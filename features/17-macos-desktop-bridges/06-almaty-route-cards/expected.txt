@@ -1,0 +1,5 @@
+would: open -a Preview -- routes/tuyuk-su.pdf
+pdf -> Preview: tuyuk-su.pdf
+would: open file://$workdir/routes/kok-jailau.html
+html -> file url: kok-jailau.html
+skip unsupported: big-almaty.gpx

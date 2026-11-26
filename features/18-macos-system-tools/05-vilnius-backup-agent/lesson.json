@@ -1,0 +1,30 @@
+{
+  "title": "Vilnius backup agent plist lint",
+  "source": "lint_agent.zsh",
+  "steps": [
+    {
+      "label": "Write the agent plist from a here-document",
+      "api": "here-document",
+      "regions": [
+        {
+          "name": "heredoc-plist",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Lint the plist with plutil",
+      "api": "plutil -lint",
+      "regions": [
+        {
+          "name": "plutil-lint",
+          "role": "primary"
+        },
+        {
+          "name": "heredoc-plist",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

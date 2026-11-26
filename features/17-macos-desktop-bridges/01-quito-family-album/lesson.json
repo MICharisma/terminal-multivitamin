@@ -1,0 +1,40 @@
+{
+  "title": "Quito family photo album, revealing a roll in Finder",
+  "source": "reveal_album.zsh",
+  "steps": [
+    {
+      "label": "Hand the carnival roll folder to Finder",
+      "api": "open",
+      "regions": [
+        {
+          "name": "open-folder",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Open one plaza note the same way",
+      "api": "open",
+      "regions": [
+        {
+          "name": "open-photo",
+          "role": "primary"
+        },
+        {
+          "name": "open-folder",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Show whether the headless guard is on",
+      "api": "headless guard",
+      "regions": [
+        {
+          "name": "headless-guard",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

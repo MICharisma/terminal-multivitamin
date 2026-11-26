@@ -1,0 +1,30 @@
+{
+  "title": "Rabat facilities power audit",
+  "source": "power_audit.zsh",
+  "steps": [
+    {
+      "label": "Ask pmset for the live profile",
+      "api": "pmset -g",
+      "regions": [
+        {
+          "name": "pmset-read",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Normalize keys so the ledger stays stable",
+      "api": "awk normalize",
+      "regions": [
+        {
+          "name": "awk-keys",
+          "role": "primary"
+        },
+        {
+          "name": "pmset-read",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

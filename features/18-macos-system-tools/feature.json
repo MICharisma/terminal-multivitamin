@@ -1,0 +1,30 @@
+{
+  "feature": "macos-system-tools",
+  "title": "macOS system tools",
+  "covers": [
+    "${(kv)array}",
+    "awk normalize",
+    "caffeinate -i",
+    "caffeinate -t",
+    "case",
+    "defaults delete",
+    "defaults export",
+    "defaults import",
+    "defaults read",
+    "defaults write",
+    "diskutil info",
+    "emulate -L zsh",
+    "for f in glob",
+    "here-document",
+    "launchctl print",
+    "mdfind",
+    "mdls",
+    "mdls -name",
+    "mdls -raw",
+    "networksetup -listallhardwareports",
+    "plutil -lint",
+    "pmset -g",
+    "process substitution",
+    "while IFS= read -r"
+  ]
+}

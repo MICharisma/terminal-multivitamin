@@ -1,0 +1,7 @@
+deploy notes copied
+== pasteboard:
+release: 2026.11.26-transilvania
+services:
+api-gateway
+billing-worker
+migrate: yes

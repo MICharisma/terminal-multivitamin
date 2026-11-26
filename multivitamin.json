@@ -6,6 +6,8 @@
   "repo": "MICharisma/terminal-multivitamin",
   "features": [
     "01-navigation-and-files",
-    "02-globbing-and-expansion"
+    "02-globbing-and-expansion",
+    "17-macos-desktop-bridges",
+    "18-macos-system-tools"
   ]
 }

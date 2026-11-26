@@ -1,0 +1,5 @@
+would: open roll-2026-carnaval
+album folder: roll-2026-carnaval
+would: open roll-2026-carnaval/img_1042-plaza.txt
+opened note: img_1042-plaza.txt
+headless guard: on

@@ -1,0 +1,30 @@
+{
+  "title": "Belfast radio rundown, converting the cue sheet",
+  "source": "convert_rundown.zsh",
+  "steps": [
+    {
+      "label": "Read each convert line from the plan",
+      "api": "while IFS= read -r",
+      "regions": [
+        {
+          "name": "read-plan",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Convert the cue sheet to RTF",
+      "api": "textutil -convert",
+      "regions": [
+        {
+          "name": "convert",
+          "role": "primary"
+        },
+        {
+          "name": "read-plan",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

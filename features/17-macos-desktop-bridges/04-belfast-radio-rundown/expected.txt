@@ -1,0 +1,5 @@
+converted 1900-news.txt -> 1900-news.rtf
+converted 1908-orla.txt -> 1908-orla.rtf
+== rtf desk:
+1900-news.rtf
+1908-orla.rtf

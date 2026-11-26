@@ -1,0 +1,4 @@
+would: screencapture -x -o -- shots/gallery-a-label.png  # gallery-a
+planned: gallery-a
+would: screencapture -x -o -- shots/gallery-b-label.png  # gallery-b
+planned: gallery-b

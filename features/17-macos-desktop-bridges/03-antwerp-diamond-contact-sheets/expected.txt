@@ -1,0 +1,3 @@
+== contact tiles:
+stone-pear-tile.png width=64
+stone-round-tile.png width=64

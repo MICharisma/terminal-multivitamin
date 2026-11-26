@@ -1,0 +1,4 @@
+shelf thangka query: kMDItemDisplayName == "*thangka*"c
+shelf thangka mdfind: ok
+shelf woodblocks query: kMDItemTextContent == "woodblock"c
+shelf woodblocks mdfind: ok
