@@ -13,7 +13,7 @@
       ]
     },
     {
-      "label": "Resolve the supplier host and show UseKeychain",
+      "label": "Resolve HostName/User/IdentityFile and show UseKeychain from the config",
       "api": "UseKeychain",
       "regions": [
         {
@@ -33,6 +33,10 @@
         {
           "name": "resolve-keychain",
           "role": "result"
+        },
+        {
+          "name": "write-keychain",
+          "role": "setup"
         }
       ]
     }

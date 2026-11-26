@@ -7,13 +7,13 @@ when the mix needs the uncompressed take again.
 **What it teaches**
 
 - `xz` compresses a single stem file in place to `.xz`
-- `wc -c` on deterministic content shows the size drop without locale padding tricks
+- compare byte counts to prove the archive is smaller (exact xz sizes vary by version)
 - `xz -d` restores a stem when the mix engineer needs the raw take again
 
 **Lesson steps**
 
 1. Measure each stem's byte size before compression (`xz`)
-2. Compress every stem with xz and show the new sizes (`xz`)
+2. Compress every stem with xz and confirm each archive is smaller (`xz`)
 3. Decompress the taksim stem when the mix needs the raw take (`xz -d`)
 
 **Files**

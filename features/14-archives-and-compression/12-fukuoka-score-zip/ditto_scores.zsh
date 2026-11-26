@@ -23,7 +23,9 @@ print "Kuroda-bushi, ensemble cue"    > repertoire/kuroda-bushi.mscz
 
 # region: ditto-zip
 # focus: ditto -c -k
-ditto -c -k repertoire repertoire.zip
+# --keepParent keeps the repertoire/ folder at the top of the zip (default
+# ditto archives only the directory's contents).
+ditto -c -k --keepParent repertoire repertoire.zip
 print "== packed repertoire.zip with ditto"
 # endregion: ditto-zip
 

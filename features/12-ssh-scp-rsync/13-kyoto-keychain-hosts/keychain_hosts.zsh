@@ -5,7 +5,7 @@
 # Teaches:
 #   - `UseKeychain yes` lets macOS OpenSSH store key passphrases in the Keychain
 #   - `AddKeysToAgent yes` loads the key into the agent on first use
-#   - `ssh -G` resolves both settings without opening a connection
+#   - `ssh -G` still resolves HostName/User/IdentityFile; the Keychain lines live in the config
 set -o errexit -o nounset -o pipefail
 
 if [[ $OSTYPE != darwin* ]]; then
@@ -34,14 +34,23 @@ EOF
 
 # region: resolve-keychain
 # focus: ssh -G -F ssh_config washi-supplier
+# Apple's ssh -G omits UseKeychain/AddKeysToAgent; read those from the config file.
 typeset -A resolved
 while IFS= read -r line; do
   resolved[${line%% *}]=${line#* }
-done < <(ssh -G -F ssh_config washi-supplier)
+done < <(ssh -G -F ssh_config washi-supplier 2>/dev/null)
+config_value() {
+  local key=$1 word rest
+  while IFS=$' \t' read -r word rest; do
+    [[ $word == $key ]] || continue
+    print -- $rest
+    return
+  done < ssh_config
+}
 print "== washi-supplier:"
 print "HostName $resolved[hostname]"
 print "User $resolved[user]"
 print "IdentityFile ${resolved[identityfile]:t}"
-print "UseKeychain $resolved[usekeychain]"
-print "AddKeysToAgent $resolved[addkeystoagent]"
+print "UseKeychain $(config_value UseKeychain)"
+print "AddKeysToAgent $(config_value AddKeysToAgent)"
 # endregion: resolve-keychain

@@ -2,14 +2,15 @@
 
 A mokuhanga studio in Kyoto keeps an SSH host for its washi paper supplier.
 macOS OpenSSH can store the key passphrase in the Keychain with `UseKeychain`
-and load the key into the agent with `AddKeysToAgent`. This slot resolves both
-with `ssh -G` and runs only on macOS.
+and load the key into the agent with `AddKeysToAgent`. `ssh -G` still resolves
+HostName/User/IdentityFile; the Keychain lines are read from the config (Apple's
+`ssh -G` omits them). macOS only.
 
 **What it teaches**
 
 - `UseKeychain yes` lets macOS OpenSSH store key passphrases in the Keychain
 - `AddKeysToAgent yes` loads the key into the agent on first use
-- `ssh -G` resolves both settings without opening a connection
+- `ssh -G` resolves HostName/User/IdentityFile; the Keychain lines live in the config
 
 **Lesson steps**
 

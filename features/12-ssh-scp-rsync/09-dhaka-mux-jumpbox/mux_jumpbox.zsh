@@ -16,20 +16,21 @@ ssh-keygen -t ed25519 -f keys/paylab -N '' -q
 
 # region: write-mux
 # focus: ControlMaster auto
+# Fixed socket name (not %C): the hash embeds absolute paths and changes per machine.
 cat > ssh_config <<EOF
 Host paylab
   HostName paylab.dhaka.internal
   User deploy
   IdentityFile $workdir/keys/paylab
   ControlMaster auto
-  ControlPath $workdir/mux/%C
+  ControlPath $workdir/mux/paylab.sock
   ControlPersist 10m
 EOF
 # endregion: write-mux
 
 show_field() {
   local want=$1 label=$2 line key value
-  ssh -G -F ssh_config paylab | while IFS= read -r line; do
+  ssh -G -F ssh_config paylab 2>/dev/null | while IFS= read -r line; do
     key=${line%% *}
     value=${line#* }
     case $key in

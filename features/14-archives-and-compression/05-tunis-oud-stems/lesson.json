@@ -17,7 +17,7 @@
       ]
     },
     {
-      "label": "Compress every stem with xz and show the new sizes",
+      "label": "Compress every stem with xz and confirm each archive is smaller",
       "api": "xz",
       "regions": [
         {

@@ -6,7 +6,7 @@ extracts it back.
 
 **What it teaches**
 
-- `ditto -c -k` builds a Finder-friendly zip from a folder tree
+- `ditto -c -k --keepParent` builds a Finder-friendly zip that keeps the folder name
 - `ditto -x -k` extracts that zip back; Terminal listing confirms the scores
 
 **Lesson steps**
