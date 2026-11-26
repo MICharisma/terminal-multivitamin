@@ -33,7 +33,8 @@ pbcopy < <(
 
 # region: copy-notes
 # focus: pbcopy
-print "deploy notes copied"
+# The copy already ran via `pbcopy < <(...)` above.
+print "deploy notes copied with pbcopy"
 # endregion: copy-notes
 
 # region: confirm-paste

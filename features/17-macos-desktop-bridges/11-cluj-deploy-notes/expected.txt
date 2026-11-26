@@ -1,4 +1,4 @@
-deploy notes copied
+deploy notes copied with pbcopy
 == pasteboard:
 release: 2026.11.26-transilvania
 services:
