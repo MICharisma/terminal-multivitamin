@@ -30,7 +30,7 @@ sed 's/channel BLUE/channel ICE-BLUE/g' map.txt
 cp map.txt map-backup.txt
 sed -i '' 's/channel BLUE/channel ICE-BLUE/g' map.txt
 print "== file on disk after BSD -i '':"
-cat map.txt
+print -r -- "$(<map.txt)"
 print "  .bak sibling: $([[ -e map.txt.bak ]] && print yes || print no)"
 # endregion: bsd-inplace
 
