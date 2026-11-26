@@ -1,0 +1,30 @@
+{
+  "title": "Thessaloniki grade roster with jq",
+  "source": "grades_jq.zsh",
+  "steps": [
+    {
+      "label": "Print every student name as a raw string",
+      "api": "jq -r",
+      "regions": [
+        {
+          "name": "list-names",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Keep only students with grade 15 or higher",
+      "api": "jq",
+      "regions": [
+        {
+          "name": "filter-passing",
+          "role": "primary"
+        },
+        {
+          "name": "list-names",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

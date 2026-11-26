@@ -1,0 +1,30 @@
+{
+  "title": "Luanda clinic redirect chain",
+  "source": "clinic_redirect.zsh",
+  "steps": [
+    {
+      "label": "See the bare 302 when redirects are not followed",
+      "api": "curl -w",
+      "regions": [
+        {
+          "name": "without-follow",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Follow the intake Location with curl -L",
+      "api": "curl -L",
+      "regions": [
+        {
+          "name": "follow-redirect",
+          "role": "primary"
+        },
+        {
+          "name": "without-follow",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

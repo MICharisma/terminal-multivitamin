@@ -1,0 +1,30 @@
+{
+  "title": "Antananarivo course material headers",
+  "source": "course_headers.zsh",
+  "steps": [
+    {
+      "label": "Probe syllabus and reading-list status lines with HEAD",
+      "api": "curl -I",
+      "regions": [
+        {
+          "name": "head-probe",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Read Content-Type quietly and route each file",
+      "api": "curl -sI",
+      "regions": [
+        {
+          "name": "branch-type",
+          "role": "primary"
+        },
+        {
+          "name": "head-probe",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

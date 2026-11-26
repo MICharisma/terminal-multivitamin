@@ -1,0 +1,2 @@
+== mural registry
+  {"ok":true,"title":"alegria del barrio","district":"tlaquepaque","panels":12}

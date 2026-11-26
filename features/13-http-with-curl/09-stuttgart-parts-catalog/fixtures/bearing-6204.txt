@@ -1,0 +1,5 @@
+part bearing-6204
+bore 20 mm
+od 47 mm
+width 14 mm
+stock 36
