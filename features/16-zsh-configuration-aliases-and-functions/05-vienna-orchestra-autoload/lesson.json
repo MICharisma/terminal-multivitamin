@@ -1,0 +1,44 @@
+{
+  "title": "Vienna chamber orchestra autoload",
+  "source": "autoload_cues.zsh",
+  "steps": [
+    {
+      "label": "Add the orchestra's zfunctions directory to fpath",
+      "api": "fpath",
+      "regions": [
+        {
+          "name": "fpath-setup",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Mark cue_letter for autoload",
+      "api": "autoload -Uz",
+      "regions": [
+        {
+          "name": "autoload",
+          "role": "primary"
+        },
+        {
+          "name": "fpath-setup",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Call it so zsh loads the file on first use",
+      "api": "autoload -Uz",
+      "regions": [
+        {
+          "name": "first-call",
+          "role": "primary"
+        },
+        {
+          "name": "autoload",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

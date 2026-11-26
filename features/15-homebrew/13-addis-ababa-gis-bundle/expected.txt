@@ -1,0 +1,11 @@
+== Brewfile declares:
+gdal
+postgis
+qgis
+bundle check: gaps remain
+brew bundle can't satisfy your Brewfile's dependencies.
+stub brew: unsupported bundle install
+Satisfy missing dependencies with .
+Missing formulae: postgis
+== desk action: install only the missing formulae on the GIS laptop
+   (this example stops before any install)

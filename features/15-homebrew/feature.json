@@ -1,0 +1,30 @@
+{
+  "feature": "homebrew",
+  "title": "Homebrew",
+  "covers": [
+    "()",
+    "Brewfile",
+    "PATH",
+    "brew --cache",
+    "brew --cellar",
+    "brew --prefix",
+    "brew --prefix FORMULA",
+    "brew bundle check",
+    "brew bundle dump",
+    "brew bundle list",
+    "brew deps",
+    "brew doctor",
+    "brew info --json=v1",
+    "brew leaves",
+    "brew list",
+    "brew outdated --json",
+    "brew services list",
+    "brew tap",
+    "brew uses",
+    "case",
+    "comm",
+    "emulate -L zsh",
+    "typeset -A",
+    "while IFS= read -r"
+  ]
+}

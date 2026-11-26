@@ -1,0 +1,11 @@
+installed formulae: 7
+leaves (requested): 3
+== dependencies you never typed (list minus leaves):
+openssl@3
+readline
+sqlite
+xz
+== requested tools still on the cart:
+cmake
+ninja
+python@3.12

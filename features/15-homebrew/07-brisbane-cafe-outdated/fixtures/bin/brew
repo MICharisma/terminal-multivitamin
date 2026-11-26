@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+set -o errexit -o nounset -o pipefail
+if [[ $1 == outdated && $2 == --json=v1 ]]; then
+  cat ${0:A:h:h}/outdated.json
+  exit 0
+fi
+print -u2 "stub brew: unsupported $*"
+exit 1

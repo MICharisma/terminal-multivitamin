@@ -1,0 +1,4 @@
+name:    ffmpeg
+desc:    Play, record, convert, and stream audio and video
+stable:  7.1.1
+keg-only:false

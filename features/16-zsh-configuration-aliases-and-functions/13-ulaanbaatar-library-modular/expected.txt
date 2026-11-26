@@ -1,0 +1,9 @@
+== named directories after modular load:
+catalog -> stacks/rare
+serials -> stacks/periodicals
+cd ~catalog lands on: stacks/rare
+== stacks alias via sourced fragment:
+rare
+periodicals
+== ^g is bound:
+"^G" "stacks^J"

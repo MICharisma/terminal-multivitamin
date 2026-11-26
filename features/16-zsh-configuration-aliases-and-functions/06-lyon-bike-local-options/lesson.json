@@ -1,0 +1,30 @@
+{
+  "title": "Lyon bicycle cooperative local options",
+  "source": "local_options.zsh",
+  "steps": [
+    {
+      "label": "Scope null_glob with emulate -L and local_options",
+      "api": "setopt local_options",
+      "regions": [
+        {
+          "name": "local-fn",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Show the caller's nomatch is unchanged",
+      "api": "emulate -L zsh",
+      "regions": [
+        {
+          "name": "caller-options",
+          "role": "primary"
+        },
+        {
+          "name": "local-fn",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

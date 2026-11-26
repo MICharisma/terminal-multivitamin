@@ -1,0 +1,7 @@
+== what each studio tool needs:
+  ffmpeg -> lame libogg opus 
+  sox -> lame libogg 
+  lame ->  
+== who pulls in the shared libraries:
+  lame <- ffmpeg sox 
+  libogg <- ffmpeg sox 

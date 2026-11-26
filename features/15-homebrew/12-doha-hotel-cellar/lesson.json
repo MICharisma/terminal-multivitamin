@@ -1,0 +1,30 @@
+{
+  "title": "Doha hotel IT cellar and cache paths",
+  "source": "path_inventory.zsh",
+  "steps": [
+    {
+      "label": "Gather prefix, cellar, and cache paths",
+      "api": "brew --cellar",
+      "regions": [
+        {
+          "name": "gather-paths",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Format the hotel asset sheet including the cache",
+      "api": "brew --cache",
+      "regions": [
+        {
+          "name": "format-sheet",
+          "role": "primary"
+        },
+        {
+          "name": "gather-paths",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

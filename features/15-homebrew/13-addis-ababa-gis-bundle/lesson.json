@@ -1,0 +1,40 @@
+{
+  "title": "Addis Ababa GIS desk bundle check",
+  "source": "bundle_check.zsh",
+  "steps": [
+    {
+      "label": "List what the Brewfile declares",
+      "api": "brew bundle list",
+      "regions": [
+        {
+          "name": "list-declared",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Dry-run brew bundle check and report gaps",
+      "api": "brew bundle check",
+      "regions": [
+        {
+          "name": "check-verbose",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Summarize the desk action in an anonymous function",
+      "api": "()",
+      "regions": [
+        {
+          "name": "anon-summary",
+          "role": "primary"
+        },
+        {
+          "name": "check-verbose",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

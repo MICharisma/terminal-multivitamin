@@ -1,0 +1,7 @@
+tap:     "homebrew/cask-fonts"
+formula: "git"
+formula: "node"
+formula: "postgresql@16"
+cask:    "visual-studio-code"
+cask:    "figma"
+== cohort laptop still needs: 1 taps, 3 formulae, 2 casks (1 comments/blank)

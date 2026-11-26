@@ -1,0 +1,44 @@
+{
+  "title": "Ulaanbaatar library modular zshrc",
+  "source": "modular_zshrc.zsh",
+  "steps": [
+    {
+      "label": "Write sourced fragments for dirs, aliases, and keys",
+      "api": "source",
+      "regions": [
+        {
+          "name": "fragments",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Resolve named directories from hash -d",
+      "api": "hash -d",
+      "regions": [
+        {
+          "name": "named-dirs",
+          "role": "primary"
+        },
+        {
+          "name": "fragments",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Confirm bindkey and the stacks alias",
+      "api": "bindkey",
+      "regions": [
+        {
+          "name": "bindkey-check",
+          "role": "primary"
+        },
+        {
+          "name": "fragments",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

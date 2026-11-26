@@ -1,0 +1,9 @@
+== apprentice handout:
+seal_tray () {
+	local tray=$1 
+	mv -- trays/raw/$tray trays/sealed/$tray
+	print "sealed $tray"
+}
+sealed tray-14.txt
+== sealed trays:
+trays/sealed/tray-14.txt
