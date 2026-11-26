@@ -20,9 +20,10 @@ jobs:
       # Copy the repository's code onto the runner.
       - uses: actions/checkout@v4
 
-      # Ubuntu does not include zsh. `file` (used by one example) is already there.
-      - name: Install zsh
-        run: sudo apt-get update && sudo apt-get install -y zsh
+      # Ubuntu does not include zsh. Features 12–14 also need rsync, a local sshd,
+      # and jq; `file` (used by one example) is already on the image.
+      - name: Install zsh, rsync, openssh-server, and jq
+        run: sudo apt-get update && sudo apt-get install -y zsh rsync openssh-server jq
 
       # The runner checks output, exit status, and cleanup for every example.
       # Scripts marked `# requires: macos` are reported as skipped here.

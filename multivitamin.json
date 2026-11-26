@@ -6,6 +6,9 @@
   "repo": "MICharisma/terminal-multivitamin",
   "features": [
     "01-navigation-and-files",
-    "02-globbing-and-expansion"
+    "02-globbing-and-expansion",
+    "12-ssh-scp-rsync",
+    "13-http-with-curl",
+    "14-archives-and-compression"
   ]
 }
