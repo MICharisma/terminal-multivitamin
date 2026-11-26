@@ -1,0 +1,11 @@
+classes on Monday's timetable: 3
+4 Amanah: (s:,:) gives 6 subjects, and period 4 looks like: Sains
+4 Amanah: "${(@s:,:)...}" keeps 7 periods; period 4 is '' (assembly in the hall)
+== Monday, periods 1 to 7:
+  4 Amanah     BM | English | Maths | (assembly) | Sains | Sejarah | PJ
+  4 Bestari    Maths | Maths | BM | English | (assembly) | Pendidikan Seni | Sains
+  4 Cemerlang  English | Sains | Sejarah | BM | Maths | (assembly) | Muzik
+== first Maths period, for Cikgu Farah's notice board:
+4 Amanah, period 3
+4 Bestari, period 1
+4 Cemerlang, period 5

@@ -1,0 +1,68 @@
+{
+  "title": "Kuala Lumpur secondary school, splitting the timetable",
+  "source": "timetable.zsh",
+  "steps": [
+    {
+      "label": "Split the file into lines",
+      "api": "${(f)...}",
+      "regions": [
+        {
+          "name": "split-lines",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Split on commas, dropping empty fields",
+      "api": "${(s:,:)...}",
+      "regions": [
+        {
+          "name": "split-drops-empty",
+          "role": "primary"
+        },
+        {
+          "name": "split-lines",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Keep empty fields with @ and quotes",
+      "api": "\"${(@s:,:)...}\"",
+      "regions": [
+        {
+          "name": "split-keeps-empty",
+          "role": "primary"
+        },
+        {
+          "name": "split-drops-empty",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Join periods for the board",
+      "api": "${(j: | :)array}",
+      "regions": [
+        {
+          "name": "join-for-display",
+          "role": "primary"
+        },
+        {
+          "name": "split-keeps-empty",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Join Maths classes with newlines",
+      "api": "${(F)array}",
+      "regions": [
+        {
+          "name": "join-lines",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

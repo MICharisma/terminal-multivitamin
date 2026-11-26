@@ -1,0 +1,68 @@
+{
+  "title": "Dakar fishing cooperative, tallying the morning landing",
+  "source": "landing_tally.zsh",
+  "steps": [
+    {
+      "label": "Declare an associative array",
+      "api": "typeset -A",
+      "regions": [
+        {
+          "name": "declare",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Accumulate kilograms per species",
+      "api": "(( assoc[$k] += n ))",
+      "regions": [
+        {
+          "name": "accumulate",
+          "role": "primary"
+        },
+        {
+          "name": "declare",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Walk keys and values",
+      "api": "${(kv)assoc}",
+      "regions": [
+        {
+          "name": "keys-values",
+          "role": "primary"
+        },
+        {
+          "name": "accumulate",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Test whether a key exists",
+      "api": "${+assoc[key]}",
+      "regions": [
+        {
+          "name": "exists",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Look up a key by its value",
+      "api": "${(k)assoc[(r)val]}",
+      "regions": [
+        {
+          "name": "reverse-lookup",
+          "role": "primary"
+        },
+        {
+          "name": "keys-values",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

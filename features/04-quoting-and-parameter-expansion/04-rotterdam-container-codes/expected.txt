@@ -1,0 +1,15 @@
+file:   MSCU7065291_45G1_vgm-weighed.json
+folder: arrivals/2026-11-26/msc-aurora
+vessel: msc-aurora
+MSCU7065291  <- ${name%%_*}, longest _* removed from the end
+MSCU7065291_45G1  <- ${name%_*}, shortest _* removed
+45G1_vgm-weighed  <- ${name#*_}, shortest *_ removed from the front
+== container numbers, split ISO 6346 style (owner+U, serial, check digit):
+  MSCU 706529 1
+  TGHU 447102 9
+  EGHU 931044 2
+== gate screen:
+  MSCU7065291  40ft high cube    vgm weighed
+  TGHU4471029  20ft general      customs hold
+  EGHU9310442  40ft reefer       reefer check
+as a Dutch customs key: arrivals:2026-11-26:msc-aurora:TGHU4471029_22G1_customs-hold.json

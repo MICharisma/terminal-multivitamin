@@ -1,0 +1,8 @@
+species landed: 3
+== by species (keys sorted with (ok)):
+  capitaine    54 kg  from ndeye-fatou
+  thiof        59 kg  from baye-fall, keur-massar
+  yaboy       910 kg  from ndeye-fatou, keur-massar, baye-fall
+total on the beach: 1023 kg (values, smallest first: 54 59 910)
+thiof landed? 1; barracuda landed? 0
+heaviest species: yaboy with 910 kg, priced for the Kermel market first
