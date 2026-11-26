@@ -13,7 +13,7 @@
       ]
     },
     {
-      "label": "Load the completion system with compinit",
+      "label": "Load the completion system with compinit -u",
       "api": "compinit",
       "regions": [
         {

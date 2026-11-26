@@ -5,13 +5,14 @@ Auckland Transport ferry ops keep a tiny `schedule` helper for Devonport runs. A
 **What it teaches**
 
 - `compinit` loads zsh's completion system from directories on `fpath`
+- `compinit -u` skips the insecure-directory prompt (needed in non-interactive scripts)
 - a custom completion function named `_command` lives in a directory on `fpath`
 - after `compinit`, `whence -v _schedule` shows the completion helper is available
 
 **Lesson steps**
 
 1. Put the ferry completion directory on fpath (`fpath`)
-2. Load the completion system with compinit (`compinit`)
+2. Load the completion system with compinit -u (`compinit`)
 3. Verify _schedule is available (`compinit`)
 
 **Files**

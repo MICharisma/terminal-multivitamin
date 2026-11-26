@@ -3,6 +3,7 @@
 #
 # Teaches:
 #   - `compinit` loads zsh's completion system from directories on `fpath`
+#   - `compinit -u` skips the insecure-directory prompt (needed in non-interactive scripts)
 #   - a custom completion function named `_command` lives in a directory on `fpath`
 #   - after `compinit`, `whence -v _schedule` shows the completion helper is available
 set -o errexit -o nounset -o pipefail
@@ -25,9 +26,9 @@ fpath=( $workdir/completions $fpath )
 # endregion: fpath-completions
 
 # region: compinit
-# focus: compinit
+# focus: compinit -u
 autoload -Uz compinit
-compinit -d $workdir/.zcompdump
+compinit -u -d $workdir/.zcompdump
 # endregion: compinit
 
 # region: verify

@@ -47,7 +47,7 @@ Official references: `man zsh`, `man zshoptions`, `man zshbuiltins` (`alias`,
 | 07 | Fintech (tech) | `setopt` / `unsetopt`, `[[ -o ]]` |
 | 08 | International school (education) | `ZDOTDIR` load order across startup files |
 | 09 | Community radio (nonprofit) | `PROMPT` / `RPROMPT` |
-| 10 | Ferry ops (mechanical) | `compinit`, completion `fpath` |
+| 10 | Ferry ops (mechanical) | `compinit -u`, completion `fpath` |
 | 11 | Makerspace (tech) | anonymous functions, `add-zsh-hook` |
 | 12 | Offshore ops (business) | `zstyle` for completion and vcs_info |
 | 13 | National library (government) | modular `source`, `bindkey`, named dirs |
