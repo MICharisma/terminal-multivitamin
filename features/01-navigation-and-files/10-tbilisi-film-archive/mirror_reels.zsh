@@ -2,11 +2,11 @@
 # Navigation and files · 10 · Tbilisi film archive, mirroring digitized reels
 #
 # Teaches:
-#   - cp -R src/ behaves differently on macOS (BSD copies the contents) and
-#     Linux (GNU copies the folder); cp -R src/. dest/ means the same on both
-#   - cp -Rp keeps modification times, so the mirror sorts like the original
-#   - diff -r compares two trees and exits 0 when they match
-#   - du -sk totals each reel folder in kilobytes for a largest-first list
+#   - `cp -R src/` behaves differently on macOS (BSD copies the contents) and
+#     Linux (GNU copies the folder); `cp -R src/. dest/` means the same on both
+#   - `cp -Rp` keeps modification times, so the mirror sorts like the original
+#   - `diff -r` compares two trees and exits 0 when they match
+#   - `du -sk` totals each film folder in kilobytes for a largest-first list
 set -o errexit -o nounset -o pipefail
 
 workdir=$(mktemp -d "${TMPDIR:-/tmp}/kinoarkivi.XXXXXX")

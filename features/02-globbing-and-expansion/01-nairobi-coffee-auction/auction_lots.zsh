@@ -2,9 +2,9 @@
 # Globbing and expansion · 01 · Nairobi Coffee Exchange auction catalogue
 #
 # Teaches:
-#   - * matches any run of characters; ? matches exactly one
-#   - [AP][AB] matches one character from each set (AA, AB, PB...)
-#   - [^C] (or [!C]) matches any one character except C
+#   - `*` matches any run of characters; `?` matches exactly one
+#   - `[AP][AB]` matches one character from each set (AA, AB, PB...)
+#   - `[^AP]` (or `[!AP]`) matches any one character except those
 #   - quoting a pattern turns globbing off, so the shell passes it literally
 set -o errexit -o nounset -o pipefail
 

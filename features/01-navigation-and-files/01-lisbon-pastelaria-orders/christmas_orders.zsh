@@ -2,10 +2,10 @@
 # Navigation and files · 01 · Lisbon pastelaria Christmas orders
 #
 # Teaches:
-#   - mkdir -p builds a nested folder tree in one call and is safe to rerun
-#   - cd with relative paths (a/b/c, ..) and reading where you are from $PWD
-#   - touch creates empty order slips; ls -F marks folders with a trailing /
-#   - plain mkdir refuses a folder that already exists
+#   - `mkdir -p` builds a nested folder tree in one call and is safe to rerun
+#   - `cd` with relative paths (`a/b/c`, `..`) and reading where you are from `$PWD`
+#   - `touch` creates empty order slips; `ls -F` marks folders with a trailing `/`
+#   - plain `mkdir` refuses a folder that already exists
 set -o errexit -o nounset -o pipefail
 
 workdir=$(mktemp -d "${TMPDIR:-/tmp}/pastelaria-belem.XXXXXX")

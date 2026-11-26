@@ -2,11 +2,11 @@
 # Globbing and expansion · 05 · Bergen weather radar archive, sizing the sweeps
 #
 # Teaches:
-#   - (L0) finds empty files; (Lk+100) finds files over 100 KiB
-#   - (OL) sorts largest first; [1,3] keeps the first three matches
-#   - (oL) sorts smallest first; (.) keeps plain files only
-#   - qualifiers stack in one set of parentheses; ^ negates the ones after it,
-#     so (.Lk-50oL^L0) is "plain, under 50 KiB, smallest first, not empty"
+#   - `(L0)` finds empty files; `(Lk+100)` finds files over 100 KiB
+#   - `(OL)` sorts largest first; `[1,3]` keeps the first three matches
+#   - `(oL)` sorts smallest first; `(.)` keeps plain files only
+#   - qualifiers stack in one set of parentheses; `^` negates the ones after it,
+#     so `(.Lk-50oL^L0)` is "plain, under 50 KiB, smallest first, not empty"
 set -o errexit -o nounset -o pipefail
 
 workdir=$(mktemp -d "${TMPDIR:-/tmp}/radar-hurum.XXXXXX")

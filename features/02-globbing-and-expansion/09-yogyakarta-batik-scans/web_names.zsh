@@ -2,10 +2,10 @@
 # Globbing and expansion · 09 · Yogyakarta batik studio, naming web images from scans
 #
 # Teaches:
-#   - modifiers :t (tail), :h (head), :r (root, no extension), :e (extension)
-#   - a modifier inside a glob qualifier, *.tif(:r), changes every match
-#   - modifiers on an unquoted array apply to each element; (u) drops duplicates
-#   - :s/old/new/ substitutes inside each name
+#   - modifiers `:t` (tail), `:h` (head), `:r` (root, no extension), `:e` (extension)
+#   - a modifier inside a glob qualifier, `*.tif(:t:r)`, changes every match
+#   - modifiers on an unquoted array apply to each element; `(u)` drops duplicates
+#   - `:s/old/new/` substitutes inside each name
 set -o errexit -o nounset -o pipefail
 
 workdir=$(mktemp -d "${TMPDIR:-/tmp}/batik-sekar-jagad.XXXXXX")

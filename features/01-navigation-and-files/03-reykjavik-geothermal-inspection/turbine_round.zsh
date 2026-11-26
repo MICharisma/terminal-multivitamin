@@ -2,10 +2,10 @@
 # Navigation and files · 03 · Reykjavík geothermal turbine inspection
 #
 # Teaches:
-#   - cdpath lets `cd hellisheidi` work from any folder
-#   - zsh's two-argument cd swaps one word of the current path for another
-#   - cd_silent stops cd from echoing the folder it found through cdpath
-#   - a plain cd into a sibling still works when cdpath has no match
+#   - `cdpath` lets `cd hellisheidi` work from any folder, even from `/`
+#   - a relative `cd` still looks in the current folder first, then in `cdpath`
+#   - zsh's two-argument `cd old new` swaps one word of the current path for another
+#   - `setopt cd_silent` stops `cd` from echoing the folder it found through `cdpath`
 set -o errexit -o nounset -o pipefail
 
 workdir=$(mktemp -d "${TMPDIR:-/tmp}/orkuveita-round.XXXXXX")

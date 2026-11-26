@@ -2,10 +2,10 @@
 # Navigation and files · 11 · Marrakech carpet cooperative named folders
 #
 # Teaches:
-#   - hash -d gives a deep folder a short name you can cd to as ~name
-#   - print -D (and the ${(D)...} flag) rewrite a path using those names
-#   - the longest matching name wins, so ~orders beats ~coop inside orders
-#   - ~name works anywhere a path does: ls, cp, and in the middle of a longer path
+#   - `hash -d` gives a deep folder a short name you can `cd` to as `~name`
+#   - `print -D` (and the `${(D)...}` flag) rewrite a path using those names
+#   - the longest matching name wins, so `~orders` beats `~coop` inside orders
+#   - `~name` works anywhere a path does: `ls`, `cp`, and in the middle of a longer path
 set -o errexit -o nounset -o pipefail
 
 workdir=$(mktemp -d "${TMPDIR:-/tmp}/cooperative-tazra.XXXXXX")

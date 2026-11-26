@@ -2,10 +2,10 @@
 # Navigation and files · 02 · Hanoi water puppet theatre pre-show round
 #
 # Teaches:
-#   - pushd moves into a folder and remembers where you came from
-#   - $dirstack is zsh's directory stack as an array; :t trims each entry
-#   - popd walks back one stop at a time; cd - jumps to the previous folder
-#   - pushd -q keeps the stack quiet so the script prints only what it means to
+#   - `pushd` moves into a folder and remembers where you came from
+#   - `$dirstack` is zsh's directory stack as an array; `:t` trims each entry
+#   - `popd` walks back one stop at a time; `cd -` jumps to the previous folder
+#   - `pushd -q` keeps the stack quiet so the script prints only what it means to
 set -o errexit -o nounset -o pipefail
 
 workdir=$(mktemp -d "${TMPDIR:-/tmp}/thang-long-theatre.XXXXXX")

@@ -2,12 +2,12 @@
 # Globbing and expansion · 13 · Seoul webtoon studio, renumbering exported panels
 #
 # Teaches:
-#   - zmv renames by pattern; (...) in the source becomes $1, $2 in the target
-#   - zmv -n prints the plan without touching anything
-#   - zmv refuses the whole batch when two files would land on one name
-#   - ${(l:3::0:)1} pads a capture with zeros on the left
-#   - zmv -W uses plain * on both sides, here to move files into folders
-#     named with ${(u)...} from the matches themselves
+#   - `zmv` renames by pattern; `(...)` in the source becomes `$1`, `$2` in the target
+#   - `zmv -n` prints the plan without touching anything
+#   - `zmv` refuses the whole batch when two files would land on one name
+#   - `${(l:3::0:)1}` pads a capture with zeros on the left
+#   - `zmv -W` uses plain `*` on both sides, here to move files into folders
+#     named with `${(u)...}` from the matches themselves
 set -o errexit -o nounset -o pipefail
 autoload -Uz zmv
 setopt extended_glob

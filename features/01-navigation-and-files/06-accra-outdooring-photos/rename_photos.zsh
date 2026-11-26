@@ -2,9 +2,9 @@
 # Navigation and files · 06 · Accra outdooring photos from a cousin's phone
 #
 # Teaches:
-#   - cp -p keeps the original timestamps on a safety copy before renaming
+#   - `cp -p` keeps the original timestamps on a safety copy before renaming
 #   - a tab-separated rename plan read with `while IFS=$'\t' read -r`
-#   - mv -n never overwrites; checking [[ -e ]] first lets the script say why
+#   - `mv -n` never overwrites; checking `[[ -e ]]` first lets the script say why
 #   - `--` stops a filename from being read as an option
 set -o errexit -o nounset -o pipefail
 

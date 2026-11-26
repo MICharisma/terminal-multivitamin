@@ -2,9 +2,9 @@
 # Navigation and files · 05 · Oaxaca recording studio, picking the latest takes
 #
 # Teaches:
-#   - touch -t CCYYMMDDhhmm stamps a file with a chosen time (works on BSD and GNU)
-#   - ls -t sorts newest first; ls -tr puts the oldest first
-#   - touch -r copies one file's timestamp onto another
+#   - `touch -t CCYYMMDDhhmm` stamps a file with a chosen time (BSD and GNU alike)
+#   - `ls -t` sorts newest first; `ls -tr` puts the oldest first
+#   - `touch -r` copies one file's timestamp onto another
 #   - an associative array keeps each take next to the time it was recorded
 set -o errexit -o nounset -o pipefail
 

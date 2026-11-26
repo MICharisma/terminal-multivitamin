@@ -2,10 +2,10 @@
 # Navigation and files · 12 · Helsinki music academy practice-room cleanup
 #
 # Teaches:
-#   - ${var:?message} stops the script before rm -r can run on an empty path
-#   - rm -- (or ./name) removes a file whose name starts with a dash
-#   - rmdir removes only empty folders, so it is a safe sweep after moving files
-#   - rm -f is quiet about files that are already gone
+#   - `${var:?message}` stops the script before `rm -r` can run on an empty path
+#   - `mv --` and `rm --` handle a file whose name starts with a dash
+#   - `rmdir` removes only empty folders, so it is a safe sweep after moving files
+#   - `rm -f` is quiet about files that are already gone
 set -o errexit -o nounset -o pipefail
 
 workdir=$(mktemp -d "${TMPDIR:-/tmp}/harjoitushuoneet.XXXXXX")

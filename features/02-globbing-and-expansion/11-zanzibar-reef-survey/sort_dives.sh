@@ -2,10 +2,10 @@
 # Globbing and expansion · 11 · Zanzibar reef survey photos, in bash
 #
 # Teaches:
-#   - bash needs shopt -s extglob for @(a|b), +(digits), and !(pattern)
-#   - extglob must be on before bash parses the line that uses it, so set it
+#   - bash needs `shopt -s extglob` for `@(a|b)`, `+(digits)`, and `!(pattern)`
+#   - `extglob` must be on before bash parses the line that uses it, so set it
 #     near the top, not inside the function that needs it
-#   - nocaseglob lets *.jpg match the camera's .JPG; nullglob drops non-matches
+#   - `nocaseglob` lets `*.jpg` match the camera's `.JPG`; `nullglob` drops non-matches
 #   - works in macOS's bash 3.2 as well as newer bash
 set -o errexit -o nounset -o pipefail
 shopt -s extglob nullglob nocaseglob

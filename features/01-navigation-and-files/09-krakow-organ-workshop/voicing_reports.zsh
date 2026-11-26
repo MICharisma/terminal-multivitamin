@@ -2,10 +2,10 @@
 # Navigation and files · 09 · Kraków organ workshop voicing reports
 #
 # Teaches:
-#   - stat takes different flags on macOS (BSD: -f %z) and Linux (GNU: -c %s)
-#   - detecting GNU stat once and defining one function for both
-#   - zsh's own zstat (zsh/stat module) answers the same question everywhere
-#   - [[ a -nt b ]] compares modification times; [[ -s f ]] means "not empty"
+#   - `stat` takes different flags on macOS (BSD: `-f %z`) and Linux (GNU: `-c %s`)
+#   - detecting GNU `stat` once and defining one function for both
+#   - zsh's own `zstat` (the `zsh/stat` module) answers the same question everywhere
+#   - `[[ a -nt b ]]` compares modification times; `[[ -s f ]]` means "not empty"
 set -o errexit -o nounset -o pipefail
 
 workdir=$(mktemp -d "${TMPDIR:-/tmp}/warsztat-organowy.XXXXXX")

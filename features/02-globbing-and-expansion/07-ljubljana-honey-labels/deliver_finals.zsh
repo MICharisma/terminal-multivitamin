@@ -2,11 +2,11 @@
 # Globbing and expansion · 07 · Ljubljana beekeeping cooperative label photos
 #
 # Teaches:
-#   - extended_glob, switched on only inside a function (emulate -L zsh) or
-#     an anonymous function (setopt local_options)
-#   - ^pattern matches everything except the pattern
-#   - pattern~exclusion keeps matches of the first part that miss the second
-#   - (a|b|c) alternation and *.(jpg|png) pick between several spellings
+#   - `extended_glob`, switched on only inside a function (`emulate -L zsh`) or
+#     an anonymous function (`setopt local_options`)
+#   - `^pattern` matches everything except the pattern
+#   - `pattern~exclusion` keeps matches of the first part that miss the second
+#   - `(a|b)` alternation and `*.(jpg|png)` pick between several spellings
 set -o errexit -o nounset -o pipefail
 
 workdir=$(mktemp -d "${TMPDIR:-/tmp}/cebelarji-labels.XXXXXX")

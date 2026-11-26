@@ -2,10 +2,10 @@
 # Navigation and files · 07 · Montevideo school office sorting parents' attachments
 #
 # Teaches:
-#   - file -b --mime-type reads a file's contents, not its (often wrong) extension
-#   - a case statement routes each MIME type to a folder
-#   - mkdir -p inside the loop creates a destination only when it is needed
-#   - mv -- moves into a folder, keeping the original name
+#   - `file -b --mime-type` reads a file's contents, not its (often wrong) extension
+#   - a `case` statement routes each MIME type to a folder
+#   - `mkdir -p` inside the loop creates a destination only when it is needed
+#   - `mv --` moves into a folder, keeping the original name
 set -o errexit -o nounset -o pipefail
 
 workdir=$(mktemp -d "${TMPDIR:-/tmp}/escuela-142-inbox.XXXXXX")

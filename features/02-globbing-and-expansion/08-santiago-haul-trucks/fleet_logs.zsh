@@ -2,10 +2,10 @@
 # Globbing and expansion · 08 · Santiago mine maintenance office, haul truck telemetry
 #
 # Teaches:
-#   - <120-135> matches any whole number in a range; <-> matches any number
-#   - (n) sorts matches numerically, so camion-99 comes before camion-101
-#   - (#i) makes the rest of a pattern case-insensitive (needs extended_glob)
-#   - <200-> leaves the upper end of a range open
+#   - `<120-135>` matches any whole number in a range; `<->` matches any number
+#   - `(n)` sorts matches numerically, so camion-99 comes before camion-101
+#   - `(#i)` makes the rest of a pattern case-insensitive (needs `extended_glob`)
+#   - `<200->` leaves the upper end of a range open
 set -o errexit -o nounset -o pipefail
 setopt extended_glob
 

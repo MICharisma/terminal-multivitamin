@@ -2,11 +2,11 @@
 # Globbing and expansion · 12 · Wellington Cable Car brake logs, in portable sh
 #
 # Teaches:
-#   - POSIX sh has no null_glob: an unmatched glob stays as the literal pattern,
-#     so loops guard with [ -e "$log" ] || continue
-#   - set -- pattern loads matches into "$@" and lets you count them with $#
-#   - case patterns use the same * ? [ ] syntax as filename globs, including [!...]
-#   - ${log##*/} and ${name%.log} trim a path without calling basename
+#   - POSIX `sh` has no `null_glob`: an unmatched glob stays as the literal pattern,
+#     so loops guard with `[ -e "$log" ] || continue`
+#   - `set -- pattern` loads matches into `"$@"` and lets you count them with `$#`
+#   - `case` patterns use the same `*` `?` `[ ]` syntax as filename globs, including `[!...]`
+#   - `${log##*/}` and `${name%.log}` trim a path without calling `basename`
 set -eu
 
 workdir=$(mktemp -d "${TMPDIR:-/tmp}/cable-car-brakes.XXXXXX")

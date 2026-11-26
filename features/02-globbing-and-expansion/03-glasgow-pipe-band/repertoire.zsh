@@ -2,10 +2,10 @@
 # Globbing and expansion · 03 · Glasgow pipe band repertoire scores
 #
 # Teaches:
-#   - **/ matches any depth of folders, including none
-#   - collecting matches into an array and counting them with ${#array}
-#   - **/reel/*.ly anchors a recursive search on one folder name
-#   - **/ does not follow symlinked folders; ***/ does
+#   - `**/` matches any depth of folders, including none
+#   - collecting matches into an array and counting them with `${#array}`
+#   - `**/reel/*.ly` anchors a recursive search on one folder name
+#   - `**/` does not follow symlinked folders; `***/` does
 set -o errexit -o nounset -o pipefail
 
 workdir=$(mktemp -d "${TMPDIR:-/tmp}/pipe-band-library.XXXXXX")

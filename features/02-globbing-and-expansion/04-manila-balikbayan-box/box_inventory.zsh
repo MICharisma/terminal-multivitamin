@@ -2,12 +2,12 @@
 # Globbing and expansion · 04 · Quezon City family balikbayan box lists
 #
 # Teaches:
-#   - glob qualifiers filter by file type: (.) plain files, (/) folders, (@) symlinks
-#   - (-/) follows symlinks first, so a link to a folder counts as a folder
-#   - qualifiers combine: (/^F) is "folders that are not full", i.e. empty
-#   - (N) makes an empty match an empty list instead of an error
-#   - ${~pattern} lets a pattern stored in a variable glob when expanded,
-#     but only outside double quotes: "${~pattern}" stays literal text
+#   - glob qualifiers filter by file type: `(.)` plain files, `(/)` folders, `(@)` symlinks
+#   - `(-/)` follows symlinks first, so a link to a folder counts as a folder
+#   - qualifiers combine: `(/^F)` is "folders that are not full", i.e. empty
+#   - `(N)` makes an empty match an empty list instead of an error
+#   - `${~pattern}` lets a pattern stored in a variable glob when expanded,
+#     but only outside double quotes: `"${~pattern}"` stays literal text
 set -o errexit -o nounset -o pipefail
 
 workdir=$(mktemp -d "${TMPDIR:-/tmp}/balikbayan.XXXXXX")

@@ -2,11 +2,11 @@
 # Navigation and files · 08 · Kigali moto-taxi fare app release switch
 #
 # Teaches:
-#   - ln -s makes a "current" symlink that points at one release folder
-#   - readlink shows where a symlink points without following it
-#   - ln -sfn replaces the link itself; without -n, ln follows the old link
+#   - `ln -s` makes a `current` symlink that points at one release folder
+#   - `readlink` shows where a symlink points without following it
+#   - `ln -sfn` replaces the link itself; without `-n`, `ln` follows the old link
 #     into a folder and drops a stray link inside it
-#   - rolling back is the same one-line ln -sfn
+#   - rolling back is the same one-line `ln -sfn`
 set -o errexit -o nounset -o pipefail
 
 workdir=$(mktemp -d "${TMPDIR:-/tmp}/moto-fare-deploy.XXXXXX")

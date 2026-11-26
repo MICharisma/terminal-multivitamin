@@ -2,10 +2,10 @@
 # Globbing and expansion · 10 · Cairo University Egyptology field season, daily reports
 #
 # Teaches:
-#   - by default (nomatch) a glob with no matches is an error and the command never runs
-#   - (N) on one glob, or setopt null_glob in a function, turns no match into nothing
-#   - (( $#reports )) checks for an empty array before looping
-#   - a nomatch failure can be tested safely inside a ( subshell )
+#   - by default (`nomatch`) a glob with no matches is an error and the command never runs
+#   - `(N)` on one glob, or `setopt null_glob` in a function, turns no match into nothing
+#   - `(( $#reports ))` checks for an empty array before looping
+#   - a `nomatch` failure can be tested safely inside a `( subshell )`
 set -o errexit -o nounset -o pipefail
 
 workdir=$(mktemp -d "${TMPDIR:-/tmp}/saqqara-season.XXXXXX")

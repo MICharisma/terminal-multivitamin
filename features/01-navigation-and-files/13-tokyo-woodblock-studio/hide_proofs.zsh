@@ -3,10 +3,10 @@
 # Navigation and files · 13 · Tokyo woodblock print studio, tidying before a client call
 #
 # Teaches:
-#   - chflags hidden hides a folder from Finder without renaming it; ls -lO shows the flag
-#   - Terminal still sees hidden folders: ls lists them, cd enters them
-#   - xattr -w / -p / -d attach, read, and remove extended attributes on a file
-#   - cp keeps extended attributes on macOS; cp -X leaves them behind
+#   - `chflags hidden` hides a folder from Finder without renaming it; `ls -lO` shows the flag
+#   - Terminal still sees hidden folders: `ls` lists them, `cd` enters them
+#   - `xattr -w` / `-p` / `-d` attach, read, and remove extended attributes on a file
+#   - `cp` keeps extended attributes on macOS; `cp -X` leaves them behind
 set -o errexit -o nounset -o pipefail
 
 if [[ $OSTYPE != darwin* ]]; then

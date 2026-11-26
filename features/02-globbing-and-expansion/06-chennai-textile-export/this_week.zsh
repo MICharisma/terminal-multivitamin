@@ -2,11 +2,11 @@
 # Globbing and expansion · 06 · Chennai textile export house, this week's purchase orders
 #
 # Teaches:
-#   - (m-7) matches files modified less than 7 days ago; (m+30) more than 30
-#   - (mh-24) counts in hours instead of days
-#   - (om[1]) picks the most recently modified match
-#   - zsh/datetime gives $EPOCHSECONDS and strftime, so the script can stamp
-#     files "3 days ago" with touch -t on both macOS and Linux
+#   - `(m-7)` matches files modified less than 7 days ago; `(m+30)` more than 30
+#   - `(mh-24)` counts in hours instead of days
+#   - `(om[1])` picks the most recently modified match
+#   - `zsh/datetime` gives `$EPOCHSECONDS` and `strftime`, so the script can stamp
+#     files "3 days ago" with `touch -t` on both macOS and Linux
 set -o errexit -o nounset -o pipefail
 
 workdir=$(mktemp -d "${TMPDIR:-/tmp}/kanchi-exports.XXXXXX")

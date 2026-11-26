@@ -2,11 +2,11 @@
 # Globbing and expansion · 02 · Cusco Quechua language school course folders
 #
 # Teaches:
-#   - brace expansion {a,b} and sequences {01..06} generate words before any
+#   - brace expansion `{a,b}` and sequences `{01..06}` generate words before any
 #     file exists; nested braces multiply into every combination
-#   - {01..12..3} steps a sequence; zero padding follows the first number
+#   - `{01..12..3}` steps a sequence; zero padding follows the first number
 #   - brace expansion invents names, globbing only finds existing ones
-#   - (/) after a glob keeps directories only (more in slot 04)
+#   - `(/)` after a glob keeps directories only (more in slot 04)
 set -o errexit -o nounset -o pipefail
 
 workdir=$(mktemp -d "${TMPDIR:-/tmp}/yachay-wasi.XXXXXX")

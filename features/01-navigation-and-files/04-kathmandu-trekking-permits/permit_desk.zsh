@@ -2,11 +2,11 @@
 # Navigation and files · 04 · Kathmandu trekking permit desk
 #
 # Teaches:
-#   - head -n 1 reads a CSV header; tail -n +2 skips it
-#   - tail -n 3 shows the latest rows of a log that grows at the bottom
-#   - head -n 7 | tail -n 3 cuts a window out of the middle of a file
-#   - wc -l pads its count on macOS (BSD); $(( )) turns it back into a number
-#   - cat -n numbers lines for a phone call about "row 6"
+#   - `head -n 1` reads a CSV header; `tail -n +2` skips it
+#   - `tail -n 3` shows the latest rows of a log that grows at the bottom
+#   - `head -n 7 | tail -n 3` cuts a window out of the middle of a file
+#   - `wc -l` pads its count on macOS (BSD); `$(( ))` turns it back into a number
+#   - `cat -n` numbers lines for a phone call about "line 6"
 set -o errexit -o nounset -o pipefail
 
 here=${0:A:h}
