@@ -1,0 +1,82 @@
+{
+  "title": "Mexico City seismic alert relay",
+  "source": "seismic_relay.zsh",
+  "steps": [
+    {
+      "label": "Load station thresholds from a here-doc",
+      "api": "done <<'EOF'",
+      "regions": [
+        {
+          "name": "load-thresholds",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Start a writer on a named pipe",
+      "api": "mkfifo",
+      "regions": [
+        {
+          "name": "fifo-writer",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Let zsh pick descriptors for the audit log and the terminal",
+      "api": "exec {fd}>file",
+      "regions": [
+        {
+          "name": "open-descriptors",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Capture only the alerts while routine output passes through",
+      "api": "$( cmd 2>&1 1>&$fd )",
+      "regions": [
+        {
+          "name": "capture-alerts",
+          "role": "primary"
+        },
+        {
+          "name": "open-descriptors",
+          "role": "setup"
+        },
+        {
+          "name": "fifo-writer",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Print the bulletin and file it with tee",
+      "api": "tee",
+      "regions": [
+        {
+          "name": "bulletin",
+          "role": "primary"
+        },
+        {
+          "name": "capture-alerts",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Close the descriptors and check the pipe",
+      "api": "exec {fd}>&-",
+      "regions": [
+        {
+          "name": "close-descriptors",
+          "role": "primary"
+        },
+        {
+          "name": "open-descriptors",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

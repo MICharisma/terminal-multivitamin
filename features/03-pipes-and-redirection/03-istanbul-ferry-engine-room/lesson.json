@@ -1,0 +1,64 @@
+{
+  "title": "Istanbul ferry engine room, comparing both engines",
+  "source": "engine_watch.zsh",
+  "steps": [
+    {
+      "label": "Read the first crossing with < and read",
+      "api": "<",
+      "regions": [
+        {
+          "name": "first-line",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Feed a whole loop from a file and keep its variables",
+      "api": "done < file",
+      "regions": [
+        {
+          "name": "loop-from-file",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Open both logs on descriptors 3 and 4",
+      "api": "exec 3< file",
+      "regions": [
+        {
+          "name": "open-descriptors",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Read both engines in step",
+      "api": "read -u",
+      "regions": [
+        {
+          "name": "read-in-step",
+          "role": "primary"
+        },
+        {
+          "name": "open-descriptors",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Close the descriptors",
+      "api": "exec 3<&-",
+      "regions": [
+        {
+          "name": "close-descriptors",
+          "role": "primary"
+        },
+        {
+          "name": "open-descriptors",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

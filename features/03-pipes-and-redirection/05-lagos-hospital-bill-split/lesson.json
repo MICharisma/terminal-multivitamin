@@ -1,0 +1,64 @@
+{
+  "title": "Lagos family splitting a hospital bill",
+  "source": "split_bill.zsh",
+  "steps": [
+    {
+      "label": "Keep only the digits of a naira amount",
+      "api": "<<<",
+      "regions": [
+        {
+          "name": "digits-only",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "See the newline a here-string adds",
+      "api": "wc -c <<<",
+      "regions": [
+        {
+          "name": "newline-added",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Count messages and payments in a multi-line string",
+      "api": "grep -c <<<",
+      "regions": [
+        {
+          "name": "count-lines",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Split each message into name and note",
+      "api": "IFS=: read -r <<<",
+      "regions": [
+        {
+          "name": "split-message",
+          "role": "primary"
+        },
+        {
+          "name": "digits-only",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Read words into a zsh array",
+      "api": "read -A <<<",
+      "regions": [
+        {
+          "name": "words-to-array",
+          "role": "primary"
+        },
+        {
+          "name": "split-message",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}
