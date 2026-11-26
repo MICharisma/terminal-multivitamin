@@ -1,0 +1,48 @@
+{
+  "title": "Tunis oud recording stems",
+  "source": "squeeze_stems.zsh",
+  "steps": [
+    {
+      "label": "Measure each stem's byte size before compression",
+      "api": "xz",
+      "regions": [
+        {
+          "name": "sizes-before",
+          "role": "setup"
+        },
+        {
+          "name": "xz-each",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Compress every stem with xz and show the new sizes",
+      "api": "xz",
+      "regions": [
+        {
+          "name": "xz-each",
+          "role": "primary"
+        },
+        {
+          "name": "sizes-before",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Decompress the taksim stem when the mix needs the raw take",
+      "api": "xz -d",
+      "regions": [
+        {
+          "name": "xz-restore",
+          "role": "primary"
+        },
+        {
+          "name": "xz-each",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

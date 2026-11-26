@@ -1,0 +1,44 @@
+{
+  "title": "Bremen spare-parts checksum",
+  "source": "verify_parts.zsh",
+  "steps": [
+    {
+      "label": "Write a SHA-256 manifest for every part drawing",
+      "api": "shasum -a 256",
+      "regions": [
+        {
+          "name": "write-manifest",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Verify the intact crate against the manifest",
+      "api": "shasum -c",
+      "regions": [
+        {
+          "name": "verify-ok",
+          "role": "primary"
+        },
+        {
+          "name": "write-manifest",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Catch a quiet edit when the gasket drawing changes",
+      "api": "shasum -c",
+      "regions": [
+        {
+          "name": "detect-tamper",
+          "role": "primary"
+        },
+        {
+          "name": "write-manifest",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+== extracted course-pack.tgz
+== tree:
+labs/lab-03-heap.txt
+readings/cormen-ch2.txt
+syllabus/outline.txt

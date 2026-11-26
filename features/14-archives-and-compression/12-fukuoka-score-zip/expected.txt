@@ -1,0 +1,5 @@
+== packed repertoire.zip with ditto
+== restored scores:
+  restored/repertoire/koto/sakura-ostinato.mscz
+  restored/repertoire/kuroda-bushi.mscz
+  restored/repertoire/shamisen/sakura-a.mscz

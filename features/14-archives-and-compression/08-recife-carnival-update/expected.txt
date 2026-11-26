@@ -1,0 +1,8 @@
+== seeded carnival-desk.zip
+== updating from refresh.plan:
+  refreshed route-galo.txt
+  refreshed float-rainha.txt
+== route after update:
+bloco: Galo da Madrugada, departure 04:45 (tide)
+== float after update:
+float: rainha do mar, height 8m, LED crown

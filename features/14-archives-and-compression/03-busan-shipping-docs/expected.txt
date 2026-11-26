@@ -1,0 +1,8 @@
+== before zip:
+bl-88421 sha256: 8fb8b76cd676601ed573d4553ad0216053d48f08c7b738356463ef8b3a0894a1
+== packed shipment.zip
+== after unzip:
+bl-88421 sha256: 8fb8b76cd676601ed573d4553ad0216053d48f08c7b738356463ef8b3a0894a1
+roundtrip: match
+bills: bl-88421.txt
+certs: coo-steel.txt phyto-na.txt

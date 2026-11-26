@@ -1,0 +1,48 @@
+{
+  "title": "Busan shipping documents",
+  "source": "shipping_roundtrip.zsh",
+  "steps": [
+    {
+      "label": "Record the bill of lading checksum before packing",
+      "api": "shasum -a 256",
+      "regions": [
+        {
+          "name": "before-hash",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Zip the whole shipment folder tree",
+      "api": "zip -r",
+      "regions": [
+        {
+          "name": "zip-tree",
+          "role": "primary"
+        },
+        {
+          "name": "before-hash",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Unzip and confirm the bill of lading survived",
+      "api": "unzip",
+      "regions": [
+        {
+          "name": "unzip-back",
+          "role": "primary"
+        },
+        {
+          "name": "zip-tree",
+          "role": "setup"
+        },
+        {
+          "name": "before-hash",
+          "role": "result"
+        }
+      ]
+    }
+  ]
+}

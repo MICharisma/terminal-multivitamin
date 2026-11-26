@@ -1,0 +1,48 @@
+{
+  "title": "Cork lab datasets",
+  "source": "gzip_datasets.zsh",
+  "steps": [
+    {
+      "label": "Map each river station to its raw CSV in an associative array",
+      "api": "gzip",
+      "regions": [
+        {
+          "name": "dataset-table",
+          "role": "setup"
+        },
+        {
+          "name": "gzip-copies",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Copy each dataset and gzip the copy",
+      "api": "gzip",
+      "regions": [
+        {
+          "name": "gzip-copies",
+          "role": "primary"
+        },
+        {
+          "name": "dataset-table",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Show that raw CSVs remain beside the .gz files",
+      "api": "gzip",
+      "regions": [
+        {
+          "name": "originals-kept",
+          "role": "result"
+        },
+        {
+          "name": "gzip-copies",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

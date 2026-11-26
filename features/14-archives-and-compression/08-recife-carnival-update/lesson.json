@@ -1,0 +1,44 @@
+{
+  "title": "Recife carnival office update",
+  "source": "update_archive.zsh",
+  "steps": [
+    {
+      "label": "Seed the carnival desk zip with the first wave of files",
+      "api": "zip",
+      "regions": [
+        {
+          "name": "seed-zip",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Read the refresh plan and zip -u each changed member",
+      "api": "zip -u",
+      "regions": [
+        {
+          "name": "update-members",
+          "role": "primary"
+        },
+        {
+          "name": "seed-zip",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Print the updated route and float notes from the zip",
+      "api": "zip -u",
+      "regions": [
+        {
+          "name": "show-updated",
+          "role": "result"
+        },
+        {
+          "name": "update-members",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}
