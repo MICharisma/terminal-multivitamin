@@ -43,6 +43,10 @@ print "== first take of the night: $(ls -tr | head -n 1)"
 # focus: touch -r la-llorona_take-02.wav la-llorona_mix-01.wav
 : > la-llorona_mix-01.wav
 touch -r la-llorona_take-02.wav la-llorona_mix-01.wav
-print "== mix stamped like its source take, so it sorts beside it:"
-ls -t | head -n 4
+if [[ ! la-llorona_mix-01.wav -nt la-llorona_take-02.wav && ! la-llorona_take-02.wav -nt la-llorona_mix-01.wav ]]; then
+  print "== mix carries the same time as la-llorona_take-02.wav"
+fi
+# Files with equal times can come out of ls -t in either order, so sort the tie by name.
+print "== newest three now, by name:"
+ls -t | head -n 3 | sort
 # endregion: copy-stamp

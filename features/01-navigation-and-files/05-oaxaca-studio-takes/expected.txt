@@ -3,8 +3,8 @@ dios-nunca-muere_take-01.wav
 la-llorona_take-02.wav
 sandunga_take-02.wav
 == first take of the night: la-llorona_take-01.wav
-== mix stamped like its source take, so it sorts beside it:
+== mix carries the same time as la-llorona_take-02.wav
+== newest three now, by name:
 dios-nunca-muere_take-01.wav
 la-llorona_mix-01.wav
 la-llorona_take-02.wav
-sandunga_take-02.wav
