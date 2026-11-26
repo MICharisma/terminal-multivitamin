@@ -1,0 +1,8 @@
+== evening rehearsal:
+  stage hands up: 3
+  rehearsal ended cleanly
+== afternoon rehearsal that fails:
+  stage hands up: 3
+  rope snaps: return 1, trap must clean up
+  outer shell saw exit 1
+  no puppeteer processes left

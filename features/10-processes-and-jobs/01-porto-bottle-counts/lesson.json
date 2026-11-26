@@ -1,0 +1,40 @@
+{
+  "title": "Porto wine lodge, counting bottles in three lodges at once",
+  "source": "count_bottles.zsh",
+  "steps": [
+    {
+      "label": "Start each lodge count in the background",
+      "api": "&",
+      "regions": [
+        {
+          "name": "launch",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Wait for each pid in turn",
+      "api": "wait $pid",
+      "regions": [
+        {
+          "name": "wait-each",
+          "role": "primary"
+        },
+        {
+          "name": "launch",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Wait for every remaining child with bare wait",
+      "api": "wait",
+      "regions": [
+        {
+          "name": "wait-all",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

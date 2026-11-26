@@ -1,0 +1,10 @@
+crew started: 3 lantern posts
+== our lantern crew (children of this script):
+  lantern-crew:gate
+  lantern-crew:river
+  lantern-crew:roof
+== river post only: lantern-crew:river
+== after pkill on river:
+  still up: lantern-crew:gate
+  still up: lantern-crew:roof
+== yard clear: pkill returned and nobody matches

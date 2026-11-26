@@ -7,6 +7,7 @@
   "features": [
     "01-navigation-and-files",
     "02-globbing-and-expansion",
-    "09-permissions-and-ownership"
+    "09-permissions-and-ownership",
+    "10-processes-and-jobs"
   ]
 }

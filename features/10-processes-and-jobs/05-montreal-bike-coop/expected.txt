@@ -1,0 +1,4 @@
+== desk opened: idle, waiting for a bike
+== after USR1: now servicing a cargo bike
+== after HUP: reloading roster
+== after TERM: finishing the bolt, then quitting

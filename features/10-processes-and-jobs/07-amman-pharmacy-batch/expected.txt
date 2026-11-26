@@ -1,0 +1,8 @@
+== labelling batch has a shared process group
+  zsh ./printer.zsh counter status-counter.txt same_group=1
+  zsh ./printer.zsh fridge status-fridge.txt same_group=1
+  zsh ./printer.zsh otc status-otc.txt same_group=1
+== one TERM to the whole group:
+  counter: stopped
+  fridge: stopped
+  otc: stopped

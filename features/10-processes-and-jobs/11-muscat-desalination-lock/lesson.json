@@ -1,0 +1,58 @@
+{
+  "title": "Muscat desalination plant, finding who holds the valve lock",
+  "source": "lsof_lock.zsh",
+  "steps": [
+    {
+      "label": "Hold the lock open with a file descriptor",
+      "api": "exec {fd}<>",
+      "regions": [
+        {
+          "name": "hold-lock",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "List holders with lsof -Fpc",
+      "api": "lsof",
+      "regions": [
+        {
+          "name": "lsof-list",
+          "role": "primary"
+        },
+        {
+          "name": "hold-lock",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Get just the pids with lsof -t",
+      "api": "lsof -t",
+      "regions": [
+        {
+          "name": "lsof-t",
+          "role": "primary"
+        },
+        {
+          "name": "hold-lock",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Release and remove the lock",
+      "api": "kill -TERM",
+      "regions": [
+        {
+          "name": "release",
+          "role": "primary"
+        },
+        {
+          "name": "hold-lock",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}
