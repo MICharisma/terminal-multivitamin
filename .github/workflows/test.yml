@@ -1,0 +1,59 @@
+# Runs every example and checks the lesson metadata.
+#
+# A workflow is a list of jobs. Each job gets a fresh virtual machine (a
+# "runner"), checks out the repository, and runs its steps top to bottom. If any
+# step exits non-zero, the job fails and the pull request shows a red X.
+name: test
+
+# When to run: on every pull request, and on pushes to main (after a merge).
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  # Job 1: the whole catalog on Linux. Ubuntu runners start quickly, and they
+  # are free for public repositories.
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+      # Copy the repository's code onto the runner.
+      - uses: actions/checkout@v4
+
+      # Ubuntu does not include zsh. `file` (used by one example) is already there.
+      - name: Install zsh
+        run: sudo apt-get update && sudo apt-get install -y zsh
+
+      # The runner checks output, exit status, and cleanup for every example.
+      # Scripts marked `# requires: macos` are reported as skipped here.
+      - name: Run examples
+        run: zsh tests/run-examples.zsh
+
+      # Python is preinstalled; setup-python gives a clean environment where
+      # `pip install` is allowed.
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install jsonschema
+        run: pip install jsonschema
+
+      # Validates the JSON against schema/ and the # region markers against lesson.json.
+      - name: Check metadata
+        run: python3 tests/check_metadata.py
+
+  # Job 2: the examples that only work on macOS (chflags, xattr, and later
+  # open, pbcopy, defaults, mdfind, ...). Jobs run in parallel, so this does
+  # not slow down job 1.
+  #
+  # macOS runners take longer to start and, for private repositories, use
+  # minutes at 10x the Linux rate, so this job runs only the macOS-only scripts.
+  # To check every example against BSD tools too, drop `--macos-only` below.
+  macos:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # zsh is macOS's default shell, so there is nothing to install.
+      - name: Run macOS-only examples
+        run: zsh tests/run-examples.zsh --macos-only
