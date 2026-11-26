@@ -1,0 +1,15 @@
+== puppet and role for the poster:
+kasparik scene-2
+vecerka scene-4
+striga scene-6
+devilboy scene-7
+== split the pipe-delimited cue sheet:
+wing flutter
+honk twice
+broom sweep
+tail wag
+== cue count and handler, rejoined with |:
+3|wing flutter|handler-martin
+3|honk twice|handler-zuzana
+3|broom sweep|handler-peter
+3|tail wag|handler-martin

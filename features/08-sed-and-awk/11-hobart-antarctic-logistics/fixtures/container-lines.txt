@@ -1,0 +1,6 @@
+TAG-SKU freeze-dried meals|mawson|420
+TAG-SKU fibre cable drum|davis|680
+TAG-SKU medical oxygen|casey|240
+TAG-SKU glaciology drills|mawson|560
+TAG-SKU parka crates|macquarie|180
+TAG-SKU satellite modem|casey|510

@@ -1,0 +1,12 @@
+== in-place with a .bak sibling:
+  ledger: row-7: plucker amara, 42kg,  LKR rate 420
+row-8: plucker sunil, 38kg,  LKR rate 420
+row-9: plucker kumari, 45kg,  LKR rate 420
+  backup: row-7: plucker amara, 42kg, rupee rate 420
+row-8: plucker sunil, 38kg, rupee rate 420
+row-9: plucker kumari, 45kg, rupee rate 420
+== no backup file after GNU or BSD -i:
+  row-7:  picker amara, 42kg, rupee rate 420
+row-8:  picker sunil, 38kg, rupee rate 420
+row-9:  picker kumari, 45kg, rupee rate 420
+  backup exists: no

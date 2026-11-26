@@ -1,0 +1,10 @@
+== threads per dye lot:
+2 indigo-09
+2 gold-17
+2 crimson-22
+== metres wound per loom:
+2730 loom-02
+2420 loom-04
+1740 loom-07
+  lots tracked: 3
+  looms tracked: 3

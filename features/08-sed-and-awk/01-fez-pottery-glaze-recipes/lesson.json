@@ -1,0 +1,40 @@
+{
+  "title": "Fez pottery glaze recipes",
+  "source": "glaze_recipes.zsh",
+  "steps": [
+    {
+      "label": "Replace only the first `oz` on each line",
+      "api": "sed 's/from/to/'",
+      "regions": [
+        {
+          "name": "first-only",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Replace every `oz` with the `g` flag",
+      "api": "sed 's/from/to/g'",
+      "regions": [
+        {
+          "name": "global-flag",
+          "role": "primary"
+        },
+        {
+          "name": "first-only",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Chain two edits with `sed -e`",
+      "api": "sed -e 'cmd'",
+      "regions": [
+        {
+          "name": "several-edits",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

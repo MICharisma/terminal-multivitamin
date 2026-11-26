@@ -1,0 +1,4 @@
+block-3 channel BLUE segments 48 pwm 220
+block-7 channel RED segments 36 pwm 180
+block-9 channel BLUE segments 60 pwm 240
+block-11 channel RED segments 24 pwm 200

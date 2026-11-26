@@ -11,8 +11,8 @@ can show each one with its source highlighted step by step. This is the Terminal
 | Serving size | 1 scenario (one runnable script) |
 | Servings per feature | 13 |
 | Features planned | 18 |
-| Features built | 2 |
-| Scenarios built | 26 of 234 |
+| Features built | 5 |
+| Scenarios built | 65 of 234 |
 | Active ingredient | zsh 5.9 on macOS (the default shell since Catalina) |
 | Also tested on | Ubuntu with zsh, GNU coreutils, dash, and bash 5 |
 
@@ -92,9 +92,9 @@ their folder; the rest are planned.
 | 03 | Pipes and redirection | `\|`, `>`, `>>`, `2>&1`, `<`, here-docs, here-strings, `tee`, process substitution, `/dev/null`, multios | planned |
 | 04 | Quoting and parameter expansion | single vs double quotes, `$'...'`, `${var:-default}`, `${var#prefix}`, zsh flags `(U)` `(s:,:)` `(j:,:)`, arrays | planned |
 | 05 | Searching text with grep | `grep -E`, `-i`, `-v`, `-c`, `-o`, `-r`, `-l`, context `-A`/`-B`, `ripgrep` notes, BSD vs GNU `grep -P` | planned |
-| 06 | Finding files with find and xargs | `find` tests and actions, `-exec {} +`, `-print0 \| xargs -0`, `-newer`, `-prune`, `fd` notes | planned |
-| 07 | Sorting, counting, and columns | `sort -k -t -n -u`, `uniq -c`, `cut`, `tr`, `paste`, `join`, `comm`, `column -t`, `wc` | planned |
-| 08 | Editing streams with sed and awk | `sed` substitution and ranges, `sed -i ''` vs `sed -i`, `awk` fields, `BEGIN`/`END`, arrays, `printf` | planned |
+| 06 | [Finding files with find and xargs](features/06-find-and-xargs/) | `find` tests and actions, `-exec {} +`, `-print0 \| xargs -0`, `-newer`, `-prune`, `fd` notes | 13 of 13 built |
+| 07 | [Sorting, counting, and columns](features/07-sorting-counting-and-columns/) | `sort -k -t -n -u`, `uniq -c`, `cut`, `tr`, `paste`, `join`, `comm`, `column -t`, `wc` | 13 of 13 built |
+| 08 | [Editing streams with sed and awk](features/08-sed-and-awk/) | `sed` substitution and ranges, `sed -i ''` vs `sed -i`, `awk` fields, `BEGIN`/`END`, arrays, `printf` | 13 of 13 built |
 | 09 | Permissions and ownership | `chmod` octal and symbolic, `umask`, `chown`, `sudo`, executable bits, `ls -l` decoding, ACLs on macOS | planned |
 | 10 | Processes and jobs | `ps`, `pgrep`/`pkill`, `kill` signals, `&`, `jobs`, `fg`/`bg`, `wait`, `nohup`, `trap`, `time`, `lsof` | planned |
 | 11 | Environment and PATH | `export`, `env`, `path` array in zsh, `/etc/paths` and `path_helper`, `which`/`whence`/`type`, `.zshenv` vs `.zprofile` | planned |

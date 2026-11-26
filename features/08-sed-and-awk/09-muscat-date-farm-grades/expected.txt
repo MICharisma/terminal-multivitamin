@@ -1,0 +1,14 @@
+== packing slip for the souq:
+khalas       grade-a 24.50
+fard         grade-b 19.80
+naghal       grade-a 31.20
+khalas       grade-a 22.10
+== moisture column for export:
+khalas moisture 18.25%
+fard moisture 16.10%
+naghal moisture 14.85%
+khalas moisture 17.90%
+== who grades which variety:
+  khalas   -> nasser
+  naghal   -> amina
+  fard     -> salim

@@ -1,0 +1,6 @@
+CODE      DESCRIPTION              MODEL          PRICE
+FI-50021  head gasket              500 F          38.50
+FI-50114  clutch cable             500 L          12.90
+LA-20310  front brake shoes        Fulvia         64.00
+AR-10577  carburettor jet kit      Giulia         47.25
+AR-10642  door seal, rear left     Giulia         29.80
