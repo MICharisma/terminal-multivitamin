@@ -4,7 +4,7 @@
   "steps": [
     {
       "label": "Read each convert line from the plan",
-      "api": "while IFS= read -r",
+      "api": "while read -r",
       "regions": [
         {
           "name": "read-plan",

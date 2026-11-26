@@ -41,7 +41,7 @@ Official references: `man open`, `man pbcopy`, `man say`, `man screencapture`,
 | 01 | Family | `open` a folder and a photo; headless guard prints what would run |
 | 02 | Tea auction (business) | `pbcopy` / `pbpaste` pipeline for a lot line |
 | 03 | Diamond atelier (art) | `sips -Z` and `sips -g` over a glob of stones |
-| 04 | Radio station (music) | `textutil -convert` driven by a while-read plan |
+| 04 | Radio station (music) | `textutil -convert` driven by a `while read -r` plan |
 | 05 | Primary school (education) | `osascript -e` wrapped in a function with `emulate -L zsh` |
 | 06 | Climbing club (nonprofit) | `case` router choosing `open -a` / `open file://` |
 | 07 | Carnival bloco (music) | `say -v` over `${(kv)array}` of callouts |

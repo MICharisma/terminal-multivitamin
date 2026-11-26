@@ -4,13 +4,13 @@ Downtown Radio's evening desk in Belfast keeps cue sheets as plain text next to 
 
 **What it teaches**
 
-- `while IFS= read -r` walks a two-column convert plan
+- `while read -r src dest` splits a two-column convert plan on IFS whitespace
 - `textutil -convert rtf -output ...` writes an RTF the on-air Mac can open
 - the plan keeps source and destination names explicit, no guessing extensions
 
 **Lesson steps**
 
-1. Read each convert line from the plan (`while IFS= read -r`)
+1. Read each convert line from the plan (`while read -r`)
 2. Convert the cue sheet to RTF (`textutil -convert`)
 
 **Files**

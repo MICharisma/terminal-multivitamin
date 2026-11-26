@@ -22,7 +22,8 @@ services=( api-gateway billing-worker )
 
 # region: process-sub
 # focus: <(
-notes_file=<(
+# Consume the /dev/fd from process substitution immediately; do not store it.
+pbcopy < <(
   print "release: $release"
   print "services:"
   print -l -- $services
@@ -32,7 +33,6 @@ notes_file=<(
 
 # region: copy-notes
 # focus: pbcopy
-pbcopy < $notes_file
 print "deploy notes copied"
 # endregion: copy-notes
 

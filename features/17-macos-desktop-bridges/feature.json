@@ -24,6 +24,6 @@
     "sips -s format",
     "textutil -convert",
     "textutil -stdin",
-    "while IFS= read -r"
+    "while read -r"
   ]
 }

@@ -5,7 +5,7 @@
 # Teaches:
 #   - process substitution builds the handout path list
 #   - `mdls -raw -name kMDItemFSName` prints only the value, no key prefix
-#   - a for-loop over the substituted list keeps the ledger tidy
+#   - consume `<(...)` immediately; a stored /dev/fd goes stale
 set -o errexit -o nounset -o pipefail
 
 if [[ $OSTYPE != darwin* ]]; then
@@ -23,7 +23,8 @@ print "coral survey worksheet" > handouts/coral-worksheet.txt
 
 # region: process-list
 # focus: <(
-list=<(print -l handouts/*.txt)
+# Materialize the list right away so the fd is not reused after it closes.
+cat < <(print -l handouts/*.txt) > handout-paths.txt
 # endregion: process-list
 
 # region: mdls-raw
@@ -31,5 +32,5 @@ list=<(print -l handouts/*.txt)
 print "== handout FS names:"
 while IFS= read -r handout; do
   print "$(mdls -raw -name kMDItemFSName -- $handout)"
-done < $list | sort
+done < handout-paths.txt | sort
 # endregion: mdls-raw

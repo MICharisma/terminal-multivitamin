@@ -28,12 +28,13 @@ for stone in stones/*.png; do
   # endregion: loop-stones
   # region: resize
   # focus: sips -Z 64
+  # sips has no GNU `--`; paths come after the options.
   tile=contacts/${stone:t:r}-tile.png
-  sips -Z 64 --out $tile -- $stone >/dev/null
+  sips -Z 64 --out $tile $stone >/dev/null
   # endregion: resize
   # region: read-width
   # focus: sips -g pixelWidth
-  width=$(sips -g pixelWidth -- $tile | awk '/pixelWidth/{print $2}')
+  width=$(sips -g pixelWidth $tile | awk '/pixelWidth/{print $2}')
   print "${tile:t} width=$width"
   # endregion: read-width
 done

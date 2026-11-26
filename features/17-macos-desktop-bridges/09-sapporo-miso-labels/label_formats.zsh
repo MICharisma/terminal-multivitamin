@@ -21,14 +21,15 @@ cp -- ${0:A:h}/fixtures/aka-miso-label.png aka-miso-label.png
 
 # region: before-format
 # focus: sips -g format
-before=$(sips -g format -- aka-miso-label.png | awk '/format:/{print tolower($2)}')
+# sips has no GNU `--`; the file path follows the options.
+before=$(sips -g format aka-miso-label.png | awk '/format:/{print tolower($2)}')
 print "before: aka-miso-label.png format=$before"
 # endregion: before-format
 
 # region: convert-jpeg
 # focus: sips -s format jpeg
-sips -s format jpeg --out aka-miso-label.jpg -- aka-miso-label.png >/dev/null
-after=$(sips -g format -- aka-miso-label.jpg | awk '/format:/{print tolower($2)}')
+sips -s format jpeg --out aka-miso-label.jpg aka-miso-label.png >/dev/null
+after=$(sips -g format aka-miso-label.jpg | awk '/format:/{print tolower($2)}')
 print "after:  aka-miso-label.jpg format=$after"
 # endregion: convert-jpeg
 

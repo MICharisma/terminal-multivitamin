@@ -1,12 +1,12 @@
 # macOS system tools · 11 · Cebu school handout metadata
 
-A science teacher in Cebu checks that each handout PDF-as-text carries the right display name before AirDrop. Process substitution feeds `mdls -raw -name kMDItemFSName` paths without a temp list file.
+A science teacher in Cebu checks that each handout PDF-as-text carries the right display name before AirDrop. Process substitution builds the path list into a file immediately (`cat < <(...)`); `mdls -raw` then reads each name.
 
 **What it teaches**
 
-- process substitution builds the handout path list
+- process substitution builds the handout path list (`cat < <(...)`)
 - `mdls -raw -name kMDItemFSName` prints only the value, no key prefix
-- a for-loop over the substituted list keeps the ledger tidy
+- consume `<(...)` immediately; a stored `/dev/fd` goes stale
 
 **Lesson steps**
 
