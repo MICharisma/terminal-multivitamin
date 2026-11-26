@@ -41,7 +41,7 @@ and on macOS `man ditto`.
 | 02 | University (education) | `tar -xzf` into a tree, then list what landed |
 | 03 | Freight desk (business) | `zip -r` / `unzip` roundtrip of a folder |
 | 04 | Mural studio (art) | `for` loop `gzip` each log, then `gzip -d` one |
-| 05 | Recording room (music) | `xz` / `xz -d` with byte sizes via `wc -c` |
+| 05 | Recording room (music) | `xz` / `xz -d`, compare sizes without pinning xz version bytes |
 | 06 | Machine shop (mechanical) | `shasum -a 256` manifest and `shasum -c` verify |
 | 07 | Startup (tech) | `tar --exclude` skipping `node_modules`-like dirs |
 | 08 | Carnival office (business) | `while read` plan, `zip` then `zip -u` |
