@@ -1,0 +1,9 @@
+== images for this release (no rc builds, maps, build or cache copies):
+firmware/battery-bms/fw-v1.10.0-rev-c.bin
+firmware/ebike-ctrl/fw-v2.4.1-rev-a.bin
+firmware/ebike-ctrl/fw-v2.4.1-rev-b.bin
+== MANIFEST.txt, crc, bytes, path:
+2727657236 26 firmware/battery-bms/fw-v1.10.0-rev-c.bin
+2121717645 23 firmware/ebike-ctrl/fw-v2.4.1-rev-a.bin
+2121717645 23 firmware/ebike-ctrl/fw-v2.4.1-rev-b.bin
+byte-identical, one image can serve both boards: fw-v2.4.1-rev-a.bin fw-v2.4.1-rev-b.bin

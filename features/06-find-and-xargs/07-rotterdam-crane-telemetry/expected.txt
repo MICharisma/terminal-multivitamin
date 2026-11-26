@@ -1,0 +1,12 @@
+== the three largest dumps, bytes, date, path:
+61440 2026-11-20 cranes/sts-02/plc-dump-2026-11-20.bin
+20480 2026-11-20 cranes/sts-01/plc-dump-2026-11-20.bin
+18432 2026-11-19 cranes/sts-01/plc-dump-2026-11-19.bin
+== written on 20 November, when sts-02 tripped its hoist brake:
+20480 2026-11-20 cranes/sts-01/plc-dump-2026-11-20.bin
+61440 2026-11-20 cranes/sts-02/plc-dump-2026-11-20.bin
+12288 2026-11-20 cranes/sts-03/plc-dump-2026-11-20.bin
+== KiB per crane for the maintenance planner:
+  sts-01   38 KiB
+  sts-02   69 KiB
+  sts-03   12 KiB

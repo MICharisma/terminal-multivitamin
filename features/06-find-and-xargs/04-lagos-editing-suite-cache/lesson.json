@@ -1,0 +1,68 @@
+{
+  "title": "Lagos film editing suite, clearing the render cache",
+  "source": "clear_cache.zsh",
+  "steps": [
+    {
+      "label": "List everything over 300 KiB, keepers included",
+      "api": "find -size",
+      "regions": [
+        {
+          "name": "big-files",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Dry-run the cache cleanup with -print",
+      "api": "find -empty",
+      "regions": [
+        {
+          "name": "dry-run",
+          "role": "primary"
+        },
+        {
+          "name": "big-files",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Swap -print for -delete",
+      "api": "find -delete",
+      "regions": [
+        {
+          "name": "delete",
+          "role": "primary"
+        },
+        {
+          "name": "dry-run",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Remove nested empty folders in one depth-first pass",
+      "api": "find -type d -empty -delete",
+      "regions": [
+        {
+          "name": "empty-folders",
+          "role": "primary"
+        },
+        {
+          "name": "delete",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "See -delete placed first wipe a whole copy",
+      "api": "find -delete",
+      "regions": [
+        {
+          "name": "delete-first",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

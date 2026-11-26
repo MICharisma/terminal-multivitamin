@@ -1,0 +1,68 @@
+{
+  "title": "Shenzhen electronics factory, firmware release manifest",
+  "source": "release_manifest.zsh",
+  "steps": [
+    {
+      "label": "Pick the regex flag for BSD or GNU find",
+      "api": "find -E / -regextype posix-extended",
+      "regions": [
+        {
+          "name": "regex-flavor",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Match release images by full path with -regex",
+      "api": "find -regex",
+      "regions": [
+        {
+          "name": "find-images",
+          "role": "primary"
+        },
+        {
+          "name": "regex-flavor",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Prune build and cache copies and skip the last release",
+      "api": "find -prune -o -print",
+      "regions": [
+        {
+          "name": "find-images",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Write the manifest with xargs -0 cksum",
+      "api": "find -print0 | xargs -0",
+      "regions": [
+        {
+          "name": "manifest",
+          "role": "primary"
+        },
+        {
+          "name": "find-images",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Group the manifest by CRC to spot identical images",
+      "api": "typeset -A",
+      "regions": [
+        {
+          "name": "identical-images",
+          "role": "primary"
+        },
+        {
+          "name": "manifest",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}
