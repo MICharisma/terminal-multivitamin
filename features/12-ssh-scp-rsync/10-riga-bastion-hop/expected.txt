@@ -1,0 +1,5 @@
+== opendata via bastion:
+User curator
+HostName data.rigatech.gov.lv
+IdentityFile opendata
+ProxyJump bastion

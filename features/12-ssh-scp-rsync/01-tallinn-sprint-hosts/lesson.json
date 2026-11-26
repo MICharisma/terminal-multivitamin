@@ -1,0 +1,68 @@
+{
+  "title": "Tallinn sprint staging hosts",
+  "source": "staging_hosts.zsh",
+  "steps": [
+    {
+      "label": "Keep the sprint Host aliases in an associative array",
+      "api": "Host",
+      "regions": [
+        {
+          "name": "host-table",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Write HostName, User, and IdentityFile for each alias",
+      "api": "HostName",
+      "regions": [
+        {
+          "name": "write-config",
+          "role": "primary"
+        },
+        {
+          "name": "host-table",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Resolve the EU staging host without connecting",
+      "api": "ssh -G",
+      "regions": [
+        {
+          "name": "resolve-eu",
+          "role": "primary"
+        },
+        {
+          "name": "write-config",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Confirm the US alias picks the matching IdentityFile",
+      "api": "IdentityFile",
+      "regions": [
+        {
+          "name": "resolve-us",
+          "role": "primary"
+        },
+        {
+          "name": "write-config",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Show the deploy User from the resolved US block",
+      "api": "User",
+      "regions": [
+        {
+          "name": "resolve-us",
+          "role": "result"
+        }
+      ]
+    }
+  ]
+}

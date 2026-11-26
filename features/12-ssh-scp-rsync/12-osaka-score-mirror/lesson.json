@@ -1,0 +1,44 @@
+{
+  "title": "Osaka score library mirror",
+  "source": "mirror_scores.zsh",
+  "steps": [
+    {
+      "label": "List the mirror while it still holds a withdrawn draft",
+      "api": "rsync --delete",
+      "regions": [
+        {
+          "name": "before-mirror",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "rsync --delete so the mirror matches the current library",
+      "api": "rsync --delete",
+      "regions": [
+        {
+          "name": "delete-stale",
+          "role": "primary"
+        },
+        {
+          "name": "before-mirror",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Confirm old-draft.ly is gone and the current scores remain",
+      "api": "rsync --delete",
+      "regions": [
+        {
+          "name": "after-mirror",
+          "role": "result"
+        },
+        {
+          "name": "delete-stale",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

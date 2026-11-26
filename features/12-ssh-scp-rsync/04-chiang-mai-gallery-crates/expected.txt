@@ -1,0 +1,8 @@
+== loading dock before:
+== loading dock after:
+crate-lanterns
+crate-silk
+== crate-lanterns:
+packing-list.txt
+== crate-silk:
+inventory.txt

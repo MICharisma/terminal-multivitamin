@@ -1,0 +1,44 @@
+{
+  "title": "Riga open-data bastion hop",
+  "source": "bastion_hop.zsh",
+  "steps": [
+    {
+      "label": "Hold bastion and opendata rows in a table",
+      "api": "ProxyJump",
+      "regions": [
+        {
+          "name": "host-rows",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Write Host blocks and ProxyJump for the inner host",
+      "api": "ProxyJump",
+      "regions": [
+        {
+          "name": "write-hosts",
+          "role": "primary"
+        },
+        {
+          "name": "host-rows",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Resolve opendata and show the ProxyJump bastion",
+      "api": "ProxyJump",
+      "regions": [
+        {
+          "name": "resolve-jump",
+          "role": "primary"
+        },
+        {
+          "name": "write-hosts",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

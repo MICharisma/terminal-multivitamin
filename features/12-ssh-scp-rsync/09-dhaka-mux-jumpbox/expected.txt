@@ -1,0 +1,4 @@
+== paylab mux:
+ControlMaster auto
+ControlPath mux/9178575e63b04750f4738a693065c0289a523384
+ControlPersist 600

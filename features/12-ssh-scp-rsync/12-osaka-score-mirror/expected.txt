@@ -1,0 +1,9 @@
+== mirror before:
+beethoven-7.ly
+old-draft.ly
+rsync: sending incremental file list
+rsync: deleting old-draft.ly
+rsync: ravel-bolero.ly
+== mirror after:
+beethoven-7.ly
+ravel-bolero.ly

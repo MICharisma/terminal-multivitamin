@@ -1,0 +1,6 @@
+== washi-supplier:
+HostName supplier.washi.kyoto.example
+User printer
+IdentityFile washi-supplier
+UseKeychain true
+AddKeysToAgent true
