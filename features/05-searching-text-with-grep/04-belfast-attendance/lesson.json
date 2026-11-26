@@ -1,0 +1,50 @@
+{
+  "title": "Belfast primary school, reading today's attendance",
+  "source": "attendance.zsh",
+  "steps": [
+    {
+      "label": "Invert the match to drop present pupils",
+      "api": "grep -v",
+      "regions": [
+        {
+          "name": "invert",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Stack -v filters to drop the header too",
+      "api": "grep -v | grep -v",
+      "regions": [
+        {
+          "name": "drop-header",
+          "role": "primary"
+        },
+        {
+          "name": "invert",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Count absences and lates",
+      "api": "grep -c",
+      "regions": [
+        {
+          "name": "count-absent",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Count the inverted set",
+      "api": "grep -vc",
+      "regions": [
+        {
+          "name": "count-inverted",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

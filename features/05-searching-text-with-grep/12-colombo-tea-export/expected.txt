@@ -1,0 +1,16 @@
+== grade BOP as a whole line (not BOPF):
+1 lots
+== orthodox leaf grades for the London buyer:
+lot-88 Nuwara Eliya BOP 1.2t
+lot-90 Dimbula FBOP 1.5t
+lot-91 Uva BOP 2.0t
+lot-93 Nuwara Eliya OP 0.9t
+lot-94 Dimbula BOP 1.1t
+== catalogue without Dust (broken leaf stays):
+lot-88 Nuwara Eliya BOP 1.2t
+lot-89 Uva BOPF 0.8t
+lot-90 Dimbula FBOP 1.5t
+lot-91 Uva BOP 2.0t
+lot-93 Nuwara Eliya OP 0.9t
+lot-94 Dimbula BOP 1.1t
+no Silver tips today; status 1 handled with if grep -q

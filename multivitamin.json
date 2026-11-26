@@ -8,6 +8,7 @@
     "01-navigation-and-files",
     "02-globbing-and-expansion",
     "03-pipes-and-redirection",
-    "04-quoting-and-parameter-expansion"
+    "04-quoting-and-parameter-expansion",
+    "05-searching-text-with-grep"
   ]
 }

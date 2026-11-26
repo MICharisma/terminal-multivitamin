@@ -1,0 +1,12 @@
+== everyone who is not simply present:
+name,status,note
+Caoimhe Dunn,absent,dentist
+Niamh Kerr,absent,cold
+Siobhan Quinn,late,bus
+== not present (header and present dropped):
+Caoimhe Dunn,absent,dentist
+Niamh Kerr,absent,cold
+Siobhan Quinn,late,bus
+absent: 2, late: 1
+rows that are not present (includes header): 4
+present pupils: 4
