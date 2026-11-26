@@ -6,7 +6,7 @@ Irrigation gates on canals outside Phnom Penh log depth and opening every hour. 
 
 - `grep -P` uses Perl-compatible regex (lookbehind, `\d`); GNU grep has it, BSD/macOS grep does not
 - detect with `grep -P . <<<x`; fall back to `grep -E` when `-P` is missing
-- `ripgrep` (`rg`) is a faster recursive search with `--pcre2` for Perl regex; same idea, different tool
+- `ripgrep` (`rg`) is a faster recursive search with `--pcre2`; the tip prints either way so CI stays deterministic
 - this slot is bash so the `<<<` here-string and the arrays stay familiar on macOS's bash 3.2
 
 **Lesson steps**

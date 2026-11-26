@@ -4,7 +4,7 @@
 # Teaches:
 #   - `grep -P` uses Perl-compatible regex (lookbehind, `\d`); GNU grep has it, BSD/macOS grep does not
 #   - detect with `grep -P . <<<x`; fall back to `grep -E` when `-P` is missing
-#   - `ripgrep` (`rg`) is a faster recursive search with `--pcre2` for Perl regex; same idea, different tool
+#   - `ripgrep` (`rg`) is a faster recursive search with `--pcre2`; the tip prints either way so CI stays deterministic
 #   - this slot is bash so the `<<<` here-string and the arrays stay familiar on macOS's bash 3.2
 set -o errexit -o nounset -o pipefail
 
@@ -54,10 +54,12 @@ fi
 
 # region: ripgrep-note
 # focus: command -v rg
+# Output stays the same whether or not rg is installed, so CI and laptops agree.
+warns=$(grep -c 'WARN low' levels.log)
 if command -v rg >/dev/null 2>&1; then
-  echo "ripgrep is on PATH; equivalent search: rg -N 'WARN low' levels.log -> $(rg -N 'WARN low' levels.log | wc -l | tr -d ' ') hits"
-else
-  echo "ripgrep (rg) is not installed; brew install ripgrep / apt install ripgrep"
+  rg_hits=$(rg -N 'WARN low' levels.log | wc -l | tr -d ' ')
+  [[ "$rg_hits" == "$warns" ]] || { echo "rg and grep -c disagree"; exit 1; }
 fi
-echo "WARN lines by plain grep: $(grep -c 'WARN low' levels.log)"
+echo "WARN lines by plain grep: $warns"
+echo "ripgrep tip: brew install ripgrep / apt install ripgrep (same count via rg -N when present)"
 # endregion: ripgrep-note

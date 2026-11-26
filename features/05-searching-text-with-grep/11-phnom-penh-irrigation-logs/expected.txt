@@ -8,5 +8,5 @@ depth 1.10m
 depth 1.05m
 == gate openings as bare percentages:
 40 55 30 70 45 35 
-ripgrep is on PATH; equivalent search: rg -N 'WARN low' levels.log -> 2 hits
 WARN lines by plain grep: 2
+ripgrep tip: brew install ripgrep / apt install ripgrep (same count via rg -N when present)
