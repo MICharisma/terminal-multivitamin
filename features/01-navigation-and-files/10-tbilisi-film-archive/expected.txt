@@ -1,0 +1,11 @@
+== mirror/scans holds the films themselves, not a nested scans/ folder:
+giorgobistve-1966
+pirosmani-1969
+repentance-1984
+diff -r: mirror matches the scans
+cp -p kept the scan time on frames.dpx
+== films by size on disk, largest first:
+  giorgobistve-1966
+  pirosmani-1969
+  repentance-1984
+diff -r: mirror is stale after the re-grade of repentance-1984

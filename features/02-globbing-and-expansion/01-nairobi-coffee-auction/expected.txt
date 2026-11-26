@@ -1,0 +1,20 @@
+== every AA lot, for the Hamburg roaster:
+lot-0412_kiambu_AA.csv
+lot-0418_nyeri_AA.csv
+== the 04xx lots from this week's catalogue:
+lot-0412_kiambu_AA.csv
+lot-0413_kiambu_AB.csv
+lot-0418_nyeri_AA.csv
+lot-0419_nyeri_PB.csv
+lot-0425_kirinyaga_C.csv
+lot-0426_kirinyaga_TT.csv
+== top screen grades (AA, AB, PB) for the Seoul buyer:
+lot-0412_kiambu_AA.csv
+lot-0413_kiambu_AB.csv
+lot-0418_nyeri_AA.csv
+lot-0419_nyeri_PB.csv
+lot-1102_embu_AB.csv
+== lower grades in the 04xx series:
+lot-0425_kirinyaga_C.csv
+lot-0426_kirinyaga_TT.csv
+== quoted, the shell leaves it alone: *_AA.csv

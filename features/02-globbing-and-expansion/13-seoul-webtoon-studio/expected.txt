@@ -1,0 +1,19 @@
+zmv refused: ep3_panel2 and ep3_panel02 would both become ep003-panel02.png
+nothing moved: 7 files still under their export names
+== dry run:
+mv -- EP12_Panel1.PNG ep012-panel01.png
+mv -- EP12_Panel2.PNG ep012-panel02.png
+mv -- ep12_panel3.png ep012-panel03.png
+mv -- ep3_panel1.png ep003-panel01.png
+mv -- ep3_panel10.png ep003-panel10.png
+mv -- ep3_panel2.png ep003-panel02.png
+== renamed:
+ep003-panel01.png
+ep003-panel02.png
+ep003-panel10.png
+ep012-panel01.png
+ep012-panel02.png
+ep012-panel03.png
+== episode folders for the upload to the platform:
+ep003: panel01.png panel02.png panel10.png
+ep012: panel01.png panel02.png panel03.png

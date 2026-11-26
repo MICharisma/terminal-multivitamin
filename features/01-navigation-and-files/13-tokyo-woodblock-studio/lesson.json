@@ -1,0 +1,68 @@
+{
+  "title": "Tokyo woodblock print studio, tidying before a client call",
+  "source": "hide_proofs.zsh",
+  "steps": [
+    {
+      "label": "Hide the proofs folder from Finder",
+      "api": "chflags hidden",
+      "regions": [
+        {
+          "name": "hide-folder",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Terminal still lists and enters the hidden folder",
+      "api": "ls",
+      "regions": [
+        {
+          "name": "terminal-still-sees",
+          "role": "primary"
+        },
+        {
+          "name": "hide-folder",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Record the printer as an extended attribute",
+      "api": "xattr -w",
+      "regions": [
+        {
+          "name": "tag-print",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Copy with and without extended attributes",
+      "api": "cp -X",
+      "regions": [
+        {
+          "name": "copy-attributes",
+          "role": "primary"
+        },
+        {
+          "name": "tag-print",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Remove the attribute and unhide the folder",
+      "api": "chflags nohidden",
+      "regions": [
+        {
+          "name": "unhide",
+          "role": "primary"
+        },
+        {
+          "name": "hide-folder",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

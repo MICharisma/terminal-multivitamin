@@ -1,0 +1,54 @@
+{
+  "title": "Helsinki music academy practice-room cleanup",
+  "source": "clear_recordings.zsh",
+  "steps": [
+    {
+      "label": "Remove a file whose name starts with a dash",
+      "api": "rm --",
+      "regions": [
+        {
+          "name": "dash-filename",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Sweep away only the empty month folders",
+      "api": "rmdir",
+      "regions": [
+        {
+          "name": "sweep-empty",
+          "role": "primary"
+        },
+        {
+          "name": "dash-filename",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Refuse to rm -r an empty path",
+      "api": "${var:?}",
+      "regions": [
+        {
+          "name": "guard-variable",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Remove quietly whether or not the file exists",
+      "api": "rm -f",
+      "regions": [
+        {
+          "name": "quiet-force",
+          "role": "primary"
+        },
+        {
+          "name": "guard-variable",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

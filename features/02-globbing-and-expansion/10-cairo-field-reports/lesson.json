@@ -1,0 +1,54 @@
+{
+  "title": "Cairo University Egyptology field season, daily reports",
+  "source": "day_reports.zsh",
+  "steps": [
+    {
+      "label": "See the default no-match error stop a command",
+      "api": "setopt nomatch",
+      "regions": [
+        {
+          "name": "nomatch-error",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Turn on null_glob for one function",
+      "api": "setopt null_glob",
+      "regions": [
+        {
+          "name": "null-glob-function",
+          "role": "primary"
+        },
+        {
+          "name": "count-before-loop",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Check the count before looping",
+      "api": "$#array",
+      "regions": [
+        {
+          "name": "count-before-loop",
+          "role": "primary"
+        },
+        {
+          "name": "null-glob-function",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Use (N) on a single glob instead",
+      "api": "(N)",
+      "regions": [
+        {
+          "name": "per-glob-n",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

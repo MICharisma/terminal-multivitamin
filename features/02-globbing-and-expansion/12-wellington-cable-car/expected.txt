@@ -1,0 +1,8 @@
+URGENT  car-1_emergency-2026-11-17: emergency stop, check the Kelburn end
+routine car-1_service-2026-11-03
+recent  car-1_service-2026-11-24
+routine car-2_service-2026-11-03
+recent  car-2_service-2026-11-24
+unknown car in car-3_service-2026-11-10
+emergency logs this month: 1
+without a guard the loop sees: logs/*.pdf

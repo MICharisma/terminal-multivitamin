@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/MICharisma/terminal-multivitamin/schema/feature.schema.json",
+  "title": "feature.json",
+  "description": "Per-feature metadata: the feature id, its title, and the APIs (here: commands, flags, and shell idioms) its examples cover.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["feature", "title", "covers"],
+  "properties": {
+    "feature": {
+      "description": "Feature id: the folder name without its NN- prefix.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "covers": {
+      "description": "Every api named by a lesson step in this feature, sorted.",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

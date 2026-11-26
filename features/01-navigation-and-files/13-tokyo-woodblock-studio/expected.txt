@@ -1,0 +1,10 @@
+proofs in Finder: hidden
+final in Finder:  visible
+== ls still lists both:
+final
+proofs
+cd into the hidden folder: ok
+printer: Watanabe Keiko
+cp keeps the printer:    Watanabe Keiko
+cp -X drops the printer: (none)
+after the call, proofs in Finder: visible

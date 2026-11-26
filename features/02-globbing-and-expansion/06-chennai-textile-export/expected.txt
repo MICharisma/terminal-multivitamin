@@ -1,0 +1,9 @@
+== changed in the last 7 days (for Monday's shipping meeting):
+po-4462_osaka_handloom-sarees.pdf
+po-4468_rotterdam_kalamkari-cushions.pdf
+po-4471_hamburg_organic-cotton-tees.pdf
+== changed in the last 24 hours:
+po-4471_hamburg_organic-cotton-tees.pdf
+== untouched for over 30 days (ask the Lyon buyer):
+po-4391_lyon_silk-stoles.pdf
+== most recent order: po-4471_hamburg_organic-cotton-tees.pdf

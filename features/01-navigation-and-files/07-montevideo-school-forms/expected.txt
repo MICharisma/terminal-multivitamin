@@ -1,0 +1,11 @@
+autorizacion_silva.pdf (application/pdf) -> permisos/
+foto-carne_martina.pdf (image/png) -> fotos/
+imagen-whatsapp-2026-11-20 (image/png) -> fotos/
+nota.doc (text/plain) -> notas/
+permiso-paseo-colonia_rodriguez.jpg (application/pdf) -> permisos/
+== office folders:
+bandeja/
+fotos/
+notas/
+permisos/
+== bandeja is empty: yes

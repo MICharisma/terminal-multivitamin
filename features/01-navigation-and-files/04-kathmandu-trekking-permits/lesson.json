@@ -1,0 +1,56 @@
+{
+  "title": "Kathmandu trekking permit desk",
+  "source": "permit_desk.zsh",
+  "steps": [
+    {
+      "label": "Read the CSV header",
+      "api": "head -n",
+      "regions": [
+        {
+          "name": "read-header",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Count permits without the header, as a plain number",
+      "api": "tail -n +N",
+      "regions": [
+        {
+          "name": "count-trekkers",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Show the latest permits at the bottom of the log",
+      "api": "tail -n",
+      "regions": [
+        {
+          "name": "latest-permits",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Cut rows 5 to 7 out of the middle",
+      "api": "head | tail",
+      "regions": [
+        {
+          "name": "middle-window",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Number the rows for a phone call",
+      "api": "cat -n",
+      "regions": [
+        {
+          "name": "number-lines",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

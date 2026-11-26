@@ -1,0 +1,54 @@
+{
+  "title": "Montevideo school office sorting parents' attachments",
+  "source": "sort_inbox.zsh",
+  "steps": [
+    {
+      "label": "Read each attachment's real type from its bytes",
+      "api": "file --mime-type",
+      "regions": [
+        {
+          "name": "read-mime",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Route each type to a folder",
+      "api": "case",
+      "regions": [
+        {
+          "name": "route-by-type",
+          "role": "primary"
+        },
+        {
+          "name": "read-mime",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Create the folder on demand and move the file in",
+      "api": "mv",
+      "regions": [
+        {
+          "name": "move-into-folder",
+          "role": "primary"
+        },
+        {
+          "name": "route-by-type",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Confirm the inbox is empty",
+      "api": "ls -A",
+      "regions": [
+        {
+          "name": "check-folders",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

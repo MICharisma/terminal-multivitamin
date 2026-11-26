@@ -1,0 +1,58 @@
+{
+  "title": "Accra outdooring photos from a cousin's phone",
+  "source": "rename_photos.zsh",
+  "steps": [
+    {
+      "label": "Keep timestamped safety copies before renaming",
+      "api": "cp -p",
+      "regions": [
+        {
+          "name": "keep-originals",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Read the rename plan line by line",
+      "api": "while IFS= read -r",
+      "regions": [
+        {
+          "name": "read-plan",
+          "role": "primary"
+        },
+        {
+          "name": "guarded-move",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Move without overwriting, and say why a photo stayed",
+      "api": "mv -n",
+      "regions": [
+        {
+          "name": "guarded-move",
+          "role": "primary"
+        },
+        {
+          "name": "read-plan",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Check the album folder",
+      "api": "ls -1",
+      "regions": [
+        {
+          "name": "show-album",
+          "role": "primary"
+        },
+        {
+          "name": "guarded-move",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

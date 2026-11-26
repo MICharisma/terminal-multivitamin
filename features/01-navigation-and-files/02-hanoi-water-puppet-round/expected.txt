@@ -1,0 +1,9 @@
+puppets: Chú Tễu: repaint the grin, re-tie the left arm string
+stack: sua-chua <- san-khau
+music:   cue 7: đàn bầu enters as the dragon surfaces
+lights:  lamp 3 over the pagoda is flickering
+stack: den <- cue <- sua-chua <- san-khau
+back in cue
+back in san-khau, stack depth 0
+cd - returned to san-khau
+cd - again: cue

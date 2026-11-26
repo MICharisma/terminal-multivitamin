@@ -1,0 +1,58 @@
+{
+  "title": "Reykjavík geothermal turbine inspection",
+  "source": "turbine_round.zsh",
+  "steps": [
+    {
+      "label": "Jump to a plant from anywhere with cdpath",
+      "api": "cdpath",
+      "regions": [
+        {
+          "name": "set-cdpath",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Walk down to this month's vibration readings",
+      "api": "cd",
+      "regions": [
+        {
+          "name": "walk-down",
+          "role": "primary"
+        },
+        {
+          "name": "set-cdpath",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Swap turbine-2 for turbine-3 in the current path",
+      "api": "cd old new",
+      "regions": [
+        {
+          "name": "swap-turbine",
+          "role": "primary"
+        },
+        {
+          "name": "walk-down",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Swap the plant and keep the rest of the path",
+      "api": "cd old new",
+      "regions": [
+        {
+          "name": "swap-plant",
+          "role": "primary"
+        },
+        {
+          "name": "swap-turbine",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

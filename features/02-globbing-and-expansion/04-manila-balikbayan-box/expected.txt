@@ -1,0 +1,11 @@
+folders                    ate-liza_milan-2026-12 kuya-jun_toronto-2026-10 tita-marites_dubai-2026-11
+files                      padala-tracking.txt plano-pasko.txt
+symlinks                   pinakabago tracking
+folders-or-links-to-them   ate-liza_milan-2026-12 kuya-jun_toronto-2026-10 pinakabago tita-marites_dubai-2026-11
+== relatives who have not sent a list yet (empty folders):
+ate-liza_milan-2026-12
+== spreadsheets from Tito Ramon: 0
+== lists received:
+kuya-jun_toronto-2026-10: maple syrup x4, winter jacket for Lola, Spam x10
+pinakabago: corned beef x12, Toblerone x6, rubber shoes for Paolo (size 8)
+tita-marites_dubai-2026-11: corned beef x12, Toblerone x6, rubber shoes for Paolo (size 8)

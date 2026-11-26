@@ -1,0 +1,12 @@
+safety copies: 4
+renamed: IMG_4410.JPG -> 2026-11-08_outdooring_01.jpg
+renamed: IMG_4411.JPG -> 2026-11-08_outdooring_02.jpg
+kept:    2026-11-08_outdooring_03.jpg already exists, IMG_4412.JPG left as it is
+missing: IMG_4413.JPG (not on this phone)
+renamed: IMG_4415.JPG -> 2026-11-08_outdooring_05.jpg
+== album folder now:
+2026-11-08_outdooring_01.jpg
+2026-11-08_outdooring_02.jpg
+2026-11-08_outdooring_03.jpg
+2026-11-08_outdooring_05.jpg
+IMG_4412.JPG

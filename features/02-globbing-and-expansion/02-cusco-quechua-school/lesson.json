@@ -1,0 +1,50 @@
+{
+  "title": "Cusco Quechua language school course folders",
+  "source": "unit_folders.zsh",
+  "steps": [
+    {
+      "label": "Create six units of three folders with nested braces",
+      "api": "{01..06}",
+      "regions": [
+        {
+          "name": "build-units",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Generate every class slot from two word lists",
+      "api": "{a,b}",
+      "regions": [
+        {
+          "name": "schedule-words",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Step a sequence by three",
+      "api": "{01..12..3}",
+      "regions": [
+        {
+          "name": "stepped-sequence",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Braces invent names; a glob only finds existing ones",
+      "api": "(N)",
+      "regions": [
+        {
+          "name": "braces-versus-globs",
+          "role": "primary"
+        },
+        {
+          "name": "build-units",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

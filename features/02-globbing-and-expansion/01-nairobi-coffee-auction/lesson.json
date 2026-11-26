@@ -1,0 +1,60 @@
+{
+  "title": "Nairobi Coffee Exchange auction catalogue",
+  "source": "auction_lots.zsh",
+  "steps": [
+    {
+      "label": "Match every AA lot with *",
+      "api": "*",
+      "regions": [
+        {
+          "name": "one-grade",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Match a fixed-width lot number with ?",
+      "api": "?",
+      "regions": [
+        {
+          "name": "fixed-width",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Match top screen grades with two character sets",
+      "api": "[...]",
+      "regions": [
+        {
+          "name": "character-sets",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Exclude grades with a negated set",
+      "api": "[^...]",
+      "regions": [
+        {
+          "name": "negated-set",
+          "role": "primary"
+        },
+        {
+          "name": "character-sets",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Quote a pattern to pass it literally",
+      "api": "'quoted'",
+      "regions": [
+        {
+          "name": "quoted-pattern",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

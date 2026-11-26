@@ -1,0 +1,64 @@
+{
+  "title": "Santiago mine maintenance office, haul truck telemetry",
+  "source": "fleet_logs.zsh",
+  "steps": [
+    {
+      "label": "See how a plain glob sorts numbers as text",
+      "api": "*",
+      "regions": [
+        {
+          "name": "lexical-order",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Sort numerically with (n)",
+      "api": "(n)",
+      "regions": [
+        {
+          "name": "numeric-order",
+          "role": "primary"
+        },
+        {
+          "name": "lexical-order",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Match a range of truck numbers",
+      "api": "<n-m>",
+      "regions": [
+        {
+          "name": "shift-range",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Match the same range in any case",
+      "api": "(#i)",
+      "regions": [
+        {
+          "name": "any-case",
+          "role": "primary"
+        },
+        {
+          "name": "shift-range",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Leave the top of the range open",
+      "api": "<n->",
+      "regions": [
+        {
+          "name": "open-range",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

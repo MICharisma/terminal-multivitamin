@@ -1,0 +1,72 @@
+{
+  "title": "Ljubljana beekeeping cooperative label photos",
+  "source": "deliver_finals.zsh",
+  "steps": [
+    {
+      "label": "Turn on extended_glob only inside a function",
+      "api": "setopt extended_glob",
+      "regions": [
+        {
+          "name": "scoped-option",
+          "role": "primary"
+        },
+        {
+          "name": "exclude-drafts",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Keep JPEG and PNG finals, excluding drafts",
+      "api": "pattern~exclusion",
+      "regions": [
+        {
+          "name": "exclude-drafts",
+          "role": "primary"
+        },
+        {
+          "name": "scoped-option",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Count everything that is not a camera RAW",
+      "api": "^pattern",
+      "regions": [
+        {
+          "name": "negate-raw",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Deliver the finals to the printer",
+      "api": "cp",
+      "regions": [
+        {
+          "name": "deliver",
+          "role": "primary"
+        },
+        {
+          "name": "exclude-drafts",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Pick two honeys with alternation",
+      "api": "(a|b)",
+      "regions": [
+        {
+          "name": "alternation",
+          "role": "primary"
+        },
+        {
+          "name": "deliver",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Lisbon pastelaria Christmas orders",
+  "source": "christmas_orders.zsh",
+  "steps": [
+    {
+      "label": "Build the whole order tree in one call",
+      "api": "mkdir -p",
+      "regions": [
+        {
+          "name": "build-tree",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Walk into a product folder and leave order slips",
+      "api": "cd",
+      "regions": [
+        {
+          "name": "enter-counter",
+          "role": "primary"
+        },
+        {
+          "name": "build-tree",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "List folders with ls -F and slips one per line",
+      "api": "ls -F",
+      "regions": [
+        {
+          "name": "list-orders",
+          "role": "primary"
+        },
+        {
+          "name": "enter-counter",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Rerun mkdir -p safely; plain mkdir refuses an existing folder",
+      "api": "mkdir",
+      "regions": [
+        {
+          "name": "rerun-safely",
+          "role": "primary"
+        },
+        {
+          "name": "build-tree",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

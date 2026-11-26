@@ -1,0 +1,11 @@
+{
+  "name": "terminal",
+  "title": "Terminal multivitamin",
+  "language": "zsh",
+  "grammar": "shellscript",
+  "repo": "MICharisma/terminal-multivitamin",
+  "features": [
+    "01-navigation-and-files",
+    "02-globbing-and-expansion"
+  ]
+}

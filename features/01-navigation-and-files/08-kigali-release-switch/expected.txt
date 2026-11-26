@@ -1,0 +1,9 @@
+current -> releases/2026-11-24
+serving: fare-api 2026-11-24, base fare 300 RWF, 150 RWF per km
+== after ln -sf (no -n):
+current -> releases/2026-11-24
+stray link inside the old release: 1
+== after ln -sfn:
+current -> releases/2026-11-26
+serving: fare-api 2026-11-26, base fare 350 RWF, 160 RWF per km
+== rolled back; current is still a symlink -> releases/2026-11-24

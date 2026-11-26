@@ -1,0 +1,7 @@
+from / via cdpath: plants/hellisheidi
+walked down: plants/hellisheidi/turbine-2/2026-11/vibration
+  bearing 2: 4.1 mm/s, inside limit
+swapped turbine: plants/hellisheidi/turbine-3/2026-11/vibration
+  bearing 2: 7.8 mm/s, schedule a stop
+swapped plant: plants/nesjavellir/turbine-3/2026-11/vibration
+  bearing 2: 3.6 mm/s, inside limit

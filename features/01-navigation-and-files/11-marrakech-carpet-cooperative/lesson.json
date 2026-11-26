@@ -1,0 +1,54 @@
+{
+  "title": "Marrakech carpet cooperative named folders",
+  "source": "named_dirs.zsh",
+  "steps": [
+    {
+      "label": "Name two deep folders",
+      "api": "hash -d",
+      "regions": [
+        {
+          "name": "name-folders",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "cd by name and print where you are",
+      "api": "cd ~name",
+      "regions": [
+        {
+          "name": "jump-by-name",
+          "role": "primary"
+        },
+        {
+          "name": "name-folders",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Abbreviate paths with the names",
+      "api": "${(D)path}",
+      "regions": [
+        {
+          "name": "abbreviate-paths",
+          "role": "primary"
+        },
+        {
+          "name": "name-folders",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Use the names inside ordinary commands",
+      "api": "~name",
+      "regions": [
+        {
+          "name": "names-in-commands",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

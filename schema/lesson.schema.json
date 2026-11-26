@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/MICharisma/terminal-multivitamin/schema/lesson.schema.json",
+  "title": "lesson.json",
+  "description": "Per-example lesson: ordered steps, each pointing at named regions of the source marked with `# region: name` / `# endregion: name` comments.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["title", "source", "steps"],
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source": {
+      "description": "The example's script, relative to the example folder.",
+      "type": "string",
+      "pattern": "^[^/]+$"
+    },
+    "steps": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/step" }
+    }
+  },
+  "$defs": {
+    "step": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "api", "regions"],
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "api": {
+          "description": "The command, flag, or idiom this step teaches. Must appear in the feature's covers.",
+          "type": "string",
+          "minLength": 1
+        },
+        "regions": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/region" }
+        }
+      }
+    },
+    "region": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "role"],
+      "properties": {
+        "name": {
+          "description": "Region name, optionally prefixed with another file in the example folder as `file#name`.",
+          "type": "string",
+          "pattern": "^([^#/]+#)?[a-z0-9]+(-[a-z0-9]+)*$"
+        },
+        "role": {
+          "enum": ["primary", "setup", "result"]
+        }
+      }
+    }
+  }
+}

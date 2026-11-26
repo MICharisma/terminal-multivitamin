@@ -1,0 +1,14 @@
+folders created: 18
+units/unidad-01/audio
+units/unidad-01/examenes
+units/unidad-01/lecciones
+== class slots for the term:
+lunes-maniana
+lunes-tarde
+miercoles-maniana
+miercoles-tarde
+viernes-maniana
+viernes-tarde
+== review weeks (every third week): week-01 week-04 week-07 week-10
+== braces name units that do not exist yet: units/unidad-07 units/unidad-08
+== a glob for the same units finds 0 folders
