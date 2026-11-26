@@ -11,8 +11,8 @@ can show each one with its source highlighted step by step. This is the Terminal
 | Serving size | 1 scenario (one runnable script) |
 | Servings per feature | 13 |
 | Features planned | 18 |
-| Features built | 4 |
-| Scenarios built | 52 of 234 |
+| Features built | 5 |
+| Scenarios built | 65 of 234 |
 | Active ingredient | zsh 5.9 on macOS (the default shell since Catalina) |
 | Also tested on | Ubuntu with zsh, GNU coreutils, dash, and bash 5 |
 
@@ -97,7 +97,7 @@ their folder; the rest are planned.
 | 08 | Editing streams with sed and awk | `sed` substitution and ranges, `sed -i ''` vs `sed -i`, `awk` fields, `BEGIN`/`END`, arrays, `printf` | planned |
 | 09 | [Permissions and ownership](features/09-permissions-and-ownership/) | `chmod` octal and symbolic, `umask`, `chown`, `sudo`, executable bits, `ls -l` decoding, ACLs on macOS | 13 of 13 built |
 | 10 | [Processes and jobs](features/10-processes-and-jobs/) | `ps`, `pgrep`/`pkill`, `kill` signals, `&`, `jobs`, `wait`, `nohup`, `trap`, `time`, `lsof`, `caffeinate -w` | 13 of 13 built |
-| 11 | Environment and PATH | `export`, `env`, `path` array in zsh, `/etc/paths` and `path_helper`, `which`/`whence`/`type`, `.zshenv` vs `.zprofile` | planned |
+| 11 | [Environment and PATH](features/11-environment-and-path/) | `export`, `env`, `path` array in zsh, `/etc/paths` and `path_helper`, `which`/`whence`/`type`, `.zshenv` vs `.zprofile` | 13 of 13 built |
 | 12 | ssh, scp, and rsync | keys and `ssh-agent`, Keychain `UseKeychain`, `~/.ssh/config` hosts, `scp`, `rsync -av --dry-run`, tunnels | planned |
 | 13 | HTTP with curl | `curl -fsSL`, headers, `-d` and `--json`, `-o`/`-O`, retries, `-w` timing, `jq` for JSON | planned |
 | 14 | Archives and compression | `tar -czf`/`-xzf`, `zip`/`unzip`, `ditto -c -k`, `gzip`, `xz`, `shasum -a 256` checksums | planned |

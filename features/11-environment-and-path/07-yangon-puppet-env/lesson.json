@@ -1,0 +1,54 @@
+{
+  "title": "Yangon puppet theatre, loading the evening show from a .env file",
+  "source": "load_env.zsh",
+  "steps": [
+    {
+      "label": "Turn on allexport",
+      "api": "set -a",
+      "regions": [
+        {
+          "name": "allexport",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Source the show.env file",
+      "api": ". ./file",
+      "regions": [
+        {
+          "name": "source-env",
+          "role": "primary"
+        },
+        {
+          "name": "allexport",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "See the child inherit SHOW_TITLE",
+      "api": "export",
+      "regions": [
+        {
+          "name": "child-sees",
+          "role": "primary"
+        },
+        {
+          "name": "source-env",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Confirm later locals are not exported",
+      "api": "set +a",
+      "regions": [
+        {
+          "name": "later-local",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

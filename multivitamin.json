@@ -8,6 +8,7 @@
     "01-navigation-and-files",
     "02-globbing-and-expansion",
     "09-permissions-and-ownership",
-    "10-processes-and-jobs"
+    "10-processes-and-jobs",
+    "11-environment-and-path"
   ]
 }

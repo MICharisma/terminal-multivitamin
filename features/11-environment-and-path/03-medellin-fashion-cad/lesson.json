@@ -1,0 +1,40 @@
+{
+  "title": "Medellín fashion school, which dxf_plot the CAD lab runs",
+  "source": "path_order.zsh",
+  "steps": [
+    {
+      "label": "Search PATH with the system bin first",
+      "api": "PATH",
+      "regions": [
+        {
+          "name": "system-first",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Prepend the lab bin so it wins",
+      "api": "PATH",
+      "regions": [
+        {
+          "name": "lab-first",
+          "role": "primary"
+        },
+        {
+          "name": "system-first",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Plant a stale hash entry and clear it",
+      "api": "hash -r",
+      "regions": [
+        {
+          "name": "stale-hash",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}
