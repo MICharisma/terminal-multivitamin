@@ -1,0 +1,76 @@
+{
+  "title": "Addis Ababa coffee roastery, setting modes on the web shop",
+  "source": "apply_modes.zsh",
+  "steps": [
+    {
+      "label": "Write down the mode every path should have",
+      "api": "chmod octal plan",
+      "regions": [
+        {
+          "name": "mode-plan",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Apply the plan with octal chmod",
+      "api": "chmod octal",
+      "regions": [
+        {
+          "name": "apply-plan",
+          "role": "primary"
+        },
+        {
+          "name": "mode-plan",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Read the modes back as octal and compare",
+      "api": "zstat -o +mode",
+      "regions": [
+        {
+          "name": "check-drift",
+          "role": "primary"
+        },
+        {
+          "name": "apply-plan",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "See what chmod -R 777 does to the shop",
+      "api": "chmod -R 777",
+      "regions": [
+        {
+          "name": "panic-fix",
+          "role": "primary"
+        },
+        {
+          "name": "check-drift",
+          "role": "result"
+        }
+      ]
+    },
+    {
+      "label": "Re-apply the plan and keep the drop-box upload folder",
+      "api": "chmod octal",
+      "regions": [
+        {
+          "name": "reapply",
+          "role": "primary"
+        },
+        {
+          "name": "apply-plan",
+          "role": "setup"
+        },
+        {
+          "name": "check-drift",
+          "role": "result"
+        }
+      ]
+    }
+  ]
+}

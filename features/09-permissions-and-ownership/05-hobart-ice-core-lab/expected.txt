@@ -1,0 +1,7 @@
+umask umask -S         predicted file       folder     purpose
+022   u=rwx,g=rx,o=rx  644/755   -rw-r--r-- drwxr-xr-x public outreach images
+027   u=rwx,g=rx,o=    640/750   -rw-r----- drwxr-x--- project group only
+077   u=rwx,g=,o=      600/700   -rw------- drwx------ embargoed until publication
+back outside the subshells, this script's umask is still 022
+with umask 077, mkdir -m 775 still gives 775, chmod 664 gives 664
+umask 000 still gives new files 666: no x bit appears from nowhere

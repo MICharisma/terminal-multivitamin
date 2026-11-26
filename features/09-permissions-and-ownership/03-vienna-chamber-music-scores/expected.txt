@@ -1,0 +1,26 @@
+== g+rX: the ensemble's group can open folders and read scores
+  kammermusik                                  drwx------ -> drwxr-x---
+  brahms-klarinettenquintett                   drwx------ -> drwxr-x---
+  brahms-klarinettenquintett/final             drwx------ -> drwxr-x---
+  brahms-klarinettenquintett/final/parts.pdf   -rw------- -> -rw-r-----
+  brahms-klarinettenquintett/parts.pdf         -rw------- -> -rw-r-----
+  schubert-forellenquintett                    drwx------ -> drwxr-x---
+  schubert-forellenquintett/final              drwx------ -> drwxr-x---
+  schubert-forellenquintett/final/parts.pdf    -rw------- -> -rw-r-----
+  schubert-forellenquintett/parts.pdf          -rw------- -> -rw-r-----
+  tools                                        drwx------ -> drwxr-x---
+  tools/click_track.sh                         -rwx------ -> -rwxr-x---
+== with lowercase x the PDFs become executable too:
+  -rw-r-x--- schubert-forellenquintett/parts.pdf
+== o-rwx after a colleague's o+rX on tools: only the others bits move
+  tools                                        drwxr-xr-x -> drwxr-x---
+  tools/click_track.sh                         -rwxr-xr-x -> -rwxr-x---
+== g=u: the group gets exactly the owner's bits
+  tools/click_track.sh                         -rwxr-x--- -> -rwxrwx---
+== u=rwx,g=rx,o= takes back g=u; a-w locks the concert versions
+  brahms-klarinettenquintett/final             drwxr-x--- -> dr-xr-x---
+  brahms-klarinettenquintett/final/parts.pdf   -rw-r----- -> -r--r-----
+  schubert-forellenquintett/final              drwxr-x--- -> dr-xr-x---
+  schubert-forellenquintett/final/parts.pdf    -rw-r----- -> -r--r-----
+  tools/click_track.sh                         -rwxrwx--- -> -rwxr-x---
+  the final parts are locked, even for the teacher who owns them

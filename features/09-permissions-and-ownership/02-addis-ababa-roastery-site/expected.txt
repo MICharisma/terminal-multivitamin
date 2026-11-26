@@ -1,0 +1,17 @@
+== after applying the plan:
+  everything matches the plan
+== the uploads form failed, and someone ran chmod -R 777 shop:
+  shop/uploads/order-1043.pdf is not in the plan
+  shop                       is 777, plan says 755 (drwxrwxrwx)
+  shop/cgi-bin               is 777, plan says 755 (drwxrwxrwx)
+  shop/cgi-bin/stock.cgi     is 777, plan says 755 (-rwxrwxrwx)
+  shop/config                is 777, plan says 750 (drwxrwxrwx)
+  shop/config/payment.env    is 777, plan says 600 (-rwxrwxrwx)
+  shop/config/shop.yml       is 777, plan says 640 (-rwxrwxrwx)
+  shop/public                is 777, plan says 755 (drwxrwxrwx)
+  shop/public/delivery.html  is 777, plan says 644 (-rwxrwxrwx)
+  shop/public/index.html     is 777, plan says 644 (-rwxrwxrwx)
+  shop/uploads               is 777, plan says 730 (drwxrwxrwx)
+== plan re-applied:
+  shop/uploads/order-1043.pdf is not in the plan
+uploads stays 730: the web server's group can drop files in, but cannot list them

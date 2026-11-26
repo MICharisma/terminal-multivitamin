@@ -11,8 +11,8 @@ can show each one with its source highlighted step by step. This is the Terminal
 | Serving size | 1 scenario (one runnable script) |
 | Servings per feature | 13 |
 | Features planned | 18 |
-| Features built | 2 |
-| Scenarios built | 26 of 234 |
+| Features built | 3 |
+| Scenarios built | 39 of 234 |
 | Active ingredient | zsh 5.9 on macOS (the default shell since Catalina) |
 | Also tested on | Ubuntu with zsh, GNU coreutils, dash, and bash 5 |
 
@@ -95,7 +95,7 @@ their folder; the rest are planned.
 | 06 | Finding files with find and xargs | `find` tests and actions, `-exec {} +`, `-print0 \| xargs -0`, `-newer`, `-prune`, `fd` notes | planned |
 | 07 | Sorting, counting, and columns | `sort -k -t -n -u`, `uniq -c`, `cut`, `tr`, `paste`, `join`, `comm`, `column -t`, `wc` | planned |
 | 08 | Editing streams with sed and awk | `sed` substitution and ranges, `sed -i ''` vs `sed -i`, `awk` fields, `BEGIN`/`END`, arrays, `printf` | planned |
-| 09 | Permissions and ownership | `chmod` octal and symbolic, `umask`, `chown`, `sudo`, executable bits, `ls -l` decoding, ACLs on macOS | planned |
+| 09 | [Permissions and ownership](features/09-permissions-and-ownership/) | `chmod` octal and symbolic, `umask`, `chown`, `sudo`, executable bits, `ls -l` decoding, ACLs on macOS | 13 of 13 built |
 | 10 | Processes and jobs | `ps`, `pgrep`/`pkill`, `kill` signals, `&`, `jobs`, `fg`/`bg`, `wait`, `nohup`, `trap`, `time`, `lsof` | planned |
 | 11 | Environment and PATH | `export`, `env`, `path` array in zsh, `/etc/paths` and `path_helper`, `which`/`whence`/`type`, `.zshenv` vs `.zprofile` | planned |
 | 12 | ssh, scp, and rsync | keys and `ssh-agent`, Keychain `UseKeychain`, `~/.ssh/config` hosts, `scp`, `rsync -av --dry-run`, tunnels | planned |

@@ -1,0 +1,7 @@
+== recettes/thieboudienne.txt is read-only for everyone, Mame Aminata included
+  cousin Ousmane's append was refused: -r--r--r--, first line: Thieboudienne de Mame Aminata (pour 10)
+  nephew Cheikh replaced it with mv: -rw-r--r--, first line: Thieboudienne de Mame Aminata (pour 25, Tabaski)
+  rm without a terminal did not ask: file is gone, first line: (none)
+== recettes/ is read-only too:
+  mv refused: -r--r--r--, first line: Thieboudienne de Mame Aminata (pour 10)
+  rm refused: -r--r--r--, first line: Thieboudienne de Mame Aminata (pour 10)

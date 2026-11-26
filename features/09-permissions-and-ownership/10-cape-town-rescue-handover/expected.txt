@@ -1,0 +1,15 @@
+== who owns the launch log:
+  the owner number is my id -u
+  the group number is one of my id -G
+  chown to myself, chgrp to my own group: allowed
+  chown to root: Operation not permitted
+  chgrp to a group I am not in: Operation not permitted
+== files I can still chmod, because I own them:
+  crew/radio notes.txt
+  crew/roster-december.txt
+  launch-logs/2026-11.txt
+  (after the handover none will pass [[ -O ]], so the chmod lines go in the sudo plan)
+== for the station commander to review and run (not run here):
+  sudo chown -R station8:volunteers handover
+  sudo chmod 640 'handover/crew/radio notes.txt'
+  sudo chmod 640 handover/crew/roster-december.txt
