@@ -1,6 +1,5 @@
 == path_helper -s:
-  PATH=...;  # built from /etc/paths and /etc/paths.d
-  export PATH;
+  PATH has entries from /etc/paths and /etc/paths.d
 == after eval, command -v ls: /bin/ls
 == after prepending the brewery bin:
   WORK/brewery/bin/mash_ping

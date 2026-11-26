@@ -72,9 +72,10 @@ for example in $root/features/*/*(/); do
   mkdir -p $sandbox/{home,tmp,cwd}
   before=$(snapshot $example)
 
-  # setsid gives the script a session of its own, so anything it leaves running
-  # can be found (pgrep -s) and killed afterwards; alarm survives exec and stops
-  # a script that hangs. perl ships with macOS and Ubuntu, setsid(1) only with Linux.
+  # setsid gives the script a process group of its own, so anything it leaves
+  # running can be found (pgrep -g) and killed afterwards; alarm survives exec
+  # and stops a script that hangs. perl ships with macOS and Ubuntu; pgrep -g
+  # is portable, pgrep -s (session) is Linux-only.
   ( cd $sandbox/cwd && umask 022 &&
     exec env -i HOME=$sandbox/home TMPDIR=$sandbox/tmp PATH=$PATH LC_ALL=C TERM=dumb \
       perl -MPOSIX -e 'POSIX::setsid() != -1 or die "setsid: $!\n";
@@ -86,7 +87,7 @@ for example in $root/features/*/*(/); do
 
   leftovers=()
   repeat 20; do
-    leftovers=( ${(f)"$(pgrep -s $session)"} )
+    leftovers=( ${(f)"$(pgrep -g $session)"} )
     (( $#leftovers )) || break
     sleep 0.05
   done
@@ -96,7 +97,7 @@ for example in $root/features/*/*(/); do
   (( exit_status == 128 + $(kill -l ALRM) )) && problems+=( "timed out after ${time_limit}s" )
   if (( $#leftovers )); then
     problems+=( "left processes running: $(ps -o pid=,command= -p ${(j:,:)leftovers})" )
-    pkill -KILL -s $session
+    pkill -KILL -g $session
   fi
   [[ -z $(ls -A $sandbox/tmp) ]] || problems+=( "left files in TMPDIR: $(ls -A $sandbox/tmp)" )
   [[ -z $(ls -A $sandbox/cwd) ]] || problems+=( "wrote into the working directory: $(ls -A $sandbox/cwd)" )

@@ -20,7 +20,11 @@ print 'print "[zlogin] login welcome"' > zdot/.zlogin
 run() {
   local label=$1; shift
   print "== $label:"
-  ZDOTDIR=$workdir/zdot "$@" 2>&1 | sed 's/^/  /'
+  # Keep only our markers: Ubuntu's /etc/zsh/zshrc may print compinit noise
+  # when zsh -i has no terminal.
+  ZDOTDIR=$workdir/zdot "$@" 2>&1 |
+    grep -E '^(\[(zshenv|zprofile|zshrc|zlogin)\]|done)' |
+    sed 's/^/  /'
 }
 
 # region: every-shell
