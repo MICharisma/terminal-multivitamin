@@ -1,0 +1,21 @@
+.ts files anywhere in the repo: 33
+== the studio's own .ts files, node_modules and .git pruned:
+salmon-run/dist/game.d.ts
+salmon-run/src/game/bear.ts
+salmon-run/src/game/player.ts
+salmon-run/src/game/river.ts
+salmon-run/src/ui/menu.ts
+salmon-run/tests/river.test.ts
+salmon-run/tools/build-atlas.ts
+== the same without the final -print; the pruned folders sneak in:
+salmon-run/.git
+salmon-run/node_modules
+dist files still listed, -path dist:            1
+dist files still listed, -path salmon-run/dist: 0
+== top-level folders, for the README's layout section:
+salmon-run/.git
+salmon-run/dist
+salmon-run/node_modules
+salmon-run/src
+salmon-run/tests
+salmon-run/tools

@@ -1,0 +1,54 @@
+{
+  "title": "Seville flamenco academy, collecting rehearsal videos, in bash",
+  "source": "collect_videos.sh",
+  "steps": [
+    {
+      "label": "Count videos through a pipe and lose the count",
+      "api": "find | while read",
+      "regions": [
+        {
+          "name": "lost-count",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Read NUL-separated names in the current shell",
+      "api": "while IFS= read -r -d ''",
+      "regions": [
+        {
+          "name": "process-substitution",
+          "role": "primary"
+        },
+        {
+          "name": "lost-count",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Collect the names into a bash 3.2 array",
+      "api": "array+=(\"$item\")",
+      "regions": [
+        {
+          "name": "process-substitution",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Flatten each path into a unique file name for the reel",
+      "api": "${var//pattern/replacement}",
+      "regions": [
+        {
+          "name": "flatten-names",
+          "role": "primary"
+        },
+        {
+          "name": "process-substitution",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

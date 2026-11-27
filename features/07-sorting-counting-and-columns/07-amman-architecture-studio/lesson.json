@@ -1,0 +1,30 @@
+{
+  "title": "Amman architecture studio, tabulating facade heights",
+  "source": "facade_table.zsh",
+  "steps": [
+    {
+      "label": "Print an aligned table from the TSV",
+      "api": "column -t",
+      "regions": [
+        {
+          "name": "column-table",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Repeat with an explicit tab separator",
+      "api": "column -t -s $'\\t'",
+      "regions": [
+        {
+          "name": "column-separator",
+          "role": "primary"
+        },
+        {
+          "name": "column-table",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

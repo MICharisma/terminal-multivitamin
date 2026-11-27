@@ -1,0 +1,44 @@
+{
+  "title": "Lyon silk weaving",
+  "source": "silk_reels.zsh",
+  "steps": [
+    {
+      "label": "Count spools per dye lot",
+      "api": "array[key]++",
+      "regions": [
+        {
+          "name": "freq-array",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Sum metres per loom",
+      "api": "array[key] +=",
+      "regions": [
+        {
+          "name": "sum-array",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Report distinct keys through `case`",
+      "api": "case $role in",
+      "regions": [
+        {
+          "name": "for-loop-report",
+          "role": "primary"
+        },
+        {
+          "name": "freq-array",
+          "role": "setup"
+        },
+        {
+          "name": "sum-array",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

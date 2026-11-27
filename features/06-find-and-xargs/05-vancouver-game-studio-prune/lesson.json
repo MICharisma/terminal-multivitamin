@@ -1,0 +1,64 @@
+{
+  "title": "Vancouver game studio, counting source without node_modules",
+  "source": "source_files.zsh",
+  "steps": [
+    {
+      "label": "Count every .ts file, dependencies included",
+      "api": "find -name",
+      "regions": [
+        {
+          "name": "everything",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Prune node_modules and .git, then print the rest",
+      "api": "find -prune -o -print",
+      "regions": [
+        {
+          "name": "prune-folders",
+          "role": "primary"
+        },
+        {
+          "name": "everything",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Leave out the final -print and see the pruned folders listed",
+      "api": "find -prune -o -print",
+      "regions": [
+        {
+          "name": "forgot-print",
+          "role": "primary"
+        },
+        {
+          "name": "prune-folders",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Prune dist by its full path",
+      "api": "find -path",
+      "regions": [
+        {
+          "name": "prune-path",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "List only the top-level folders",
+      "api": "find -mindepth -maxdepth",
+      "regions": [
+        {
+          "name": "top-level",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

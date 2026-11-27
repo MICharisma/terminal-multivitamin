@@ -1,0 +1,21 @@
+== everything over 300 KiB, keepers included:
+owambe-nights/cache/render/scene-04_take-2.cache
+owambe-nights/cache/render/scene-07_take-1.cache
+owambe-nights/exports/owambe-nights_rough-cut.mp4
+owambe-nights/proxies/scene-04_proxy.mov
+== dry run in the cache: big renders and the empty peak file from the crash:
+owambe-nights/cache/peaks/dialogue-scene-04.pkf
+owambe-nights/cache/render/scene-04_take-2.cache
+owambe-nights/cache/render/scene-07_take-1.cache
+files left in the cache: cache/render/scene-07_take-1.xml
+== empty right now; the dry run cannot know scene-11 will empty out too:
+owambe-nights/cache/peaks
+owambe-nights/cache/render/scene-09
+owambe-nights/cache/render/scene-11/frames
+== folders left:
+owambe-nights
+owambe-nights/cache
+owambe-nights/cache/render
+owambe-nights/exports
+owambe-nights/proxies
+with -delete first, find removed the whole rehearsal-copy, not just the .xml

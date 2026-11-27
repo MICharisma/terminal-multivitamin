@@ -1,0 +1,44 @@
+{
+  "title": "Vientiane temple palm-leaf archive",
+  "source": "palm_leaf_archive.zsh",
+  "steps": [
+    {
+      "label": "Transliterate angle tags to pipes",
+      "api": "sed -e 's/<tag>/|/g'",
+      "regions": [
+        {
+          "name": "transliterate-tags",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Repair leaf counts and scribe fields",
+      "api": "awk -F'|'",
+      "regions": [
+        {
+          "name": "repair-fields",
+          "role": "primary"
+        },
+        {
+          "name": "transliterate-tags",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Sum bundles and leaves per shelf",
+      "api": "awk END",
+      "regions": [
+        {
+          "name": "summary-table",
+          "role": "primary"
+        },
+        {
+          "name": "repair-fields",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

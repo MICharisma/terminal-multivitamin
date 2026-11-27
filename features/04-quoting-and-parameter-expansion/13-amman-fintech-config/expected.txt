@@ -9,4 +9,4 @@ payments URL: https://api.staging.joynpay.jo:8443/v2/payments
 == same walk with :h (head) and :t (tail), without touching $path:
   api  (requests.jsonl)
   worker  (jobs.jsonl)
-status line: joynpay api @ api.joynpay.jo  [2026-11-26]
+status line: joynpay api @ api.joynpay.jo  [YYYY-MM-DD]

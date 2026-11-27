@@ -1,0 +1,14 @@
+== dala-south-2026-11-22 lines 2-4:
+06:30 jetty-1 -> dala
+07:15 dala -> jetty-1
+18:40 jetty-1 -> dala
+== innya-lake-2026-11-22 lines 2-4:
+08:00 u-bein -> shore
+12:30 shore -> u-bein
+== dala sailings touching jetty-1:
+06:30 jetty-1 -> dala
+07:15 dala -> jetty-1
+18:40 jetty-1 -> dala
+== afternoon block on the dala run:
+07:15 dala -> jetty-1
+18:40 jetty-1 -> dala

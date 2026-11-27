@@ -1,0 +1,58 @@
+{
+  "title": "Bangkok street food, cleaning the vendor sign board",
+  "source": "vendor_cleanup.zsh",
+  "steps": [
+    {
+      "label": "Downcase the board with character classes",
+      "api": "tr '[:upper:]' '[:lower:]'",
+      "regions": [
+        {
+          "name": "downcase",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Delete bangs and dots from each line",
+      "api": "tr -d",
+      "regions": [
+        {
+          "name": "delete-chars",
+          "role": "primary"
+        },
+        {
+          "name": "downcase",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Squeeze repeated spaces to one",
+      "api": "tr -s",
+      "regions": [
+        {
+          "name": "squeeze-spaces",
+          "role": "primary"
+        },
+        {
+          "name": "delete-chars",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Blank every non-alnum character with complement",
+      "api": "tr -c",
+      "regions": [
+        {
+          "name": "complement",
+          "role": "primary"
+        },
+        {
+          "name": "squeeze-spaces",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

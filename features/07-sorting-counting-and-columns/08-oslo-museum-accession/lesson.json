@@ -1,0 +1,44 @@
+{
+  "title": "Oslo museum accession, reconciling photo day with the register",
+  "source": "photo_reconcile.zsh",
+  "steps": [
+    {
+      "label": "List accessioned ids not on the photo sheet",
+      "api": "comm -23",
+      "regions": [
+        {
+          "name": "comm-only-first",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "List photographed ids missing from the register",
+      "api": "comm -13",
+      "regions": [
+        {
+          "name": "comm-only-second",
+          "role": "primary"
+        },
+        {
+          "name": "comm-only-first",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "List ids present in both sorted files",
+      "api": "comm -12",
+      "regions": [
+        {
+          "name": "comm-both",
+          "role": "primary"
+        },
+        {
+          "name": "comm-only-second",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

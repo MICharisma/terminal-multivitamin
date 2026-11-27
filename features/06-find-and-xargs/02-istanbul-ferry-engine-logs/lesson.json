@@ -1,0 +1,54 @@
+{
+  "title": "Istanbul ferry engine logs since the dry-dock inspection",
+  "source": "engine_logs.zsh",
+  "steps": [
+    {
+      "label": "List the logs written after the inspection report",
+      "api": "find -newer",
+      "regions": [
+        {
+          "name": "newer-than-inspection",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Negate the test for the logs from before it",
+      "api": "find ! -newer",
+      "regions": [
+        {
+          "name": "not-newer",
+          "role": "primary"
+        },
+        {
+          "name": "newer-than-inspection",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Bracket a date window with two touch -t stamps",
+      "api": "find -newer a ! -newer b",
+      "regions": [
+        {
+          "name": "date-window",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "See why a plain cp looks new and cp -p does not",
+      "api": "cp -p",
+      "regions": [
+        {
+          "name": "copy-refreshes-time",
+          "role": "primary"
+        },
+        {
+          "name": "newer-than-inspection",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

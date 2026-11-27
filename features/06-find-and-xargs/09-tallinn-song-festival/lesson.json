@@ -1,0 +1,54 @@
+{
+  "title": "Tallinn song festival, one folder per choir and song",
+  "source": "choir_folders.zsh",
+  "steps": [
+    {
+      "label": "See plain xargs split song titles into words",
+      "api": "xargs",
+      "regions": [
+        {
+          "name": "plain-xargs",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Make a folder per choir and voice, one roster line per command",
+      "api": "xargs -L 1",
+      "regions": [
+        {
+          "name": "one-line-per-command",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Make a folder per song, keeping each whole line",
+      "api": "xargs -I {}",
+      "regions": [
+        {
+          "name": "whole-line",
+          "role": "primary"
+        },
+        {
+          "name": "plain-xargs",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Use the placeholder twice to copy the joint score",
+      "api": "xargs -I {}",
+      "regions": [
+        {
+          "name": "placeholder-twice",
+          "role": "primary"
+        },
+        {
+          "name": "whole-line",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

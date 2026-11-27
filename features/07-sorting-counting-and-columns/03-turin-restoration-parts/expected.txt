@@ -1,0 +1,24 @@
+== part codes and prices from the supplier's printout:
+FI-50021    38.50
+FI-50114    12.90
+LA-20310    64.00
+AR-10577    47.25
+AR-10642    29.80
+with cut -d' ' -f2 the second field of each part line is empty: []
+and -f3 is only the first word of a description: [front]
+== part and mechanic for each work order, comment line dropped by -s:
+FI-50021	Giuseppe
+AR-10577	Chiara
+LA-20310	Giuseppe
+AR-10642	Marco
+cut -f4,2 printed the same columns in the same order as -f2,4
+== mechanic first, by reading the fields instead:
+  Giuseppe: FI-50021
+  Chiara: AR-10577
+  Giuseppe: LA-20310
+  Marco: AR-10642
+== for the customer copy, everything but the part code:
+WO-4821	1968 Fiat 500 F	Giuseppe
+WO-4822	1965 Alfa Romeo Giulia	Chiara
+WO-4823	1971 Lancia Fulvia	Giuseppe
+WO-4824	1965 Alfa Romeo Giulia	Marco

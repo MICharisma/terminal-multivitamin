@@ -66,5 +66,9 @@ for logpath in $logpaths; print "  ${logpath:h:h:t}  (${logpath:t})"
 # focus: ${(%)line}
 role=api
 line="joynpay ${role} @ ${(P)${:-${role}_host}}  [%D{%Y-%m-%d}]"
-print -r -- "status line: ${(%)line}"
+# ${(%)line} expands %D{%Y-%m-%d} to today; pin the printed date so the
+# example's expected output does not change every midnight.
+expanded=${(%)line}
+today=${(%):-%D{%Y-%m-%d}}
+print -r -- "status line: ${expanded/${today}/YYYY-MM-DD}"
 # endregion: prompt-escapes

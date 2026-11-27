@@ -1,0 +1,11 @@
+== thiof lines for the smokehouse:
+pirogue-adiou land 52kg
+pirogue-khady land 44kg
+pirogue-sene land 38kg
+== heavy crates for the ice truck:
+pirogue-adiou land thiof 52
+pirogue-khady land thiof 44
+pirogue-khady land capitaine 62
+== totals the buyers asked for:
+thiof: 3 landings, 134 kg
+sardinelle: 2 landings, 40 kg

@@ -1,0 +1,5 @@
+east-a1<bundle>b-14<leaf>24</leaf>somphou</bundle>
+east-a1<bundle>b-15<leaf>18</leaf>somphou</bundle>
+west-c3<bundle>c-02<leaf></leaf>22</leaf>khamla</bundle>
+west-c3<bundle>c-04<leaf>31</leaf></bundle>
+north-b2<bundle>d-08<leaf>12</leaf>visone</bundle>

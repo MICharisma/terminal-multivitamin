@@ -1,0 +1,9 @@
+== GIA numbers ready for the vault ledger:
+stock GIA 2145831220 1.02ct D VVS1
+== HRD line keeps the lab prefix:
+HRD-04015941002 certified 0.91ct E VS2
+== every line through the case router:
+stock GIA 2145831220 1.02ct D VVS1
+HRD-04015941002 certified 0.91ct E VS2
+IGI-5122044 cut OV 0.75ct F SI1
+stock GIA 6234128891 0.68ct G VS1

@@ -9,6 +9,9 @@
     "02-globbing-and-expansion",
     "03-pipes-and-redirection",
     "04-quoting-and-parameter-expansion",
-    "05-searching-text-with-grep"
+    "05-searching-text-with-grep",
+    "06-find-and-xargs",
+    "07-sorting-counting-and-columns",
+    "08-sed-and-awk"
   ]
 }
