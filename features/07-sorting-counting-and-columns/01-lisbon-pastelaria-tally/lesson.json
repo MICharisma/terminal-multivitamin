@@ -1,0 +1,58 @@
+{
+  "title": "Lisbon pastelaria, tallying the 23 December orders",
+  "source": "order_tally.zsh",
+  "steps": [
+    {
+      "label": "See uniq -c miscount an unsorted order book",
+      "api": "uniq -c",
+      "regions": [
+        {
+          "name": "unsorted-uniq",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Sort first, then count each cake",
+      "api": "sort | uniq -c",
+      "regions": [
+        {
+          "name": "tally",
+          "role": "primary"
+        },
+        {
+          "name": "unsorted-uniq",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Rank by count to find the best seller",
+      "api": "sort -rn",
+      "regions": [
+        {
+          "name": "rank",
+          "role": "primary"
+        },
+        {
+          "name": "tally",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Break ties alphabetically with two keys",
+      "api": "sort -k1,1nr -k2,2",
+      "regions": [
+        {
+          "name": "tie-break",
+          "role": "primary"
+        },
+        {
+          "name": "rank",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

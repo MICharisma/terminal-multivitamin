@@ -1,0 +1,17 @@
+== how zsh would type each name:
+  Nouvel\ An\ 2026\ -\ famille\ Razafy.jpg
+  Tante\ Voahangy\'s\ jardin\ \(Antananarivo\).jpg
+  Lac\$Anosy,\ pique-nique.jpg
+  Fianarantsoa\ -\ \'Maison\ de\ la\ Reine\'.jpg
+always single quotes: 'Lac$Anosy, pique-nique.jpg'
+always double quotes: "Lac\$Anosy, pique-nique.jpg"
+rename.plan holds 4 quoted lines:
+  Nouvel\ An\ 2026\ -\ famille\ Razafy.jpg
+  Tante\ Voahangy\'s\ jardin\ \(Antananarivo\).jpg
+  Lac\$Anosy,\ pique-nique.jpg
+  Fianarantsoa\ -\ \'Maison\ de\ la\ Reine\'.jpg
+== after (Q) and space replacement, files under renamed/:
+  Fianarantsoa_-_'Maison_de_la_Reine'.jpg
+  Lac$Anosy,_pique-nique.jpg
+  Nouvel_An_2026_-_famille_Razafy.jpg
+  Tante_Voahangy's_jardin_(Antananarivo).jpg

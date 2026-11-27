@@ -1,0 +1,44 @@
+{
+  "title": "Sapporo snow festival LEDs",
+  "source": "led_strings.zsh",
+  "steps": [
+    {
+      "label": "Preview a substitution on stdout",
+      "api": "sed 's/from/to/'",
+      "regions": [
+        {
+          "name": "dry-run",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Patch in place with BSD `sed -i ''`",
+      "api": "sed -i ''",
+      "regions": [
+        {
+          "name": "bsd-inplace",
+          "role": "primary"
+        },
+        {
+          "name": "dry-run",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Retune a second channel the same way",
+      "api": "sed -i ''",
+      "regions": [
+        {
+          "name": "second-pass",
+          "role": "primary"
+        },
+        {
+          "name": "bsd-inplace",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

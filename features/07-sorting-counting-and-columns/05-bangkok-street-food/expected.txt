@@ -1,0 +1,20 @@
+== board downcased for the night-market printer:
+khan   original   pics
+pad   thai!!!    from  vendor--soi-11
+som   tam--isan  near   victory  monument
+mango  sticky   rice..  @  jatujak
+== same lines with bangs and dots removed:
+khan   original   pics
+pad   thai    from  vendor--soi-11
+som   tam--isan  near   victory  monument
+mango  sticky   rice  @  jatujak
+== squeezed to single spaces:
+khan original pics
+pad thai from vendor--soi-11
+som tam--isan near victory monument
+mango sticky rice @ jatujak
+== alnum and newlines kept, other symbols blanked:
+khan original pics
+pad thai from vendor soi 11
+som tam isan near victory monument
+mango sticky rice jatujak

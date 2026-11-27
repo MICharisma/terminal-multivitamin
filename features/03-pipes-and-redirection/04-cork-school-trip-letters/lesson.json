@@ -1,0 +1,58 @@
+{
+  "title": "Cork secondary school, Skellig Michael trip letters",
+  "source": "trip_letters.zsh",
+  "steps": [
+    {
+      "label": "Write a script with a quoted here-doc, keeping $1 literal",
+      "api": "<<'EOF'",
+      "regions": [
+        {
+          "name": "literal-script",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Indent a here-doc with tabs inside a function",
+      "api": "<<-EOF",
+      "regions": [
+        {
+          "name": "tab-stripped",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Feed the roster loop from a here-doc",
+      "api": "done <<'EOF'",
+      "regions": [
+        {
+          "name": "roster-loop",
+          "role": "primary"
+        },
+        {
+          "name": "roster-end",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Write each letter with an expanding here-doc",
+      "api": "<<EOF",
+      "regions": [
+        {
+          "name": "expanding-letter",
+          "role": "primary"
+        },
+        {
+          "name": "tab-stripped",
+          "role": "setup"
+        },
+        {
+          "name": "show-letter",
+          "role": "result"
+        }
+      ]
+    }
+  ]
+}

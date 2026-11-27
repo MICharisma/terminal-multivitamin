@@ -1,0 +1,11 @@
+== kilograms per destination after stripping tags:
+980 mawson
+750 casey
+680 davis
+180 macquarie
+== manifests at least 500 kg:
+  SKU fibre cable drum -> davis (680 kg)
+  SKU glaciology drills -> mawson (560 kg)
+  SKU satellite modem -> casey (510 kg)
+== heaviest single line:
+SKU fibre cable drum|davis|680

@@ -1,0 +1,56 @@
+{
+  "title": "Florence conservation lab scan names, in bash",
+  "source": "scan_names.sh",
+  "steps": [
+    {
+      "label": "See unquoted expansion split on spaces",
+      "api": "unquoted $var",
+      "regions": [
+        {
+          "name": "unquoted-splits",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "See unquoted expansion glob on *",
+      "api": "unquoted glob",
+      "regions": [
+        {
+          "name": "unquoted-globs",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Forward arguments with \"$@\"",
+      "api": "\"$@\"",
+      "regions": [
+        {
+          "name": "forward-args",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Show the safe spelling with printf %q",
+      "api": "printf %q",
+      "regions": [
+        {
+          "name": "printf-q",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Uppercase a label, with a bash 3.2 fallback",
+      "api": "${var^^}",
+      "regions": [
+        {
+          "name": "uppercase",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

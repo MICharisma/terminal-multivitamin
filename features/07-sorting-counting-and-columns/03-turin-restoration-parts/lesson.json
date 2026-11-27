@@ -1,0 +1,68 @@
+{
+  "title": "Turin classic car workshop, cutting columns from a parts catalogue",
+  "source": "parts_columns.zsh",
+  "steps": [
+    {
+      "label": "Cut character columns from the fixed-width catalogue",
+      "api": "cut -c",
+      "regions": [
+        {
+          "name": "fixed-width",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "See cut -d' ' treat every pad space as a field",
+      "api": "cut -d",
+      "regions": [
+        {
+          "name": "space-delimiter",
+          "role": "primary"
+        },
+        {
+          "name": "fixed-width",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Cut tab fields and drop the comment with -s",
+      "api": "cut -f -s",
+      "regions": [
+        {
+          "name": "tab-fields",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "See that cut never reorders fields",
+      "api": "cut -f",
+      "regions": [
+        {
+          "name": "no-reorder",
+          "role": "primary"
+        },
+        {
+          "name": "tab-fields",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Keep every field but the part code with 1,3-",
+      "api": "cut -f1,3-",
+      "regions": [
+        {
+          "name": "all-but-one",
+          "role": "primary"
+        },
+        {
+          "name": "tab-fields",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

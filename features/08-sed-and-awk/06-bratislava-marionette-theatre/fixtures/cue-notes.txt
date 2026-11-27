@@ -1,0 +1,4 @@
+kasparik|wing flutter|handler-martin
+vecerka|honk twice|handler-zuzana
+striga|broom sweep|handler-peter
+devilboy|tail wag|handler-martin

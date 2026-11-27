@@ -1,0 +1,46 @@
+{
+  "title": "Colombo tea export desk, grading the catalogue, in portable sh",
+  "source": "grade_check.sh",
+  "steps": [
+    {
+      "label": "Match a whole line with -x",
+      "api": "grep -x",
+      "regions": [
+        {
+          "name": "whole-line-grade",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "OR fixed grades with -F -e",
+      "api": "grep -F -e",
+      "regions": [
+        {
+          "name": "fixed-or",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Drop Dust with -v",
+      "api": "grep -v",
+      "regions": [
+        {
+          "name": "invert-dust",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Handle no-match with if grep -q",
+      "api": "grep -q",
+      "regions": [
+        {
+          "name": "no-match-status",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

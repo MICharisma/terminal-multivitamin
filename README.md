@@ -11,8 +11,13 @@ can show each one with its source highlighted step by step. This is the Terminal
 | Serving size | 1 scenario (one runnable script) |
 | Servings per feature | 13 |
 | Features planned | 18 |
+<<<<<<< HEAD
 | Features built | 5 |
 | Scenarios built | 65 of 234 |
+=======
+| Features built | 8 |
+| Scenarios built | 104 of 234 |
+>>>>>>> origin/cursor/terminal-multivitamin-v1-43fa
 | Active ingredient | zsh 5.9 on macOS (the default shell since Catalina) |
 | Also tested on | Ubuntu with zsh, GNU coreutils, dash, and bash 5 |
 
@@ -89,6 +94,7 @@ their folder; the rest are planned.
 | --- | --- | --- | --- |
 | 01 | [Navigation and files](features/01-navigation-and-files/) | `cd`, `pushd`/`popd`, `cdpath`, named dirs, `ls`, `mkdir`, `cp`, `mv`, `rm`, `ln`, `stat`, `file`, `du` | 13 of 13 built |
 | 02 | [Globbing and expansion](features/02-globbing-and-expansion/) | `*` `?` `[...]`, braces, `**/`, qualifiers, extended globs, modifiers, `zmv`, bash `extglob` | 13 of 13 built |
+<<<<<<< HEAD
 | 03 | Pipes and redirection | `\|`, `>`, `>>`, `2>&1`, `<`, here-docs, here-strings, `tee`, process substitution, `/dev/null`, multios | planned |
 | 04 | Quoting and parameter expansion | single vs double quotes, `$'...'`, `${var:-default}`, `${var#prefix}`, zsh flags `(U)` `(s:,:)` `(j:,:)`, arrays | planned |
 | 05 | Searching text with grep | `grep -E`, `-i`, `-v`, `-c`, `-o`, `-r`, `-l`, context `-A`/`-B`, `ripgrep` notes, BSD vs GNU `grep -P` | planned |
@@ -98,6 +104,17 @@ their folder; the rest are planned.
 | 09 | [Permissions and ownership](features/09-permissions-and-ownership/) | `chmod` octal and symbolic, `umask`, `chown`, `sudo`, executable bits, `ls -l` decoding, ACLs on macOS | 13 of 13 built |
 | 10 | [Processes and jobs](features/10-processes-and-jobs/) | `ps`, `pgrep`/`pkill`, `kill` signals, `&`, `jobs`, `wait`, `nohup`, `trap`, `time`, `lsof`, `caffeinate -w` | 13 of 13 built |
 | 11 | [Environment and PATH](features/11-environment-and-path/) | `export`, `env`, `path` array in zsh, `/etc/paths` and `path_helper`, `which`/`whence`/`type`, `.zshenv` vs `.zprofile` | 13 of 13 built |
+=======
+| 03 | [Pipes and redirection](features/03-pipes-and-redirection/) | `|`, `>`, `>>`, `2>&1`, `<`, here-docs, here-strings, `tee`, process substitution, `/dev/null`, multios | 13 of 13 built |
+| 04 | [Quoting and parameter expansion](features/04-quoting-and-parameter-expansion/) | single vs double quotes, `$'...'`, `${var:-default}`, `${var#prefix}`, zsh flags `(U)` `(s:,:)` `(j:,:)`, arrays | 13 of 13 built |
+| 05 | [Searching text with grep](features/05-searching-text-with-grep/) | `grep -E`, `-i`, `-v`, `-c`, `-o`, `-r`, `-l`, context `-A`/`-B`, `ripgrep` notes, BSD vs GNU `grep -P` | 13 of 13 built |
+| 06 | [Finding files with find and xargs](features/06-find-and-xargs/) | `find` tests and actions, `-exec {} +`, `-print0 \| xargs -0`, `-newer`, `-prune`, `fd` notes | 13 of 13 built |
+| 07 | [Sorting, counting, and columns](features/07-sorting-counting-and-columns/) | `sort -k -t -n -u`, `uniq -c`, `cut`, `tr`, `paste`, `join`, `comm`, `column -t`, `wc` | 13 of 13 built |
+| 08 | [Editing streams with sed and awk](features/08-sed-and-awk/) | `sed` substitution and ranges, `sed -i ''` vs `sed -i`, `awk` fields, `BEGIN`/`END`, arrays, `printf` | 13 of 13 built |
+| 09 | Permissions and ownership | `chmod` octal and symbolic, `umask`, `chown`, `sudo`, executable bits, `ls -l` decoding, ACLs on macOS | planned |
+| 10 | Processes and jobs | `ps`, `pgrep`/`pkill`, `kill` signals, `&`, `jobs`, `fg`/`bg`, `wait`, `nohup`, `trap`, `time`, `lsof` | planned |
+| 11 | Environment and PATH | `export`, `env`, `path` array in zsh, `/etc/paths` and `path_helper`, `which`/`whence`/`type`, `.zshenv` vs `.zprofile` | planned |
+>>>>>>> origin/cursor/terminal-multivitamin-v1-43fa
 | 12 | ssh, scp, and rsync | keys and `ssh-agent`, Keychain `UseKeychain`, `~/.ssh/config` hosts, `scp`, `rsync -av --dry-run`, tunnels | planned |
 | 13 | HTTP with curl | `curl -fsSL`, headers, `-d` and `--json`, `-o`/`-O`, retries, `-w` timing, `jq` for JSON | planned |
 | 14 | Archives and compression | `tar -czf`/`-xzf`, `zip`/`unzip`, `ditto -c -k`, `gzip`, `xz`, `shasum -a 256` checksums | planned |

@@ -1,0 +1,40 @@
+{
+  "title": "Dakar fishing cooperative",
+  "source": "catch_log.zsh",
+  "steps": [
+    {
+      "label": "Match species with a regex pattern",
+      "api": "awk '/regex/'",
+      "regions": [
+        {
+          "name": "regex-pattern",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Compare the kilogram field",
+      "api": "awk '$3 >= n'",
+      "regions": [
+        {
+          "name": "comparison-pattern",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Total one species in `END`",
+      "api": "awk END",
+      "regions": [
+        {
+          "name": "action-block",
+          "role": "primary"
+        },
+        {
+          "name": "regex-pattern",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

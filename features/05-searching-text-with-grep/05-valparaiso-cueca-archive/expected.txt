@@ -1,0 +1,17 @@
+== lines that mention cueca, with numbers for the binder:
+2:2. Yo te canto cueca con el pañuelo en la mano
+5:5. Cueca brava del puerto, cueca suave del valle
+8:8. El canto a lo poeta se encuentra con la cueca
+== each pañuelo phrase, nothing else:
+pañuelo en la mano
+Pañuelo blanco
+pañuelo rojo
+== cueca phrases with their verse numbers:
+2:cueca con el pañuelo en la mano
+5:Cueca brava del puerto
+5:cueca suave del valle
+8:cueca
+== every pañuelo + next word (one -o match per hit):
+pañuelo en
+Pañuelo blanco
+pañuelo rojo

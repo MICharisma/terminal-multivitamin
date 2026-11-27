@@ -1,0 +1,40 @@
+{
+  "title": "Colombo tea estate ledger",
+  "source": "tea_ledger.zsh",
+  "steps": [
+    {
+      "label": "Edit in place and keep `file.bak`",
+      "api": "sed -i.bak",
+      "regions": [
+        {
+          "name": "portable-bak",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Detect GNU sed once",
+      "api": "sed --version",
+      "regions": [
+        {
+          "name": "detect-inplace",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Edit without a backup on either flavor",
+      "api": "sed -i ''",
+      "regions": [
+        {
+          "name": "no-backup",
+          "role": "primary"
+        },
+        {
+          "name": "detect-inplace",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

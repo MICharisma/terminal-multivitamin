@@ -1,0 +1,6 @@
+== first oz on each line only:
+chabakoua: 2 grams water, 2oz frit-3124, 1oz cobalt carb
+== every oz with the g flag:
+chabakoua: 2 grams water, 2 grams frit-3124, 1 grams cobalt carb
+== glaze sheet ready for the electric kiln log:
+tin-white: 4 grams  H2O, 1 grams tin oxide, 0.5 grams bentonite

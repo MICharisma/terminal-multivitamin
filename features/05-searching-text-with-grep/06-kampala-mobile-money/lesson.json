@@ -1,0 +1,46 @@
+{
+  "title": "Kampala mobile-money agents, auditing the morning float",
+  "source": "float_audit.zsh",
+  "steps": [
+    {
+      "label": "Search every log under a folder",
+      "api": "grep -r",
+      "regions": [
+        {
+          "name": "recursive",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "List only the files that matched",
+      "api": "grep -l",
+      "regions": [
+        {
+          "name": "files-with",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "List the files that did not match",
+      "api": "grep -L",
+      "regions": [
+        {
+          "name": "files-without",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Hide filenames with -h",
+      "api": "grep -h",
+      "regions": [
+        {
+          "name": "hide-names",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

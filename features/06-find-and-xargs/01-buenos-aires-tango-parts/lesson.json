@@ -1,0 +1,50 @@
+{
+  "title": "Buenos Aires tango orchestra, pulling parts for rehearsal",
+  "source": "rehearsal_parts.zsh",
+  "steps": [
+    {
+      "label": "Find the PDF parts by name",
+      "api": "find -name",
+      "regions": [
+        {
+          "name": "by-name",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Ignore case to catch the copyist's .PDF",
+      "api": "find -iname",
+      "regions": [
+        {
+          "name": "any-case",
+          "role": "primary"
+        },
+        {
+          "name": "by-name",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Keep the piano-arreglos folder out with -type f",
+      "api": "find -type f",
+      "regions": [
+        {
+          "name": "files-only",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Group the -o tests in parentheses before -print",
+      "api": "find \\( a -o b \\)",
+      "regions": [
+        {
+          "name": "precedence",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

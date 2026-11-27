@@ -1,0 +1,44 @@
+{
+  "title": "Riga city library, auditing holds against the patron directory",
+  "source": "hold_audit.zsh",
+  "steps": [
+    {
+      "label": "Join the matching cards after sorting both lists",
+      "api": "join -t",
+      "regions": [
+        {
+          "name": "inner-join",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Build the outer view with matches plus both -v lists",
+      "api": "join -v2",
+      "regions": [
+        {
+          "name": "outer-join",
+          "role": "primary"
+        },
+        {
+          "name": "inner-join",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "List shelf holds with no patron record",
+      "api": "join -v1",
+      "regions": [
+        {
+          "name": "unmatched-left",
+          "role": "primary"
+        },
+        {
+          "name": "outer-join",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}
