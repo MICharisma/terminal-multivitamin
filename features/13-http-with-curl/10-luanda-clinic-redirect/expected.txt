@@ -1,0 +1,4 @@
+== without following redirects
+  http_code=302
+== with curl -L
+  patient=maria-dos-santos ward=intake nurse=nzinga

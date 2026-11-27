@@ -11,8 +11,8 @@ can show each one with its source highlighted step by step. This is the Terminal
 | Serving size | 1 scenario (one runnable script) |
 | Servings per feature | 13 |
 | Features planned | 18 |
-| Features built | 11 |
-| Scenarios built | 143 of 234 |
+| Features built | 14 |
+| Scenarios built | 182 of 234 |
 | Active ingredient | zsh 5.9 on macOS (the default shell since Catalina) |
 | Also tested on | Ubuntu with zsh, GNU coreutils, dash, and bash 5 |
 
@@ -98,9 +98,9 @@ their folder; the rest are planned.
 | 09 | [Permissions and ownership](features/09-permissions-and-ownership/) | `chmod` octal and symbolic, `umask`, `chown`, `sudo`, executable bits, `ls -l` decoding, ACLs on macOS | 13 of 13 built |
 | 10 | [Processes and jobs](features/10-processes-and-jobs/) | `ps`, `pgrep`/`pkill`, `kill` signals, `&`, `jobs`, `wait`, `nohup`, `trap`, `time`, `lsof`, `caffeinate -w` | 13 of 13 built |
 | 11 | [Environment and PATH](features/11-environment-and-path/) | `export`, `env`, `path` array in zsh, `/etc/paths` and `path_helper`, `which`/`whence`/`type`, `.zshenv` vs `.zprofile` | 13 of 13 built |
-| 12 | ssh, scp, and rsync | keys and `ssh-agent`, Keychain `UseKeychain`, `~/.ssh/config` hosts, `scp`, `rsync -av --dry-run`, tunnels | planned |
-| 13 | HTTP with curl | `curl -fsSL`, headers, `-d` and `--json`, `-o`/`-O`, retries, `-w` timing, `jq` for JSON | planned |
-| 14 | Archives and compression | `tar -czf`/`-xzf`, `zip`/`unzip`, `ditto -c -k`, `gzip`, `xz`, `shasum -a 256` checksums | planned |
+| 12 | [ssh, scp, and rsync](features/12-ssh-scp-rsync/) | keys and `ssh-agent`, Keychain `UseKeychain`, `~/.ssh/config` hosts, `scp`, `rsync -av --dry-run`, tunnels | 13 of 13 built |
+| 13 | [HTTP with curl](features/13-http-with-curl/) | `curl -fsSL`, headers, `-d` and `--json`, `-o`/`-O`, retries, `-w` timing, `jq` for JSON | 13 of 13 built |
+| 14 | [Archives and compression](features/14-archives-and-compression/) | `tar -czf`/`-xzf`, `zip`/`unzip`, `ditto -c -k`, `gzip`, `xz`, `shasum -a 256` checksums | 13 of 13 built |
 | 15 | Homebrew | `brew install`/`upgrade`/`info`, casks, `Brewfile` and `brew bundle`, `brew services`, `brew doctor` | planned |
 | 16 | zsh configuration, aliases, and functions | `.zshrc`, `alias`, suffix and global aliases, functions and `autoload`, `fpath`, options, prompt, `compinit` | planned |
 | 17 | macOS desktop bridges | `open` (apps, URLs, `-R`), `pbcopy`/`pbpaste`, `say`, `screencapture`, `osascript`, `sips`, `textutil` | planned (macOS only) |

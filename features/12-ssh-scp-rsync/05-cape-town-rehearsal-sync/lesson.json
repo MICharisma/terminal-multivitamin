@@ -1,0 +1,44 @@
+{
+  "title": "Cape Town Baxter Theatre rehearsal sync",
+  "source": "archive_rehearsal.zsh",
+  "steps": [
+    {
+      "label": "List this week's act-1 rehearsal takes",
+      "api": "rsync -av",
+      "regions": [
+        {
+          "name": "source-takes",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "rsync -av the takes into archive/week-47",
+      "api": "rsync -av",
+      "regions": [
+        {
+          "name": "rsync-archive",
+          "role": "primary"
+        },
+        {
+          "name": "source-takes",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Confirm the archive week holds both cue sheets",
+      "api": "rsync -av",
+      "regions": [
+        {
+          "name": "archive-listing",
+          "role": "result"
+        },
+        {
+          "name": "rsync-archive",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

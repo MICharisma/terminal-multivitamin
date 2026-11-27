@@ -1,0 +1,2 @@
+== guest folio
+  field=folio;file=guest-card.txt

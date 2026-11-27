@@ -1,0 +1,30 @@
+{
+  "title": "Amman campus dashboard tunnel",
+  "source": "campus_tunnel.zsh",
+  "steps": [
+    {
+      "label": "Write LocalForward 18080 to the campus portal's localhost:8080",
+      "api": "LocalForward",
+      "regions": [
+        {
+          "name": "write-forward",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Resolve the campus-dashboard alias and show the forward",
+      "api": "LocalForward",
+      "regions": [
+        {
+          "name": "resolve-tunnel",
+          "role": "primary"
+        },
+        {
+          "name": "write-forward",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

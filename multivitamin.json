@@ -15,6 +15,9 @@
     "08-sed-and-awk",
     "09-permissions-and-ownership",
     "10-processes-and-jobs",
-    "11-environment-and-path"
+    "11-environment-and-path",
+    "12-ssh-scp-rsync",
+    "13-http-with-curl",
+    "14-archives-and-compression"
   ]
 }

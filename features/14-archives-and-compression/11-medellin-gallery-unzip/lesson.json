@@ -1,0 +1,48 @@
+{
+  "title": "Medellín gallery unzip",
+  "source": "select_print.zsh",
+  "steps": [
+    {
+      "label": "List exhibition.zip members by name only",
+      "api": "unzip -Z1",
+      "regions": [
+        {
+          "name": "list-names",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Pick the Comuna 13 mural with a case router",
+      "api": "unzip",
+      "regions": [
+        {
+          "name": "pick-member",
+          "role": "setup"
+        },
+        {
+          "name": "extract-one",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Extract only the chosen print onto the wall",
+      "api": "unzip",
+      "regions": [
+        {
+          "name": "extract-one",
+          "role": "primary"
+        },
+        {
+          "name": "pick-member",
+          "role": "setup"
+        },
+        {
+          "name": "list-names",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

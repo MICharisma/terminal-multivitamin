@@ -1,0 +1,10 @@
+== aurora forecast metrics
+  body:{
+  body:  "station": "tromso-observatory",
+  body:  "kp_index": 4,
+  body:  "window": "21:00-02:00",
+  body:  "clarity": "good"
+  body:}
+  http_code=200
+  content_type=application/json
+  size_download=103

@@ -1,0 +1,30 @@
+{
+  "title": "Valparaíso Saturday ferry timetable",
+  "source": "ferry_timetable.zsh",
+  "steps": [
+    {
+      "label": "Save the Saturday timetable into ferry-saturday.txt",
+      "api": "curl -o",
+      "regions": [
+        {
+          "name": "save-timetable",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Fetch quietly with -sS so only the body lands in the file",
+      "api": "curl -sS",
+      "regions": [
+        {
+          "name": "save-timetable",
+          "role": "primary"
+        },
+        {
+          "name": "show-body",
+          "role": "result"
+        }
+      ]
+    }
+  ]
+}

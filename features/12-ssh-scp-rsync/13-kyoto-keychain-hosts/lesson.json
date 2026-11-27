@@ -1,0 +1,44 @@
+{
+  "title": "Kyoto mokuhanga supplier Keychain hosts",
+  "source": "keychain_hosts.zsh",
+  "steps": [
+    {
+      "label": "Write UseKeychain and AddKeysToAgent for the washi supplier",
+      "api": "UseKeychain",
+      "regions": [
+        {
+          "name": "write-keychain",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Resolve HostName/User/IdentityFile and show UseKeychain from the config",
+      "api": "UseKeychain",
+      "regions": [
+        {
+          "name": "resolve-keychain",
+          "role": "primary"
+        },
+        {
+          "name": "write-keychain",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Confirm AddKeysToAgent is enabled on the same host",
+      "api": "AddKeysToAgent",
+      "regions": [
+        {
+          "name": "resolve-keychain",
+          "role": "result"
+        },
+        {
+          "name": "write-keychain",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

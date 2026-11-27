@@ -1,0 +1,44 @@
+{
+  "title": "Edinburgh fintech desk agent keys",
+  "source": "load_deploy_key.zsh",
+  "steps": [
+    {
+      "label": "Start ssh-agent and keep its socket for the desk session",
+      "api": "ssh-agent",
+      "regions": [
+        {
+          "name": "start-agent",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "ssh-add the production deploy key into the agent",
+      "api": "ssh-add",
+      "regions": [
+        {
+          "name": "add-key",
+          "role": "primary"
+        },
+        {
+          "name": "start-agent",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "List loaded keys with ssh-add -l (comments only)",
+      "api": "ssh-add -l",
+      "regions": [
+        {
+          "name": "list-keys",
+          "role": "primary"
+        },
+        {
+          "name": "add-key",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}
