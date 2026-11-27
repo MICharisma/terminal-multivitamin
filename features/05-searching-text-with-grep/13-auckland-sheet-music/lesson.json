@@ -1,0 +1,46 @@
+{
+  "title": "Auckland youth orchestra, finding parts with Spotlight",
+  "source": "spotlight_parts.zsh",
+  "steps": [
+    {
+      "label": "Find Beethoven parts with grep -rl",
+      "api": "grep -rl",
+      "regions": [
+        {
+          "name": "grep-immediate",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Show the mdfind name query",
+      "api": "mdfind",
+      "regions": [
+        {
+          "name": "mdfind-name",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Run a Spotlight content query",
+      "api": "mdfind content",
+      "regions": [
+        {
+          "name": "mdfind-content",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Read the display name with mdls",
+      "api": "mdls",
+      "regions": [
+        {
+          "name": "mdls",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

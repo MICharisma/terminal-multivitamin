@@ -1,0 +1,58 @@
+{
+  "title": "Almaty mountain weather desk, editing PATH as a zsh array",
+  "source": "path_array.zsh",
+  "steps": [
+    {
+      "label": "Set the tied path array and watch PATH follow",
+      "api": "path array",
+      "regions": [
+        {
+          "name": "tied",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Prepend and append directories",
+      "api": "path=( ... $path )",
+      "regions": [
+        {
+          "name": "prepend-append",
+          "role": "primary"
+        },
+        {
+          "name": "tied",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Drop duplicates with typeset -U",
+      "api": "typeset -U path",
+      "regions": [
+        {
+          "name": "unique",
+          "role": "primary"
+        },
+        {
+          "name": "prepend-append",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Print one entry per line with (F)",
+      "api": "${(F)path}",
+      "regions": [
+        {
+          "name": "join",
+          "role": "primary"
+        },
+        {
+          "name": "unique",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

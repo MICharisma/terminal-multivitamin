@@ -1,0 +1,3 @@
+== Monday opening checklist:
+node: 22.11.0 -> 22.14.0
+postgresql@16: 16.4 -> 16.6

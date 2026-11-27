@@ -1,0 +1,44 @@
+{
+  "title": "Bogotá Contadoría invoice exclude",
+  "source": "sync_invoices.zsh",
+  "steps": [
+    {
+      "label": "Choose exclude patterns for tmp files and borradores",
+      "api": "rsync --exclude",
+      "regions": [
+        {
+          "name": "choose-excludes",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "rsync the desk while applying those excludes",
+      "api": "rsync --exclude",
+      "regions": [
+        {
+          "name": "sync-clean",
+          "role": "primary"
+        },
+        {
+          "name": "choose-excludes",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "List the remote desk and confirm clutter stayed behind",
+      "api": "rsync --exclude",
+      "regions": [
+        {
+          "name": "remote-desk",
+          "role": "result"
+        },
+        {
+          "name": "sync-clean",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

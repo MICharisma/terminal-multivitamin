@@ -1,0 +1,6 @@
+== before:
+== UserKnownHostsFile: known_hosts
+== known hosts recorded: yes
+== StrictHostKeyChecking: accept-new
+== after:
+barco-rabelo.jpg

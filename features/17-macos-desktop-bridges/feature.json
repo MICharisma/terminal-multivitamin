@@ -1,0 +1,29 @@
+{
+  "feature": "macos-desktop-bridges",
+  "title": "macOS desktop bridges",
+  "covers": [
+    "${(kv)array}",
+    "case",
+    "emulate -L zsh",
+    "for f in glob",
+    "headless guard",
+    "here-document",
+    "open",
+    "open -R",
+    "open -a",
+    "open file://",
+    "osascript --",
+    "osascript -e",
+    "pbcopy",
+    "pbpaste",
+    "process substitution",
+    "say -v",
+    "screencapture",
+    "sips -Z",
+    "sips -g",
+    "sips -s format",
+    "textutil -convert",
+    "textutil -stdin",
+    "while read -r"
+  ]
+}

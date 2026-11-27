@@ -1,0 +1,10 @@
+== rehearsal takes:
+bridge-chorus.txt
+madiba-entrance.txt
+== rsync:
+sending incremental file list
+bridge-chorus.txt
+madiba-entrance.txt
+== archive/week-47:
+bridge-chorus.txt
+madiba-entrance.txt

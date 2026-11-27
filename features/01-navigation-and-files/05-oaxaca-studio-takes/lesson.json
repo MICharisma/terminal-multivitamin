@@ -1,0 +1,58 @@
+{
+  "title": "Oaxaca recording studio, picking the latest takes",
+  "source": "latest_takes.zsh",
+  "steps": [
+    {
+      "label": "Stamp each take with the time it was recorded",
+      "api": "touch -t",
+      "regions": [
+        {
+          "name": "stamp-takes",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "List the newest takes first",
+      "api": "ls -t",
+      "regions": [
+        {
+          "name": "newest-first",
+          "role": "primary"
+        },
+        {
+          "name": "stamp-takes",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Find the first take of the night",
+      "api": "ls -tr",
+      "regions": [
+        {
+          "name": "oldest-first",
+          "role": "primary"
+        },
+        {
+          "name": "stamp-takes",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Give a mix its source take's timestamp",
+      "api": "touch -r",
+      "regions": [
+        {
+          "name": "copy-stamp",
+          "role": "primary"
+        },
+        {
+          "name": "newest-first",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

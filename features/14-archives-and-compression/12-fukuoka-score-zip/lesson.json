@@ -1,0 +1,30 @@
+{
+  "title": "Fukuoka score zip",
+  "source": "ditto_scores.zsh",
+  "steps": [
+    {
+      "label": "Zip the repertoire folder with ditto for Finder",
+      "api": "ditto -c -k",
+      "regions": [
+        {
+          "name": "ditto-zip",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Extract the zip with ditto and list the scores",
+      "api": "ditto -x -k",
+      "regions": [
+        {
+          "name": "ditto-extract",
+          "role": "primary"
+        },
+        {
+          "name": "ditto-zip",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

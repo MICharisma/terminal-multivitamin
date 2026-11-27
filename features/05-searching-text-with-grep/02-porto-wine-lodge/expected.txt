@@ -1,0 +1,9 @@
+== every Tawny, any capitalisation:
+bin-A12 Taylor Fladgate 20-year Tawny, 750ml, 3 bottles
+bin-B03 Graham's 40-year Tawny, 750ml, 1 bottle
+bin-D02 Taylor Fladgate 10-year Tawny, 375ml, 4 bottles
+== whole word Ruby:
+bin-C01 Fonseca Bin 27 Ruby, 750ml, 12 bottles
+== whole word Rub (the letters are there, but not as a word):
+(none)
+Tawny bottles on the lodge floor: 3 lines

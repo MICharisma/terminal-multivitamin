@@ -1,0 +1,9 @@
+== election night workflow:
+packed election-night.tgz (3 station files)
+sealed election-night.tgz
+== verify before opening:
+election-night.tgz: OK
+extracted into opened:
+centar-box-12.txt
+novo-box-03.txt
+stari-box-07.txt

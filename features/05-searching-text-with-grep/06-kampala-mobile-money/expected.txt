@@ -1,0 +1,12 @@
+== FAILED transactions across all agents:
+ledger/agent-kitintale.log:09:47 withdraw 3000 UGX to 0755-012-998 ref MM-9203 FAILED pin locked
+ledger/agent-nakasero.log:09:40 withdraw 50000 UGX to 0772-441-220 ref MM-9010 FAILED insufficient float
+== agents that saw a failure:
+ledger/agent-kitintale.log
+ledger/agent-nakasero.log
+== agents with a clean morning:
+ledger/agent-wandegeya.log
+== every touch of 0772-441-220, bare lines for the spreadsheet:
+09:01 deposit 25000 UGX from 0772-441-220 ref MM-9001
+09:40 withdraw 50000 UGX to 0772-441-220 ref MM-9010 FAILED insufficient float
+09:55 deposit 100000 UGX from 0772-441-220 ref MM-9110

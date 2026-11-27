@@ -1,0 +1,2 @@
+pmset -g captured
+power keys: present

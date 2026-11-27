@@ -1,0 +1,11 @@
+private: hana-kebede
+public:  hana-kebede.pub
+comment: student@aait.edu.et
+type:    ssh-ed25519
+private: dawit-tesfaye
+public:  dawit-tesfaye.pub
+comment: student@aait.edu.et
+type:    ssh-ed25519
+== lab roster:
+students/dawit-tesfaye.pub
+students/hana-kebede.pub

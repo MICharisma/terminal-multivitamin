@@ -1,0 +1,40 @@
+{
+  "title": "Córdoba community radio, one-shot environment on the jingle command",
+  "source": "prefix_env.zsh",
+  "steps": [
+    {
+      "label": "Prefix the command with assignments",
+      "api": "NAME=value command",
+      "regions": [
+        {
+          "name": "prefix",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Show the shell values are unchanged",
+      "api": "NAME=value command",
+      "regions": [
+        {
+          "name": "shell-unchanged",
+          "role": "primary"
+        },
+        {
+          "name": "prefix",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Export the defaults so a bare run sees them",
+      "api": "export",
+      "regions": [
+        {
+          "name": "default-run",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

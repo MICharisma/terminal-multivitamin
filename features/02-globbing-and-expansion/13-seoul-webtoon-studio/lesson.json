@@ -1,0 +1,58 @@
+{
+  "title": "Seoul webtoon studio, renumbering exported panels",
+  "source": "renumber_panels.zsh",
+  "steps": [
+    {
+      "label": "Watch zmv refuse a batch with a collision",
+      "api": "zmv",
+      "regions": [
+        {
+          "name": "refuse-collision",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Print the rename plan without moving anything",
+      "api": "zmv -n",
+      "regions": [
+        {
+          "name": "dry-run",
+          "role": "primary"
+        },
+        {
+          "name": "refuse-collision",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Rename with zero-padded captures",
+      "api": "${(l:3::0:)1}",
+      "regions": [
+        {
+          "name": "rename",
+          "role": "primary"
+        },
+        {
+          "name": "dry-run",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Move panels into episode folders with zmv -W",
+      "api": "zmv -W",
+      "regions": [
+        {
+          "name": "into-folders",
+          "role": "primary"
+        },
+        {
+          "name": "rename",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

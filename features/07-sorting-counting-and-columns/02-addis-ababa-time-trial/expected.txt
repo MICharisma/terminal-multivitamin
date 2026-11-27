@@ -1,0 +1,28 @@
+distances sorted as text:    10 10 10 10 21 21 5 5
+distances sorted as numbers: 5 5 10 10 10 10 21 21
+== by distance, fastest first within each:
+  Dawit Mekonnen  men-open    5 km 14:21
+  Meseret Alemu   women-u20   5 km 16:55
+  Yomif Desta     men-open   10 km 29:58
+  Kenenisa Abebe  men-u20    10 km 31:09
+  Tigist Bekele   women-open 10 km 34:12
+  Selam Hailu     women-u20  10 km 35:47
+  Haile Tesfaye   men-open   21 km 68:40
+  Almaz Girma     women-open 21 km 74:31
+== men-open with -k3: after the group, sort keeps comparing km as text:
+  Yomif Desta     men-open   10 km 29:58
+  Haile Tesfaye   men-open   21 km 68:40
+  Dawit Mekonnen  men-open    5 km 14:21
+== men-open with -k3,3 -k5,5: group, then time:
+  Dawit Mekonnen  men-open    5 km 14:21
+  Yomif Desta     men-open   10 km 29:58
+  Haile Tesfaye   men-open   21 km 68:40
+== the coach's board: longest distance first, fastest first within it:
+  Haile Tesfaye   men-open   21 km 68:40
+  Almaz Girma     women-open 21 km 74:31
+  Yomif Desta     men-open   10 km 29:58
+  Kenenisa Abebe  men-u20    10 km 31:09
+  Tigist Bekele   women-open 10 km 34:12
+  Selam Hailu     women-u20  10 km 35:47
+  Dawit Mekonnen  men-open    5 km 14:21
+  Meseret Alemu   women-u20   5 km 16:55

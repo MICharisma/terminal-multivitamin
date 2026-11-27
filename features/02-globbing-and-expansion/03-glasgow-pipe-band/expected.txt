@@ -1,0 +1,6 @@
+LilyPond scores in the library: 7
+== every reel, whichever set it sits in:
+sets/medley/reel/mrs-macpherson-of-inveran.ly
+sets/msr/reel/the-sheepwife.ly
+exactly three folders under sets/: 6; one folder deep: 1 (tuning/tuning-phrase.ly)
+following the worlds-2027-msr symlink too: 10 (the MSR counted twice)

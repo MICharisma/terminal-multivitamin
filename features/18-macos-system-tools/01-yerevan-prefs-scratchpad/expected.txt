@@ -1,0 +1,4 @@
+wrote domain: com.micharisma.multivitamin.yerevan-workshop
+cohort: cascade-2026
+seats: 18
+domain still present: no

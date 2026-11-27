@@ -1,0 +1,15 @@
+== diff of the sorted lists (< packed only, > unpacked only):
+< TRA-009 Flora masquerade mask
+> TRA-012 Germont waistcoat (Tokyo theatre's, not ours)
+< ZAU-022 Queen of the Night cape
+still missing after the Tokyo tour: 2
+  TRA-009 Flora masquerade mask
+  ZAU-022 Queen of the Night cape
+== in our crates but not on our list:
+  TRA-012 Germont waistcoat (Tokyo theatre's, not ours)
+== costumes per production, packed vs unpacked:
+  ROS: packed 3, unpacked 3
+  TRA: packed 3, unpacked 3
+  ZAU: packed 4, unpacked 3
+<(...) gives a pipe, read once
+=(...) gives a regular file, deleted when the command ends

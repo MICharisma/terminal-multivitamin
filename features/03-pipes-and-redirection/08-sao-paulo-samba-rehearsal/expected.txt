@@ -1,0 +1,14 @@
+baianas: Ensaio técnico: Saturday 20:00, Sambódromo do Anhembi, gate 3
+bateria: Ensaio técnico: Saturday 20:00, Sambódromo do Anhembi, gate 3
+passistas: Ensaio técnico: Saturday 20:00, Sambódromo do Anhembi, gate 3
+baianas notice has 2 lines
+bateria notice has 2 lines
+passistas notice has 2 lines
+directors counted through the pipe: 3; written to the file: 3
+== WhatsApp message for the bateria (directors first, then their notice):
+  Mestre de bateria: Thiago Moreira
+  Carnavalesca: Renata Albuquerque
+  Puxador: Edson Batista
+  Ensaio técnico: Saturday 20:00, Sambódromo do Anhembi, gate 3
+  Bring white shoes; the samba-enredo is the new 2027 version
+with no_multios, bateria.txt has 0 lines (opened and emptied), baianas.txt has 1

@@ -1,0 +1,15 @@
+rm -take3.wav: rm read the name as options
+kept Eero's take 3; removed take 1 with rm --
+rmdir: removed empty r214/2026-10
+rmdir: kept r214/2026-11 (still has recordings)
+rmdir: removed empty r301/2026-10
+rmdir: removed empty r301/2026-11
+clear_room with an empty name: stopped before rm ran
+clear_room rooms/r301: done
+rm -f on a missing file: no complaint
+== what is left:
+keep:
+eero_kantele-etude_take3.wav
+
+rooms:
+r214

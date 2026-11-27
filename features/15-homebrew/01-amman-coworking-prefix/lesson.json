@@ -1,0 +1,44 @@
+{
+  "title": "Amman coworking desk Homebrew prefix",
+  "source": "prefix_tour.zsh",
+  "steps": [
+    {
+      "label": "Print the Homebrew root with brew --prefix",
+      "api": "brew --prefix",
+      "regions": [
+        {
+          "name": "root-prefix",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Ask where ripgrep's keg lives",
+      "api": "brew --prefix FORMULA",
+      "regions": [
+        {
+          "name": "formula-prefix",
+          "role": "primary"
+        },
+        {
+          "name": "root-prefix",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Check whether PATH already includes the Homebrew bin",
+      "api": "PATH",
+      "regions": [
+        {
+          "name": "path-membership",
+          "role": "primary"
+        },
+        {
+          "name": "root-prefix",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

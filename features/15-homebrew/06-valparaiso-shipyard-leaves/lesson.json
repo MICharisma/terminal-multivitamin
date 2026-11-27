@@ -1,0 +1,44 @@
+{
+  "title": "Valpara\u00edso shipyard leaves vs list",
+  "source": "leaves_vs_list.zsh",
+  "steps": [
+    {
+      "label": "List every installed formula",
+      "api": "brew list",
+      "regions": [
+        {
+          "name": "list-all",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "List only the leaves you asked for",
+      "api": "brew leaves",
+      "regions": [
+        {
+          "name": "leaves-only",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Compare list and leaves with comm",
+      "api": "comm",
+      "regions": [
+        {
+          "name": "comm-deps",
+          "role": "primary"
+        },
+        {
+          "name": "list-all",
+          "role": "setup"
+        },
+        {
+          "name": "leaves-only",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Vienna opera costume store, checking the crates after a tour",
+  "source": "costume_check.zsh",
+  "steps": [
+    {
+      "label": "Diff two unsorted lists with <(sort ...)",
+      "api": "<(...)",
+      "regions": [
+        {
+          "name": "diff-unsorted",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "List costumes still missing with comm -23",
+      "api": "comm -23 <(...) <(...)",
+      "regions": [
+        {
+          "name": "comm-missing",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Spot another theatre's costume with comm -13",
+      "api": "comm -13",
+      "regions": [
+        {
+          "name": "comm-extra",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Line up counts per production with paste",
+      "api": "paste <(...) <(...)",
+      "regions": [
+        {
+          "name": "paste-columns",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Compare <(...) with zsh's =(...) temp file",
+      "api": "=(...)",
+      "regions": [
+        {
+          "name": "temp-file-form",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

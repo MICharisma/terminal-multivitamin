@@ -1,0 +1,10 @@
+{
+  "term": "2026-spring",
+  "course": "byzantine chant",
+  "students": [
+    {"name": "elena papadopoulos", "grade": 18},
+    {"name": "nikos ioannou", "grade": 14},
+    {"name": "sofia dimitriou", "grade": 19},
+    {"name": "giorgos antoniou", "grade": 11}
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title": "Colombo tea tasting room, scoring cups in a clean environment",
+  "source": "clean_cupping.zsh",
+  "steps": [
+    {
+      "label": "See what an ordinary run inherits",
+      "api": "env",
+      "regions": [
+        {
+          "name": "inherited",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Start the scorer with env -i",
+      "api": "env -i",
+      "regions": [
+        {
+          "name": "env-i",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Confirm CUPPING_NOTE is still in this shell",
+      "api": "env",
+      "regions": [
+        {
+          "name": "env-list",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

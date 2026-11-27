@@ -1,0 +1,54 @@
+{
+  "title": "Kigali moto-taxi fare app release switch",
+  "source": "switch_release.zsh",
+  "steps": [
+    {
+      "label": "Point current at the first release",
+      "api": "ln -s",
+      "regions": [
+        {
+          "name": "first-link",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "See what ln -sf does to a link that points at a folder",
+      "api": "ln -sf",
+      "regions": [
+        {
+          "name": "forgot-n",
+          "role": "primary"
+        },
+        {
+          "name": "first-link",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Replace the link itself with ln -sfn",
+      "api": "ln -sfn",
+      "regions": [
+        {
+          "name": "switch-with-n",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Roll back and read where current points",
+      "api": "readlink",
+      "regions": [
+        {
+          "name": "roll-back",
+          "role": "primary"
+        },
+        {
+          "name": "switch-with-n",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

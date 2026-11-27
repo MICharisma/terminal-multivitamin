@@ -1,0 +1,30 @@
+{
+  "title": "Bucharest museum digitization doctor",
+  "source": "doctor_filter.zsh",
+  "steps": [
+    {
+      "label": "Run brew doctor and capture its log",
+      "api": "brew doctor",
+      "regions": [
+        {
+          "name": "run-doctor",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Filter warnings with process substitution",
+      "api": "brew doctor",
+      "regions": [
+        {
+          "name": "filter-warnings",
+          "role": "primary"
+        },
+        {
+          "name": "run-doctor",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

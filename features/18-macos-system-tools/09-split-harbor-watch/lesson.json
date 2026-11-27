@@ -1,0 +1,16 @@
+{
+  "title": "Split harbor watch with caffeinate -i",
+  "source": "harbor_watch.zsh",
+  "steps": [
+    {
+      "label": "Prevent idle sleep around the watch",
+      "api": "caffeinate -i",
+      "regions": [
+        {
+          "name": "caffeinate-i",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

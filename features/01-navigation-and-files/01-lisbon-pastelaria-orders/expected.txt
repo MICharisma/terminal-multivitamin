@@ -1,0 +1,10 @@
+at the counter: encomendas/natal/bolo-rei
+at the counter: encomendas/natal/pasteis-de-nata
+== encomendas:
+consoada/
+natal/
+== natal/bolo-rei:
+cafe-alcantara.txt
+familia-mendes.txt
+mkdir -p on an existing folder: fine
+plain mkdir on an existing folder: refused

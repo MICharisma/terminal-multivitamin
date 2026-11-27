@@ -1,0 +1,5 @@
+== one-shot for the evening bed:
+  jingle station=Radio-Universidad bed=cumbia
+== shell still STATION=default BED_DB=studio
+== after export, defaults reach the child:
+  jingle station=default bed=studio

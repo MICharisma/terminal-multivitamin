@@ -1,0 +1,64 @@
+{
+  "title": "Hobart Antarctic research lab, choosing a umask for ice core data",
+  "source": "umask_table.zsh",
+  "steps": [
+    {
+      "label": "List the masks the lab is choosing between",
+      "api": "umask",
+      "regions": [
+        {
+          "name": "masks-to-try",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Predict each mode, then create a core folder in a subshell",
+      "api": "umask 027",
+      "regions": [
+        {
+          "name": "predict-and-create",
+          "role": "primary"
+        },
+        {
+          "name": "masks-to-try",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Read the same mask as the bits that are kept",
+      "api": "umask -S",
+      "regions": [
+        {
+          "name": "predict-and-create",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Check that the subshells left the script's umask alone",
+      "api": "umask in a subshell",
+      "regions": [
+        {
+          "name": "scoped",
+          "role": "primary"
+        },
+        {
+          "name": "predict-and-create",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "See that a umask only takes bits away",
+      "api": "mkdir -m",
+      "regions": [
+        {
+          "name": "mask-only-removes",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

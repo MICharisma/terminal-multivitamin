@@ -1,0 +1,50 @@
+{
+  "title": "Bergen weather radar archive, sizing the sweeps",
+  "source": "radar_sweeps.zsh",
+  "steps": [
+    {
+      "label": "Find the empty, dropped sweeps",
+      "api": "(L0)",
+      "regions": [
+        {
+          "name": "dropped-sweeps",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Find scans over 100 KiB",
+      "api": "(Lk+100)",
+      "regions": [
+        {
+          "name": "storm-cells",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Take the three largest, largest first",
+      "api": "(OL[1,3])",
+      "regions": [
+        {
+          "name": "largest-three",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Stack qualifiers and negate one",
+      "api": "(.Lk-50oL^L0)",
+      "regions": [
+        {
+          "name": "stacked-qualifiers",
+          "role": "primary"
+        },
+        {
+          "name": "dropped-sweeps",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

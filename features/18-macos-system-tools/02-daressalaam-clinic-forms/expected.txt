@@ -1,0 +1,3 @@
+== intake metadata:
+amina-juma.txt fsname=amina-juma.txt size=present
+baraka-mwinyi.txt fsname=baraka-mwinyi.txt size=present

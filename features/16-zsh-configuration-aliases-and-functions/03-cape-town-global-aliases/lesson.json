@@ -1,0 +1,30 @@
+{
+  "title": "Cape Town family global aliases",
+  "source": "global_aliases.zsh",
+  "steps": [
+    {
+      "label": "Define global aliases for a path glob and a pipe",
+      "api": "alias -g",
+      "regions": [
+        {
+          "name": "global-alias",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Use them in the middle of ordinary commands",
+      "api": "alias -g",
+      "regions": [
+        {
+          "name": "use-global",
+          "role": "primary"
+        },
+        {
+          "name": "global-alias",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

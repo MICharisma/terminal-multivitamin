@@ -1,0 +1,5 @@
+== inside the function (null_glob local):
+no .spare files on the rack
+== caller still has nomatch: yes
+== unmatched glob still errors for the caller:
+nomatch rejected bikes/*.spare

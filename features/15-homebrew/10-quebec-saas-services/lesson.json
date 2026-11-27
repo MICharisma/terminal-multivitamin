@@ -1,0 +1,30 @@
+{
+  "title": "Qu\u00e9bec City SaaS brew services board",
+  "source": "services_board.zsh",
+  "steps": [
+    {
+      "label": "Read brew services list into an associative array",
+      "api": "brew services list",
+      "regions": [
+        {
+          "name": "services-list",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Print the standup board from the status table",
+      "api": "typeset -A",
+      "regions": [
+        {
+          "name": "board",
+          "role": "primary"
+        },
+        {
+          "name": "services-list",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

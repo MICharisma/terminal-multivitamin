@@ -1,0 +1,30 @@
+{
+  "title": "Ouagadougou radio prefs export/import",
+  "source": "prefs_roundtrip.zsh",
+  "steps": [
+    {
+      "label": "Export the radio domain to a plist",
+      "api": "defaults export",
+      "regions": [
+        {
+          "name": "export-domain",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Import the plist back after a delete",
+      "api": "defaults import",
+      "regions": [
+        {
+          "name": "import-domain",
+          "role": "primary"
+        },
+        {
+          "name": "export-domain",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

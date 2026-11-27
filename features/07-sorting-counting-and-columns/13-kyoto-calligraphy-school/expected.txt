@@ -1,0 +1,11 @@
+== practice grid, four strokes per row:
+ei    hyo   ei    hyo
+shin  gyo   shin  gyo
+so    kai   so    kai
+== narrow booklet, two strokes per row:
+ei    hyo
+ei    hyo
+shin  gyo
+shin  gyo
+so    kai
+so    kai

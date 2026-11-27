@@ -1,0 +1,14 @@
+== what xargs makes of one path with spaces:
+  [recordings/ciaran]
+  [byrne/the]
+  [silver]
+  [spear.txt]
+plain xargs gave up: the apostrophe in "sean o'neill" opened a quote it never closed
+== ready for the exam, names passed with -print0 | xargs -0:
+recordings/aoife ni bhriain/drowsy maggie.txt
+recordings/niamh-doyle/star-of-munster.txt
+recordings/sean o'neill/the kesh jig.txt
+== the same list from -exec ... {} +, no xargs at all:
+recordings/aoife ni bhriain/drowsy maggie.txt
+recordings/niamh-doyle/star-of-munster.txt
+recordings/sean o'neill/the kesh jig.txt

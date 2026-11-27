@@ -1,0 +1,13 @@
+head truntum | tail truntum-garuda_scan-1200dpi.tiff | root truntum/truntum-garuda_scan-1200dpi | extension tiff
+== motifs scanned at 600 dpi:
+kawung-picis_scan-600dpi
+parang-barong_scan-600dpi
+parang-rusak_scan-600dpi
+truntum-sogan_scan-600dpi
+== motif families: kawung parang truntum
+== web export plan:
+kawung/kawung-picis_scan-600dpi.tif -> web/kawung/kawung-picis.jpg
+parang/parang-barong_scan-600dpi.tif -> web/parang/parang-barong.jpg
+parang/parang-rusak_scan-600dpi.tif -> web/parang/parang-rusak.jpg
+truntum/truntum-garuda_scan-1200dpi.tiff -> web/truntum/truntum-garuda.jpg
+truntum/truntum-sogan_scan-600dpi.tif -> web/truntum/truntum-sogan.jpg

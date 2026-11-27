@@ -1,0 +1,9 @@
+now in ~orders/export/berlin
+  beni ouarain 2x3 m, natural wool, ship via Casablanca
+now in ~coop/teintures/henna
+shipment note: ~orders/export/berlin/galerie-moser.txt
+shipment note: ~orders/export/kyoto/ryokan-hanami.txt
+dye recipe:    ~coop/teintures/henna/recette.txt
+== ls ~orders/export/kyoto:
+recette.txt
+ryokan-hanami.txt

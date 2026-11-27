@@ -1,0 +1,64 @@
+{
+  "title": "Copenhagen furniture workshop, pasting a cut list",
+  "source": "cut_list.zsh",
+  "steps": [
+    {
+      "label": "Save the clipboard and restore it on exit",
+      "api": "trap ... | pbcopy",
+      "regions": [
+        {
+          "name": "save-clipboard",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Copy a command's output to the clipboard",
+      "api": "| pbcopy",
+      "regions": [
+        {
+          "name": "copy-output",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Pipe the clipboard into another command",
+      "api": "pbpaste |",
+      "regions": [
+        {
+          "name": "paste-into-pipe",
+          "role": "primary"
+        },
+        {
+          "name": "copy-output",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Copy a file and paste it back",
+      "api": "pbcopy < file",
+      "regions": [
+        {
+          "name": "copy-file",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Tidy the clipboard in place",
+      "api": "pbpaste | sort -u | pbcopy",
+      "regions": [
+        {
+          "name": "tidy-in-place",
+          "role": "primary"
+        },
+        {
+          "name": "copy-file",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

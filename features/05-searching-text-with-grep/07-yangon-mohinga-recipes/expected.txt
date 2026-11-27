@@ -1,0 +1,21 @@
+== Aunt Thida's toppings (heading plus three lines):
+Toppings:
+- boiled eggs, halved
+- crisp chickpea fritters
+- banana stem, sliced thin
+== Cousin Htet's note on banana stem, with two lines before:
+- yellow split-pea crackers
+
+Do not skip the banana stem; it is the crunch.
+== fish sauce mentions in both recipes, one line of context:
+aunt-thida.txt-- 1 tsp turmeric
+aunt-thida.txt:- fish sauce to taste
+aunt-thida.txt-
+--
+cousin-htet.txt-- turmeric and paprika
+cousin-htet.txt:- splash of fish sauce
+cousin-htet.txt-
+== Aunt Thida's broth, numbered:
+3:Broth:
+4-- 1 kg catfish, cleaned
+5-- 2 lemongrass stalks, bruised

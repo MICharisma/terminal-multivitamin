@@ -1,0 +1,50 @@
+{
+  "title": "Zanzibar reef survey photos, in bash",
+  "source": "sort_dives.sh",
+  "steps": [
+    {
+      "label": "Match either extension spelling, in any case",
+      "api": "@(a|b)",
+      "regions": [
+        {
+          "name": "alternation",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Match one or more digits",
+      "api": "+(pattern)",
+      "regions": [
+        {
+          "name": "one-or-more",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Exclude blurry photos with !(...)",
+      "api": "!(pattern)",
+      "regions": [
+        {
+          "name": "negation",
+          "role": "primary"
+        },
+        {
+          "name": "one-or-more",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Loop over a possibly empty array safely in bash 3.2",
+      "api": "shopt -s nullglob",
+      "regions": [
+        {
+          "name": "empty-array",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

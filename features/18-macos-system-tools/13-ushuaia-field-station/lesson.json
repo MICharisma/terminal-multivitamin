@@ -1,0 +1,40 @@
+{
+  "title": "Ushuaia field station night kit",
+  "source": "night_kit.zsh",
+  "steps": [
+    {
+      "label": "Record the logger id with defaults write",
+      "api": "defaults write",
+      "regions": [
+        {
+          "name": "logger-pref",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Hold sleep for the stamp second",
+      "api": "caffeinate -t",
+      "regions": [
+        {
+          "name": "stamp-awake",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Confirm the sample with mdls",
+      "api": "mdls",
+      "regions": [
+        {
+          "name": "mdls-sample",
+          "role": "primary"
+        },
+        {
+          "name": "stamp-awake",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Montréal theatre, building the surtitle cue file",
+  "source": "surtitle_cues.zsh",
+  "steps": [
+    {
+      "label": "Compare '\\t' with $'\\t'",
+      "api": "$'\\t'",
+      "regions": [
+        {
+          "name": "tab-or-not",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Write é as UTF-8 bytes that work under LC_ALL=C",
+      "api": "$'\\x..'",
+      "regions": [
+        {
+          "name": "bytes-not-code-points",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Build the cue file with real tabs",
+      "api": "$'...\\t...'",
+      "regions": [
+        {
+          "name": "build-cues",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Split each cue on tabs",
+      "api": "IFS=$'\\t' read -r",
+      "regions": [
+        {
+          "name": "split-on-tab",
+          "role": "primary"
+        },
+        {
+          "name": "build-cues",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Hold a two-line surtitle in one string",
+      "api": "$'...\\n...'",
+      "regions": [
+        {
+          "name": "two-line-surtitle",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

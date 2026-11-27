@@ -1,0 +1,5 @@
+== files in the heritage album:
+album/2026-heritage/braai.txt
+album/2026-heritage/castles.txt
+== line count across the album:
+2

@@ -1,0 +1,5 @@
+== plain glob, sorted as text: camion-101.log camion-118.log camion-120.log camion-127.log camion-135.log camion-136.log camion-204.log camion-212.log camion-99.log
+== numeric order: camion-99.log camion-101.log camion-118.log camion-120.log camion-127.log camion-135.log camion-136.log camion-204.log camion-212.log
+== trucks 120 to 135 on the night shift: camion-120.log camion-127.log camion-135.log
+== same range, any case (picks up the old dispatch export): CAMION-131.LOG camion-120.log camion-127.log camion-135.log
+== the new 200-series trucks: camion-204.log camion-212.log

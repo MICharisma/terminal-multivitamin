@@ -1,0 +1,54 @@
+{
+  "title": "Tbilisi film archive, mirroring digitized reels",
+  "source": "mirror_reels.zsh",
+  "steps": [
+    {
+      "label": "Copy the contents of scans/ the same way on macOS and Linux",
+      "api": "cp -R src/. dest/",
+      "regions": [
+        {
+          "name": "mirror-contents",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Compare the two trees",
+      "api": "diff -r",
+      "regions": [
+        {
+          "name": "compare-trees",
+          "role": "primary"
+        },
+        {
+          "name": "mirror-contents",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Rank the films by size on disk",
+      "api": "du -sk",
+      "regions": [
+        {
+          "name": "largest-films",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Catch a stale mirror after a change",
+      "api": "diff -r",
+      "regions": [
+        {
+          "name": "catch-drift",
+          "role": "primary"
+        },
+        {
+          "name": "compare-trees",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

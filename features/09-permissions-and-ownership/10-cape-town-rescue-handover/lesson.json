@@ -1,0 +1,64 @@
+{
+  "title": "Cape Town sea rescue station, handing files to the station account",
+  "source": "handover_plan.zsh",
+  "steps": [
+    {
+      "label": "Read the owner and group as numbers",
+      "api": "ls -n",
+      "regions": [
+        {
+          "name": "numeric-owner",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Make the changes a regular user may make",
+      "api": "chgrp",
+      "regions": [
+        {
+          "name": "allowed-changes",
+          "role": "primary"
+        },
+        {
+          "name": "numeric-owner",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Try to give a file away, and get refused",
+      "api": "chown",
+      "regions": [
+        {
+          "name": "refused-changes",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Test ownership instead of trying",
+      "api": "[[ -O ]]",
+      "regions": [
+        {
+          "name": "test-first",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Write the root-only commands into a plan for review",
+      "api": "sudo",
+      "regions": [
+        {
+          "name": "sudo-plan",
+          "role": "primary"
+        },
+        {
+          "name": "refused-changes",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

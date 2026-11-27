@@ -1,0 +1,44 @@
+{
+  "title": "Colombo tea auction clipboard for the lot board",
+  "source": "lot_clipboard.zsh",
+  "steps": [
+    {
+      "label": "Copy this morning's Uva lot onto the pasteboard",
+      "api": "pbcopy",
+      "regions": [
+        {
+          "name": "copy-lot",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Paste it into the auctioneer's board file",
+      "api": "pbpaste",
+      "regions": [
+        {
+          "name": "paste-board",
+          "role": "primary"
+        },
+        {
+          "name": "copy-lot",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Replace the pasteboard with the next Nuwara Eliya lot",
+      "api": "pbcopy",
+      "regions": [
+        {
+          "name": "replace-clip",
+          "role": "primary"
+        },
+        {
+          "name": "paste-board",
+          "role": "result"
+        }
+      ]
+    }
+  ]
+}

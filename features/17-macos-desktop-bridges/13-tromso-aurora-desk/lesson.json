@@ -1,0 +1,36 @@
+{
+  "title": "Troms\u00f8 aurora desk, bridging a night's report",
+  "source": "aurora_desk.zsh",
+  "steps": [
+    {
+      "label": "Convert the night report to HTML",
+      "api": "textutil -convert",
+      "regions": [
+        {
+          "name": "convert-report",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Copy the alert line to the pasteboard",
+      "api": "pbcopy",
+      "regions": [
+        {
+          "name": "copy-alert",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Open the HTML card for the morning shift",
+      "api": "open",
+      "regions": [
+        {
+          "name": "open-card",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

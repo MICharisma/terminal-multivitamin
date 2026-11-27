@@ -1,0 +1,4 @@
+brew "ffmpeg"
+brew "sox"
+brew "timidity"
+cask "musescore"

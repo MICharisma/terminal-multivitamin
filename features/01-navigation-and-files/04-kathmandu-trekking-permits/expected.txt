@@ -1,0 +1,17 @@
+columns: permit,trekker,nationality,route,issued
+permits issued: 10
+== latest three at the desk:
+TIMS-88111,Arjun Mehta,India,Gokyo Lakes,2026-11-21
+TIMS-88112,Chloé Marchand,France,Annapurna Base Camp,2026-11-22
+TIMS-88113,Samuel Mensah,Ghana,Mardi Himal,2026-11-23
+== rows 5 to 7 (the Langtang group that called back):
+TIMS-88107,Lucía Ferreyra,Argentina,Langtang Valley,2026-11-19
+TIMS-88108,Tomás Ferreyra,Argentina,Langtang Valley,2026-11-19
+TIMS-88109,Rangi Parata,New Zealand,Langtang Valley,2026-11-19
+== numbered, so the office in Pokhara can say "line 6":
+     1	TIMS-88104,Ingrid Solberg,Norway,Annapurna Circuit,2026-11-18
+     2	TIMS-88105,Kenji Matsuda,Japan,Everest Base Camp,2026-11-18
+     3	TIMS-88106,Amara Okafor,Nigeria,Poon Hill,2026-11-19
+     4	TIMS-88107,Lucía Ferreyra,Argentina,Langtang Valley,2026-11-19
+     5	TIMS-88108,Tomás Ferreyra,Argentina,Langtang Valley,2026-11-19
+     6	TIMS-88109,Rangi Parata,New Zealand,Langtang Valley,2026-11-19

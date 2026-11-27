@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/MICharisma/terminal-multivitamin/schema/multivitamin.schema.json",
+  "title": "multivitamin.json",
+  "description": "Root metadata for a multivitamin catalog, read by the build that publishes manifest.json for multivitamin-web.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["name", "title", "language", "grammar", "repo", "features"],
+  "properties": {
+    "name": {
+      "description": "Short id, also the URL segment in multivitamin-web (e.g. rubyllm, terminal).",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "language": {
+      "description": "Language of the example sources (e.g. ruby, zsh).",
+      "type": "string",
+      "minLength": 1
+    },
+    "grammar": {
+      "description": "Shiki grammar id used to highlight the sources (e.g. ruby, shellscript).",
+      "type": "string",
+      "minLength": 1
+    },
+    "repo": {
+      "description": "GitHub owner/name.",
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"
+    },
+    "features": {
+      "description": "Feature folders under features/, in catalog order.",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[0-9]{2}-[a-z0-9]+(-[a-z0-9]+)*$"
+      }
+    }
+  }
+}

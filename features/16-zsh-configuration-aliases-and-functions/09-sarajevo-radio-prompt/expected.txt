@@ -1,0 +1,3 @@
+== preview with print -P:
+LEFT:  [36meR-studio-b[39m % 
+RIGHT: [31mON AIR[39m

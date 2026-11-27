@@ -1,0 +1,3 @@
+would: open -R -- folios/thuluth-folio-14.txt
+revealed: thuluth-folio-14.txt
+caption: thuluth-folio-14.txt

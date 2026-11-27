@@ -1,0 +1,50 @@
+{
+  "title": "Penang fab lab, PATH and hashing in bash",
+  "source": "bash_path.sh",
+  "steps": [
+    {
+      "label": "Point PATH at the laser tools",
+      "api": "PATH",
+      "regions": [
+        {
+          "name": "set-path",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "See gcode_send land in the hash table",
+      "api": "hash",
+      "regions": [
+        {
+          "name": "hash-table",
+          "role": "primary"
+        },
+        {
+          "name": "set-path",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Plant a stale hash entry and clear it",
+      "api": "hash -p",
+      "regions": [
+        {
+          "name": "switch",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "List every match with type -a",
+      "api": "type -a",
+      "regions": [
+        {
+          "name": "type-a",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

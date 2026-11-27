@@ -1,0 +1,30 @@
+{
+  "title": "Muscat hotel Wi-Fi inventory",
+  "source": "wifi_inventory.zsh",
+  "steps": [
+    {
+      "label": "List every hardware port",
+      "api": "networksetup -listallhardwareports",
+      "regions": [
+        {
+          "name": "list-ports",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Walk the inventory line by line",
+      "api": "while IFS= read -r",
+      "regions": [
+        {
+          "name": "read-devices",
+          "role": "primary"
+        },
+        {
+          "name": "list-ports",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "title": "Stellenbosch wine estate, fermentation tank alarms, in portable sh",
+  "source": "tank_alarms.sh",
+  "steps": [
+    {
+      "label": "Run grep once per tank with -exec ... \\;",
+      "api": "find -exec {} \\;",
+      "regions": [
+        {
+          "name": "one-per-file",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Batch all tanks into one grep with -exec ... +",
+      "api": "find -exec {} +",
+      "regions": [
+        {
+          "name": "batched",
+          "role": "primary"
+        },
+        {
+          "name": "one-per-file",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Add /dev/null so grep always names the file",
+      "api": "grep pattern /dev/null {} +",
+      "regions": [
+        {
+          "name": "dev-null-trick",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Compare find's exit status for \\; and +",
+      "api": "find -exec {} +",
+      "regions": [
+        {
+          "name": "exit-status",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

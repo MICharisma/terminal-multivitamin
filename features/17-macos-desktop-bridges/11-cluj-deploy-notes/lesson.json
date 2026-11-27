@@ -1,0 +1,44 @@
+{
+  "title": "Cluj-Napoca deploy notes on the pasteboard",
+  "source": "deploy_notes.zsh",
+  "steps": [
+    {
+      "label": "Build release notes through process substitution",
+      "api": "process substitution",
+      "regions": [
+        {
+          "name": "process-sub",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Load the pasteboard from that stream",
+      "api": "pbcopy",
+      "regions": [
+        {
+          "name": "copy-notes",
+          "role": "primary"
+        },
+        {
+          "name": "process-sub",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Confirm with pbpaste before Slack",
+      "api": "pbpaste",
+      "regions": [
+        {
+          "name": "confirm-paste",
+          "role": "primary"
+        },
+        {
+          "name": "copy-notes",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

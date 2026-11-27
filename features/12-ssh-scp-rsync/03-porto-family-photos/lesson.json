@@ -1,0 +1,68 @@
+{
+  "title": "Porto family photos to grandmother's inbox",
+  "source": "send_album.zsh",
+  "steps": [
+    {
+      "label": "Show grandmother's inbox before the transfer",
+      "api": "scp",
+      "regions": [
+        {
+          "name": "before-inbox",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "scp the Douro barco photo into the inbox over local sshd",
+      "api": "scp",
+      "regions": [
+        {
+          "name": "scp-photo",
+          "role": "primary"
+        },
+        {
+          "name": "before-inbox",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Record the host key with StrictHostKeyChecking accept-new",
+      "api": "StrictHostKeyChecking",
+      "regions": [
+        {
+          "name": "known-hosts",
+          "role": "primary"
+        },
+        {
+          "name": "scp-photo",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Keep the known_hosts file inside the workdir",
+      "api": "UserKnownHostsFile",
+      "regions": [
+        {
+          "name": "known-hosts",
+          "role": "result"
+        }
+      ]
+    },
+    {
+      "label": "List the inbox after the photo arrives",
+      "api": "scp",
+      "regions": [
+        {
+          "name": "after-inbox",
+          "role": "result"
+        },
+        {
+          "name": "scp-photo",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

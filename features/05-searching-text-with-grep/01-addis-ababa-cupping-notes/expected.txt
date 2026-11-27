@@ -1,0 +1,10 @@
+== Yirgacheffe lots for the Hamburg roaster:
+lot-221,Yirgacheffe,washed,fragrance floral,acidity bright,body tea-like,score 86.5
+lot-225,Yirgacheffe,honey,fragrance floral,acidity citrus,body tea-like,score 85.75
+lots with bright acidity: 3
+== score 86. in basic regex (. matches any character):
+lot-221,Yirgacheffe,washed,fragrance floral,acidity bright,body tea-like,score 86.5
+== quoted pattern, shell leaves it alone:
+lot-221,Yirgacheffe,washed,fragrance floral,acidity bright,body tea-like,score 86.5
+lot-225,Yirgacheffe,honey,fragrance floral,acidity citrus,body tea-like,score 85.75
+no match: grep exits 1 (caught with if ! so errexit stays happy)

@@ -1,0 +1,44 @@
+{
+  "title": "Chiang Mai lacquer workshop functions",
+  "source": "workshop_functions.zsh",
+  "steps": [
+    {
+      "label": "Define a seal_tray function with a local argument",
+      "api": "function",
+      "regions": [
+        {
+          "name": "define-fn",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Print the definition for the apprentice handout",
+      "api": "typeset -f",
+      "regions": [
+        {
+          "name": "show-fn",
+          "role": "primary"
+        },
+        {
+          "name": "define-fn",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Call the function to move a tray",
+      "api": "function",
+      "regions": [
+        {
+          "name": "call-fn",
+          "role": "primary"
+        },
+        {
+          "name": "define-fn",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

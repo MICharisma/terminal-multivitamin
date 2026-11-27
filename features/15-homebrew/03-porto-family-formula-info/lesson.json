@@ -1,0 +1,30 @@
+{
+  "title": "Porto family laptop formula cards",
+  "source": "formula_cards.zsh",
+  "steps": [
+    {
+      "label": "Fetch ffmpeg's card as JSON",
+      "api": "brew info --json=v1",
+      "regions": [
+        {
+          "name": "info-json",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Extract name, description, and stable version",
+      "api": "brew info --json=v1",
+      "regions": [
+        {
+          "name": "extract-fields",
+          "role": "primary"
+        },
+        {
+          "name": "info-json",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

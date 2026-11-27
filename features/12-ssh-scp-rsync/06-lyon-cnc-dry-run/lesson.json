@@ -1,0 +1,44 @@
+{
+  "title": "Lyon CNC shop dry-run",
+  "source": "dry_run_programmes.zsh",
+  "steps": [
+    {
+      "label": "Show the empty machine share before any transfer",
+      "api": "rsync --dry-run",
+      "regions": [
+        {
+          "name": "empty-share",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Dry-run each programme from the transfer plan",
+      "api": "rsync --dry-run",
+      "regions": [
+        {
+          "name": "dry-run-plan",
+          "role": "primary"
+        },
+        {
+          "name": "empty-share",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Confirm the machine share is still empty after the dry-run",
+      "api": "rsync --dry-run",
+      "regions": [
+        {
+          "name": "still-empty",
+          "role": "result"
+        },
+        {
+          "name": "dry-run-plan",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Dar es Salaam clinic forms, reading Spotlight metadata",
+  "source": "form_metadata.zsh",
+  "steps": [
+    {
+      "label": "Loop over each intake form",
+      "api": "for f in glob",
+      "regions": [
+        {
+          "name": "loop-forms",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Read FS name and size with mdls -name",
+      "api": "mdls -name",
+      "regions": [
+        {
+          "name": "mdls-names",
+          "role": "primary"
+        },
+        {
+          "name": "loop-forms",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

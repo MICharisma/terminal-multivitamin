@@ -1,0 +1,30 @@
+{
+  "title": "Colombo school ZDOTDIR load order",
+  "source": "load_order.zsh",
+  "steps": [
+    {
+      "label": "Write the four startup files under a temp ZDOTDIR",
+      "api": "ZDOTDIR",
+      "regions": [
+        {
+          "name": "write-startup",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Run login+interactive zsh and watch the order",
+      "api": "ZDOTDIR",
+      "regions": [
+        {
+          "name": "login-interactive",
+          "role": "primary"
+        },
+        {
+          "name": "write-startup",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

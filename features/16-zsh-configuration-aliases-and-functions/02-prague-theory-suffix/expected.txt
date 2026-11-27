@@ -1,0 +1,3 @@
+== typing a worksheet name opens it via the suffix alias:
+opened-pdf: worksheets/bach-invention.pdf
+opened-lilypond: worksheets/dvorak-bass.ly

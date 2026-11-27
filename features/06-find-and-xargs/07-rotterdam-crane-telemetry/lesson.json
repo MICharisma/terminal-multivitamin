@@ -1,0 +1,68 @@
+{
+  "title": "Rotterdam container terminal, sizing crane telemetry dumps",
+  "source": "telemetry_dumps.zsh",
+  "steps": [
+    {
+      "label": "Detect -printf once and define one listing function",
+      "api": "find -printf",
+      "regions": [
+        {
+          "name": "detect-printf",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Fall back to stat -f on BSD find",
+      "api": "find -exec stat -f {} +",
+      "regions": [
+        {
+          "name": "detect-printf",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Rank the dumps by size",
+      "api": "sort -rn",
+      "regions": [
+        {
+          "name": "largest-dumps",
+          "role": "primary"
+        },
+        {
+          "name": "detect-printf",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Pick out the day of the brake trip",
+      "api": "grep",
+      "regions": [
+        {
+          "name": "one-day",
+          "role": "primary"
+        },
+        {
+          "name": "detect-printf",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Total the dumps per crane in a while-read loop",
+      "api": "while read -r",
+      "regions": [
+        {
+          "name": "per-crane",
+          "role": "primary"
+        },
+        {
+          "name": "detect-printf",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

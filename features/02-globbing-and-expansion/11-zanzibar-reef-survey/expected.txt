@@ -1,0 +1,14 @@
+dive photos, any extension spelling, any case: 7
+== transect photos (any transect number):
+  transect-12_0001.JPG
+  transect-1_0001.JPG
+  transect-1_0002.JPG
+  transect-1_0003_blurry.JPG
+  transect-2_0001.jpg
+  transect-2_0002.jpeg
+== transects 1 and 2, sharp only, for the coral cover count:
+  transect-1_0001.JPG
+  transect-1_0002.JPG
+  transect-2_0001.jpg
+  transect-2_0002.jpeg
+video clips this dive: 0

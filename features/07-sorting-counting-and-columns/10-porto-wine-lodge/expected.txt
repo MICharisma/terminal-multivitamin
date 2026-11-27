@@ -1,0 +1,5 @@
+== lodge totals: 5 lines, 24 words, 135 bytes
+longest tasting note: 61 characters
+== longest line for the back label:
+violets and dark cherry with a long warm finish on the palate
+raw wc -l field: [5], arithmetic count: 5

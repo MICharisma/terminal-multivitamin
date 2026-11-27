@@ -1,0 +1,60 @@
+{
+  "title": "Chennai textile export house, this week's purchase orders",
+  "source": "this_week.zsh",
+  "steps": [
+    {
+      "label": "Stamp files hours in the past, portably",
+      "api": "strftime",
+      "regions": [
+        {
+          "name": "stamp-ages",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Match orders changed in the last 7 days",
+      "api": "(m-7)",
+      "regions": [
+        {
+          "name": "this-week",
+          "role": "primary"
+        },
+        {
+          "name": "stamp-ages",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Count in hours instead of days",
+      "api": "(mh-24)",
+      "regions": [
+        {
+          "name": "today",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Find orders untouched for over 30 days",
+      "api": "(m+30)",
+      "regions": [
+        {
+          "name": "stale",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Pick the most recent order",
+      "api": "(om[1])",
+      "regions": [
+        {
+          "name": "newest",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

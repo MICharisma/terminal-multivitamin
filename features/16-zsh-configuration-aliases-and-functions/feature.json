@@ -1,0 +1,30 @@
+{
+  "feature": "zsh-configuration-aliases-and-functions",
+  "title": "zsh configuration, aliases, and functions",
+  "covers": [
+    "()",
+    "PROMPT",
+    "RPROMPT",
+    "ZDOTDIR",
+    "[[ -o ]]",
+    "add-zsh-hook",
+    "alias",
+    "alias -L",
+    "alias -g",
+    "alias -s",
+    "autoload -Uz",
+    "bindkey",
+    "compinit",
+    "emulate -L zsh",
+    "fpath",
+    "function",
+    "hash -d",
+    "setopt",
+    "setopt local_options",
+    "source",
+    "typeset -f",
+    "unalias",
+    "unsetopt",
+    "zstyle"
+  ]
+}

@@ -1,0 +1,10 @@
+stat flavour: GNU (stat -c %s)
+bourdon-16.txt              105 bytes
+pryncypal-8.txt              67 bytes
+trompeta-8.txt               45 bytes
+vox-humana-8.txt              0 bytes
+zstat agrees on bourdon-16.txt: 105 bytes
+== reports written since the September service:
+  bourdon-16.txt
+  pryncypal-8.txt
+  vox-humana-8.txt (empty: the voicer has not written it up yet)

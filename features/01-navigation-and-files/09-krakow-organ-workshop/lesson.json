@@ -1,0 +1,54 @@
+{
+  "title": "Kraków organ workshop voicing reports",
+  "source": "voicing_reports.zsh",
+  "steps": [
+    {
+      "label": "Detect GNU or BSD stat once",
+      "api": "stat --version",
+      "regions": [
+        {
+          "name": "pick-stat",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Read every report's size through one function",
+      "api": "stat -c %s / stat -f %z",
+      "regions": [
+        {
+          "name": "read-sizes",
+          "role": "primary"
+        },
+        {
+          "name": "pick-stat",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Ask zsh's own zstat the same question",
+      "api": "zstat",
+      "regions": [
+        {
+          "name": "zstat-check",
+          "role": "primary"
+        },
+        {
+          "name": "read-sizes",
+          "role": "result"
+        }
+      ]
+    },
+    {
+      "label": "List reports newer than the last service, flagging empty ones",
+      "api": "[[ -nt ]]",
+      "regions": [
+        {
+          "name": "newer-than-service",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+== ls -l only shows a + : -rw-r--r--+
+== ls -le shows the entry:
+    0: group:everyone deny delete
+rm by the owner: refused, the deny entry wins
+== a render saved after the folder entry inherits it:
+    0: group:everyone inherited deny delete
+== after chmod -a on vista-aeria_v7.png: -rw-r--r--
+rm by the owner: removed, the competition picked v8
+== after chmod -R -N, no ACEs are left:
+  drwxr-xr-x renders
+  -rw-r--r-- renders/interior-estacio_v2.png
+  -rw-r--r-- renders/placa-capvespre_v4.png

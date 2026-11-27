@@ -1,0 +1,3 @@
+plutil -lint: ok
+would: launchctl bootstrap gui/$UID com.micharisma.multivitamin.vilnius-backup.plist
+would: launchctl bootout gui/$UID com.micharisma.multivitamin.vilnius-backup.plist

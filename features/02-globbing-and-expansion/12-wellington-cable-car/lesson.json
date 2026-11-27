@@ -1,0 +1,54 @@
+{
+  "title": "Wellington Cable Car brake logs, in portable sh",
+  "source": "brake_logs.sh",
+  "steps": [
+    {
+      "label": "Guard a POSIX loop against an unmatched glob",
+      "api": "[ -e \"$f\" ] || continue",
+      "regions": [
+        {
+          "name": "guarded-loop",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Sort logs with case patterns",
+      "api": "case",
+      "regions": [
+        {
+          "name": "case-patterns",
+          "role": "primary"
+        },
+        {
+          "name": "guarded-loop",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Count matches with set --",
+      "api": "set -- glob",
+      "regions": [
+        {
+          "name": "count-with-set",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "See what an unguarded loop receives",
+      "api": "for f in glob",
+      "regions": [
+        {
+          "name": "literal-leftover",
+          "role": "primary"
+        },
+        {
+          "name": "guarded-loop",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

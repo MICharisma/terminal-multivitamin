@@ -1,0 +1,56 @@
+{
+  "title": "Quezon City family balikbayan box lists",
+  "source": "box_inventory.zsh",
+  "steps": [
+    {
+      "label": "Ask for folders, files, and symlinks by qualifier",
+      "api": "(/)",
+      "regions": [
+        {
+          "name": "kinds-table",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Glob a pattern stored in a variable",
+      "api": "${~pattern}",
+      "regions": [
+        {
+          "name": "kinds-table",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Find empty folders by combining qualifiers",
+      "api": "(/^F)",
+      "regions": [
+        {
+          "name": "empty-folders",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Get an empty list instead of an error",
+      "api": "(N)",
+      "regions": [
+        {
+          "name": "no-match",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Read only regular files one level down",
+      "api": "(.)",
+      "regions": [
+        {
+          "name": "lists-inside",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

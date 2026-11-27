@@ -1,0 +1,11 @@
+== dangerous PATH runs the scratch trojan first:
+  TROJAN
+== auditing each PATH entry:
+  drop .: relative PATH entry
+  drop WORK/scratch: world-writable
+  keep WORK/safe/bin
+  keep /usr/bin
+  keep /bin
+== rewritten PATH runs the clinic tool:
+  clinic ls
+  PATH=WORK/safe/bin:/usr/bin:/bin

@@ -1,0 +1,19 @@
+== PATH after setting path array:
+  WORK/bin:/usr/bin:/bin
+== after prepend forecast/bin and append bin again:
+  WORK/forecast/bin
+  WORK/bin
+  /usr/bin
+  /bin
+  WORK/bin
+== entries before unique: 5
+== after typeset -U path: 4
+  WORK/forecast/bin
+  WORK/bin
+  /usr/bin
+  /bin
+== one per line with join flag (F):
+  WORK/forecast/bin
+  WORK/bin
+  /usr/bin
+  /bin

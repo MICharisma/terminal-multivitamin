@@ -1,0 +1,50 @@
+{
+  "title": "Yogyakarta batik studio, naming web images from scans",
+  "source": "web_names.zsh",
+  "steps": [
+    {
+      "label": "Pull a path apart with :h :t :r :e",
+      "api": ":t :h :r :e",
+      "regions": [
+        {
+          "name": "pull-apart",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Apply modifiers to every match inside the qualifier",
+      "api": "(:t:r)",
+      "regions": [
+        {
+          "name": "qualifier-modifier",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "List the motif families once each",
+      "api": "(u)",
+      "regions": [
+        {
+          "name": "array-modifiers",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Substitute inside names to plan web exports",
+      "api": ":s/old/new/",
+      "regions": [
+        {
+          "name": "substitute-names",
+          "role": "primary"
+        },
+        {
+          "name": "array-modifiers",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

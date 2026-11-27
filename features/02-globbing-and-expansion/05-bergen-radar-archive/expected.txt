@@ -1,0 +1,14 @@
+== dropped sweeps to re-request from the radar:
+hurum_2026-11-20T0630.h5
+hurum_2026-11-20T0715.h5
+== full-volume scans (over 100 KiB), probably the storm cell:
+hurum_2026-11-20T0600.h5
+hurum_2026-11-20T0615.h5
+hurum_2026-11-20T0700.h5
+== three largest, for the forecaster on duty:
+hurum_2026-11-20T0700.h5 260 KiB
+hurum_2026-11-20T0615.h5 210 KiB
+hurum_2026-11-20T0600.h5 180 KiB
+== small but not empty, smallest first (clear-air scans):
+hurum_2026-11-20T0730.h5
+hurum_2026-11-20T0645.h5

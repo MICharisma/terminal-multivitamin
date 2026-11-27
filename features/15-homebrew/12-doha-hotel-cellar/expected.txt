@@ -1,0 +1,4 @@
+prefix   opt/homebrew
+cellar   opt/homebrew/Cellar
+cache    Library/Caches/Homebrew
+kegs     curl wget 

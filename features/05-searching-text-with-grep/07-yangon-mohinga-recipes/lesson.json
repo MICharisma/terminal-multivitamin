@@ -1,0 +1,46 @@
+{
+  "title": "Yangon family, comparing two mohinga recipes",
+  "source": "compare_recipes.zsh",
+  "steps": [
+    {
+      "label": "Print lines after a match with -A",
+      "api": "grep -A",
+      "regions": [
+        {
+          "name": "after",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Print lines before a match with -B",
+      "api": "grep -B",
+      "regions": [
+        {
+          "name": "before",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Print context on both sides with -C",
+      "api": "grep -C",
+      "regions": [
+        {
+          "name": "context",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Combine -n with -A",
+      "api": "grep -nA",
+      "regions": [
+        {
+          "name": "numbered-context",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "title": "Yerevan prefs scratchpad for a workshop app",
+  "source": "prefs_scratchpad.zsh",
+  "steps": [
+    {
+      "label": "Write the workshop cohort into a throwaway domain",
+      "api": "defaults write",
+      "regions": [
+        {
+          "name": "write-pref",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Read the cohort back for the projector",
+      "api": "defaults read",
+      "regions": [
+        {
+          "name": "read-pref",
+          "role": "primary"
+        },
+        {
+          "name": "write-pref",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Delete the domain on the way out",
+      "api": "defaults delete",
+      "regions": [
+        {
+          "name": "delete-pref",
+          "role": "primary"
+        },
+        {
+          "name": "write-pref",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

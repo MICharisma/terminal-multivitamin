@@ -1,0 +1,64 @@
+{
+  "title": "Brisbane jazz club, announcing the next set",
+  "source": "announce_set.zsh",
+  "steps": [
+    {
+      "label": "Generate a render script with (q)",
+      "api": "${(q)name}",
+      "regions": [
+        {
+          "name": "q-for-script",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Show the always-single-quoted form",
+      "api": "${(qq)name}",
+      "regions": [
+        {
+          "name": "qq-form",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Watch AppleScript break on embedded quotes",
+      "api": "osascript -e",
+      "regions": [
+        {
+          "name": "broken-applescript",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Escape quotes for AppleScript",
+      "api": "${var//\"/\\\"}",
+      "regions": [
+        {
+          "name": "escaped-applescript",
+          "role": "primary"
+        },
+        {
+          "name": "broken-applescript",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Run the generated script",
+      "api": "zsh render.zsh",
+      "regions": [
+        {
+          "name": "render-all",
+          "role": "primary"
+        },
+        {
+          "name": "q-for-script",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "title": "Almaty climbing club route cards",
+  "source": "open_routes.zsh",
+  "steps": [
+    {
+      "label": "Route each card by its extension",
+      "api": "case",
+      "regions": [
+        {
+          "name": "route-case",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Open a PDF in Preview by name",
+      "api": "open -a",
+      "regions": [
+        {
+          "name": "open-preview",
+          "role": "primary"
+        },
+        {
+          "name": "route-case",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Open a local HTML topo via file://",
+      "api": "open file://",
+      "regions": [
+        {
+          "name": "open-file-url",
+          "role": "primary"
+        },
+        {
+          "name": "route-case",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

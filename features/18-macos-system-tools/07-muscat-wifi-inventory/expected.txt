@@ -1,0 +1,2 @@
+hardware ports captured
+device line present: yes

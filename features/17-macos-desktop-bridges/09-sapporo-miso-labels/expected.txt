@@ -1,0 +1,3 @@
+before: aka-miso-label.png format=png
+after:  aka-miso-label.jpg format=jpeg
+proof ready for the Otaru printer

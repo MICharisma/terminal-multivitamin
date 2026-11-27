@@ -1,0 +1,58 @@
+{
+  "title": "Dhaka payments jumpbox mux",
+  "source": "mux_jumpbox.zsh",
+  "steps": [
+    {
+      "label": "Write a paylab Host block with ControlMaster auto",
+      "api": "ControlMaster",
+      "regions": [
+        {
+          "name": "write-mux",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Resolve ControlMaster for the jumpbox alias",
+      "api": "ControlMaster",
+      "regions": [
+        {
+          "name": "resolve-master",
+          "role": "primary"
+        },
+        {
+          "name": "write-mux",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Show the ControlPath socket basename under mux/",
+      "api": "ControlPath",
+      "regions": [
+        {
+          "name": "resolve-path",
+          "role": "primary"
+        },
+        {
+          "name": "write-mux",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Confirm ControlPersist keeps the master around",
+      "api": "ControlPersist",
+      "regions": [
+        {
+          "name": "resolve-persist",
+          "role": "primary"
+        },
+        {
+          "name": "write-mux",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

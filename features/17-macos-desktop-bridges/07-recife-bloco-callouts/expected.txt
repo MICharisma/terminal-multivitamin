@@ -1,0 +1,6 @@
+== rehearsal callouts:
+would: say -v Alex -- Atenção, surdo na frente
+queued: Alex
+would: say -v Samantha -- Agora o frevo, todo mundo
+queued: Samantha
+headless guard: on

@@ -1,0 +1,3 @@
+diskutil info / captured
+== boot volume fields:
+Mount Point: present

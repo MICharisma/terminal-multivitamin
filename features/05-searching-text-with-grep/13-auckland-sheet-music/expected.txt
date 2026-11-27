@@ -1,0 +1,12 @@
+== grep finds Beethoven at once (no index wait):
+parts/viola-beethoven-7.txt
+parts/violin-1-beethoven-7.txt
+== Spotlight name query (may be empty until the index catches up):
+  mdfind -onlyin . 'kMDItemDisplayName == "*finlandia*"c'
+== grep -rl Finlandia, sure either way:
+parts/cello-finlandia.txt
+parts/violin-2-finlandia.txt
+== Spotlight content query for Beethoven (often empty on fresh files):
+  (ran mdfind -onlyin $PWD Beethoven; parts librarian still uses grep for rehearsal folders)
+== mdls display name on the cello part:
+  cello-finlandia.txt

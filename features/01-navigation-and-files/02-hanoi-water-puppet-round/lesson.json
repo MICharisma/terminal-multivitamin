@@ -1,0 +1,54 @@
+{
+  "title": "Hanoi water puppet theatre pre-show round",
+  "source": "cue_round.zsh",
+  "steps": [
+    {
+      "label": "Push into the puppet repairs folder",
+      "api": "pushd",
+      "regions": [
+        {
+          "name": "push-repairs",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Push two more stops and read the stack",
+      "api": "$dirstack",
+      "regions": [
+        {
+          "name": "push-more",
+          "role": "primary"
+        },
+        {
+          "name": "push-repairs",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Pop back one stop at a time",
+      "api": "popd",
+      "regions": [
+        {
+          "name": "pop-back",
+          "role": "primary"
+        },
+        {
+          "name": "push-more",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Toggle between two folders with cd -",
+      "api": "cd -",
+      "regions": [
+        {
+          "name": "toggle-previous",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Fez calligraphy studio, revealing a folio",
+  "source": "reveal_folio.zsh",
+  "steps": [
+    {
+      "label": "Reveal the folio in Finder",
+      "api": "open -R",
+      "regions": [
+        {
+          "name": "reveal-finder",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Pass the folio name into osascript as argv",
+      "api": "osascript --",
+      "regions": [
+        {
+          "name": "osascript-argv",
+          "role": "primary"
+        },
+        {
+          "name": "reveal-finder",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

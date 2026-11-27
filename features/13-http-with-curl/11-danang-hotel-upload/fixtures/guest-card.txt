@@ -1,0 +1,4 @@
+guest: linh nguyen
+room: 1204
+nights: 3
+breakfast: yes

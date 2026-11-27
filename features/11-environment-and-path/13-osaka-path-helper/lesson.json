@@ -1,0 +1,44 @@
+{
+  "title": "Osaka brewery IT loft, reading path_helper's PATH",
+  "source": "path_helper_demo.zsh",
+  "steps": [
+    {
+      "label": "Ask path_helper for the login PATH",
+      "api": "path_helper -s",
+      "regions": [
+        {
+          "name": "path-helper",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Eval the assignments it printed",
+      "api": "eval",
+      "regions": [
+        {
+          "name": "eval-helper",
+          "role": "primary"
+        },
+        {
+          "name": "path-helper",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Prepend the brewery bin with the path array",
+      "api": "path=( ... $path )",
+      "regions": [
+        {
+          "name": "prepend-brewery",
+          "role": "primary"
+        },
+        {
+          "name": "eval-helper",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

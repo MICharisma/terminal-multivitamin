@@ -1,0 +1,44 @@
+{
+  "title": "Sarajevo radio prompt",
+  "source": "on_air_prompt.zsh",
+  "steps": [
+    {
+      "label": "Build the left PROMPT with studio and path",
+      "api": "PROMPT",
+      "regions": [
+        {
+          "name": "set-prompt",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Set RPROMPT to the on-air flag",
+      "api": "RPROMPT",
+      "regions": [
+        {
+          "name": "set-rprompt",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Preview both with print -P",
+      "api": "PROMPT",
+      "regions": [
+        {
+          "name": "preview",
+          "role": "primary"
+        },
+        {
+          "name": "set-prompt",
+          "role": "setup"
+        },
+        {
+          "name": "set-rprompt",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+cue: rehearsal letter B — strings ready
+function file still on disk: zfunctions/cue_letter

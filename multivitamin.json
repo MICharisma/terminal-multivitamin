@@ -1,0 +1,27 @@
+{
+  "name": "terminal",
+  "title": "Terminal multivitamin",
+  "language": "zsh",
+  "grammar": "shellscript",
+  "repo": "MICharisma/terminal-multivitamin",
+  "features": [
+    "01-navigation-and-files",
+    "02-globbing-and-expansion",
+    "03-pipes-and-redirection",
+    "04-quoting-and-parameter-expansion",
+    "05-searching-text-with-grep",
+    "06-find-and-xargs",
+    "07-sorting-counting-and-columns",
+    "08-sed-and-awk",
+    "09-permissions-and-ownership",
+    "10-processes-and-jobs",
+    "11-environment-and-path",
+    "12-ssh-scp-rsync",
+    "13-http-with-curl",
+    "14-archives-and-compression",
+    "15-homebrew",
+    "16-zsh-configuration-aliases-and-functions",
+    "17-macos-desktop-bridges",
+    "18-macos-system-tools"
+  ]
+}

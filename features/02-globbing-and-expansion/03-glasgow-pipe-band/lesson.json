@@ -1,0 +1,54 @@
+{
+  "title": "Glasgow pipe band repertoire scores",
+  "source": "repertoire.zsh",
+  "steps": [
+    {
+      "label": "Collect every score at any depth",
+      "api": "**/",
+      "regions": [
+        {
+          "name": "every-score",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Find every reel by anchoring on a folder name",
+      "api": "**/",
+      "regions": [
+        {
+          "name": "anchored-folder",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Compare fixed-depth patterns",
+      "api": "*/*",
+      "regions": [
+        {
+          "name": "shallow-and-deep",
+          "role": "primary"
+        },
+        {
+          "name": "every-score",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Follow symlinked folders with ***/",
+      "api": "***/",
+      "regions": [
+        {
+          "name": "follow-links",
+          "role": "primary"
+        },
+        {
+          "name": "every-score",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

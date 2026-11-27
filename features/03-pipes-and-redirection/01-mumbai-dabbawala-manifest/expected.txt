@@ -1,0 +1,18 @@
+morning pickups in Andheri: 5
+after the 10:30 phone calls: 7
+== tiffins per station, busiest first:
+churchgate   3
+dadar        2
+lower-parel  2
+noclobber: > refused to replace practice-run.txt, 7 lines kept
+>| replaced it on purpose: 1 line
+noclobber also stops: sort practice-run.txt > practice-run.txt
+without noclobber it runs, and leaves 0 lines
+== sorted the safe way, 7 lines for the Churchgate train:
+churchgate,Bombay Stock Exchange, desk 31
+churchgate,Mehta & Sons, Fort
+churchgate,Sharma Advocates, Nariman Point 7F
+dadar,Kulkarni Engineering, Plaza building
+dadar,Patil Eye Clinic, Ranade Road
+lower-parel,D'Souza Design, Kamala Mills
+lower-parel,Iyer household, flat 1204
