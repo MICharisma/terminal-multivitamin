@@ -1,0 +1,6 @@
+first crossing today: 07:10 eminonu-kadikoy, port engine 1180 rpm
+port engine peak: 1205 rpm on the 09:55 crossing
+== crossings where the engines drift more than 30 rpm apart:
+  09:00 eminonu-kadikoy: port 1190, starboard 1140 (drift 50)
+  09:55 kadikoy-eminonu: port 1205, starboard 1150 (drift 55)
+descriptor 3 is closed; the chief engineer's report can be filed

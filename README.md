@@ -11,8 +11,8 @@ can show each one with its source highlighted step by step. This is the Terminal
 | Serving size | 1 scenario (one runnable script) |
 | Servings per feature | 13 |
 | Features planned | 18 |
-| Features built | 2 |
-| Scenarios built | 26 of 234 |
+| Features built | 5 |
+| Scenarios built | 65 of 234 |
 | Active ingredient | zsh 5.9 on macOS (the default shell since Catalina) |
 | Also tested on | Ubuntu with zsh, GNU coreutils, dash, and bash 5 |
 
@@ -89,9 +89,9 @@ their folder; the rest are planned.
 | --- | --- | --- | --- |
 | 01 | [Navigation and files](features/01-navigation-and-files/) | `cd`, `pushd`/`popd`, `cdpath`, named dirs, `ls`, `mkdir`, `cp`, `mv`, `rm`, `ln`, `stat`, `file`, `du` | 13 of 13 built |
 | 02 | [Globbing and expansion](features/02-globbing-and-expansion/) | `*` `?` `[...]`, braces, `**/`, qualifiers, extended globs, modifiers, `zmv`, bash `extglob` | 13 of 13 built |
-| 03 | Pipes and redirection | `\|`, `>`, `>>`, `2>&1`, `<`, here-docs, here-strings, `tee`, process substitution, `/dev/null`, multios | planned |
-| 04 | Quoting and parameter expansion | single vs double quotes, `$'...'`, `${var:-default}`, `${var#prefix}`, zsh flags `(U)` `(s:,:)` `(j:,:)`, arrays | planned |
-| 05 | Searching text with grep | `grep -E`, `-i`, `-v`, `-c`, `-o`, `-r`, `-l`, context `-A`/`-B`, `ripgrep` notes, BSD vs GNU `grep -P` | planned |
+| 03 | [Pipes and redirection](features/03-pipes-and-redirection/) | `|`, `>`, `>>`, `2>&1`, `<`, here-docs, here-strings, `tee`, process substitution, `/dev/null`, multios | 13 of 13 built |
+| 04 | [Quoting and parameter expansion](features/04-quoting-and-parameter-expansion/) | single vs double quotes, `$'...'`, `${var:-default}`, `${var#prefix}`, zsh flags `(U)` `(s:,:)` `(j:,:)`, arrays | 13 of 13 built |
+| 05 | [Searching text with grep](features/05-searching-text-with-grep/) | `grep -E`, `-i`, `-v`, `-c`, `-o`, `-r`, `-l`, context `-A`/`-B`, `ripgrep` notes, BSD vs GNU `grep -P` | 13 of 13 built |
 | 06 | Finding files with find and xargs | `find` tests and actions, `-exec {} +`, `-print0 \| xargs -0`, `-newer`, `-prune`, `fd` notes | planned |
 | 07 | Sorting, counting, and columns | `sort -k -t -n -u`, `uniq -c`, `cut`, `tr`, `paste`, `join`, `comm`, `column -t`, `wc` | planned |
 | 08 | Editing streams with sed and awk | `sed` substitution and ranges, `sed -i ''` vs `sed -i`, `awk` fields, `BEGIN`/`END`, arrays, `printf` | planned |

@@ -1,0 +1,24 @@
+== as typed, then with (C):
+  giorgos PAPADOPOULOS      -> Giorgos Papadopoulos
+  ELENI kostaki             -> Eleni Kostaki
+  anna-maria vlachou        -> Anna-Maria Vlachou
+  dimitris o'neill-karras   -> Dimitris O'Neill-Karras
+  sophia mcgrath            -> Sophia Mcgrath
+  yiayia katerina           -> Yiayia Katerina
+== seating chart by surname, emails by first name:
+  PAPADOPOULOS       giorgos@gamos-maria-nikos.gr
+  KOSTAKI            eleni@gamos-maria-nikos.gr
+  VLACHOU            anna-maria@gamos-maria-nikos.gr
+  O'NEILL-KARRAS     dimitris@gamos-maria-nikos.gr
+  MCGRATH            sophia@gamos-maria-nikos.gr
+  KATERINA           yiayia@gamos-maria-nikos.gr
+without @: Giorgos Papadopoulos Eleni Kostaki
+with @:    Giorgos Papadopoulos, Eleni Kostaki
+== the whole list for the priest: Giorgos Papadopoulos, Eleni Kostaki, Anna-Maria Vlachou, Dimitris O'Neill-Karras, Sophia Mcgrath, Yiayia Katerina
+== place cards for the printer in Kifisia:
+  Anna-Maria Vlachou.......... table  4
+  Dimitris O'Neill-Karras..... table  4
+  Eleni Kostaki............... table  1
+  Giorgos Papadopoulos........ table  1
+  Sophia Mcgrath.............. table  7
+  Yiayia Katerina............. table  1

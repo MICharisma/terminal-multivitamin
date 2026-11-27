@@ -1,0 +1,9 @@
+starting nightly report (this line goes to the terminal)
+back on the terminal; report.log has 5 lines:
+  == Sunbird Solar, installs reporting tonight
+  khayelitsha-library 23 kWh
+  stellenbosch-winery 41 kWh
+  WARN muizenberg-surf-school: only 6 kWh, check for load-shedding trips or dirty panels
+  muizenberg-surf-school 6 kWh
+monthly.log: 3 lines, errors.log: 1 line
+  WARN hout-bay-harbour: only 4 kWh, check for load-shedding trips or dirty panels

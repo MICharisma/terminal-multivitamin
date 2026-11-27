@@ -1,0 +1,15 @@
+single quotes: Har gow, 4 pieces: HK$38
+double quotes: Siu mai, 4 pieces: HK
+== with \$ inside double quotes:
+Char siu bao: HK$32
+Cheung fun: HK$36
+Egg tart: HK$28
+Set for two: 84 each, total HK$168
+== the board, 7 lines:
+Har gow, 4 pieces: HK$38
+Char siu bao: HK$32
+Cheung fun: HK$36
+Egg tart: HK$28
+Set for two: 84 each, total HK$168
+Lin Heung's lotus seed bun: sold out
+Auntie Mei's turnip cake: back at 11:00

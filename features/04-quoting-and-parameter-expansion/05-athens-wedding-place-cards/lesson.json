@@ -1,0 +1,50 @@
+{
+  "title": "Athens family wedding, place cards from the aunts' guest list",
+  "source": "place_cards.zsh",
+  "steps": [
+    {
+      "label": "Capitalize each word with (C)",
+      "api": "${(C)name}",
+      "regions": [
+        {
+          "name": "capitalize",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Uppercase surnames and lowercase first names",
+      "api": "${(U)name}",
+      "regions": [
+        {
+          "name": "upper-lower",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Join a capitalized array without collapsing it",
+      "api": "${(j:, :)${(@C)array}}",
+      "regions": [
+        {
+          "name": "whole-array",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Pad place cards with dot leaders",
+      "api": "${(r:28::.:)name}",
+      "regions": [
+        {
+          "name": "dot-leaders",
+          "role": "primary"
+        },
+        {
+          "name": "capitalize",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

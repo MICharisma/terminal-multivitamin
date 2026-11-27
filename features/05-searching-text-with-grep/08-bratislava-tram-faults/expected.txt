@@ -1,0 +1,10 @@
+== without -F, [2] is a character class (matches Pantograph2):
+07:25 tram-7101 Pantograph2 reset by driver, pressure normal
+== with -F, the brackets are literal:
+07:12 tram-7101 Pantograph[2] pressure low, delayed at Račianske mýto
+08:02 tram-7108 Pantograph[2] inspection due at 5000 km
+== Door*3 as a fixed string:
+07:18 tram-7104 Door*3 sensor intermittent, continued to Zimný štadión
+07:55 tram-7104 Door*3 replaced, test run OK
+== paste from the SCADA screen, dots and all:
+4:07:40 tram-7112 Inverter.temp warning cleared after coasting

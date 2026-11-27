@@ -1,0 +1,4 @@
+09:01 deposit 25000 UGX from 0772-441-220 ref MM-9001
+09:14 withdraw 10000 UGX to 0701-883-114 ref MM-9002
+09:22 deposit 5000 UGX from 0755-012-998 ref MM-9003
+09:40 withdraw 50000 UGX to 0772-441-220 ref MM-9010 FAILED insufficient float

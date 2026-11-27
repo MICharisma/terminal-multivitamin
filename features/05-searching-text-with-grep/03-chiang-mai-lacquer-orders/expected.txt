@@ -1,0 +1,22 @@
+== bowls and trays only:
+ord-401 bowl black gold-leaf 12cm for Gallery Siam
+ord-402 tray red mother-of-pearl 30cm for Hotel Rachamankha
+ord-403 bowl black silver-leaf 16cm for private client Mae Rim
+ord-405 tray black gold-leaf 40cm for Cafe de Chiang Mai
+ord-406 bowl red plain 12cm for market stall
+== leaf finishes:
+ord-401 bowl black gold-leaf 12cm for Gallery Siam
+ord-403 bowl black silver-leaf 16cm for private client Mae Rim
+ord-404 vase gold-leaf 25cm for Embassy reception
+ord-405 tray black gold-leaf 40cm for Cafe de Chiang Mai
+ord-407 box gold-leaf 8cm for wedding favour set
+== pieces 10cm or larger (two or more digits):
+ord-401 bowl black gold-leaf 12cm for Gallery Siam
+ord-402 tray red mother-of-pearl 30cm for Hotel Rachamankha
+ord-403 bowl black silver-leaf 16cm for private client Mae Rim
+ord-404 vase gold-leaf 25cm for Embassy reception
+ord-405 tray black gold-leaf 40cm for Cafe de Chiang Mai
+ord-406 bowl red plain 12cm for market stall
+== gold-leaf bowls and trays for the Bangkok shipment:
+ord-401 bowl black gold-leaf 12cm for Gallery Siam
+ord-405 tray black gold-leaf 40cm for Cafe de Chiang Mai

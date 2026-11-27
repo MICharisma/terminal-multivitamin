@@ -1,0 +1,56 @@
+{
+  "title": "Tallinn parcel-locker startup, deploy settings with defaults",
+  "source": "deploy_plan.zsh",
+  "steps": [
+    {
+      "label": "Use a default when the variable is unset or empty",
+      "api": "${var:-default}",
+      "regions": [
+        {
+          "name": "colon-dash",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Treat empty differently from unset",
+      "api": "${var-default}",
+      "regions": [
+        {
+          "name": "dash-only",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Assign a default once with :=",
+      "api": "${var:=default}",
+      "regions": [
+        {
+          "name": "assign-default",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Add an optional flag only when set",
+      "api": "${var:+value}",
+      "regions": [
+        {
+          "name": "optional-flag",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Stop on a missing required setting",
+      "api": "${var:?message}",
+      "regions": [
+        {
+          "name": "required-setting",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

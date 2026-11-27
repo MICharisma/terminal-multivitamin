@@ -1,0 +1,9 @@
+ROS-012 Octavian silver rose jacket
+TRA-003 Violetta ball gown, act 1
+ZAU-030 Sarastro robe
+ZAU-014 Papageno feather coat
+TRA-007 Alfredo tailcoat
+ROS-011 Marschallin morning robe
+ZAU-021 Queen of the Night gown, star crown
+ROS-019 Baron Ochs wig
+TRA-012 Germont waistcoat (Tokyo theatre's, not ours)

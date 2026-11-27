@@ -1,0 +1,12 @@
+varname holds 'api_host'; (P)varname expands to: api.joynpay.jo
+== hosts by role:
+  api -> api.joynpay.jo:8443
+  worker -> workers.joynpay.jo:9100
+payments URL: https://api.staging.joynpay.jo:8443/v2/payments
+== service from a log path (stack two trims):
+  api  (requests.jsonl)
+  worker  (jobs.jsonl)
+== same walk with :h (head) and :t (tail), without touching $path:
+  api  (requests.jsonl)
+  worker  (jobs.jsonl)
+status line: joynpay api @ api.joynpay.jo  [2026-11-26]

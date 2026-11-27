@@ -1,0 +1,6 @@
+without pipefail, the pipeline reports: 0 (and loads.txt has 3 readings)
+PIPESTATUS per stage: 3 0 0
+a second look is already gone: 0
+the reader failed; heaviest lift so far: STS-07 hoist 40.2t
+with pipefail, the pipeline reports: 3
+connection drops seen through the pipe: 1 (|& would need bash 4)

@@ -1,0 +1,56 @@
+{
+  "title": "Hong Kong dim sum teahouse, printing the menu board",
+  "source": "menu_board.zsh",
+  "steps": [
+    {
+      "label": "Write a price with a literal dollar sign",
+      "api": "'...'",
+      "regions": [
+        {
+          "name": "single-quotes",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "See double quotes expand $38 into nothing",
+      "api": "\"...\"",
+      "regions": [
+        {
+          "name": "double-quote-trap",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Escape the dollar inside double quotes",
+      "api": "\\$",
+      "regions": [
+        {
+          "name": "escaped-dollar",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Join single-quoted and double-quoted pieces",
+      "api": "'HK$'\"$price\"",
+      "regions": [
+        {
+          "name": "joined-pieces",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Put an apostrophe inside single quotes",
+      "api": "'...'\\''...'",
+      "regions": [
+        {
+          "name": "apostrophes",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

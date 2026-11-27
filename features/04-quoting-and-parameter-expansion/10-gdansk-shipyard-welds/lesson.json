@@ -1,0 +1,60 @@
+{
+  "title": "Gdańsk shipyard weld inspections, in portable sh",
+  "source": "weld_records.sh",
+  "steps": [
+    {
+      "label": "Load fields into $1..$5 with set and IFS",
+      "api": "set -- $record",
+      "regions": [
+        {
+          "name": "split-record",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Turn globbing off so * stays a star",
+      "api": "set -f",
+      "regions": [
+        {
+          "name": "glob-off",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Trim block and day from the fields",
+      "api": "${var%pattern}",
+      "regions": [
+        {
+          "name": "trim-fields",
+          "role": "primary"
+        },
+        {
+          "name": "split-record",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Join repairs with IFS and \"$*\"",
+      "api": "\"$*\"",
+      "regions": [
+        {
+          "name": "join-with-ifs",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Stop when the result field is missing",
+      "api": "${var:?message}",
+      "regions": [
+        {
+          "name": "required-field",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}
