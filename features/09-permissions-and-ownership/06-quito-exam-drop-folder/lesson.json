@@ -1,0 +1,54 @@
+{
+  "title": "Quito university, an exam drop folder students cannot browse",
+  "source": "folder_matrix.zsh",
+  "steps": [
+    {
+      "label": "Write one small test per folder operation",
+      "api": "folder r w x",
+      "regions": [
+        {
+          "name": "operations",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Try every operation against six folder modes",
+      "api": "folder mode matrix",
+      "regions": [
+        {
+          "name": "matrix",
+          "role": "primary"
+        },
+        {
+          "name": "operations",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "See that w does nothing without x",
+      "api": "folder r w x",
+      "regions": [
+        {
+          "name": "matrix",
+          "role": "result"
+        }
+      ]
+    },
+    {
+      "label": "Hand in exams through a -wx drop box",
+      "api": "chmod 300",
+      "regions": [
+        {
+          "name": "drop-box",
+          "role": "primary"
+        },
+        {
+          "name": "matrix",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

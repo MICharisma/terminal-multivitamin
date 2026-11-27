@@ -1,0 +1,68 @@
+{
+  "title": "Chiang Mai temple school, signalling the lantern crew",
+  "source": "signal_crew.zsh",
+  "steps": [
+    {
+      "label": "Rename each post with exec -a",
+      "api": "exec -a",
+      "regions": [
+        {
+          "name": "start-crew",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Find children of this script with pgrep",
+      "api": "pgrep -P",
+      "regions": [
+        {
+          "name": "pgrep-children",
+          "role": "primary"
+        },
+        {
+          "name": "start-crew",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Find one post by pattern",
+      "api": "pgrep -f",
+      "regions": [
+        {
+          "name": "pgrep-one",
+          "role": "primary"
+        },
+        {
+          "name": "start-crew",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Stop one post with pkill",
+      "api": "pkill",
+      "regions": [
+        {
+          "name": "pkill-one",
+          "role": "primary"
+        },
+        {
+          "name": "pgrep-one",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Clear the yard with pkill on the marker",
+      "api": "pkill",
+      "regions": [
+        {
+          "name": "pkill-rest",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

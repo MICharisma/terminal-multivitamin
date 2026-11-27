@@ -1,0 +1,72 @@
+{
+  "title": "Bengaluru hosting support desk, decoding a pasted ls -l",
+  "source": "decode_listing.zsh",
+  "steps": [
+    {
+      "label": "Split each pasted line into mode, name, and link target",
+      "api": "ls -l",
+      "regions": [
+        {
+          "name": "split-columns",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Read the type from the first character",
+      "api": "ls -l",
+      "regions": [
+        {
+          "name": "type-char",
+          "role": "primary"
+        },
+        {
+          "name": "split-columns",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Turn each rwx triad into an octal digit",
+      "api": "rwx = 4 2 1",
+      "regions": [
+        {
+          "name": "triads-to-octal",
+          "role": "primary"
+        },
+        {
+          "name": "type-char",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Spot setuid, setgid, sticky, and ACL markers",
+      "api": "setuid setgid sticky",
+      "regions": [
+        {
+          "name": "special-bits",
+          "role": "primary"
+        },
+        {
+          "name": "triads-to-octal",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Flag world-writable files and folders for the customer",
+      "api": "o+w",
+      "regions": [
+        {
+          "name": "flag-risks",
+          "role": "primary"
+        },
+        {
+          "name": "special-bits",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

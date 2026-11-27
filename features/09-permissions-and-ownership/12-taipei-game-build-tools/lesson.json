@@ -1,0 +1,74 @@
+{
+  "title": "Taipei game studio, restoring execute bits after a Windows zip, in bash",
+  "source": "restore_exec_bits.sh",
+  "steps": [
+    {
+      "label": "Count what came out of the zip executable",
+      "api": "find -perm -0100",
+      "regions": [
+        {
+          "name": "what-unzip-gave",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Walk every file safely, spaces and all",
+      "api": "find -print0",
+      "regions": [
+        {
+          "name": "find-scripts",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Treat files that start with #! as scripts",
+      "api": "#! line",
+      "regions": [
+        {
+          "name": "find-scripts",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Give every script its execute bit back",
+      "api": "chmod a+x",
+      "regions": [
+        {
+          "name": "restore-bits",
+          "role": "primary"
+        },
+        {
+          "name": "find-scripts",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Test before running the release build",
+      "api": "[[ -x ]]",
+      "regions": [
+        {
+          "name": "run-script",
+          "role": "primary"
+        },
+        {
+          "name": "restore-bits",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "See chmod +x follow the umask",
+      "api": "chmod +x",
+      "regions": [
+        {
+          "name": "umask-gotcha",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

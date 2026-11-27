@@ -1,0 +1,6 @@
+== after sourcing under set -a:
+  tonight: Yama Zatdaw at Kanbawza Theatre, curtain 19:30
+  export -p | grep SHOW:
+  export SHOW_TITLE='Yama Zatdaw'
+== BACKSTAGE after set +a is not exported:
+  shell=quiet, not in environment

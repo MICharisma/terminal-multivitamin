@@ -1,0 +1,18 @@
+== files anyone can change:
+planning/ligplaatsen/week-49.csv
+planning/scans-usb/douane-verklaring_0412.pdf
+planning/scans-usb/douane-verklaring_0413.pdf
+== world-writable folders without the sticky bit (anyone can delete anyone's file):
+planning/scans-usb
+== group- or world-writable files (portable 'any of these bits'):
+planning/ligplaatsen/week-49.csv
+planning/loodsen/rooster.txt
+planning/scans-usb/douane-verklaring_0412.pdf
+planning/scans-usb/douane-verklaring_0413.pdf
+== executable PDFs, a sign they came off a FAT-formatted USB stick:
+planning/scans-usb/douane-verklaring_0412.pdf
+planning/scans-usb/douane-verklaring_0413.pdf
+== after the fix:
+  world-writable files: 0
+  unsticky world-writable folders: 0
+  inbox kept its sticky bit: drwxrwxrwt

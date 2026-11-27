@@ -1,0 +1,7 @@
+== exported year: receita de bolo-de-rolo for year 2026
+  export ANO_RECEITA=2026
+== readonly blocked the change; still 2026
+== after typeset +x FORNO:
+  shell FORNO=lenha
+  gone from environment
+  typeset FORNO=lenha

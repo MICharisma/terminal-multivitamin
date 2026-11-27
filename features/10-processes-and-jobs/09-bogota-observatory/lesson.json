@@ -1,0 +1,58 @@
+{
+  "title": "Bogotá observatory, timing plate exposures with zsh's time",
+  "source": "time_exposures.zsh",
+  "steps": [
+    {
+      "label": "Set TIMEFMT for elapsed, user, and system",
+      "api": "TIMEFMT",
+      "regions": [
+        {
+          "name": "timefmt",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Time one exposure and capture stderr",
+      "api": "time",
+      "regions": [
+        {
+          "name": "time-one",
+          "role": "primary"
+        },
+        {
+          "name": "timefmt",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Time a second plate the same way",
+      "api": "time",
+      "regions": [
+        {
+          "name": "time-pipeline",
+          "role": "primary"
+        },
+        {
+          "name": "timefmt",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Try a shorter TIMEFMT with %J",
+      "api": "TIMEFMT",
+      "regions": [
+        {
+          "name": "compare",
+          "role": "primary"
+        },
+        {
+          "name": "timefmt",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

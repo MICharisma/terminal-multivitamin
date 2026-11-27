@@ -1,0 +1,9 @@
+== executable after unzip: 0 files
+== restored the x bit on 3 scripts:
+  -rwxr-xr-x build scripts/release build.sh
+  -rwxr-xr-x tools/export_levels.py
+  -rwxr-xr-x tools/pack_atlas
+  -rw-r--r-- assets/sprites/stall_tofu.png (no #!, left alone)
+build 2026.11.26-rc2 for Steam and Switch
+== with umask 077, chmod +x gives -rwxr--r--
+   and chmod a+x gives     -rwxr-xr-x

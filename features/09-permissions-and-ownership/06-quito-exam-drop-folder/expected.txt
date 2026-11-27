@@ -1,0 +1,10 @@
+mode                 list   enter    read  create  delete
+700    drwx------     yes     yes     yes     yes     yes
+500    dr-x------     yes     yes     yes      no      no
+300    d-wx------      no     yes     yes     yes     yes
+100    d--x------      no     yes     yes      no      no
+600    drw-------     yes      no      no      no      no
+400    dr--------     yes      no      no      no      no
+== the drop box (300): hand in, then reopen your own by name
+  Andrea rereads hers: Andrea Quishpe, problema 1: v = 12.4 m/s
+  listing the box shows 0 names

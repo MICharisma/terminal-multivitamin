@@ -1,0 +1,64 @@
+{
+  "title": "Vienna music university, sharing chamber music scores",
+  "source": "share_scores.zsh",
+  "steps": [
+    {
+      "label": "Let the ensemble open folders and read scores",
+      "api": "chmod g+rX",
+      "regions": [
+        {
+          "name": "capital-x",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "See why lowercase x is wrong for PDFs",
+      "api": "chmod g+rx",
+      "regions": [
+        {
+          "name": "lowercase-x",
+          "role": "primary"
+        },
+        {
+          "name": "capital-x",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Remove the others bits and keep everything else",
+      "api": "chmod o-rwx",
+      "regions": [
+        {
+          "name": "relative-change",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Give the group the owner's bits on the click track",
+      "api": "chmod g=u",
+      "regions": [
+        {
+          "name": "copy-owner-bits",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Set exact bits with clauses and lock the concert versions",
+      "api": "chmod u=rwx,g=rx,o=",
+      "regions": [
+        {
+          "name": "comma-clauses",
+          "role": "primary"
+        },
+        {
+          "name": "copy-owner-bits",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

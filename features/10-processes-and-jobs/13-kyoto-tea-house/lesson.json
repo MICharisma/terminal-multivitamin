@@ -1,0 +1,44 @@
+{
+  "title": "Kyoto tea house, keeping the Mac awake for a long steep",
+  "source": "caffeinate_timer.zsh",
+  "steps": [
+    {
+      "label": "Start the steep timer in the background",
+      "api": "&",
+      "regions": [
+        {
+          "name": "start-timer",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Point caffeinate at the timer pid",
+      "api": "caffeinate -w",
+      "regions": [
+        {
+          "name": "caffeinate",
+          "role": "primary"
+        },
+        {
+          "name": "start-timer",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Wait for both to exit",
+      "api": "wait $pid",
+      "regions": [
+        {
+          "name": "wait-both",
+          "role": "primary"
+        },
+        {
+          "name": "caffeinate",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}
