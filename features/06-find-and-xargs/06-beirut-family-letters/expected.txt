@@ -1,0 +1,11 @@
+scans handed over with sh as $0: 5
+scans handed over without it:    4
+kept rasael/1975/from-salim-in-paris.JPEG: rasael/1975/from-salim-in-paris.jpg is already there
+== after renaming:
+rasael/1975/from-salim-in-paris.JPEG
+rasael/1975/from-salim-in-paris.jpg
+rasael/1982/from-mona-in-montreal.jpg
+rasael/1982/wedding-invitation.jpg
+rasael/1990/postcard-from-byblos.jpg
+== captions written next to each scan, by name only:
+postcard-from-byblos.jpg, from the family archive

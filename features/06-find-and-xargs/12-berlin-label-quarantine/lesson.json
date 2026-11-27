@@ -1,0 +1,58 @@
+{
+  "title": "Berlin techno label, clearing quarantine from sample packs",
+  "source": "unquarantine_samples.zsh",
+  "steps": [
+    {
+      "label": "Find the samples macOS still has in quarantine",
+      "api": "find -xattrname",
+      "regions": [
+        {
+          "name": "find-quarantined",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Find the samples the label tagged with a BPM",
+      "api": "find -xattrname",
+      "regions": [
+        {
+          "name": "find-tagged",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Remove only the quarantine attribute through xargs -0",
+      "api": "xargs -0 xattr -d",
+      "regions": [
+        {
+          "name": "clear-quarantine",
+          "role": "primary"
+        },
+        {
+          "name": "find-quarantined",
+          "role": "setup"
+        },
+        {
+          "name": "find-tagged",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "See xattr -cr clear the tags too",
+      "api": "xattr -cr",
+      "regions": [
+        {
+          "name": "clear-everything",
+          "role": "primary"
+        },
+        {
+          "name": "clear-quarantine",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

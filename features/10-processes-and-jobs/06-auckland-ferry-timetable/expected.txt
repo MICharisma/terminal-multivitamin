@@ -1,0 +1,7 @@
+started in launch order: waiheke, devonport, bayswater
+== waiting in timetable order:
+  devonport: ok (devonport berth check)
+  bayswater: FAILED (exit 1)
+  waiheke: ok (waiheke berth check)
+== wait on a pid that is not our child:
+  refused (not a child of this shell)

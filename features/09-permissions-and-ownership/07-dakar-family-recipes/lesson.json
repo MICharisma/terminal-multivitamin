@@ -1,0 +1,86 @@
+{
+  "title": "Dakar family recipe book, a read-only file that still gets replaced",
+  "source": "protect_recipe.zsh",
+  "steps": [
+    {
+      "label": "Make the recipe read-only for everyone",
+      "api": "chmod a-w",
+      "regions": [
+        {
+          "name": "lock-file",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Appending to it is refused",
+      "api": "[[ -w ]]",
+      "regions": [
+        {
+          "name": "append-fails",
+          "role": "primary"
+        },
+        {
+          "name": "lock-file",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Replacing it with mv works and resets the mode",
+      "api": "mv",
+      "regions": [
+        {
+          "name": "replace-works",
+          "role": "primary"
+        },
+        {
+          "name": "lock-file",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Deleting it works too",
+      "api": "rm",
+      "regions": [
+        {
+          "name": "delete-works",
+          "role": "primary"
+        },
+        {
+          "name": "lock-file",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Restore the original after every attempt",
+      "api": "{ } always { } restore",
+      "regions": [
+        {
+          "name": "append-fails",
+          "role": "primary"
+        },
+        {
+          "name": "replace-works",
+          "role": "primary"
+        },
+        {
+          "name": "delete-works",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Lock the folder to protect the file for real",
+      "api": "chmod a-w",
+      "regions": [
+        {
+          "name": "lock-folder",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

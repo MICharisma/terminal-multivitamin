@@ -1,0 +1,46 @@
+{
+  "title": "Quito orchid nursery export",
+  "source": "orchid_export.zsh",
+  "steps": [
+    {
+      "label": "Show only the first three lines",
+      "api": "sed -n '1,3p'",
+      "regions": [
+        {
+          "name": "quiet-print",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Drop draft lots with `d`",
+      "api": "sed '/pattern/d'",
+      "regions": [
+        {
+          "name": "delete-draft",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Print lines that do not match `shipped`",
+      "api": "sed -n '/pattern/!p'",
+      "regions": [
+        {
+          "name": "invert",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Stop after line five",
+      "api": "sed -n '5{p;q;}'",
+      "regions": [
+        {
+          "name": "quit-early",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

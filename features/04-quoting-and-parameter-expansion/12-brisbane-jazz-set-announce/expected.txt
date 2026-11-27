@@ -1,0 +1,9 @@
+== render.zsh, with (q) so a re-run parses each title as one word:
+  #!/bin/zsh
+  say -o set-1.aiff -- Maeve\ O\'Connor\ Quartet:\ Blue\ in\ Green
+  say -o set-2.aiff -- The\ Fortitude\ Five:\ Take\ the\ A\ Train
+  say -o set-3.aiff -- Linh\ \"Bird\"\ Nguyen\ Trio:\ Autumn\ Leaves
+same title with (qq), always single-quoted: 'Linh "Bird" Nguyen Trio: Autumn Leaves'
+AppleScript with raw double quotes: broke on "Bird"
+AppleScript with escaped quotes: announced Linh "Bird" Nguyen Trio: Autumn Leaves
+aiff files ready for the interval playlist: 3 (set-1.aiff, set-2.aiff, set-3.aiff)

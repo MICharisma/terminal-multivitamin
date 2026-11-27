@@ -1,0 +1,21 @@
+with -name: 5 parts
+with -iname: 6 parts, adding repertorio/la-cumparsita/contrabajo.PDF
+== -name 'piano*' also matches a folder:
+repertorio/adios-nonino/piano-arreglos
+repertorio/adios-nonino/piano.pdf
+repertorio/la-cumparsita/piano.pdf
+repertorio/libertango/piano.mscz
+== add -type f for files only:
+repertorio/adios-nonino/piano.pdf
+repertorio/la-cumparsita/piano.pdf
+repertorio/libertango/piano.mscz
+== without parentheses, -print belongs to the -mscz test alone:
+repertorio/libertango/piano.mscz
+== grouped, everything the orchestra can open:
+repertorio/adios-nonino/piano.pdf
+repertorio/la-cumparsita/bandoneon-1.pdf
+repertorio/la-cumparsita/contrabajo.PDF
+repertorio/la-cumparsita/piano.pdf
+repertorio/la-cumparsita/violin-1.pdf
+repertorio/libertango/bandoneon-1.pdf
+repertorio/libertango/piano.mscz

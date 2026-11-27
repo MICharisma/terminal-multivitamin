@@ -1,0 +1,10 @@
+== shell sees BATCH_NO=2026-11-26-A
+  child without export: no batch number for amoxicillin
+== after export:
+  child: label batch 2026-11-26-A for amoxicillin
+  printenv: 2026-11-26-A
+== export -p (just our batch):
+  export BATCH_NO=2026-11-26-A
+== after unset:
+  printenv finds nothing
+  child: no batch number for ibuprofen

@@ -1,0 +1,15 @@
+== installed:
+  drwxr-xr-x opt/spawanie
+  drwxr-xr-x opt/spawanie/bin
+  -rwxr-xr-x opt/spawanie/bin/calibrate_torch
+  -rwxr-xr-x opt/spawanie/bin/check_wire_feed
+  drwxr-x--- opt/spawanie/etc
+  -rw-r----- opt/spawanie/etc/cell3.conf
+  drwx------ opt/spawanie/private
+  -rw------- opt/spawanie/private/service.secret
+== the installed tools run straight away:
+cell 3: torch TCP offset recalibrated, 0.2 mm
+cell 3: wire feed 9.5 m/min, argon 18 l/min
+== the same files copied with cp keep their source modes:
+  -rw-r--r-- with-cp.conf  (wanted 640)
+  -rw------- with-cp.secret

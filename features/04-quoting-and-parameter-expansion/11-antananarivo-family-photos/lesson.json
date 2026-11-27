@@ -1,0 +1,50 @@
+{
+  "title": "Antananarivo family photo archive, quoting the filenames",
+  "source": "quote_filenames.zsh",
+  "steps": [
+    {
+      "label": "Quote each filename the zsh way",
+      "api": "${(q)name}",
+      "regions": [
+        {
+          "name": "quote-one",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Force single or double quotes with qq and qqq",
+      "api": "${(qq)name}",
+      "regions": [
+        {
+          "name": "always-single",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Write a plan of quoted names",
+      "api": "\"${(@q)array}\"",
+      "regions": [
+        {
+          "name": "write-plan",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Unquote and replace spaces for the web album",
+      "api": "${(Q)name}",
+      "regions": [
+        {
+          "name": "unquote",
+          "role": "primary"
+        },
+        {
+          "name": "write-plan",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

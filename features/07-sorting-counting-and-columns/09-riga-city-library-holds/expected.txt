@@ -1,0 +1,13 @@
+== cards on both the shelf and the directory:
+  RIG-4412: Olga Kalnina
+  RIG-4415: Anna Ozola
+== every card in either holds or the directory:
+  RIG-4412: shelf and directory agree on Olga Kalnina
+  RIG-4413: on shelf only, Juris Berzins
+  RIG-4414: on directory only, Edgars Vanags
+  RIG-4415: shelf and directory agree on Anna Ozola
+  RIG-4418: on shelf only, Martins Liepa
+  RIG-4419: on directory only, Ieva Strautina
+== holds with no matching patron record:
+  RIG-4413 (HG-204): Juris Berzins — no row in patron-directory.tsv
+  RIG-4418 (HG-405): Martins Liepa — no row in patron-directory.tsv

@@ -1,0 +1,9 @@
+TIMEFMT is: real %*E  user %*U  sys %*S
+== andes-nebula exposure:
+  frames: 5
+  real N.NN  user N.NN  sys N.NN
+== orion-belt exposure:
+  frames: 3
+  real N.NN  user N.NN  sys N.NN
+== with a shorter TIMEFMT:
+  ./expose.zsh milky-way-core 4  N.NN seconds wall

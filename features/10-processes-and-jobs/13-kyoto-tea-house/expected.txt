@@ -1,0 +1,5 @@
+== steep timer started
+== caffeinate watching the steep pid
+== both exited:
+  gyokuro steeping, 90 seconds of wall time (demo: 0.3s)
+  steep done, serve at 60 C

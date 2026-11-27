@@ -1,0 +1,58 @@
+{
+  "title": "Riga puppet theatre, cleaning up stage workers with trap",
+  "source": "trap_cleanup.zsh",
+  "steps": [
+    {
+      "label": "Install an EXIT trap that stops workers",
+      "api": "trap EXIT",
+      "regions": [
+        {
+          "name": "install-trap",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Start the puppeteers and record their pids",
+      "api": "&",
+      "regions": [
+        {
+          "name": "start-workers",
+          "role": "primary"
+        },
+        {
+          "name": "install-trap",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Fail the rehearsal with return 1",
+      "api": "return",
+      "regions": [
+        {
+          "name": "fail-exit",
+          "role": "primary"
+        },
+        {
+          "name": "install-trap",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Run the happy path and the failure path",
+      "api": "trap EXIT",
+      "regions": [
+        {
+          "name": "run-both",
+          "role": "primary"
+        },
+        {
+          "name": "install-trap",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

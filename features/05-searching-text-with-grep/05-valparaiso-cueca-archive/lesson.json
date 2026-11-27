@@ -1,0 +1,46 @@
+{
+  "title": "Valparaíso cueca archive, indexing the verses",
+  "source": "verse_index.zsh",
+  "steps": [
+    {
+      "label": "Number the matching verses",
+      "api": "grep -n",
+      "regions": [
+        {
+          "name": "line-numbers",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Print only the matching phrase",
+      "api": "grep -o",
+      "regions": [
+        {
+          "name": "only-match",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Number each matching piece",
+      "api": "grep -no",
+      "regions": [
+        {
+          "name": "numbered-pieces",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Pull every match on a line with -Eo",
+      "api": "grep -Eo",
+      "regions": [
+        {
+          "name": "all-on-line",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Valparaíso funicular logs",
+  "source": "funicular_runs.zsh",
+  "steps": [
+    {
+      "label": "Sum riders per car between BEGIN and END",
+      "api": "awk BEGIN/END",
+      "regions": [
+        {
+          "name": "begin-end",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Count how many array keys exist",
+      "api": "length(array)",
+      "regions": [
+        {
+          "name": "length-array",
+          "role": "primary"
+        },
+        {
+          "name": "begin-end",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Find the longest string in a column",
+      "api": "length($1)",
+      "regions": [
+        {
+          "name": "length-string",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

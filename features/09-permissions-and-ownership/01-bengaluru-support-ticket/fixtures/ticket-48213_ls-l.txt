@@ -1,0 +1,12 @@
+total 212
+-rw-r--r--  1 deploy deploy    2210 Nov 20 09:14 config.yml
+-rw-rw-rw-  1 deploy deploy     512 Nov 21 18:02 .env
+-rwx------  1 deploy deploy    9120 Nov 19 11:40 backup.sh
+-rwxr-x---+ 1 deploy deploy    4407 Nov 25 16:31 rotate_logs.sh
+-rwsr-xr-x  1 root   root     68208 Feb  6  2024 passwd
+-rwSr--r--  1 deploy deploy     880 Nov 24 10:05 report_job
+drwxrwxrwt 12 root   root      4096 Nov 26 08:00 tmp
+drwxrwxrwx  2 deploy deploy    4096 Nov 22 13:47 exports
+drwxr-x---  3 deploy www-data  4096 Nov 25 16:30 uploads
+lrwxrwxrwx  1 deploy deploy      22 Nov 25 16:30 current -> releases/2026-11-25
+crw-rw-rw-  1 root   root    1,   3 Nov 26 07:58 null

@@ -1,0 +1,13 @@
+== Kadıköy ferry, engineer's morning checks (mode -rw-r--r--):
+  ./bilge_check.sh -> exit 126: found, but not executable
+  sh bilge_check.sh -> exit 0: bilge pump 2: 38 l/min, float switch ok
+  bilge_check.sh -> exit 127: not found (the command, or its #! interpreter)
+== after chmod u+x (mode -rwxr--r--):
+  ./bilge_check.sh -> exit 0: bilge pump 2: 38 l/min, float switch ok
+== shaft_seal.sh came from the Windows laptop in the office:
+  ./shaft_seal.sh -> exit 127: not found (the command, or its #! interpreter)
+  stripped the \r characters with tr:
+  ./shaft_seal.sh -> exit 0: port shaft seal: 2 drops/min
+== the checks folder lost its x bit (mode drw-r-xr-x):
+  ./checks/bilge_check.sh -> exit 126: found, but not executable
+  ./checks/bilge_check.sh -> exit 0: bilge pump 2: 38 l/min, float switch ok

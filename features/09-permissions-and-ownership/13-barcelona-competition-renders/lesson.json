@@ -1,0 +1,78 @@
+{
+  "title": "Barcelona architecture studio, guarding competition renders with ACLs",
+  "source": "acl_renders.zsh",
+  "steps": [
+    {
+      "label": "Add a deny-delete entry to the final render",
+      "api": "chmod +a",
+      "regions": [
+        {
+          "name": "deny-delete",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "List the entries with ls -le",
+      "api": "ls -le",
+      "regions": [
+        {
+          "name": "deny-delete",
+          "role": "result"
+        }
+      ]
+    },
+    {
+      "label": "Watch the owner's rm get refused",
+      "api": "chmod +a",
+      "regions": [
+        {
+          "name": "owner-blocked",
+          "role": "primary"
+        },
+        {
+          "name": "deny-delete",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Make new renders inherit the entry from their folder",
+      "api": "file_inherit,directory_inherit",
+      "regions": [
+        {
+          "name": "inherit",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Remove one entry and delete the old version",
+      "api": "chmod -a",
+      "regions": [
+        {
+          "name": "remove-one",
+          "role": "primary"
+        },
+        {
+          "name": "deny-delete",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Remove every entry under the competition folder",
+      "api": "chmod -N",
+      "regions": [
+        {
+          "name": "remove-all",
+          "role": "primary"
+        },
+        {
+          "name": "inherit",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "title": "Amman pharmacy, stopping a whole labelling batch with one signal",
+  "source": "process_group.zsh",
+  "steps": [
+    {
+      "label": "Start the batch in a new session",
+      "api": "setsid",
+      "regions": [
+        {
+          "name": "new-session",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Confirm every printer shares the process group",
+      "api": "ps -o pgid=",
+      "regions": [
+        {
+          "name": "confirm-group",
+          "role": "primary"
+        },
+        {
+          "name": "new-session",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Signal the whole group at once",
+      "api": "kill -- -pgid",
+      "regions": [
+        {
+          "name": "kill-group",
+          "role": "primary"
+        },
+        {
+          "name": "confirm-group",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

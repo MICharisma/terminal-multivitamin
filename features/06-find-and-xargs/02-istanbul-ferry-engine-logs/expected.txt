@@ -1,0 +1,9 @@
+logs written after the inspection: 9, covering engine-2026-11-08.log, engine-2026-11-11.log, engine-2026-11-13.log
+== before the inspection, for the shipyard's file:
+engine-room/baris-manco/engine-2026-11-04.log
+engine-room/kartal/engine-2026-11-04.log
+engine-room/moda/engine-2026-11-04.log
+== the Kartal's logs for 9 to 12 November, when the coolant alarm sounded:
+engine-room/kartal/engine-2026-11-11.log
+== copies of the 4 November log that look newer than the inspection:
+for-chief-engineer/plain-copy.log

@@ -1,0 +1,15 @@
+== default tabs between parallel columns:
+BX-1021	m	teal
+BX-1022	m	coral
+BX-1023	l	navy
+BX-1024	m	amber
+== colon-separated for the laser printer:
+BX-1021:m:teal
+BX-1022:m:coral
+BX-1023:l:navy
+BX-1024:m:amber
+== serial mode: one line listing every carton id:
+BX-1021 BX-1022 BX-1023 BX-1024
+== and one line per size-color pair from two files:
+m	m	l	m
+teal	coral	navy	amber

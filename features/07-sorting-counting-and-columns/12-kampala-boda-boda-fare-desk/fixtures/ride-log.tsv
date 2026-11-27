@@ -1,0 +1,6 @@
+entebbe-road	jinja-road
+nateete-road	entebbe-road
+wandegeya-ring	entebbe-road
+jinja-road	nateete-road
+entebbe-road	entebbe-road
+wandegeya-ring	jinja-road

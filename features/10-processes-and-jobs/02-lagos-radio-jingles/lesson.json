@@ -1,0 +1,58 @@
+{
+  "title": "Lagos radio station, mixing jingles as background jobs",
+  "source": "mix_jingles.zsh",
+  "steps": [
+    {
+      "label": "Start the three jingles as jobs",
+      "api": "&",
+      "regions": [
+        {
+          "name": "start-jobs",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "List them with jobs -l via a redirect",
+      "api": "jobs -l",
+      "regions": [
+        {
+          "name": "list-jobs",
+          "role": "primary"
+        },
+        {
+          "name": "start-jobs",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Stop one by a command substring",
+      "api": "%?string",
+      "regions": [
+        {
+          "name": "kill-by-name",
+          "role": "primary"
+        },
+        {
+          "name": "list-jobs",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Stop the rest by their job numbers",
+      "api": "%n",
+      "regions": [
+        {
+          "name": "kill-by-number",
+          "role": "primary"
+        },
+        {
+          "name": "kill-by-name",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

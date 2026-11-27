@@ -1,0 +1,36 @@
+{
+  "title": "Muscat date farm grades",
+  "source": "date_grades.zsh",
+  "steps": [
+    {
+      "label": "Align variety and grade with `printf`",
+      "api": "awk printf",
+      "regions": [
+        {
+          "name": "printf-columns",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Format moisture with `%.2f`",
+      "api": "printf \"%.2f\"",
+      "regions": [
+        {
+          "name": "fixed-decimals",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Map varieties to packers in zsh",
+      "api": "typeset -A",
+      "regions": [
+        {
+          "name": "assign-packer",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

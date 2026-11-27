@@ -1,0 +1,8 @@
+== laser first: laser gcode 1.0
+== bash hash table contains gcode_send after first run:
+  yes
+== PATH says cnc, hash still says laser: laser gcode 1.0
+== after hash -r: cnc gcode 2.0
+== type -a gcode_send:
+  gcode_send is WORK/cnc/bin/gcode_send
+  gcode_send is WORK/laser/bin/gcode_send

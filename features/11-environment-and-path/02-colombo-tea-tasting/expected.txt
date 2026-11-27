@@ -1,0 +1,12 @@
+== ordinary run inherits the desk laptop:
+  LANG=si_LK.UTF-8
+  HOME=<inherited desk HOME>
+  PATH=<inherited desk PATH>
+  cupping score sheet ready
+== env -i with only what the score sheet needs:
+  LANG=unset
+  HOME=WORK
+  PATH=/usr/bin:/bin
+  cupping score sheet ready
+== env | grep CUPPING (still in this shell):
+  CUPPING_NOTE=brioche, citrus

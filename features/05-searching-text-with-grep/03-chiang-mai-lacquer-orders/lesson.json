@@ -1,0 +1,46 @@
+{
+  "title": "Chiang Mai lacquer atelier, filtering this week's orders",
+  "source": "lacquer_orders.zsh",
+  "steps": [
+    {
+      "label": "Match bowl or tray with alternation",
+      "api": "grep -E",
+      "regions": [
+        {
+          "name": "alternation",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Group alternatives for leaf finishes",
+      "api": "grep -E (...)",
+      "regions": [
+        {
+          "name": "group",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Match two or more digits with {2,}",
+      "api": "grep -E {n,}",
+      "regions": [
+        {
+          "name": "quantifier",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Combine anchors, groups and .*",
+      "api": "grep -E ^...",
+      "regions": [
+        {
+          "name": "combined",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}
