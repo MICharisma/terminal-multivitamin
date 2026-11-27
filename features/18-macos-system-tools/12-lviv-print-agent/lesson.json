@@ -1,0 +1,30 @@
+{
+  "title": "Lviv print shop launch agent dry-run",
+  "source": "spool_agent.zsh",
+  "steps": [
+    {
+      "label": "Lint the spool agent plist",
+      "api": "plutil -lint",
+      "regions": [
+        {
+          "name": "lint-spool",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Show the launchctl print target",
+      "api": "launchctl print",
+      "regions": [
+        {
+          "name": "would-print",
+          "role": "primary"
+        },
+        {
+          "name": "lint-spool",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

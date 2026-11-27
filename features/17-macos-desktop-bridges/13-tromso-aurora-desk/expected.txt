@@ -1,0 +1,4 @@
+action convert-html: night-report.html
+action copy-alert: aurora desk: Kp=5 arcs, review night-report.html
+would: open night-report.html
+action open-card: night-report.html

@@ -1,0 +1,44 @@
+{
+  "title": "Recife bloco rehearsal callouts",
+  "source": "bloco_callouts.zsh",
+  "steps": [
+    {
+      "label": "Walk voice and callout pairs together",
+      "api": "${(kv)array}",
+      "regions": [
+        {
+          "name": "kv-walk",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Speak each callout with a named voice",
+      "api": "say -v",
+      "regions": [
+        {
+          "name": "say-voice",
+          "role": "primary"
+        },
+        {
+          "name": "kv-walk",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Keep CI quiet with the headless guard",
+      "api": "headless guard",
+      "regions": [
+        {
+          "name": "headless-say",
+          "role": "primary"
+        },
+        {
+          "name": "say-voice",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

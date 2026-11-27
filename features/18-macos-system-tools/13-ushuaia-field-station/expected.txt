@@ -1,0 +1,3 @@
+logger: beagle-canal-3
+stamp under caffeinate: done
+sample fsname: canal-temp.txt

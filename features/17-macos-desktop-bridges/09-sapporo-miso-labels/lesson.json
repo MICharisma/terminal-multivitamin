@@ -1,0 +1,30 @@
+{
+  "title": "Sapporo miso brewery label formats",
+  "source": "label_formats.zsh",
+  "steps": [
+    {
+      "label": "Read the master label's format",
+      "api": "sips -g",
+      "regions": [
+        {
+          "name": "before-format",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Convert a copy to JPEG for the printer",
+      "api": "sips -s format",
+      "regions": [
+        {
+          "name": "convert-jpeg",
+          "role": "primary"
+        },
+        {
+          "name": "before-format",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

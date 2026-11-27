@@ -1,0 +1,30 @@
+{
+  "title": "Kampala school bulletin via AppleScript",
+  "source": "bulletin_title.zsh",
+  "steps": [
+    {
+      "label": "Localize options inside the bulletin helper",
+      "api": "emulate -L zsh",
+      "regions": [
+        {
+          "name": "local-helper",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Join class names with osascript -e",
+      "api": "osascript -e",
+      "regions": [
+        {
+          "name": "osascript-join",
+          "role": "primary"
+        },
+        {
+          "name": "local-helper",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "La Paz family recipe cards to HTML",
+  "source": "recipe_card.zsh",
+  "steps": [
+    {
+      "label": "Feed the salte\u00f1a recipe from a here-document",
+      "api": "here-document",
+      "regions": [
+        {
+          "name": "heredoc-recipe",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Convert stdin text to an HTML card",
+      "api": "textutil -stdin",
+      "regions": [
+        {
+          "name": "stdin-convert",
+          "role": "primary"
+        },
+        {
+          "name": "heredoc-recipe",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

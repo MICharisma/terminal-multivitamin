@@ -1,0 +1,30 @@
+{
+  "title": "Cartagena library disk check",
+  "source": "disk_check.zsh",
+  "steps": [
+    {
+      "label": "Read boot volume info",
+      "api": "diskutil info",
+      "regions": [
+        {
+          "name": "diskutil-info",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Keep only stable field names",
+      "api": "case",
+      "regions": [
+        {
+          "name": "case-fields",
+          "role": "primary"
+        },
+        {
+          "name": "diskutil-info",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

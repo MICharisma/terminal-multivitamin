@@ -20,6 +20,8 @@
     "13-http-with-curl",
     "14-archives-and-compression",
     "15-homebrew",
-    "16-zsh-configuration-aliases-and-functions"
+    "16-zsh-configuration-aliases-and-functions",
+    "17-macos-desktop-bridges",
+    "18-macos-system-tools"
   ]
 }

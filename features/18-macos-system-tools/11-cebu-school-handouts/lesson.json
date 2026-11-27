@@ -1,0 +1,30 @@
+{
+  "title": "Cebu school handout metadata",
+  "source": "handout_names.zsh",
+  "steps": [
+    {
+      "label": "Build the handout list with process substitution",
+      "api": "process substitution",
+      "regions": [
+        {
+          "name": "process-list",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Print raw FS names with mdls -raw",
+      "api": "mdls -raw",
+      "regions": [
+        {
+          "name": "mdls-raw",
+          "role": "primary"
+        },
+        {
+          "name": "process-list",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

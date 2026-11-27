@@ -1,0 +1,30 @@
+{
+  "title": "Bilbao overnight render under caffeinate",
+  "source": "overnight_render.zsh",
+  "steps": [
+    {
+      "label": "Localize the render helper",
+      "api": "emulate -L zsh",
+      "regions": [
+        {
+          "name": "local-render",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Hold idle sleep for two seconds",
+      "api": "caffeinate -t",
+      "regions": [
+        {
+          "name": "caffeinate-t",
+          "role": "primary"
+        },
+        {
+          "name": "local-render",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

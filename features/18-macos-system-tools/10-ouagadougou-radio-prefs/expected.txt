@@ -1,0 +1,4 @@
+exported: radio-prefs.plist
+after delete, station missing: yes
+restored station: Radio La Voix
+restored frequency: 101.1

@@ -1,0 +1,30 @@
+{
+  "title": "Lhasa archive catalog queries",
+  "source": "catalog_queries.zsh",
+  "steps": [
+    {
+      "label": "Walk shelf and query pairs",
+      "api": "${(kv)array}",
+      "regions": [
+        {
+          "name": "kv-queries",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Run each catalog query with mdfind",
+      "api": "mdfind",
+      "regions": [
+        {
+          "name": "run-mdfind",
+          "role": "primary"
+        },
+        {
+          "name": "kv-queries",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

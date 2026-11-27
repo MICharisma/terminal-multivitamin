@@ -1,0 +1,30 @@
+{
+  "title": "Valletta maritime museum wall-label captures",
+  "source": "label_captures.zsh",
+  "steps": [
+    {
+      "label": "Build each capture from the shot list",
+      "api": "screencapture",
+      "regions": [
+        {
+          "name": "build-capture",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Print the guarded command instead of prompting",
+      "api": "headless guard",
+      "regions": [
+        {
+          "name": "guard-capture",
+          "role": "primary"
+        },
+        {
+          "name": "build-capture",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

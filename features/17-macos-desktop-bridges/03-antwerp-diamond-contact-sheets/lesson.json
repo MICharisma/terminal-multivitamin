@@ -1,0 +1,44 @@
+{
+  "title": "Antwerp diamond atelier contact sheets",
+  "source": "contact_sheets.zsh",
+  "steps": [
+    {
+      "label": "Loop over every stone still",
+      "api": "for f in glob",
+      "regions": [
+        {
+          "name": "loop-stones",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Fit each copy to a 64-pixel contact tile",
+      "api": "sips -Z",
+      "regions": [
+        {
+          "name": "resize",
+          "role": "primary"
+        },
+        {
+          "name": "loop-stones",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Read the new pixel width into the ledger",
+      "api": "sips -g",
+      "regions": [
+        {
+          "name": "read-width",
+          "role": "primary"
+        },
+        {
+          "name": "resize",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}
