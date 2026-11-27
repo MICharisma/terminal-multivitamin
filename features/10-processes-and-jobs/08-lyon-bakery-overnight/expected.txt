@@ -1,0 +1,9 @@
+== bake pid running under nohup
+  HUP ignored: bake still running
+== so far in bake.log:
+  poolish mixed at 22:00
+  dough folded
+== after TERM:
+  poolish mixed at 22:00
+  dough folded
+  bake stopped

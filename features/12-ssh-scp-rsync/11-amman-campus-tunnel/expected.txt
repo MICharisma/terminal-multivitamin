@@ -1,0 +1,5 @@
+== campus-dashboard:
+User student
+HostName portal.ju.edu.jo
+LocalForward 18080 [localhost]:8080
+IdentityFile student

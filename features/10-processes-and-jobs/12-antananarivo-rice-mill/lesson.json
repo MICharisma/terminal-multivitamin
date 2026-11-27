@@ -1,0 +1,40 @@
+{
+  "title": "Antananarivo rice mill, waiting on baggers in portable sh",
+  "source": "wait_sh.sh",
+  "steps": [
+    {
+      "label": "Start each bagger and keep the pids",
+      "api": "&",
+      "regions": [
+        {
+          "name": "launch",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Wait for each pid in a portable loop",
+      "api": "wait",
+      "regions": [
+        {
+          "name": "wait-loop",
+          "role": "primary"
+        },
+        {
+          "name": "launch",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Wait for every remaining child",
+      "api": "wait",
+      "regions": [
+        {
+          "name": "wait-all",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

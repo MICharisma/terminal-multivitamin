@@ -1,0 +1,74 @@
+{
+  "title": "Amman fintech ops, resolving nested deploy config",
+  "source": "resolve_config.zsh",
+  "steps": [
+    {
+      "label": "Expand a variable whose name is in another variable",
+      "api": "${(P)name}",
+      "regions": [
+        {
+          "name": "indirect",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Build the name from a role, then look it up",
+      "api": "${(P)${:-${role}_host}}",
+      "regions": [
+        {
+          "name": "nested-pick",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Re-evaluate a URL template with (e)",
+      "api": "${(e)template}",
+      "regions": [
+        {
+          "name": "evaluate-template",
+          "role": "primary"
+        },
+        {
+          "name": "nested-pick",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Stack two trims to get the service name",
+      "api": "${${var%/*/*}##*/}",
+      "regions": [
+        {
+          "name": "stacked-trims",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Walk the same path with :h and :t",
+      "api": ":h :t",
+      "regions": [
+        {
+          "name": "modifiers-walk",
+          "role": "primary"
+        },
+        {
+          "name": "stacked-trims",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Expand prompt escapes in a status line",
+      "api": "${(%)line}",
+      "regions": [
+        {
+          "name": "prompt-escapes",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "title": "Ulaanbaatar core sample archive",
+  "source": "peek_core.zsh",
+  "steps": [
+    {
+      "label": "List every member in the borehole archive",
+      "api": "tar -tf",
+      "regions": [
+        {
+          "name": "list-archive",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Peek at the 18m mudstone sample on stdout",
+      "api": "tar -xOf",
+      "regions": [
+        {
+          "name": "peek-member",
+          "role": "primary"
+        },
+        {
+          "name": "list-archive",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Confirm the workdir never unpacked the tree",
+      "api": "tar -xOf",
+      "regions": [
+        {
+          "name": "still-packed",
+          "role": "result"
+        },
+        {
+          "name": "peek-member",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

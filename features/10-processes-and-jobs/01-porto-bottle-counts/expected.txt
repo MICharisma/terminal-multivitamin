@@ -1,0 +1,9 @@
+started vintage-2011 in the background
+started late-bottled-2017 in the background
+started white-dry in the background
+== waiting for each counter:
+  vintage-2011: 40 bottles
+  late-bottled-2017: 40 bottles
+  white-dry: 18 bottles
+tawny-10 recount started; wait with no arguments...
+  tawny-10: 12 bottles

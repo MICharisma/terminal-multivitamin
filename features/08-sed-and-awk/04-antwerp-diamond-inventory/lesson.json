@@ -1,0 +1,44 @@
+{
+  "title": "Antwerp diamond inventory",
+  "source": "diamond_tags.zsh",
+  "steps": [
+    {
+      "label": "Rewrite GIA numbers with capture groups",
+      "api": "sed 's/\\(a\\)\\(b\\)/x \\2/'",
+      "regions": [
+        {
+          "name": "backreference",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Keep the HRD prefix with `&`",
+      "api": "sed 's/pattern/& suffix/'",
+      "regions": [
+        {
+          "name": "ampersand",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Route each certificate format through `case`",
+      "api": "case $line in",
+      "regions": [
+        {
+          "name": "case-router",
+          "role": "primary"
+        },
+        {
+          "name": "backreference",
+          "role": "setup"
+        },
+        {
+          "name": "ampersand",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

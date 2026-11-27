@@ -1,0 +1,4 @@
+== paylab mux:
+ControlMaster auto
+ControlPath mux/paylab.sock
+ControlPersist 600

@@ -1,0 +1,30 @@
+{
+  "title": "Quito mural restoration logs",
+  "source": "compress_logs.zsh",
+  "steps": [
+    {
+      "label": "Gzip each panel journal before the scaffold comes down",
+      "api": "gzip",
+      "regions": [
+        {
+          "name": "gzip-each",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Decompress panel-b when the pigment match needs a re-read",
+      "api": "gzip -d",
+      "regions": [
+        {
+          "name": "gunzip-one",
+          "role": "primary"
+        },
+        {
+          "name": "gzip-each",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

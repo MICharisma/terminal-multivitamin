@@ -1,0 +1,40 @@
+{
+  "title": "Bratislava marionette theatre",
+  "source": "marionette_cast.zsh",
+  "steps": [
+    {
+      "label": "Print fields one and three",
+      "api": "awk '{print $n}'",
+      "regions": [
+        {
+          "name": "field-number",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Split on pipe with `-F`",
+      "api": "awk -F'|'",
+      "regions": [
+        {
+          "name": "fs",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Count fields and rejoin with `OFS`",
+      "api": "OFS and NF",
+      "regions": [
+        {
+          "name": "ofs-nf",
+          "role": "primary"
+        },
+        {
+          "name": "fs",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

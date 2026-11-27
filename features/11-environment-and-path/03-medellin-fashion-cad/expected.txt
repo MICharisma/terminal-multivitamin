@@ -1,0 +1,6 @@
+== system first: system-dxf-plot 1.0
+  whence -p: WORK/system/bin/dxf_plot
+== lab in front: lab-dxf-plot 2026.2
+  whence -p: WORK/lab/bin/dxf_plot
+== PATH says system, but hash still points at lab: lab-dxf-plot 2026.2
+== after hash -r: system-dxf-plot 1.0

@@ -1,0 +1,30 @@
+{
+  "title": "Kampala boda-boda fare desk, tallying popular routes",
+  "source": "route_tally.sh",
+  "steps": [
+    {
+      "label": "Show paired route columns from the log",
+      "api": "cut -f1,2",
+      "regions": [
+        {
+          "name": "route-fields",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Tally routes with sort and uniq -c",
+      "api": "cut -f1,2 | sort | uniq -c",
+      "regions": [
+        {
+          "name": "route-tally",
+          "role": "primary"
+        },
+        {
+          "name": "route-fields",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

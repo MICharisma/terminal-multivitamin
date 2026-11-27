@@ -1,0 +1,64 @@
+{
+  "title": "Buenos Aires milonga DJ, building tandas",
+  "source": "build_tandas.zsh",
+  "steps": [
+    {
+      "label": "Show both streams together on the terminal",
+      "api": "2>&1",
+      "regions": [
+        {
+          "name": "both-streams",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Send the playlist and the warnings to separate files",
+      "api": "2> file",
+      "regions": [
+        {
+          "name": "split-streams",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Drop the warnings with /dev/null",
+      "api": "2>/dev/null",
+      "regions": [
+        {
+          "name": "drop-warnings",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Compare > file 2>&1 with 2>&1 > file",
+      "api": "> file 2>&1",
+      "regions": [
+        {
+          "name": "order-matters",
+          "role": "primary"
+        },
+        {
+          "name": "both-streams",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Count only the missing records, and meet zsh's multios",
+      "api": "2>&1 >/dev/null |",
+      "regions": [
+        {
+          "name": "errors-only-pipe",
+          "role": "primary"
+        },
+        {
+          "name": "order-matters",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

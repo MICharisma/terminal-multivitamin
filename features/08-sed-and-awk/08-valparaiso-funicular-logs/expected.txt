@@ -1,0 +1,9 @@
+== passengers per car since the maintenance window:
+ascensor-artilleria 33
+ascensor-baron-1883 11
+ascensor-concepcion 50
+ascensor-reina-victoria 34
+== how many cars carried riders today:
+4
+== longest car code on the log:
+ascensor-reina-victoria 23 chars

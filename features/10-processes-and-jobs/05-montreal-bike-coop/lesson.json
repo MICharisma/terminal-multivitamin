@@ -1,0 +1,72 @@
+{
+  "title": "Montréal bike cooperative, a repair desk that listens for signals",
+  "source": "signal_desk.zsh",
+  "steps": [
+    {
+      "label": "Install HUP, TERM, and USR1 traps on the desk",
+      "api": "trap",
+      "regions": [
+        {
+          "name": "desk-script",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Start the desk in the background",
+      "api": "&",
+      "regions": [
+        {
+          "name": "start-desk",
+          "role": "primary"
+        },
+        {
+          "name": "desk-script",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Signal a cargo bike with USR1",
+      "api": "kill -USR1",
+      "regions": [
+        {
+          "name": "usr1",
+          "role": "primary"
+        },
+        {
+          "name": "start-desk",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Reload the roster with HUP",
+      "api": "kill -HUP",
+      "regions": [
+        {
+          "name": "hup",
+          "role": "primary"
+        },
+        {
+          "name": "start-desk",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Stop the desk politely with TERM",
+      "api": "kill -TERM",
+      "regions": [
+        {
+          "name": "term",
+          "role": "primary"
+        },
+        {
+          "name": "start-desk",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

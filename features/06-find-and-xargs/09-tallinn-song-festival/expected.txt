@@ -1,0 +1,15 @@
+plain xargs made 8 folders from 3 songs: Koit Mu Ta armas isamaa lendab mesipuu poole
+== a folder per choir and voice, one sh run per roster line:
+parts/ellerhein/alto
+parts/ellerhein/soprano
+parts/rahvusmeeskoor/bass
+parts/rahvusmeeskoor/tenor
+parts/tallinna-poistekoor/treble
+== a folder per song, spaces kept:
+songs/Koit
+songs/Mu isamaa armas
+songs/Ta lendab mesipuu poole
+== the joint score, copied under each song's name:
+songs/Koit/Koit.pdf
+songs/Mu isamaa armas/Mu isamaa armas.pdf
+songs/Ta lendab mesipuu poole/Ta lendab mesipuu poole.pdf

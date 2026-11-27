@@ -1,0 +1,10 @@
+== night shift, our own columns:
+  state=S cmd=tram-15-androva
+  state=S cmd=tram-22-palmovka
+== just tram 15:
+  state=S cmd=tram-15-androva
+== after STOP on tram 22:
+  state=S cmd=tram-15-androva
+  state=T cmd=tram-22-palmovka
+== matching by pid list, not by grep:
+  tracked 2 of our own trams

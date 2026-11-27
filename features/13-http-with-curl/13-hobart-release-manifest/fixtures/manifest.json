@@ -1,0 +1,9 @@
+{
+  "product": "southern-lights",
+  "release": "2026.11",
+  "channels": [
+    {"name": "stable", "version": "3.2.1", "active": true},
+    {"name": "beta", "version": "3.3.0-rc1", "active": true},
+    {"name": "nightly", "version": "3.3.0-dev", "active": false}
+  ]
+}

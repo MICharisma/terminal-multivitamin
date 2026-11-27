@@ -1,0 +1,64 @@
+{
+  "title": "São Paulo samba school, one rehearsal notice for every wing",
+  "source": "rehearsal_notice.zsh",
+  "steps": [
+    {
+      "label": "Write one notice to three files",
+      "api": "> a > b",
+      "regions": [
+        {
+          "name": "write-to-many",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Append to two of them",
+      "api": ">> a >> b",
+      "regions": [
+        {
+          "name": "append-to-many",
+          "role": "primary"
+        },
+        {
+          "name": "write-to-many",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Write to a file and a pipe at once",
+      "api": "> file | cmd",
+      "regions": [
+        {
+          "name": "file-and-pipe",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Read two files as one input",
+      "api": "< a < b",
+      "regions": [
+        {
+          "name": "read-from-many",
+          "role": "primary"
+        },
+        {
+          "name": "file-and-pipe",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Turn multios off and see only the last redirection win",
+      "api": "setopt no_multios",
+      "regions": [
+        {
+          "name": "no-multios",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

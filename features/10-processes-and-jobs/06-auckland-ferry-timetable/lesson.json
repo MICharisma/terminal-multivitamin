@@ -1,0 +1,40 @@
+{
+  "title": "Auckland ferry timetable desk, waiting on each sailing's check",
+  "source": "wait_sailings.zsh",
+  "steps": [
+    {
+      "label": "Start the checks in launch order",
+      "api": "&",
+      "regions": [
+        {
+          "name": "launch-order",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Wait in timetable order and read each exit status",
+      "api": "wait $pid",
+      "regions": [
+        {
+          "name": "wait-timetable",
+          "role": "primary"
+        },
+        {
+          "name": "launch-order",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Refuse wait on a pid that is not a child",
+      "api": "wait",
+      "regions": [
+        {
+          "name": "not-a-child",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

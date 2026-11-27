@@ -1,0 +1,54 @@
+{
+  "title": "Port of Rotterdam planning office, auditing a shared drive",
+  "source": "audit_drive.zsh",
+  "steps": [
+    {
+      "label": "Find files anyone can change",
+      "api": "find -perm -0002",
+      "regions": [
+        {
+          "name": "world-writable-files",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Find open folders without the sticky bit",
+      "api": "find ! -perm -1000",
+      "regions": [
+        {
+          "name": "unsticky-folders",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Match any of several bits portably",
+      "api": "find \\( -perm -0020 -o -perm -0002 \\)",
+      "regions": [
+        {
+          "name": "any-of-bits",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Fix everything found in one pass",
+      "api": "find -exec chmod {} +",
+      "regions": [
+        {
+          "name": "bulk-fix",
+          "role": "primary"
+        },
+        {
+          "name": "world-writable-files",
+          "role": "setup"
+        },
+        {
+          "name": "unsticky-folders",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

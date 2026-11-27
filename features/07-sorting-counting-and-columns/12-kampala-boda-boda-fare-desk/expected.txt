@@ -1,0 +1,14 @@
+== paired pickup and drop-off columns:
+  entebbe-road	jinja-road
+  nateete-road	entebbe-road
+  wandegeya-ring	entebbe-road
+  jinja-road	nateete-road
+  entebbe-road	entebbe-road
+  wandegeya-ring	jinja-road
+== tally for the evening tariff board:
+    1 entebbe-road	entebbe-road
+    1 entebbe-road	jinja-road
+    1 jinja-road	nateete-road
+    1 nateete-road	entebbe-road
+    1 wandegeya-ring	entebbe-road
+    1 wandegeya-ring	jinja-road

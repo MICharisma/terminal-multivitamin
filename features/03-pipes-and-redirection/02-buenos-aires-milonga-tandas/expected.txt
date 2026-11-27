@@ -1,0 +1,19 @@
+== on the terminal, both streams arrive together:
+library/di-sarli_bahia-blanca.flac
+missing: di-sarli_el-once (still on the vinyl shelf?)
+library/di-sarli_organito-de-la-tarde.flac
+missing: canaro_poema (still on the vinyl shelf?)
+playlist lines: 2, warnings: 2
+playable for the second tanda: library/pugliese_la-yumba.flac
+> order-a.log 2>&1 put 4 lines in the file
+== 2>&1 > order-b.log: stderr already points at the old stdout, the pipe:
+  pipe got: missing: di-sarli_el-once (still on the vinyl shelf?)
+  pipe got: missing: canaro_poema (still on the vinyl shelf?)
+order-b.log got 2 lines
+without braces, zsh's multios copies stdout into the pipe too: 4 lines
+records to pull from the shelf before midnight: 2
+== |& pipes both streams, in the order they were written:
+  library/d-arienzo_la-cumparsita.flac
+  missing: darienzo_paciencia (still on the vinyl shelf?)
+  library/troilo_quejas-de-bandoneon.flac
+  missing: tanturi_una-emocion (still on the vinyl shelf?)

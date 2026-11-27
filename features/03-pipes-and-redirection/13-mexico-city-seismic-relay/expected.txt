@@ -1,0 +1,11 @@
+== relay running; routine readings pass straight through:
+  routine: CU-UNAM 12 mg
+  routine: XOCHIMILCO 9 mg
+  routine: TLATELOLCO 18 mg
+accelerometer feed closed cleanly (exit 0)
+== bulletin for Protección Civil: 3 stations over their limit
+  ALERT TLATELOLCO 31 mg (limit 25)
+  ALERT CU-UNAM 44 mg (limit 40)
+  ALERT XOCHIMILCO 26 mg (limit 20)
+audit.log: 6 readings; bulletin filed: 4 lines
+readings.fifo is still a named pipe (type p), holding no data

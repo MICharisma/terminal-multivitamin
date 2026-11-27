@@ -1,0 +1,24 @@
+{
+  "feature": "archives-and-compression",
+  "title": "Archives and compression",
+  "covers": [
+    "ditto -c -k",
+    "ditto -x -k",
+    "gzip",
+    "gzip -d",
+    "shasum -a 256",
+    "shasum -c",
+    "tar --exclude",
+    "tar -czf",
+    "tar -tf",
+    "tar -xOf",
+    "tar -xzf",
+    "unzip",
+    "unzip -Z1",
+    "xz",
+    "xz -d",
+    "zip",
+    "zip -r",
+    "zip -u"
+  ]
+}

@@ -1,0 +1,13 @@
+ticket 48213, customer's listing of /srv/shop:
+name             mode        type     octal notes
+config.yml       -rw-r--r--  file     644
+.env             -rw-rw-rw-  file     666   WORLD-WRITABLE: anyone on the server can change this
+backup.sh        -rwx------  file     700
+rotate_logs.sh   -rwxr-x---+ file     750   has an ACL, see getfacl
+passwd           -rwsr-xr-x  file     4755  setuid
+report_job       -rwSr--r--  file     4644  setuid; (S: setuid but not executable, a typo?)
+tmp              drwxrwxrwt  folder   1777  sticky; world-writable but sticky: fine, like /tmp
+exports          drwxrwxrwx  folder   777   WORLD-WRITABLE: anyone on the server can change this
+uploads          drwxr-x---  folder   750
+current          lrwxrwxrwx  symlink  777   -> releases/2026-11-25, the link's own mode is ignored
+null             crw-rw-rw-  device   666

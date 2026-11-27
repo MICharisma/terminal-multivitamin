@@ -1,0 +1,9 @@
+grep flavour: GNU
+== ochre rows in palette.csv files only:
+./panel-a/palette.csv:ochre,Djebel Ressas,120
+./panel-b/palette.csv:ochre,Djebel Ressas,15
+== ochre anywhere except the notes:
+./panel-a/palette.csv:ochre,Djebel Ressas,120
+./panel-b/palette.csv:ochre,Djebel Ressas,15
+== portable find form (same answer on both greps):
+./panel-a/palette.csv:gold-glass,Murano scrap,6

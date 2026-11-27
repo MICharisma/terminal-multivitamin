@@ -1,0 +1,5 @@
+== release pull
+  http_code=200
+== active channels
+  stable=3.2.1
+  beta=3.3.0-rc1

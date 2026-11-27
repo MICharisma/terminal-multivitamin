@@ -1,0 +1,5 @@
+== fixed seats hold
+  artist=Orchestra Baobab;night=soundcheck;seats=1
+== plan file holds
+  artist=Youssou N'Dour;night=opening;seats=2
+  artist=Orchestra Baobab;night=finale;seats=4

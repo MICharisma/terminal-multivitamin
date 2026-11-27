@@ -1,0 +1,12 @@
+grep -P: available (GNU)
+== depths recorded this morning:
+depth 1.20m
+depth 1.35m
+depth 0.95m
+depth 1.50m
+depth 1.10m
+depth 1.05m
+== gate openings as bare percentages:
+40 55 30 70 45 35 
+WARN lines by plain grep: 2
+ripgrep tip: brew install ripgrep / apt install ripgrep (same count via rg -N when present)

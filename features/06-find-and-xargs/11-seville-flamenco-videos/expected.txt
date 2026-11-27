@@ -1,0 +1,8 @@
+counted through a pipe: 0 (the loop ran in a subshell)
+counted with process substitution: 5
+== festival-reel/, one file per pupil and dance:
+antonio de la vega__alegrias.mov
+antonio de la vega__bulerias.mov
+lucia-moreno__sevillanas.mov
+maria jose ruiz__alegrias.mov
+maria jose ruiz__soleares.mov

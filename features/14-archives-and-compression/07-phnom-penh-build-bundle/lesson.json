@@ -1,0 +1,30 @@
+{
+  "title": "Phnom Penh build bundle",
+  "source": "bundle_release.zsh",
+  "steps": [
+    {
+      "label": "Pack the app while excluding node_modules",
+      "api": "tar --exclude",
+      "regions": [
+        {
+          "name": "pack-excluding",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "List the archive and confirm node_modules stayed out",
+      "api": "tar -tf",
+      "regions": [
+        {
+          "name": "prove-exclusion",
+          "role": "primary"
+        },
+        {
+          "name": "pack-excluding",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

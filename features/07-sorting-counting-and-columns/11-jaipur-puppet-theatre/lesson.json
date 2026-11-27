@@ -1,0 +1,30 @@
+{
+  "title": "Jaipur puppet theatre, counting cues for the night show",
+  "source": "cue_tally.bash",
+  "steps": [
+    {
+      "label": "Tally cues with sort and uniq -c",
+      "api": "sort | uniq -c",
+      "regions": [
+        {
+          "name": "tally-bash",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Save ranked tallies in a bash 3.2 array",
+      "api": "array+=(\"$item\")",
+      "regions": [
+        {
+          "name": "ranked-array",
+          "role": "primary"
+        },
+        {
+          "name": "tally-bash",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

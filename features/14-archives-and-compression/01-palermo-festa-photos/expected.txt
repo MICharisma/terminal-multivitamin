@@ -1,0 +1,5 @@
+== packed festa-2026.tgz
+== members:
+album/nonna-maria.jpg
+album/tavolata.jpg
+album/zio-paolo.jpg

@@ -1,0 +1,6 @@
+== catalog downloads
+  saved bearing-6204.txt
+  saved seal-nitrile.txt
+== workdir sheets
+  bearing-6204.txt
+  seal-nitrile.txt

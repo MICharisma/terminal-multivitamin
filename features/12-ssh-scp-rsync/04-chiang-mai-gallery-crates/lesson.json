@@ -1,0 +1,44 @@
+{
+  "title": "Chiang Mai Night Bazaar gallery crates",
+  "source": "ship_crates.zsh",
+  "steps": [
+    {
+      "label": "Show the empty loading dock before the crates leave",
+      "api": "scp -r",
+      "regions": [
+        {
+          "name": "empty-dock",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "scp -r each crate folder to the loading dock over local sshd",
+      "api": "scp -r",
+      "regions": [
+        {
+          "name": "ship-crates",
+          "role": "primary"
+        },
+        {
+          "name": "empty-dock",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "List the dock and the contents of each crate",
+      "api": "scp -r",
+      "regions": [
+        {
+          "name": "dock-listing",
+          "role": "result"
+        },
+        {
+          "name": "ship-crates",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

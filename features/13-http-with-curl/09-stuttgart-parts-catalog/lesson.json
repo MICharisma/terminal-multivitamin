@@ -1,0 +1,30 @@
+{
+  "title": "Stuttgart parts catalog download",
+  "source": "parts_catalog.zsh",
+  "steps": [
+    {
+      "label": "Download each sheet with the remote file name",
+      "api": "curl -O",
+      "regions": [
+        {
+          "name": "remote-name",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "List the sheets that landed in the workdir",
+      "api": "curl -O",
+      "regions": [
+        {
+          "name": "list-saved",
+          "role": "result"
+        },
+        {
+          "name": "remote-name",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

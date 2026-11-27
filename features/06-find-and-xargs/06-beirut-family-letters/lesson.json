@@ -1,0 +1,54 @@
+{
+  "title": "Beirut family, tidying the scans of Teta's letters",
+  "source": "tidy_scans.zsh",
+  "steps": [
+    {
+      "label": "Count the names each sh -c call receives, with and without $0",
+      "api": "find -exec sh -c",
+      "regions": [
+        {
+          "name": "count-arguments",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Rename a batch of scans to .jpg inside one sh -c loop",
+      "api": "find -exec sh -c",
+      "regions": [
+        {
+          "name": "rename-batch",
+          "role": "primary"
+        },
+        {
+          "name": "count-arguments",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Check for an existing target before mv",
+      "api": "[ -e \"$target\" ]",
+      "regions": [
+        {
+          "name": "rename-batch",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Write a caption beside each scan with -execdir",
+      "api": "find -execdir",
+      "regions": [
+        {
+          "name": "execdir-captions",
+          "role": "primary"
+        },
+        {
+          "name": "rename-batch",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

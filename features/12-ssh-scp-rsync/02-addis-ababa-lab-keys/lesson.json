@@ -1,0 +1,62 @@
+{
+  "title": "Addis Ababa Institute of Technology lab keys",
+  "source": "lab_keys.zsh",
+  "steps": [
+    {
+      "label": "Mint an ed25519 key inside a function with local options",
+      "api": "ssh-keygen -t ed25519",
+      "regions": [
+        {
+          "name": "mint-key",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Issue Hana Kebede's lab key with the AAIT comment",
+      "api": "ssh-keygen -t ed25519",
+      "regions": [
+        {
+          "name": "issue-hana",
+          "role": "primary"
+        },
+        {
+          "name": "mint-key",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Issue Dawit Tesfaye's key the same way",
+      "api": "ssh-keygen -t ed25519",
+      "regions": [
+        {
+          "name": "issue-dawit",
+          "role": "primary"
+        },
+        {
+          "name": "mint-key",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "List the public keys on the lab roster",
+      "api": "ssh-keygen -t ed25519",
+      "regions": [
+        {
+          "name": "lab-roster",
+          "role": "result"
+        },
+        {
+          "name": "issue-hana",
+          "role": "setup"
+        },
+        {
+          "name": "issue-dawit",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

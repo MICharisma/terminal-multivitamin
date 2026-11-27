@@ -1,0 +1,16 @@
+{
+  "title": "Da Nang hotel folio upload",
+  "source": "hotel_upload.zsh",
+  "steps": [
+    {
+      "label": "Upload the guest card as a multipart folio field",
+      "api": "curl -F",
+      "regions": [
+        {
+          "name": "multipart-upload",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

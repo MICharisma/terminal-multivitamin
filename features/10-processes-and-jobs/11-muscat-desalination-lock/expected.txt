@@ -1,0 +1,8 @@
+== holder says: holding valve-7.lock on fd 11
+== who has valve-7.lock open:
+  pid=PID
+  command=zsh
+  pid=PID
+  command=sleep
+== lsof -t count: 2
+== lock free; removing valve-7.lock

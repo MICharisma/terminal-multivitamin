@@ -1,0 +1,7 @@
+lot-221,Yirgacheffe,washed,fragrance floral,acidity bright,body tea-like,score 86.5
+lot-222,Sidamo,natural,fragrance berry,acidity mild,body full,score 84.0
+lot-223,Guji,washed,fragrance jasmine,acidity bright,body silky,score 87.25
+lot-224,Harrar,natural,fragrance blueberry,acidity winey,body heavy,score 83.5
+lot-225,Yirgacheffe,honey,fragrance floral,acidity citrus,body tea-like,score 85.75
+lot-226,Limu,washed,fragrance cocoa,acidity mild,body round,score 82.0
+lot-227,Guji,natural,fragrance stone-fruit,acidity bright,body juicy,score 88.0

@@ -1,0 +1,54 @@
+{
+  "title": "Tromsø northern lights desk, watching zsh startup files under ZDOTDIR",
+  "source": "startup_order.zsh",
+  "steps": [
+    {
+      "label": "Run a non-interactive shell: zshenv only",
+      "api": "ZDOTDIR",
+      "regions": [
+        {
+          "name": "every-shell",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Run an interactive shell: add zshrc",
+      "api": "zsh -i",
+      "regions": [
+        {
+          "name": "interactive",
+          "role": "primary"
+        },
+        {
+          "name": "every-shell",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Run a login shell: add zprofile and zlogin",
+      "api": "zsh -l",
+      "regions": [
+        {
+          "name": "login",
+          "role": "primary"
+        },
+        {
+          "name": "every-shell",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Run login interactive: all four files",
+      "api": "zsh -il",
+      "regions": [
+        {
+          "name": "login-interactive",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

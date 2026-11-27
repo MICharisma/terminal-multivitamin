@@ -1,0 +1,10 @@
+== compressing:
+  panel-a.log.gz
+  panel-b.log.gz
+  panel-c.log.gz
+== reopened panel-b:
+  2026-11-21: matched ochre pigment for the sun motif
+== still compressed:
+panel-a.log.gz
+panel-b.log
+panel-c.log.gz

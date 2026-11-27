@@ -1,0 +1,14 @@
+== normalized delimiters:
+east-a1|b-14|24|somphou
+east-a1|b-15|18|somphou
+west-c3|c-02||22|khamla
+== rows with repaired leaf counts:
+east-a1 bundle b-14: 24 leaves, scribe somphou
+east-a1 bundle b-15: 18 leaves, scribe somphou
+west-c3 bundle c-02: 22 leaves, scribe khamla
+west-c3 bundle c-04: 31 leaves, scribe unknown
+north-b2 bundle d-08: 12 leaves, scribe visone
+== totals for the restoration workshop:
+shelf east-a1: 2 bundles, 42 leaves
+shelf north-b2: 1 bundles, 12 leaves
+shelf west-c3: 2 bundles, 53 leaves

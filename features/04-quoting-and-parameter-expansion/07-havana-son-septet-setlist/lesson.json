@@ -1,0 +1,60 @@
+{
+  "title": "Havana son septet, who plays tonight",
+  "source": "septet_setlist.zsh",
+  "steps": [
+    {
+      "label": "Read by index and slice",
+      "api": "$array[2,4]",
+      "regions": [
+        {
+          "name": "index-and-slice",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Append a guest and remove a sick player",
+      "api": "array+=(...)",
+      "regions": [
+        {
+          "name": "append-remove",
+          "role": "primary"
+        },
+        {
+          "name": "index-and-slice",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Find a player by instrument",
+      "api": "${array[(i)pattern]}",
+      "regions": [
+        {
+          "name": "search",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Subtract absences and intersect with regulars",
+      "api": "${a:|b}",
+      "regions": [
+        {
+          "name": "set-operations",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Pass one word per element with \"${array[@]}\"",
+      "api": "\"${array[@]}\"",
+      "regions": [
+        {
+          "name": "one-or-many-words",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

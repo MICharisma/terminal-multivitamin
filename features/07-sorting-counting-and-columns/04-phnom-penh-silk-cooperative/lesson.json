@@ -1,0 +1,44 @@
+{
+  "title": "Phnom Penh silk cooperative, matching weavers to dye lots",
+  "source": "weave_match.zsh",
+  "steps": [
+    {
+      "label": "See join fail on unsorted weaver and lot lists",
+      "api": "join -t,",
+      "regions": [
+        {
+          "name": "unsorted-join",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Sort on the first field before joining",
+      "api": "sort -t, -k1,1",
+      "regions": [
+        {
+          "name": "sort-for-join",
+          "role": "primary"
+        },
+        {
+          "name": "unsorted-join",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Join the sorted tables on weaver id",
+      "api": "join -t, -1 1 -2 1",
+      "regions": [
+        {
+          "name": "comma-join",
+          "role": "primary"
+        },
+        {
+          "name": "sort-for-join",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

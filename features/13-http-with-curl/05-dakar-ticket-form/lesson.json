@@ -1,0 +1,30 @@
+{
+  "title": "Dakar festival ticket form",
+  "source": "ticket_form.zsh",
+  "steps": [
+    {
+      "label": "Post a soundcheck hold with plain -d fields",
+      "api": "curl -d",
+      "regions": [
+        {
+          "name": "post-fields",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Encode each artist name from the plan file",
+      "api": "--data-urlencode",
+      "regions": [
+        {
+          "name": "encode-plan",
+          "role": "primary"
+        },
+        {
+          "name": "post-fields",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Palermo festa birthday photos",
+  "source": "festa_album.zsh",
+  "steps": [
+    {
+      "label": "Pack the three festa photos into a gzipped tar",
+      "api": "tar -czf",
+      "regions": [
+        {
+          "name": "pack-album",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "List the archive members by name only",
+      "api": "tar -tf",
+      "regions": [
+        {
+          "name": "list-members",
+          "role": "primary"
+        },
+        {
+          "name": "pack-album",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

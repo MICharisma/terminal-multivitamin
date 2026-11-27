@@ -1,0 +1,7 @@
+== packed greet-kh.tgz without node_modules
+== archive members:
+dist/main.js
+package.json
+src/greet.js
+== node_modules mentioned?
+  no

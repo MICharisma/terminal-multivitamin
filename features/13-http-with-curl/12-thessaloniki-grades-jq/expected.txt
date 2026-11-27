@@ -1,0 +1,8 @@
+== choir roll
+  elena papadopoulos
+  nikos ioannou
+  sofia dimitriou
+  giorgos antoniou
+== passing (grade >= 15)
+  elena papadopoulos=18
+  sofia dimitriou=19
