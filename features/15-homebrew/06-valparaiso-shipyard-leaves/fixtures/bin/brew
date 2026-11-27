@@ -1,0 +1,14 @@
+#!/usr/bin/env zsh
+set -o errexit -o nounset -o pipefail
+case $1 in
+  list)
+    print -l cmake ninja python@3.12 openssl@3 readline sqlite xz
+    ;;
+  leaves)
+    print -l cmake ninja python@3.12
+    ;;
+  *)
+    print -u2 "stub brew: unsupported $*"
+    exit 1
+    ;;
+esac

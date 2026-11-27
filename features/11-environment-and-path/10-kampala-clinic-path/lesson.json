@@ -1,0 +1,44 @@
+{
+  "title": "Kampala clinic IT closet, refusing a dangerous PATH",
+  "source": "path_hygiene.zsh",
+  "steps": [
+    {
+      "label": "Put . and a world-writable dir on PATH",
+      "api": "PATH",
+      "regions": [
+        {
+          "name": "dangerous-path",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Audit each entry and drop the bad ones",
+      "api": "(( mode & 8#002 ))",
+      "regions": [
+        {
+          "name": "audit",
+          "role": "primary"
+        },
+        {
+          "name": "dangerous-path",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Rewrite path to the safe entries",
+      "api": "path=( $safe_path )",
+      "regions": [
+        {
+          "name": "rewrite",
+          "role": "primary"
+        },
+        {
+          "name": "audit",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

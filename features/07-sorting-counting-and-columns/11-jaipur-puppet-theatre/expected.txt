@@ -1,0 +1,9 @@
+== cues by frequency for the puppet master:
+    3 drummer repeat
+    2 lion mask cue
+    2 narrator enters left
+    1 prince exits stage right
+    1 princess wave
+== top two cues saved for the call sheet:
+  3 x drummer repeat
+  2 x lion mask cue

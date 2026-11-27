@@ -1,0 +1,14 @@
+== -exec ... \; : one grep per tank, counts without names:
+0
+1
+2
+== -exec ... + : one grep for all tanks, so it names each one:
+cellar/chenin/tank-05.log:0
+cellar/chenin/tank-07.log:1
+cellar/pinotage/tank-03.log:2
+== only tank-07 matches the -name test; grep alone hides which file it read:
+12:00 ALARM 27.9C glycol valve stuck
+== with /dev/null as a second file, grep names it:
+cellar/chenin/tank-07.log:12:00 ALARM 27.9C glycol valve stuck
+with \; find exits 0 even though grep found no alarm in tank-05
+with + find passes on grep's failure: no alarms in tank-05, and set -e would stop here

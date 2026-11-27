@@ -1,0 +1,8 @@
+== exhibition.zip members:
+exhibition/
+exhibition/bronze-plaza.jpg
+exhibition/guatape-boat.jpg
+exhibition/mural-stairs.jpg
+== hanging mural-stairs.jpg
+== on the wall:
+  Comuna 13 mural detail, stairs

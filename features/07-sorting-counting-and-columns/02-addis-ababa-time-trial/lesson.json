@@ -1,0 +1,54 @@
+{
+  "title": "Addis Ababa running club, sorting the Entoto time trial",
+  "source": "trial_results.zsh",
+  "steps": [
+    {
+      "label": "Sort distances as text and see 10 come before 5",
+      "api": "sort -t, -k4,4",
+      "regions": [
+        {
+          "name": "text-key",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Sort distances as numbers, then by time",
+      "api": "sort -t, -k4,4n -k5,5",
+      "regions": [
+        {
+          "name": "numeric-key",
+          "role": "primary"
+        },
+        {
+          "name": "text-key",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "See -k3 run to the end of the line, and fix it with -k3,3",
+      "api": "sort -k3 vs -k3,3",
+      "regions": [
+        {
+          "name": "open-ended-key",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Reverse only the distance key for the coach's board",
+      "api": "sort -k4,4nr",
+      "regions": [
+        {
+          "name": "reverse-one-key",
+          "role": "primary"
+        },
+        {
+          "name": "numeric-key",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

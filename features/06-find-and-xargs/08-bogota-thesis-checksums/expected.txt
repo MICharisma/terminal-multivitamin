@@ -1,0 +1,12 @@
+== xargs -n 4 over ten theses:
+  one cksum run would get 4 files
+  one cksum run would get 4 files
+  one cksum run would get 2 files
+manifest lines: 10
+== first entries, crc, bytes, path:
+3333021605 62 tesis/artes/2025-rincon.pdf
+1525205090 63 tesis/artes/2026-castano.pdf
+2889070437 62 tesis/artes/2026-gaitan.pdf
+derecho has deposited nothing yet: 0 manifest lines, not a checksum of empty input
+== changed since the deposit:
+  tesis/medicina/2026-mejia.pdf

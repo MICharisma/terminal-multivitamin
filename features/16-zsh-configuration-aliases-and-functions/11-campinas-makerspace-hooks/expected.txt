@@ -1,0 +1,4 @@
+== visit log:
+opened makerspace lobby
+now in projects/cnc-jig
+now in projects/laser-box

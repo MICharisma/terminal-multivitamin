@@ -1,0 +1,72 @@
+{
+  "title": "Sarajevo ballot bundle",
+  "source": "ballot_bundle.zsh",
+  "steps": [
+    {
+      "label": "Define pack_ballots around tar -czf",
+      "api": "tar -czf",
+      "regions": [
+        {
+          "name": "pack-fn",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Define seal_bundle around shasum -a 256",
+      "api": "shasum -a 256",
+      "regions": [
+        {
+          "name": "seal-fn",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Define verify_bundle around shasum -c",
+      "api": "shasum -c",
+      "regions": [
+        {
+          "name": "verify-fn",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Define extract_ballots around tar -xzf",
+      "api": "tar -xzf",
+      "regions": [
+        {
+          "name": "extract-fn",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Run pack, seal, verify, and extract for election night",
+      "api": "tar -czf",
+      "regions": [
+        {
+          "name": "run-workflow",
+          "role": "primary"
+        },
+        {
+          "name": "pack-fn",
+          "role": "setup"
+        },
+        {
+          "name": "seal-fn",
+          "role": "setup"
+        },
+        {
+          "name": "verify-fn",
+          "role": "setup"
+        },
+        {
+          "name": "extract-fn",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

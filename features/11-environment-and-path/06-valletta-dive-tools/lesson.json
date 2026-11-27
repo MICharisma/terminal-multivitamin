@@ -1,0 +1,46 @@
+{
+  "title": "Valletta dive school, asking the shell where each tool is",
+  "source": "resolve_tools.zsh",
+  "steps": [
+    {
+      "label": "Locate tools with command -v",
+      "api": "command -v",
+      "regions": [
+        {
+          "name": "command-v",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Classify them with whence -v",
+      "api": "whence -v",
+      "regions": [
+        {
+          "name": "whence-v",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "List every ls on PATH with type -a",
+      "api": "type -a",
+      "regions": [
+        {
+          "name": "type-a",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Use which interactively",
+      "api": "which",
+      "regions": [
+        {
+          "name": "which",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

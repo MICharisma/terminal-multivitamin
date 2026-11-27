@@ -1,0 +1,16 @@
+{
+  "title": "Tromsø aurora forecast timing",
+  "source": "aurora_timing.zsh",
+  "steps": [
+    {
+      "label": "Capture http_code, content_type, and size_download with -w",
+      "api": "curl -w",
+      "regions": [
+        {
+          "name": "write-out",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

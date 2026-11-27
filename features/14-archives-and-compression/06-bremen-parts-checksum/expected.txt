@@ -1,0 +1,12 @@
+== sealed drawings:
+drawings/gasket-viton.dwg
+drawings/housing-b441.dwg
+drawings/sleeve-28mm.dwg
+== verify intact:
+drawings/gasket-viton.dwg: OK
+drawings/housing-b441.dwg: OK
+drawings/sleeve-28mm.dwg: OK
+== verify after a quiet edit:
+drawings/gasket-viton.dwg: FAILED
+drawings/housing-b441.dwg: OK
+drawings/sleeve-28mm.dwg: OK

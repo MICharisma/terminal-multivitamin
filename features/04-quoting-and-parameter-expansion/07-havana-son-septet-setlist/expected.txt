@@ -1,0 +1,11 @@
+septeto: 7 players; first Yoel:tres, last Iván:guitarra
+the front line (2 to 4): Mariela:voz Ernesto:trompeta Lázaro:bongó
+with a guest on timbales and Iván off sick: 7 players, last now Dayron:timbales
+trumpet is player 3: Ernesto
+a flute? index 8 means not found (one past the end)
+on stage at the Casa de la Música: 6
+regulars playing: 5, guests: Dayron
+"${tonight[@]}" passes 6 word(s), "$tonight" passes 1 word(s)
+  1. Chan Chan
+  2. El Cuarto de Tula
+  3. Lágrimas Negras

@@ -1,0 +1,50 @@
+{
+  "title": "Hamburg container terminal crane telemetry, in bash",
+  "source": "crane_pipeline.sh",
+  "steps": [
+    {
+      "label": "See an early failure hidden by the last stage",
+      "api": "$?",
+      "regions": [
+        {
+          "name": "hidden-failure",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Read every stage's status from PIPESTATUS",
+      "api": "PIPESTATUS",
+      "regions": [
+        {
+          "name": "pipestatus",
+          "role": "primary"
+        },
+        {
+          "name": "hidden-failure",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Fail the pipeline with pipefail",
+      "api": "set -o pipefail",
+      "regions": [
+        {
+          "name": "pipefail",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Send stderr down the pipe in bash 3.2",
+      "api": "2>&1 |",
+      "regions": [
+        {
+          "name": "stderr-down-the-pipe",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

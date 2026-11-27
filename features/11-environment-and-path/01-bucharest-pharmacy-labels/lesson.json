@@ -1,0 +1,58 @@
+{
+  "title": "Bucharest pharmacy, exporting the batch number for every label printer",
+  "source": "label_batch.zsh",
+  "steps": [
+    {
+      "label": "Assign a batch number without exporting it",
+      "api": "assignment",
+      "regions": [
+        {
+          "name": "plain-assign",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Export it so children inherit it",
+      "api": "export",
+      "regions": [
+        {
+          "name": "export",
+          "role": "primary"
+        },
+        {
+          "name": "plain-assign",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "List the export with export -p",
+      "api": "export -p",
+      "regions": [
+        {
+          "name": "export-p",
+          "role": "primary"
+        },
+        {
+          "name": "export",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Unset it from the shell and the environment",
+      "api": "unset",
+      "regions": [
+        {
+          "name": "unset",
+          "role": "primary"
+        },
+        {
+          "name": "export",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "feature": "ssh-scp-rsync",
+  "title": "ssh, scp, and rsync",
+  "covers": [
+    "AddKeysToAgent",
+    "ControlMaster",
+    "ControlPath",
+    "ControlPersist",
+    "Host",
+    "HostName",
+    "IdentityFile",
+    "LocalForward",
+    "ProxyJump",
+    "StrictHostKeyChecking",
+    "UseKeychain",
+    "User",
+    "UserKnownHostsFile",
+    "rsync --delete",
+    "rsync --dry-run",
+    "rsync --exclude",
+    "rsync -av",
+    "scp",
+    "scp -r",
+    "ssh -G",
+    "ssh-add",
+    "ssh-add -l",
+    "ssh-agent",
+    "ssh-keygen -t ed25519"
+  ]
+}

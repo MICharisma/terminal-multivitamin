@@ -1,0 +1,6 @@
+join on unsorted lots: 1 rows (expect 3), stderr: join: weavers.csv:2: is not sorted: W01,Malis Roeung
+weaver ids after sort: W01 W02 W03
+== weaver, lot, shade for the dye vats:
+  Malis Roeung (W01): lot-441, champagne
+  Vannak Meas (W02): lot-512, indigo
+  Sophea Chum (W03): lot-533, lotus-pink

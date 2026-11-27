@@ -1,0 +1,54 @@
+{
+  "title": "Prague tram depot, reading the night shift's process list",
+  "source": "list_processes.zsh",
+  "steps": [
+    {
+      "label": "Pick the columns with ps -o",
+      "api": "ps -o",
+      "regions": [
+        {
+          "name": "columns",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Ask about one tram with ps -p",
+      "api": "ps -p",
+      "regions": [
+        {
+          "name": "one-process",
+          "role": "primary"
+        },
+        {
+          "name": "columns",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Freeze a tram and read state T",
+      "api": "kill -STOP",
+      "regions": [
+        {
+          "name": "stop-state",
+          "role": "primary"
+        },
+        {
+          "name": "columns",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Filter by pid list, never by grep",
+      "api": "ps -p",
+      "regions": [
+        {
+          "name": "no-grep-self",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

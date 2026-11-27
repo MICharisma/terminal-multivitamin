@@ -1,0 +1,8 @@
+== excludes: --exclude *.tmp --exclude borradores/
+== escritorio-remoto:
+escritorio-remoto:
+facturas
+
+escritorio-remoto/facturas:
+factura-1042.pdf
+factura-1043.pdf

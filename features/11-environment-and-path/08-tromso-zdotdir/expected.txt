@@ -1,0 +1,18 @@
+== zsh -c (every shell: zshenv only):
+  [zshenv] PATH seed
+  done
+== zsh -i -c (interactive: zshenv + zshrc):
+  [zshenv] PATH seed
+  [zshrc] interactive
+  done
+== zsh -l -c (login: zshenv + zprofile + zlogin):
+  [zshenv] PATH seed
+  [zprofile] login PATH
+  [zlogin] login welcome
+  done
+== zsh -il -c (login interactive: all four):
+  [zshenv] PATH seed
+  [zprofile] login PATH
+  [zshrc] interactive
+  [zlogin] login welcome
+  done

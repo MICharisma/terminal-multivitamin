@@ -1,0 +1,9 @@
+Lagos University Teaching Hospital bill: ₦1,240,000, as a number: 1240000
+reference LUTH/IDI-ARABA/2026/08841 is 25 characters; wc -c <<< sees 26
+messages in the family group: 4, already sent: 3
+  Tunde  paid     400000
+  Ngozi  paid     310000
+  Emeka  pledged  250000
+  Kemi   paid     280000
+still owed: 250000; if Friday slips, 3 cousins cover 83333 each
+first to call: Chidi

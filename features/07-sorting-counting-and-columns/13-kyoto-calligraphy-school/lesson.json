@@ -1,0 +1,30 @@
+{
+  "title": "Kyoto calligraphy school, reflowing a practice stroke grid",
+  "source": "grid_reflow.zsh",
+  "steps": [
+    {
+      "label": "Reflow the grid to four columns per row",
+      "api": "rs -e 0 4",
+      "regions": [
+        {
+          "name": "rs-columns",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Reflow the same grid to two columns",
+      "api": "rs -e 0 2",
+      "regions": [
+        {
+          "name": "rs-narrow",
+          "role": "primary"
+        },
+        {
+          "name": "rs-columns",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

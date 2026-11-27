@@ -1,0 +1,25 @@
+#!/usr/bin/env zsh
+set -o errexit -o nounset -o pipefail
+cmd=$1; shift
+case $cmd in
+  deps)
+    case $1 in
+      ffmpeg) print -l lame libogg opus ;;
+      sox)    print -l lame libogg ;;
+      lame)   print -l ;;
+      *) exit 1 ;;
+    esac
+    ;;
+  uses)
+    shift # --installed
+    case $1 in
+      lame)   print -l ffmpeg sox ;;
+      libogg) print -l ffmpeg sox ;;
+      *) exit 1 ;;
+    esac
+    ;;
+  *)
+    print -u2 "stub brew: unsupported $cmd $*"
+    exit 1
+    ;;
+esac

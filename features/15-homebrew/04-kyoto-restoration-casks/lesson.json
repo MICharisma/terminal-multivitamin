@@ -1,0 +1,30 @@
+{
+  "title": "Kyoto print restoration lab casks vs formulae",
+  "source": "sort_brewfile.zsh",
+  "steps": [
+    {
+      "label": "Route each Brewfile line by brew, cask, or tap",
+      "api": "case",
+      "regions": [
+        {
+          "name": "case-router",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Show the packing lists for the scanner Mac",
+      "api": "Brewfile",
+      "regions": [
+        {
+          "name": "packing-lists",
+          "role": "primary"
+        },
+        {
+          "name": "case-router",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

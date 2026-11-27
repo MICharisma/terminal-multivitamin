@@ -1,0 +1,10 @@
+== the three jingles on the board:
+  [1]    PID running    ./mix_sunrise
+  [2]  - PID running    ./mix_drive
+  [3]  + PID running    ./mix_news
+== stop the news jingle by substring:
+  still running: ./mix_drive, ./mix_sunrise
+== stop the remaining jobs by their numbers:
+  killing %1 (./mix_sunrise)
+  killing %2 (./mix_drive)
+  board clear: 0 jobs

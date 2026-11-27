@@ -1,0 +1,58 @@
+{
+  "title": "Hobart release manifest",
+  "source": "release_manifest.zsh",
+  "steps": [
+    {
+      "label": "Fetch the manifest with -fsSL and auth headers",
+      "api": "curl -fsSL",
+      "regions": [
+        {
+          "name": "fetch-manifest",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Send Authorization and Accept headers",
+      "api": "curl -H",
+      "regions": [
+        {
+          "name": "fetch-manifest",
+          "role": "primary"
+        },
+        {
+          "name": "write-status",
+          "role": "result"
+        }
+      ]
+    },
+    {
+      "label": "Capture the HTTP status with -w while saving the body",
+      "api": "curl -w",
+      "regions": [
+        {
+          "name": "write-status",
+          "role": "primary"
+        },
+        {
+          "name": "fetch-manifest",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "List active release channels with jq",
+      "api": "jq -r",
+      "regions": [
+        {
+          "name": "active-channels",
+          "role": "primary"
+        },
+        {
+          "name": "write-status",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

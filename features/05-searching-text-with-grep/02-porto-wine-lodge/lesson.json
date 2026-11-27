@@ -1,0 +1,36 @@
+{
+  "title": "Porto wine lodge, finding bottles in the inventory",
+  "source": "lodge_inventory.zsh",
+  "steps": [
+    {
+      "label": "Match Tawny in any capitalisation",
+      "api": "grep -i",
+      "regions": [
+        {
+          "name": "case-insensitive",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Match a whole word only",
+      "api": "grep -w",
+      "regions": [
+        {
+          "name": "whole-word",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Combine -i and -w to count Tawny lines",
+      "api": "grep -iw",
+      "regions": [
+        {
+          "name": "both",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

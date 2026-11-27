@@ -1,0 +1,4 @@
+Name          Status User  File
+postgresql@16 started alice ~/Library/LaunchAgents/homebrew.mxcl.postgresql@16.plist
+redis         started alice ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
+unbound       none                 

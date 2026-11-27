@@ -1,0 +1,14 @@
+== command -v:
+  nitrox_mix -> WORK/bin/nitrox_mix
+  tanks      -> alias tanks='print 12 L steel'
+  cd         -> cd
+== whence -v:
+  nitrox_mix is WORK/bin/nitrox_mix
+  tanks is an alias for print 12 L steel
+  cd is a shell builtin
+== type -a ls (lab bin shadows the system):
+  ls is WORK/bin/ls
+  ls is /usr/bin/ls
+  ls is /bin/ls
+== which (handy interactively):
+  WORK/bin/nitrox_mix

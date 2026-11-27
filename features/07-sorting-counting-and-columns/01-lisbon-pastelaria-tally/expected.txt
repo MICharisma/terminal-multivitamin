@@ -1,0 +1,14 @@
+uniq -c without sort: 17 lines for 5 kinds of cake
+== orders per cake for the bakers:
+  3 bolo-rainha
+  7 bolo-rei
+  4 broas-de-mel
+  2 filhoses
+  4 sonhos
+best seller: bolo-rei, 7 orders
+== ranked by count, ties in alphabetical order, for the shop window board:
+  7 bolo-rei
+  4 broas-de-mel
+  4 sonhos
+  3 bolo-rainha
+  2 filhoses

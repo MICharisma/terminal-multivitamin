@@ -1,0 +1,7 @@
+== with workshop bin prepended:
+  WORK/bin/knot_count
+  knot counter 440
+== restored DEFAULT_PATH:
+  knot_count not on PATH
+== command -v ls: /usr/bin/ls
+== command -v knot_count: WORK/bin/knot_count

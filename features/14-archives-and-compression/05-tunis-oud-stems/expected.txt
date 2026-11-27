@@ -1,0 +1,14 @@
+== before xz:
+  oud-maqam.raw: 480 bytes
+  oud-taksim.raw: 480 bytes
+  riqq-groove.raw: 480 bytes
+== after xz (each smaller than its raw stem):
+  oud-maqam.raw.xz: smaller
+  oud-taksim.raw.xz: smaller
+  riqq-groove.raw.xz: smaller
+== restored oud-taksim:
+  480 bytes
+== remaining archives:
+oud-maqam.raw.xz
+oud-taksim.raw
+riqq-groove.raw.xz

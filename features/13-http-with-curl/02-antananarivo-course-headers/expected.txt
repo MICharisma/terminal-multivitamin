@@ -1,0 +1,6 @@
+== status lines
+  HTTP/1.0 200 OK
+  HTTP/1.0 200 OK
+== route by content-type
+  syllabus.json -> parse as json (application/json)
+  reading-list.txt -> show as text (text/plain)

@@ -1,0 +1,36 @@
+{
+  "title": "Yangon ferry timetable",
+  "source": "ferry_schedule.zsh",
+  "steps": [
+    {
+      "label": "Print only lines 2 through 4",
+      "api": "sed -n 'Np'",
+      "regions": [
+        {
+          "name": "line-number",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Print lines that match a pier name",
+      "api": "sed -n '/pattern/p'",
+      "regions": [
+        {
+          "name": "pattern-address",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Print from one departure through another",
+      "api": "sed -n '/from/,/to/p'",
+      "regions": [
+        {
+          "name": "range-address",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "title": "Hobart Antarctic logistics",
+  "source": "cargo_manifest.bash",
+  "steps": [
+    {
+      "label": "Strip tags then total with awk",
+      "api": "sed | awk",
+      "regions": [
+        {
+          "name": "sed-then-awk",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Feed a pipeline through process substitution",
+      "api": "< <(sed",
+      "regions": [
+        {
+          "name": "process-substitution",
+          "role": "primary"
+        },
+        {
+          "name": "sed-then-awk",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Run awk on a here-string of cleaned lines",
+      "api": "awk <<<",
+      "regions": [
+        {
+          "name": "here-string",
+          "role": "primary"
+        },
+        {
+          "name": "sed-then-awk",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

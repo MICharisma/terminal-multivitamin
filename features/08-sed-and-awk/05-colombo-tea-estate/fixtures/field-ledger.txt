@@ -1,0 +1,3 @@
+row-7: plucker amara, 42kg, rupee rate 420
+row-8: plucker sunil, 38kg, rupee rate 420
+row-9: plucker kumari, 45kg, rupee rate 420

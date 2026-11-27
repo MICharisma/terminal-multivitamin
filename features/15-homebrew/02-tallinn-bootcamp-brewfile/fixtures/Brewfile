@@ -1,0 +1,7 @@
+# kood/Jõhvi cohort laptop — tools for the web track
+tap "homebrew/cask-fonts"
+brew "git"
+brew "node"
+brew "postgresql@16"
+cask "visual-studio-code"
+cask "figma"

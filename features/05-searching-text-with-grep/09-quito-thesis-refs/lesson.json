@@ -1,0 +1,50 @@
+{
+  "title": "Quito university thesis, scanning citations",
+  "source": "scan_citations.zsh",
+  "steps": [
+    {
+      "label": "Match either of two patterns with -e",
+      "api": "grep -e",
+      "regions": [
+        {
+          "name": "multiple-e",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Read patterns from a file with -f",
+      "api": "grep -f",
+      "regions": [
+        {
+          "name": "from-file",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Find authors not yet on the list",
+      "api": "grep -e (again)",
+      "regions": [
+        {
+          "name": "missing-from-list",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Treat the checklist as fixed strings",
+      "api": "grep -Ff",
+      "regions": [
+        {
+          "name": "fixed-from-file",
+          "role": "primary"
+        },
+        {
+          "name": "from-file",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

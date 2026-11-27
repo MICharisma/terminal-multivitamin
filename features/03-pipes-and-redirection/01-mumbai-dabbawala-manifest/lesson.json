@@ -1,0 +1,64 @@
+{
+  "title": "Mumbai dabbawala lunch manifest",
+  "source": "lunch_manifest.zsh",
+  "steps": [
+    {
+      "label": "Write the morning pickups to a fresh manifest",
+      "api": ">",
+      "regions": [
+        {
+          "name": "morning-pickups",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Append the late phone orders",
+      "api": ">>",
+      "regions": [
+        {
+          "name": "late-orders",
+          "role": "primary"
+        },
+        {
+          "name": "morning-pickups",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Count tiffins per station with a pipeline",
+      "api": "|",
+      "regions": [
+        {
+          "name": "count-per-station",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Refuse to overwrite with noclobber, then override with >|",
+      "api": ">|",
+      "regions": [
+        {
+          "name": "noclobber",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "See sort empty its own input, then sort the safe way",
+      "api": "sort f > f.new && mv",
+      "regions": [
+        {
+          "name": "sort-in-place-trap",
+          "role": "primary"
+        },
+        {
+          "name": "noclobber",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "title": "Gdańsk shipyard welding cell, installing robot tools in portable sh",
+  "source": "install_tools.sh",
+  "steps": [
+    {
+      "label": "Read the install plan from a here-doc manifest",
+      "api": "while read -r",
+      "regions": [
+        {
+          "name": "manifest",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Create folders with exact modes",
+      "api": "install -d -m",
+      "regions": [
+        {
+          "name": "manifest",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Copy files and set their modes in one step",
+      "api": "install -m",
+      "regions": [
+        {
+          "name": "manifest",
+          "role": "primary"
+        },
+        {
+          "name": "verify",
+          "role": "result"
+        }
+      ]
+    },
+    {
+      "label": "Run the installed tools",
+      "api": "install -m",
+      "regions": [
+        {
+          "name": "run-installed",
+          "role": "primary"
+        },
+        {
+          "name": "manifest",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Compare with cp, which keeps the source mode",
+      "api": "cp",
+      "regions": [
+        {
+          "name": "cp-compared",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

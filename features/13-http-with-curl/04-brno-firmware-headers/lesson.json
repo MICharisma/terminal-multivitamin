@@ -1,0 +1,16 @@
+{
+  "title": "Brno firmware board headers",
+  "source": "firmware_headers.zsh",
+  "steps": [
+    {
+      "label": "Probe each board with X-Board-Id and X-Firmware-Rev headers",
+      "api": "curl -H",
+      "regions": [
+        {
+          "name": "header-loop",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

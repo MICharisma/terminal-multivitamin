@@ -1,0 +1,30 @@
+{
+  "title": "Penang family laksa recipe",
+  "source": "family_recipe.zsh",
+  "steps": [
+    {
+      "label": "Fail loud when the recipe card is still missing",
+      "api": "curl -fsSL",
+      "regions": [
+        {
+          "name": "fail-missing",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Fetch auntie Mei's laksa card once it is posted",
+      "api": "curl -fsSL",
+      "regions": [
+        {
+          "name": "fetch-recipe",
+          "role": "primary"
+        },
+        {
+          "name": "fail-missing",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

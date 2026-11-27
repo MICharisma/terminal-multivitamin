@@ -1,0 +1,11 @@
+== still quarantined, Ableton will ask about each one:
+samples/hi hats/open hat 03.wav
+samples/kick-drums/909-kick-tuned.wav
+samples/kick-drums/rumble-kick-128.wav
+samples/pads/tresor-drone.wav
+== tagged with a BPM by the label:
+samples/kick-drums/rumble-kick-128.wav
+samples/pads/spree-dawn-pad.wav
+quarantined after xattr -d: 0
+BPM tag kept on rumble-kick-128.wav: 128
+after xattr -cr on the backup, BPM tags left: 0

@@ -1,0 +1,44 @@
+{
+  "title": "Porto wine lodge, measuring the tasting notes sheet",
+  "source": "lodge_counts.zsh",
+  "steps": [
+    {
+      "label": "Count lines, words, and bytes on the sheet",
+      "api": "wc -l -w -c",
+      "regions": [
+        {
+          "name": "wc-text",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Find the longest line with wc -L",
+      "api": "wc -L",
+      "regions": [
+        {
+          "name": "wc-longest",
+          "role": "primary"
+        },
+        {
+          "name": "wc-text",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Compare raw wc -l with arithmetic stripping",
+      "api": "wc -l <",
+      "regions": [
+        {
+          "name": "wc-arithmetic",
+          "role": "primary"
+        },
+        {
+          "name": "wc-longest",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

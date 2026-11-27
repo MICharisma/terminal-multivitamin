@@ -1,0 +1,54 @@
+{
+  "title": "Tunis mosaic workshop, searching only the palette files",
+  "source": "palette_search.zsh",
+  "steps": [
+    {
+      "label": "Detect GNU vs BSD grep",
+      "api": "grep --help",
+      "regions": [
+        {
+          "name": "detect-gnu",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Search only *.csv with --include",
+      "api": "grep --include",
+      "regions": [
+        {
+          "name": "include-csv",
+          "role": "primary"
+        },
+        {
+          "name": "detect-gnu",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Skip *.md with --exclude",
+      "api": "grep --exclude",
+      "regions": [
+        {
+          "name": "exclude-md",
+          "role": "primary"
+        },
+        {
+          "name": "detect-gnu",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Use the portable find -exec form",
+      "api": "find -exec grep",
+      "regions": [
+        {
+          "name": "portable-find",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Tallinn payments startup, refusing keys that are too open",
+  "source": "key_guard.zsh",
+  "steps": [
+    {
+      "label": "Test the mode bits with arithmetic, the way ssh does",
+      "api": "(( mode & 8#077 ))",
+      "regions": [
+        {
+          "name": "guard",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Check that nobody else can write the keys folder",
+      "api": "(( mode & 8#022 ))",
+      "regions": [
+        {
+          "name": "check-folder",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Refuse to sign with any key that is too open",
+      "api": "[[ -O ]]",
+      "regions": [
+        {
+          "name": "refuse",
+          "role": "primary"
+        },
+        {
+          "name": "guard",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Clear group and others bits on every key",
+      "api": "chmod go=",
+      "regions": [
+        {
+          "name": "tighten",
+          "role": "primary"
+        },
+        {
+          "name": "guard",
+          "role": "setup"
+        },
+        {
+          "name": "check-folder",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "feature": "http-with-curl",
+  "title": "HTTP with curl",
+  "covers": [
+    "--data-urlencode",
+    "curl --json",
+    "curl --retry",
+    "curl -F",
+    "curl -H",
+    "curl -I",
+    "curl -L",
+    "curl -O",
+    "curl -d",
+    "curl -fsSL",
+    "curl -o",
+    "curl -sI",
+    "curl -sS",
+    "curl -w",
+    "jq",
+    "jq -r"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "title": "Bogotá university library, fixity checksums for the thesis repository",
+  "source": "fixity_manifest.zsh",
+  "steps": [
+    {
+      "label": "See how xargs -n 4 splits ten theses into batches",
+      "api": "xargs -n",
+      "regions": [
+        {
+          "name": "batches",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Checksum in parallel and sort the manifest",
+      "api": "xargs -P",
+      "regions": [
+        {
+          "name": "parallel",
+          "role": "primary"
+        },
+        {
+          "name": "batches",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Record a portable CRC for each thesis",
+      "api": "cksum",
+      "regions": [
+        {
+          "name": "parallel",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Skip the command on empty input with -r where xargs accepts it",
+      "api": "xargs -r",
+      "regions": [
+        {
+          "name": "empty-input",
+          "role": "primary"
+        },
+        {
+          "name": "parallel",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Find the thesis that changed since the deposit",
+      "api": "diff",
+      "regions": [
+        {
+          "name": "verify",
+          "role": "primary"
+        },
+        {
+          "name": "parallel",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+build.log keeps 9 lines; 2 warnings went on to grep -c
+modules: 5 unique, from 6 compile lines
+== stage 1 shows which module compiled twice: compiled :checkout
+== release-history.log after two runs:
+build 911: 2 warnings, BUILD SUCCESSFUL
+build 912: 2 warnings, BUILD SUCCESSFUL
+release notes for both stores: 4 warning lines to triage

@@ -1,0 +1,13 @@
+== datasets queued: banon, blackwater, lee
+== compressing copies:
+  banon-ph.csv.gz
+  blackwater-ph.csv.gz
+  lee-ph.csv.gz
+== raw still present:
+banon-ph.csv
+blackwater-ph.csv
+lee-ph.csv
+== compressed:
+banon-ph.csv.gz
+blackwater-ph.csv.gz
+lee-ph.csv.gz

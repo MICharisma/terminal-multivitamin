@@ -1,0 +1,13 @@
+== payout run, 08:00 Tallinn time:
+  lhv-live: private, signing
+  Permissions 0640 for 'keys/seb-sandbox.pem' are too open.
+  refusing to sign payouts with seb-sandbox
+  Permissions 0644 for 'keys/swedbank-live.pem' are too open.
+  refusing to sign payouts with swedbank-live
+== an intern ran chmod 777 keys while debugging:
+  folder keys is 0777: others could swap a key
+== after chmod go= and chmod go-w:
+  keys/ is drwxr-xr-x
+  lhv-live.pem -rw-------: ready to sign
+  seb-sandbox.pem -rw-------: ready to sign
+  swedbank-live.pem -rw-------: ready to sign

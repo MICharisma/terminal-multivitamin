@@ -1,0 +1,40 @@
+{
+  "title": "Dhaka fintech option probe",
+  "source": "option_probe.zsh",
+  "steps": [
+    {
+      "label": "Probe whether key options are on",
+      "api": "[[ -o ]]",
+      "regions": [
+        {
+          "name": "baseline",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Turn null_glob on with setopt",
+      "api": "setopt",
+      "regions": [
+        {
+          "name": "setopt-toggle",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Turn it back off with unsetopt",
+      "api": "unsetopt",
+      "regions": [
+        {
+          "name": "unsetopt-toggle",
+          "role": "primary"
+        },
+        {
+          "name": "setopt-toggle",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

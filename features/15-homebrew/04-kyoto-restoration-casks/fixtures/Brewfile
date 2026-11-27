@@ -1,0 +1,7 @@
+# Kyoto print restoration lab — scanner Mac
+tap "homebrew/cask-fonts"
+brew "imagemagick"
+brew "exiftool"
+brew "rawtherapee"
+cask "affinity-photo"
+cask "font-source-han-serif"

@@ -1,0 +1,64 @@
+{
+  "title": "Bogotá university library, renewing loans in a batch",
+  "source": "renew_loans.zsh",
+  "steps": [
+    {
+      "label": "Watch a command swallow the rest of the loop's input",
+      "api": "done < file",
+      "regions": [
+        {
+          "name": "swallowed-stdin",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Empty the log in place",
+      "api": ": > file",
+      "regions": [
+        {
+          "name": "truncate-log",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Give the command an empty stdin",
+      "api": "< /dev/null",
+      "regions": [
+        {
+          "name": "dev-null-stdin",
+          "role": "primary"
+        },
+        {
+          "name": "swallowed-stdin",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Read the loop from descriptor 3 instead",
+      "api": "read -u 3 ... done 3< file",
+      "regions": [
+        {
+          "name": "loop-on-fd3",
+          "role": "primary"
+        },
+        {
+          "name": "swallowed-stdin",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Keep only the exit status",
+      "api": "> /dev/null 2>&1",
+      "regions": [
+        {
+          "name": "status-only",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

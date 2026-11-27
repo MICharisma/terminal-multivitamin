@@ -1,0 +1,44 @@
+{
+  "title": "Stavanger offshore zstyle",
+  "source": "zstyle_desk.zsh",
+  "steps": [
+    {
+      "label": "Set completion and vcs_info zstyles for the desk",
+      "api": "zstyle",
+      "regions": [
+        {
+          "name": "set-zstyles",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Read the matcher back with zstyle -g",
+      "api": "zstyle",
+      "regions": [
+        {
+          "name": "read-back",
+          "role": "primary"
+        },
+        {
+          "name": "set-zstyles",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "List them as re-runnable zstyle lines",
+      "api": "zstyle",
+      "regions": [
+        {
+          "name": "list-zstyles",
+          "role": "primary"
+        },
+        {
+          "name": "set-zstyles",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

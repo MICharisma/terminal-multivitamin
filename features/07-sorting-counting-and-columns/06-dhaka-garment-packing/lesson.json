@@ -1,0 +1,44 @@
+{
+  "title": "Dhaka garment packing, lining up carton labels",
+  "source": "pack_columns.zsh",
+  "steps": [
+    {
+      "label": "Merge three files into tab columns",
+      "api": "paste",
+      "regions": [
+        {
+          "name": "paste-default",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Join fields with a colon delimiter",
+      "api": "paste -d",
+      "regions": [
+        {
+          "name": "paste-delimiter",
+          "role": "primary"
+        },
+        {
+          "name": "paste-default",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Turn one file into one line with -s",
+      "api": "paste -s",
+      "regions": [
+        {
+          "name": "paste-serial",
+          "role": "primary"
+        },
+        {
+          "name": "paste-delimiter",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

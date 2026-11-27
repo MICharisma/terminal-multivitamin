@@ -1,0 +1,7 @@
+started baggers: 3 lines
+== joining each bagger:
+  line-a: 5 bags (exit 0)
+  line-b: 8 bags (exit 0)
+  line-c: 3 bags (exit 0)
+line-d started; wait with no arguments...
+  line-d: 2 bags

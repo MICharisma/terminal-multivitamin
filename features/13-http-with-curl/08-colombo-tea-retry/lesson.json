@@ -1,0 +1,16 @@
+{
+  "title": "Colombo tea auction retry",
+  "source": "tea_retry.zsh",
+  "steps": [
+    {
+      "label": "Retry the flaky warehouse until the lot sheet arrives",
+      "api": "curl --retry",
+      "regions": [
+        {
+          "name": "retry-lot",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

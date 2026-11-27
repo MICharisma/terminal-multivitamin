@@ -1,0 +1,44 @@
+{
+  "title": "Bogot\u00e1 agency shell aliases",
+  "source": "agency_aliases.zsh",
+  "steps": [
+    {
+      "label": "Define campaign aliases for the desk",
+      "api": "alias",
+      "regions": [
+        {
+          "name": "define-aliases",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "List them as re-runnable alias statements",
+      "api": "alias -L",
+      "regions": [
+        {
+          "name": "list-aliases",
+          "role": "primary"
+        },
+        {
+          "name": "define-aliases",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Retire a finished campaign alias",
+      "api": "unalias",
+      "regions": [
+        {
+          "name": "retire-alias",
+          "role": "primary"
+        },
+        {
+          "name": "define-aliases",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

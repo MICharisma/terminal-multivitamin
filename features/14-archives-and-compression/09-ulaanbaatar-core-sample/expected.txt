@@ -1,0 +1,9 @@
+== borehole-14 members:
+cores/borehole-14/
+cores/borehole-14/sample-12m.txt
+cores/borehole-14/sample-18m.txt
+cores/borehole-14/sample-24m.txt
+== peek sample-18m.txt without unpacking:
+depth 18.5m: grey mudstone, moist
+== workdir still holds only the archive:
+borehole-14.tgz

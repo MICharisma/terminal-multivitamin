@@ -1,0 +1,16 @@
+{
+  "title": "Guadalajara mural JSON submission",
+  "source": "mural_json.zsh",
+  "steps": [
+    {
+      "label": "POST the barrio mural fields as JSON",
+      "api": "curl --json",
+      "regions": [
+        {
+          "name": "json-post",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

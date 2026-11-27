@@ -1,0 +1,17 @@
+== first three rows for the customs broker:
+shipped lot-101 cattleya warscewiczii 24 stems
+shipped lot-102 oncidium sharry baby 18 stems
+ready lot-103 miltoniopsis vexillaria 12 stems
+== drop draft lots before invoicing:
+shipped lot-101 cattleya warscewiczii 24 stems
+shipped lot-102 oncidium sharry baby 18 stems
+ready lot-103 miltoniopsis vexillaria 12 stems
+ready lot-105 brassia gireoudiana 9 stems
+shipped lot-106 dendrobium nobile alba 30 stems
+== lots not yet on the truck:
+ready lot-103 miltoniopsis vexillaria 12 stems
+draft lot-104 pleurothallis restrepioides 6 stems
+ready lot-105 brassia gireoudiana 9 stems
+
+== stop after the fifth line for a fax cover sheet:
+ready lot-105 brassia gireoudiana 9 stems

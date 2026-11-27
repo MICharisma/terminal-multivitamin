@@ -1,0 +1,4 @@
+== firmware probes
+  board=alpha-relay rev=r12
+  board=beta-sensor rev=r7
+  board=gamma-motor rev=r9

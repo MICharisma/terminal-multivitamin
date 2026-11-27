@@ -1,0 +1,40 @@
+{
+  "title": "Baku carpet workshop, editing PATH in portable sh",
+  "source": "path_sh.sh",
+  "steps": [
+    {
+      "label": "Prepend the workshop bin to PATH",
+      "api": "PATH=dir:$PATH",
+      "regions": [
+        {
+          "name": "prepend",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Restore the saved DEFAULT_PATH",
+      "api": "PATH",
+      "regions": [
+        {
+          "name": "restore",
+          "role": "primary"
+        },
+        {
+          "name": "prepend",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Locate tools with command -v",
+      "api": "command -v",
+      "regions": [
+        {
+          "name": "command-v",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

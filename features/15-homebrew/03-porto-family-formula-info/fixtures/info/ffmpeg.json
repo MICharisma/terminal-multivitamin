@@ -1,0 +1,8 @@
+[
+  {
+    "name": "ffmpeg",
+    "desc": "Play, record, convert, and stream audio and video",
+    "versions": { "stable": "7.1.1" },
+    "keg_only": false
+  }
+]

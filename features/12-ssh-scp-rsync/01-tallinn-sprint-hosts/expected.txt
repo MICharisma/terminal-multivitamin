@@ -1,0 +1,8 @@
+== staging-eu
+User deploy
+HostName staging-eu.internal.bolt-lab.ee
+IdentityFile staging-eu
+== staging-us
+User deploy
+HostName staging-us.internal.bolt-lab.ee
+IdentityFile staging-us

@@ -1,0 +1,6 @@
+== agency aliases on this desk:
+alias briefs='ls -1 campaigns/*/brief.md'
+alias shoot='print "on set in Chapinero"'
+shoot retired after the location wrap
+briefs still works:
+campaigns/cafe-nevado/brief.md

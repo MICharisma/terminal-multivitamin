@@ -1,0 +1,10 @@
+unset:          region: eu-north-1
+empty:          region: eu-north-1
+set to Riga DC: region: eu-central-riga
+unset: replicas: '2' with -, '2' with :-
+empty: replicas: '' with -, '2' with :-
+release channel, assigned once and kept: stable
+no webhook:   4 words: flyctl deploy --region eu-north-1
+with webhook: 5 words: flyctl deploy --region eu-north-1 --notify=https://hooks.slack.example/T0/lockers
+stopped before migrating: set DATABASE_URL to the Postgres connection string
+migrating postgres://lockers@db.tallinn.internal/prod

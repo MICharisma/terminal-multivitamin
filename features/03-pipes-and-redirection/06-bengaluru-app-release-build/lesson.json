@@ -1,0 +1,50 @@
+{
+  "title": "Bengaluru delivery app, keeping the release build log",
+  "source": "release_build.zsh",
+  "steps": [
+    {
+      "label": "Keep the full log while counting warnings",
+      "api": "tee",
+      "regions": [
+        {
+          "name": "save-and-count",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Save each stage of a pipeline to debug it",
+      "api": "tee stage | cmd",
+      "regions": [
+        {
+          "name": "tap-stages",
+          "role": "primary"
+        },
+        {
+          "name": "save-and-count",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Append to a history across builds",
+      "api": "tee -a",
+      "regions": [
+        {
+          "name": "append-history",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Copy to two files and print nothing",
+      "api": "tee a b >/dev/null",
+      "regions": [
+        {
+          "name": "fan-out",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

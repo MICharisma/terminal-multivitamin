@@ -1,0 +1,58 @@
+{
+  "title": "Lyon bakery, leaving the overnight bake running under nohup",
+  "source": "nohup_bake.zsh",
+  "steps": [
+    {
+      "label": "Start the bake under nohup",
+      "api": "nohup",
+      "regions": [
+        {
+          "name": "nohup-start",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Show that HUP is ignored",
+      "api": "kill -HUP",
+      "regions": [
+        {
+          "name": "nohup-ignores-hup",
+          "role": "primary"
+        },
+        {
+          "name": "nohup-start",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Read the bake log",
+      "api": "nohup",
+      "regions": [
+        {
+          "name": "read-log",
+          "role": "primary"
+        },
+        {
+          "name": "nohup-start",
+          "role": "result"
+        }
+      ]
+    },
+    {
+      "label": "Stop the bake with TERM",
+      "api": "kill -TERM",
+      "regions": [
+        {
+          "name": "stop-bake",
+          "role": "primary"
+        },
+        {
+          "name": "nohup-start",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+renewals with a plain loop: 1 of 4
+  renewed QA76.73.Z34 for student 1020304050, note read from stdin: 1033445566 PQ8180.17 Cien años de soledad
+renewals.log emptied: 0 bytes
+renewals with < /dev/null: 4 of 4
+renewals reading the loop from descriptor 3, each with its own note: 4 of 4
+  renewed QH541 for student 1011223344, note read from stdin: overdue fine waived by Prof. Rojas
+García Márquez is renewed; nothing printed by grep, only its exit status used
+no koha-renew on this machine, so the batch used the local stand-in

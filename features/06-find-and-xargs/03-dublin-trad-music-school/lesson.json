@@ -1,0 +1,54 @@
+{
+  "title": "Dublin traditional music school, who is ready for the grade exam",
+  "source": "exam_ready.zsh",
+  "steps": [
+    {
+      "label": "Watch xargs split one path with spaces into four arguments",
+      "api": "xargs",
+      "regions": [
+        {
+          "name": "split-on-blanks",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "See the apostrophe in sean o'neill stop plain xargs",
+      "api": "xargs",
+      "regions": [
+        {
+          "name": "apostrophe-stops-xargs",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Pass names with NUL bytes using -print0 and -0",
+      "api": "find -print0 | xargs -0",
+      "regions": [
+        {
+          "name": "null-separated",
+          "role": "primary"
+        },
+        {
+          "name": "apostrophe-stops-xargs",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Get the same list from -exec ... {} + with no xargs",
+      "api": "find -exec {} +",
+      "regions": [
+        {
+          "name": "exec-plus",
+          "role": "primary"
+        },
+        {
+          "name": "null-separated",
+          "role": "result"
+        }
+      ]
+    }
+  ]
+}

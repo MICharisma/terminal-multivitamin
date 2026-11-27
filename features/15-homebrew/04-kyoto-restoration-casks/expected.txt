@@ -1,0 +1,9 @@
+== CLI formulae for the scanner Mac:
+imagemagick
+exiftool
+rawtherapee
+== GUI casks for the colour desk:
+affinity-photo
+font-source-han-serif
+== taps:
+homebrew/cask-fonts

@@ -1,0 +1,78 @@
+{
+  "title": "Istanbul ferry engine room, the check script that will not run",
+  "source": "run_checks.zsh",
+  "steps": [
+    {
+      "label": "Run the check without an x bit",
+      "api": "exit status 126",
+      "regions": [
+        {
+          "name": "no-x-bit",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Run it through sh instead",
+      "api": "sh script",
+      "regions": [
+        {
+          "name": "via-interpreter",
+          "role": "primary"
+        },
+        {
+          "name": "no-x-bit",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Call it without ./",
+      "api": "exit status 127",
+      "regions": [
+        {
+          "name": "not-on-path",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Add the owner's execute bit",
+      "api": "chmod u+x",
+      "regions": [
+        {
+          "name": "add-x-bit",
+          "role": "primary"
+        },
+        {
+          "name": "no-x-bit",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Fix the Windows line ending in the #! line",
+      "api": "#! line",
+      "regions": [
+        {
+          "name": "bad-interpreter",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Take x away from the folder on the way",
+      "api": "folder x bit",
+      "regions": [
+        {
+          "name": "folder-needs-x",
+          "role": "primary"
+        },
+        {
+          "name": "add-x-bit",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

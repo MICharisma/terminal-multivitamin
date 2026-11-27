@@ -1,0 +1,40 @@
+{
+  "title": "Recife family kitchen, marking the recipe year for every helper script",
+  "source": "export_flags.zsh",
+  "steps": [
+    {
+      "label": "Export with typeset -x",
+      "api": "typeset -x",
+      "regions": [
+        {
+          "name": "typeset-x",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Lock the year with typeset -r",
+      "api": "typeset -r",
+      "regions": [
+        {
+          "name": "readonly",
+          "role": "primary"
+        },
+        {
+          "name": "typeset-x",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Remove the export bit with typeset +x",
+      "api": "typeset +x",
+      "regions": [
+        {
+          "name": "unexport",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

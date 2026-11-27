@@ -1,0 +1,30 @@
+{
+  "title": "Almaty university course pack",
+  "source": "unpack_course.zsh",
+  "steps": [
+    {
+      "label": "Extract the course pack into the unpacked folder",
+      "api": "tar -xzf",
+      "regions": [
+        {
+          "name": "extract-pack",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "List the syllabus, readings, and labs that landed",
+      "api": "tar -xzf",
+      "regions": [
+        {
+          "name": "show-tree",
+          "role": "result"
+        },
+        {
+          "name": "extract-pack",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

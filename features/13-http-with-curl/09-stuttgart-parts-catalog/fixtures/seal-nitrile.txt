@@ -1,0 +1,5 @@
+part seal-nitrile
+inner 25 mm
+outer 40 mm
+material nitrile
+stock 80

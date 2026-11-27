@@ -1,0 +1,44 @@
+{
+  "title": "Antananarivo CS lab taps",
+  "source": "list_taps.zsh",
+  "steps": [
+    {
+      "label": "List taps already on the lab iMac",
+      "api": "brew tap",
+      "regions": [
+        {
+          "name": "brew-tap",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Collect tap lines from the lab Brewfile",
+      "api": "Brewfile",
+      "regions": [
+        {
+          "name": "brewfile-taps",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Unique the union of installed and declared taps",
+      "api": "brew tap",
+      "regions": [
+        {
+          "name": "unique-union",
+          "role": "primary"
+        },
+        {
+          "name": "brew-tap",
+          "role": "setup"
+        },
+        {
+          "name": "brewfile-taps",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}
