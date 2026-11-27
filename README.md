@@ -11,8 +11,8 @@ can show each one with its source highlighted step by step. This is the Terminal
 | Serving size | 1 scenario (one runnable script) |
 | Servings per feature | 13 |
 | Features planned | 18 |
-| Features built | 16 |
-| Scenarios built | 208 of 234 |
+| Features built | 18 |
+| Scenarios built | 234 of 234 |
 | Active ingredient | zsh 5.9 on macOS (the default shell since Catalina) |
 | Also tested on | Ubuntu with zsh, GNU coreutils, dash, and bash 5 |
 
