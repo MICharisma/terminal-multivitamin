@@ -11,8 +11,8 @@ can show each one with its source highlighted step by step. This is the Terminal
 | Serving size | 1 scenario (one runnable script) |
 | Servings per feature | 13 |
 | Features planned | 18 |
-| Features built | 14 |
-| Scenarios built | 182 of 234 |
+| Features built | 16 |
+| Scenarios built | 208 of 234 |
 | Active ingredient | zsh 5.9 on macOS (the default shell since Catalina) |
 | Also tested on | Ubuntu with zsh, GNU coreutils, dash, and bash 5 |
 
@@ -101,8 +101,8 @@ their folder; the rest are planned.
 | 12 | [ssh, scp, and rsync](features/12-ssh-scp-rsync/) | keys and `ssh-agent`, Keychain `UseKeychain`, `~/.ssh/config` hosts, `scp`, `rsync -av --dry-run`, tunnels | 13 of 13 built |
 | 13 | [HTTP with curl](features/13-http-with-curl/) | `curl -fsSL`, headers, `-d` and `--json`, `-o`/`-O`, retries, `-w` timing, `jq` for JSON | 13 of 13 built |
 | 14 | [Archives and compression](features/14-archives-and-compression/) | `tar -czf`/`-xzf`, `zip`/`unzip`, `ditto -c -k`, `gzip`, `xz`, `shasum -a 256` checksums | 13 of 13 built |
-| 15 | Homebrew | `brew install`/`upgrade`/`info`, casks, `Brewfile` and `brew bundle`, `brew services`, `brew doctor` | planned |
-| 16 | zsh configuration, aliases, and functions | `.zshrc`, `alias`, suffix and global aliases, functions and `autoload`, `fpath`, options, prompt, `compinit` | planned |
+| 15 | [Homebrew](features/15-homebrew/) | `brew --prefix`/`info`/`deps`/`leaves`, casks, `Brewfile` and `brew bundle` check/dump/list, `brew services`, `brew doctor` | 13 of 13 built |
+| 16 | [zsh configuration, aliases, and functions](features/16-zsh-configuration-aliases-and-functions/) | `.zshrc`, `alias`, suffix and global aliases, functions and `autoload`, `fpath`, options, prompt, `compinit` | 13 of 13 built |
 | 17 | macOS desktop bridges | `open` (apps, URLs, `-R`), `pbcopy`/`pbpaste`, `say`, `screencapture`, `osascript`, `sips`, `textutil` | planned (macOS only) |
 | 18 | macOS system tools | `defaults`, `mdfind`/`mdls`, `caffeinate`, `pmset`, `launchctl` and launch agents, `diskutil`, `networksetup` | planned (macOS only) |
 

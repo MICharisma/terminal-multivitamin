@@ -1,0 +1,44 @@
+{
+  "title": "Auckland ferry completions",
+  "source": "ferry_completions.zsh",
+  "steps": [
+    {
+      "label": "Put the ferry completion directory on fpath",
+      "api": "fpath",
+      "regions": [
+        {
+          "name": "fpath-completions",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Load the completion system with compinit -u",
+      "api": "compinit",
+      "regions": [
+        {
+          "name": "compinit",
+          "role": "primary"
+        },
+        {
+          "name": "fpath-completions",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Verify _schedule is available",
+      "api": "compinit",
+      "regions": [
+        {
+          "name": "verify",
+          "role": "primary"
+        },
+        {
+          "name": "compinit",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

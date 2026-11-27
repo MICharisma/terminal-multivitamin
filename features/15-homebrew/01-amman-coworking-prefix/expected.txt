@@ -1,0 +1,3 @@
+Homebrew root: opt/homebrew
+ripgrep keg: opt/homebrew/opt/ripgrep
+PATH is missing opt/homebrew/bin — add it in .zprofile

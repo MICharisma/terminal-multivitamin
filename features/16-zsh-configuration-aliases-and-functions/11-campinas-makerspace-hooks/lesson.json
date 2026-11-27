@@ -1,0 +1,44 @@
+{
+  "title": "Campinas makerspace hooks",
+  "source": "precwd_hook.zsh",
+  "steps": [
+    {
+      "label": "Run one-shot setup in an anonymous function",
+      "api": "()",
+      "regions": [
+        {
+          "name": "anon-setup",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Register a chpwd hook with add-zsh-hook",
+      "api": "add-zsh-hook",
+      "regions": [
+        {
+          "name": "register-hook",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Walk project folders and read the visit log",
+      "api": "add-zsh-hook",
+      "regions": [
+        {
+          "name": "walk",
+          "role": "primary"
+        },
+        {
+          "name": "register-hook",
+          "role": "setup"
+        },
+        {
+          "name": "anon-setup",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

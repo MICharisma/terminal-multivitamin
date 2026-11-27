@@ -1,0 +1,3 @@
+== completion helper for schedule:
+_schedule is an autoload shell function from completions/_schedule
+== dump written beside the temp config: .zcompdump (present)

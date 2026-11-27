@@ -1,0 +1,30 @@
+{
+  "title": "Tallinn coding bootcamp Brewfile audit",
+  "source": "audit_brewfile.zsh",
+  "steps": [
+    {
+      "label": "Walk each Brewfile line without word-splitting",
+      "api": "while IFS= read -r",
+      "regions": [
+        {
+          "name": "read-brewfile",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Classify taps, formulae, and casks from the Brewfile",
+      "api": "Brewfile",
+      "regions": [
+        {
+          "name": "classify-lines",
+          "role": "primary"
+        },
+        {
+          "name": "read-brewfile",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

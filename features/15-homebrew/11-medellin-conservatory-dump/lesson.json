@@ -1,0 +1,30 @@
+{
+  "title": "Medell\u00edn conservatory Brewfile dump",
+  "source": "dump_brewfile.zsh",
+  "steps": [
+    {
+      "label": "Dump the live machine's Brewfile into the temp folder",
+      "api": "brew bundle dump",
+      "regions": [
+        {
+          "name": "dump-live",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Diff the dump against the committed Brewfile",
+      "api": "brew bundle dump",
+      "regions": [
+        {
+          "name": "diff-committed",
+          "role": "primary"
+        },
+        {
+          "name": "dump-live",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

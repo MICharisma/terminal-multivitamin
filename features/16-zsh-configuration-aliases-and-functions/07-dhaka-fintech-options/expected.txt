@@ -1,0 +1,8 @@
+== baseline on the build agent:
+interactive: off
+monitor: off
+null_glob: off
+== after setopt null_glob:
+null_glob: on
+== after unsetopt null_glob:
+null_glob: off

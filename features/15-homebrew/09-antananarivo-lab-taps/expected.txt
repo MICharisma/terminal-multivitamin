@@ -1,0 +1,11 @@
+== already tapped on the lab iMac:
+homebrew/core
+homebrew/cask
+== taps declared in the lab Brewfile:
+homebrew/cask-fonts
+dart-lang/dart
+== unique taps after imaging:
+homebrew/core
+homebrew/cask
+homebrew/cask-fonts
+dart-lang/dart

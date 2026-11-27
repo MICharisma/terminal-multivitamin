@@ -1,0 +1,3 @@
+doctor exit note: Your system is ready to brew.
+== warnings the digitization desk will raise at standup:
+Warning: Unbrewed header files were found in /usr/local/include.

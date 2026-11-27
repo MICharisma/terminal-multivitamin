@@ -18,6 +18,8 @@
     "11-environment-and-path",
     "12-ssh-scp-rsync",
     "13-http-with-curl",
-    "14-archives-and-compression"
+    "14-archives-and-compression",
+    "15-homebrew",
+    "16-zsh-configuration-aliases-and-functions"
   ]
 }

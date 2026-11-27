@@ -1,0 +1,44 @@
+{
+  "title": "Lagos highlife studio dependency map",
+  "source": "deps_map.zsh",
+  "steps": [
+    {
+      "label": "List dependencies for each studio formula",
+      "api": "brew deps",
+      "regions": [
+        {
+          "name": "deps-map",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "List installed formulae that use each shared library",
+      "api": "brew uses",
+      "regions": [
+        {
+          "name": "uses-map",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Print the dependency map from an associative array",
+      "api": "typeset -A",
+      "regions": [
+        {
+          "name": "print-table",
+          "role": "primary"
+        },
+        {
+          "name": "deps-map",
+          "role": "setup"
+        },
+        {
+          "name": "uses-map",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

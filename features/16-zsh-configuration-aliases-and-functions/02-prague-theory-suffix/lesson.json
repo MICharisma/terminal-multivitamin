@@ -1,0 +1,30 @@
+{
+  "title": "Prague theory-lab suffix aliases",
+  "source": "suffix_scores.zsh",
+  "steps": [
+    {
+      "label": "Define suffix aliases for pdf and ly worksheets",
+      "api": "alias -s",
+      "regions": [
+        {
+          "name": "suffix-alias",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Invoke a worksheet by typing its filename",
+      "api": "alias -s",
+      "regions": [
+        {
+          "name": "invoke-suffix",
+          "role": "primary"
+        },
+        {
+          "name": "suffix-alias",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}

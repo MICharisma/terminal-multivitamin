@@ -1,0 +1,30 @@
+{
+  "title": "Brisbane cafe POS outdated report",
+  "source": "outdated_report.zsh",
+  "steps": [
+    {
+      "label": "Wrap the report in emulate -L zsh so options stay local",
+      "api": "emulate -L zsh",
+      "regions": [
+        {
+          "name": "report-fn",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "List outdated formulae as JSON and print a checklist",
+      "api": "brew outdated --json",
+      "regions": [
+        {
+          "name": "run-report",
+          "role": "primary"
+        },
+        {
+          "name": "report-fn",
+          "role": "setup"
+        }
+      ]
+    }
+  ]
+}
