@@ -1,0 +1,10 @@
+== supervisor's two required authors:
+northern Ecuador by the late sixteenth century (Murra 1980; Salomon 1986).
+== every author on the reading-list file:
+2:northern Ecuador by the late sixteenth century (Murra 1980; Salomon 1986).
+3:Later surveys of Chimborazo cultivars (Zimmerer 1996) and a re-reading of
+6:Oberem (1980: 44-52). A dissenting view appears in Larson (1995).
+== authors cited but not yet on patterns.txt:
+4:the visitas (Espinoza Soriano 1976) still frame the debate. Compare also
+5:Horkheimer (1973) on coastal irrigation, and the field notes in
+checklist hits (fixed strings): 3

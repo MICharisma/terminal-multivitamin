@@ -1,0 +1,12 @@
+unquoted $scan: 5 argument(s)
+quoted "$scan": 1 argument(s)
+== unquoted, the * in the name becomes a glob:
+  [Annunciazione]
+  [Annunciazione *draft*.tif]
+  [Annunciazione detail draft-2.tif]
+two scans through "$@": 2 argument(s)
+through $*:            8 argument(s)
+through "$*":          1 argument(s)
+== to type the name back in, quote it like this:
+  Botticelli\ -\ Primavera\ detail\ 03.tif
+label for the crate: PRIMAVERA, RESTORATION 1982

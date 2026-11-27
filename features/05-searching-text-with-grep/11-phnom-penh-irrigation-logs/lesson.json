@@ -1,0 +1,54 @@
+{
+  "title": "Phnom Penh irrigation logs, Perl regex and ripgrep notes, in bash",
+  "source": "scan_levels.sh",
+  "steps": [
+    {
+      "label": "Detect whether grep -P works",
+      "api": "grep -P",
+      "regions": [
+        {
+          "name": "detect-p",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Pull depths with \\d or the -E fallback",
+      "api": "grep -Po",
+      "regions": [
+        {
+          "name": "digits",
+          "role": "primary"
+        },
+        {
+          "name": "detect-p",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Try a lookbehind for gate openings",
+      "api": "grep -P lookbehind",
+      "regions": [
+        {
+          "name": "lookbehind",
+          "role": "primary"
+        },
+        {
+          "name": "detect-p",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Note ripgrep as a faster recursive search",
+      "api": "rg",
+      "regions": [
+        {
+          "name": "ripgrep-note",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+on the clipboard: 6 oak parts for the Nørrebro café sideboard
+doors to cut, counted from pbpaste: 2
+pbpaste gives back cutlist.txt byte for byte
+== after pbpaste | sort -u | pbcopy, ready for the panel saw:
+back   birch-ply  1760 x 700 x 6
+door   oak         700 x 430 x 20
+shelf  oak        1750 x 420 x 20
+side   oak         720 x 450 x 25
+top    oak        1800 x 450 x 25

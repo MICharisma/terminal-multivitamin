@@ -1,0 +1,46 @@
+{
+  "title": "Rotterdam container terminal, decoding manifest file names",
+  "source": "container_codes.zsh",
+  "steps": [
+    {
+      "label": "Strip folders with ## and %",
+      "api": "${path##*/}",
+      "regions": [
+        {
+          "name": "strip-folders",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Compare shortest and longest suffix removal",
+      "api": "${name%%_*}",
+      "regions": [
+        {
+          "name": "shortest-longest",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Slice the container number by position",
+      "api": "${id:0:4}",
+      "regions": [
+        {
+          "name": "slice-id",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Replace size codes and every slash",
+      "api": "${var/old/new}",
+      "regions": [
+        {
+          "name": "replace",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

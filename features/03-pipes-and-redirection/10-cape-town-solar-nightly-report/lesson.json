@@ -1,0 +1,54 @@
+{
+  "title": "Cape Town solar installer's nightly report, in portable sh",
+  "source": "nightly_report.sh",
+  "steps": [
+    {
+      "label": "Save the terminal's stdout and stderr",
+      "api": "exec 3>&1",
+      "regions": [
+        {
+          "name": "save-stdout",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Redirect the rest of the script to a log",
+      "api": "exec > file 2>&1",
+      "regions": [
+        {
+          "name": "redirect-script",
+          "role": "primary"
+        },
+        {
+          "name": "save-stdout",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Restore the terminal and read the log",
+      "api": "exec 1>&3",
+      "regions": [
+        {
+          "name": "restore-stdout",
+          "role": "primary"
+        },
+        {
+          "name": "redirect-script",
+          "role": "result"
+        }
+      ]
+    },
+    {
+      "label": "Redirect a whole group of commands once",
+      "api": "{ ...; } >> file",
+      "regions": [
+        {
+          "name": "group-redirect",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

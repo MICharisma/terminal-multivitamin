@@ -1,0 +1,46 @@
+{
+  "title": "Addis Ababa coffee exchange, searching the cupping notes",
+  "source": "cupping_search.zsh",
+  "steps": [
+    {
+      "label": "Find every Yirgacheffe lot",
+      "api": "grep",
+      "regions": [
+        {
+          "name": "plain-search",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Count lots with bright acidity",
+      "api": "grep -c",
+      "regions": [
+        {
+          "name": "count",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "See . match any character in basic regex",
+      "api": "basic regex .",
+      "regions": [
+        {
+          "name": "basic-dot",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Quote the pattern and handle exit status 1",
+      "api": "grep exit 1",
+      "regions": [
+        {
+          "name": "quoted-star",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

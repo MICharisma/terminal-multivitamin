@@ -1,0 +1,10 @@
+fields: 5; weld W-0412 on block-17-hull, result pass, method UT
+globbing on:  the method field became 'welds.txt'
+globbing off: the method field stays '*' (the inspector's 'see sketch')
+== inspection board, block by block:
+  block-17 hull  weld 0412  day 18  pass  (UT)
+  block-17 hull  weld 0413  day 18  repair  (RT)
+  block-21 deck  weld 0420  day 19  pass  (*)
+  block-21 deck  weld 0421  day 19  repair  (none)
+repairs for the night shift: W-0413,W-0421
+stopped: weld W-0422 has no inspection result

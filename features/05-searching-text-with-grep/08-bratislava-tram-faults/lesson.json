@@ -1,0 +1,50 @@
+{
+  "title": "Bratislava tram depot, matching fault codes literally",
+  "source": "fault_codes.zsh",
+  "steps": [
+    {
+      "label": "See [2] act as a character class",
+      "api": "grep without -F",
+      "regions": [
+        {
+          "name": "without-f",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Match brackets literally with -F",
+      "api": "grep -F",
+      "regions": [
+        {
+          "name": "with-f",
+          "role": "primary"
+        },
+        {
+          "name": "without-f",
+          "role": "setup"
+        }
+      ]
+    },
+    {
+      "label": "Match a star literally",
+      "api": "grep -F *",
+      "regions": [
+        {
+          "name": "star-literal",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Paste a SCADA token with dots",
+      "api": "grep -Fn",
+      "regions": [
+        {
+          "name": "pasted-line",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}

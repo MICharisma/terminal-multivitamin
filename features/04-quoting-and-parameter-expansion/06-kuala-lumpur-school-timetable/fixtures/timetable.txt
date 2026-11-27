@@ -1,0 +1,3 @@
+4 Amanah:BM,English,Maths,,Sains,Sejarah,PJ
+4 Bestari:Maths,Maths,BM,English,,Pendidikan Seni,Sains
+4 Cemerlang:English,Sains,Sejarah,BM,Maths,,Muzik

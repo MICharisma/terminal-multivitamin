@@ -1,0 +1,9 @@
+'\t' is 2 characters, $'\t' is 1
+under LC_ALL=C, $'\u00e9' is refused; $'\xc3\xa9' gives thé
+cues.tsv: 3 cues, 6 tabs
+cue 14  FR: Tu es en retard.  EN: You are late.
+cue 15  FR: Je t'attendais depuis une heure.  EN: I waited for you for an hour.
+cue 16  FR: Le thé était froid.  EN: The tea was cold.
+a surtitle screen holds two lines; this one has 2:
+  > Je t'attendais
+  > depuis une heure.
